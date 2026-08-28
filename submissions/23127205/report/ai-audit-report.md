@@ -211,3 +211,22 @@ Thực thi toàn bộ chuỗi kịch bản kiểm thử hiệu năng chính th�
 
 ---
 
+### Entry #10
+
+- **Thời gian:** `2026-08-29 01:18:42 +07:00`
+- **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+
+#### Prompt:
+```text
+Phân tích các tệp log thô kiểm thử hiệu năng (results/load/raw.jtl, results/stress/raw.jtl, results/spike/raw.jtl), đưa ra đánh giá về Throughput, Response Time, Bottlenecks và đề xuất tối ưu hóa hệ thống EShop.
+```
+
+#### AI Output:
+1. Phân tích số liệu: Hệ thống bão hòa ở mức 109 req/s trong Stress Test do nghẽn băng thông mạng; ước tính p95 đạt 5.2ms (trung bình cộng 5 endpoints); Spike test gây nghẽn socket kéo dài và ước tính 2-5% request bị lỗi.
+2. Đề xuất tối ưu: (1) Bật SQLite WAL mode, (2) Thêm database index, (3) Cấu hình SQLite connection pool maxPoolSize=50, (4) Dùng Node.js Cluster Module.
+
+#### Human Review & Action:
+> Đối chiếu phân tích của AI với công cụ Ground Truth jtl_parser.py. Vạch trần 4 điểm ảo giác kỹ thuật của AI: (1) Lỗi tính trung bình phân vị p95 (5.2ms vs 6.0ms thực tế do Percentiles là non-additive), (2) Nhầm lẫn nghẽn mạng trên localhost (nguyên nhân thật là do SQLite Write Lock), (3) Ảo giác suy thoái kéo dài sau Spike (hồi phục trong 1.5s), (4) Giả định lỗi 2-5% trong khi thực tế đạt 0.00% lỗi. Phản biện đề xuất SQLite Connection Pool là ảo giác kỹ thuật do SQLite là CSDL nhúng.
+
+---
+

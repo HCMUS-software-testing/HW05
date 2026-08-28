@@ -189,3 +189,25 @@ Sinh và hoàn thiện 4 file kịch bản kiểm thử hiệu năng JMeter Test
 
 ---
 
+### Entry #09
+
+- **Thời gian:** `2026-08-28 23:37:41 +07:00`
+- **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+
+#### Prompt:
+```text
+Thực thi toàn bộ chuỗi kịch bản kiểm thử hiệu năng chính thức (Load 50 VUs, Stress Stepping 250 VUs, Spike Ultimate 350 VUs, Endurance Soak Test 12 phút), xuất các thư mục HTML Dashboard Report, và tự động trích xuất thông số phần cứng hệ thống từ dxdiag/systeminfo.
+```
+
+#### AI Output:
+1. Thu thập thông số phần cứng thực tế của máy: CPU Intel Core i5-12500H, RAM 15.73 GB, Windows 11 64-bit, Node.js v24.12.0, OpenJDK 17 LTS, lưu vào evidence/hardware/hardware_spec.txt.
+2. Thực thi Load Test thành công: 2,500 mẫu (0% lỗi, throughput 18.21 req/s, avg 2.92ms, p95 9.0ms), sinh HTML Dashboard tại results/load/html-report/.
+3. Thực thi Stress Test thành công: 41,100 mẫu (0% lỗi, throughput 108.51 req/s, avg 3.98ms, p95 11.0ms), sinh HTML Dashboard tại results/stress/html-report/.
+4. Thực thi Spike Test thành công: 9,110 mẫu (0% lỗi, throughput 187.32 req/s, avg 3.35ms, p95 11.0ms), sinh HTML Dashboard tại results/spike/html-report/.
+5. Khởi chạy kịch bản Endurance Soak Test (35 VUs trong 12 phút / 720s) tại results/endurance/raw.jtl.
+
+#### Human Review & Action:
+> Kiểm tra trực tiếp các thư mục kết quả. Xác nhận đầy đủ file raw.jtl và index.html dashboard cho cả 3 kịch bản chính, đối chiếu số liệu Ground Truth từ jtl_parser.py đạt độ chính xác 100%.
+
+---
+

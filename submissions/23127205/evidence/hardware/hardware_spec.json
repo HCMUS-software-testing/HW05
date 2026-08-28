@@ -1,0 +1,11 @@
+{
+  "student_id": "23127205",
+  "hostname": "LamKhanh",
+  "os": "Windows 11 (10.0.26200, 64bit)",
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12500H",
+  "ram_gb": 15.73,
+  "nodejs": "v24.12.0",
+  "java": "openjdk version \"17.0.16\" 2025-07-15 LTS",
+  "jmeter": "5.6.3 Portable",
+  "jvm_heap": "-Xms1g -Xmx4g"
+}

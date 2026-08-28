@@ -1,0 +1,27 @@
+======================================================================
+                   SUT HARDWARE & SYSTEM SPECIFICATIONS
+  Student: Lam Huu Khanh (23127205) - Member 1
+  Date: 2026-08-29
+======================================================================
+
+[1] Host & OS Information:
+  - Computer Name (Hostname): LamKhanh
+  - Operating System: Windows 11 (10.0.26200, 64bit)
+  - System Type: 64-bit Operating System, x64-based processor
+
+[2] Processor (CPU):
+  - Model: 12th Gen Intel(R) Core(TM) i5-12500H
+  - Cores / Threads: Multi-core High-performance Architecture
+
+[3] Physical Memory (RAM):
+  - Total Physical RAM: 15.73 GB
+  - Usable System Memory: 15.73 GB
+
+[4] Runtime & Test Environment:
+  - SUT Application: EShop RESTful API (Node.js/Express + SQLite)
+  - Node.js Version: v24.12.0
+  - Java Runtime Version: openjdk version "17.0.16" 2025-07-15 LTS
+  - Performance Test Tool: Apache JMeter 5.6.3 Portable
+  - JMeter JVM Heap Allocation: -Xms1g -Xmx4g (G1GC)
+  - Custom Plugins: jpgc-casutg (Stepping & Ultimate Thread Groups)
+======================================================================

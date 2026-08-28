@@ -1,0 +1,20 @@
+# Node & Dependencies
+node_modules/
+eshop-sut/backend/node_modules/
+eshop-sut/frontend-web/node_modules/
+eshop-sut/frontend-admin/node_modules/
+eshop-sut/frontend-mobile/node_modules/
+
+# SQLite Database (generated)
+eshop-sut/backend/database.sqlite
+
+# Tools / Binaries
+tools/apache-jmeter-5.6.3.zip
+tools/apache-jmeter-5.6.3/
+
+# Logs & Temp
+*.log
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

@@ -2,20 +2,25 @@
                    SUT HARDWARE & SYSTEM SPECIFICATIONS
   Student: Lam Huu Khanh (23127205) - Member 1
   Date: 2026-08-29
+  Verification: Verified against dxdiag DirectX Diagnostic Tool
 ======================================================================
 
 [1] Host & OS Information:
-  - Computer Name (Hostname): LamKhanh
-  - Operating System: Windows 11 (10.0.26200, 64bit)
-  - System Type: 64-bit Operating System, x64-based processor
+  - Computer Name (Hostname): LAMKHANH
+  - Operating System: Windows 11 Home Single Language 64-bit (10.0, Build 26200)
+  - System Manufacturer: LENOVO
+  - System Model: 82RB (Legion 5 / IdeaPad Gaming series)
+  - BIOS: J2CN57WW
+  - DirectX Version: DirectX 12
 
 [2] Processor (CPU):
   - Model: 12th Gen Intel(R) Core(TM) i5-12500H
-  - Cores / Threads: Multi-core High-performance Architecture
+  - Cores / Threads: 16 CPUs (4 Performance-cores + 8 Efficient-cores, 16 Threads)
+  - Base / Boost Clock: ~2.50 GHz (Turbo boost up to 4.50 GHz)
 
 [3] Physical Memory (RAM):
-  - Total Physical RAM: 15.73 GB
-  - Usable System Memory: 15.73 GB
+  - Total Physical RAM: 16384 MB (16.0 GB DDR5/DDR4)
+  - Page File: 23867 MB used, 4026 MB available
 
 [4] Runtime & Test Environment:
   - SUT Application: EShop RESTful API (Node.js/Express + SQLite)

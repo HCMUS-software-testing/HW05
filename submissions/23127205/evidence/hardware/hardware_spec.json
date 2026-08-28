@@ -1,11 +1,15 @@
 {
   "student_id": "23127205",
-  "hostname": "LamKhanh",
-  "os": "Windows 11 (10.0.26200, 64bit)",
-  "cpu": "12th Gen Intel(R) Core(TM) i5-12500H",
-  "ram_gb": 15.73,
+  "hostname": "LAMKHANH",
+  "os": "Windows 11 Home Single Language 64-bit (10.0, Build 26200)",
+  "manufacturer": "LENOVO",
+  "model": "82RB",
+  "bios": "J2CN57WW",
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12500H (16 CPUs), ~2.5GHz",
+  "ram_mb": 16384,
+  "directx": "DirectX 12",
   "nodejs": "v24.12.0",
-  "java": "openjdk version \"17.0.16\" 2025-07-15 LTS",
+  "java": "openjdk version 17.0.16 2025-07-15 LTS",
   "jmeter": "5.6.3 Portable",
   "jvm_heap": "-Xms1g -Xmx4g"
 }

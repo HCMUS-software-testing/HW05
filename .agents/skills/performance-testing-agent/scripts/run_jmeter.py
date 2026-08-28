@@ -1,6 +1,7 @@
 import os
 import sys
 import subprocess
+import shutil
 
 if sys.stdout.encoding != 'utf-8':
     try:
@@ -22,6 +23,30 @@ def run_jmeter(args=None):
         print(f"[-] JMeter bin directory not found at {jmeter_bin}")
         sys.exit(1)
         
+    # Auto-clean target .jtl and html-report folder to prevent JMeter "not empty" errors
+    i = 0
+    while i < len(args):
+        arg = args[i]
+        if arg == "-l" and i + 1 < len(args):
+            jtl_file = args[i + 1]
+            abs_jtl = jtl_file if os.path.isabs(jtl_file) else os.path.abspath(jtl_file)
+            if os.path.exists(abs_jtl):
+                try:
+                    os.remove(abs_jtl)
+                    print(f"[*] Auto-cleaned existing results log: {abs_jtl}")
+                except Exception as e:
+                    print(f"[!] Warning cleaning JTL: {e}")
+        elif arg == "-o" and i + 1 < len(args):
+            report_dir = args[i + 1]
+            abs_report = report_dir if os.path.isabs(report_dir) else os.path.abspath(report_dir)
+            if os.path.exists(abs_report):
+                try:
+                    shutil.rmtree(abs_report)
+                    print(f"[*] Auto-cleaned existing HTML report folder: {abs_report}")
+                except Exception as e:
+                    print(f"[!] Warning cleaning HTML report folder: {e}")
+        i += 1
+
     # Convert path arguments (-t, -l, -o, -g) into relative paths FROM jmeter_bin
     # This completely eliminates Unicode / accented characters from the JVM CLI arguments!
     processed_args = []
@@ -31,7 +56,6 @@ def run_jmeter(args=None):
         if arg in ["-t", "-l", "-o", "-g"] and i + 1 < len(args):
             val = args[i + 1]
             abs_val = val if os.path.isabs(val) else os.path.abspath(val)
-            # Make relative to jmeter_bin
             try:
                 rel_val = os.path.relpath(abs_val, jmeter_bin)
                 processed_args.extend([arg, rel_val])

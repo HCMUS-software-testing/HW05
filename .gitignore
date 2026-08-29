@@ -4,3 +4,6 @@ jmeter.log
 *.pyc
 submissions/23127326/.sut/
 submissions/23127326/.runtime/
+submissions/23127326/results/invalid-*/
+submissions/23127326/results/smoke/
+submissions/23127326/23127326_HW05_AI_Performance_TODO.zip

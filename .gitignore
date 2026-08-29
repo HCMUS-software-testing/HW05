@@ -1,0 +1,6 @@
+# Local tooling output; official JTL/HTML evidence belongs under submissions/<StudentID>/results/.
+jmeter.log
+**/__pycache__/
+*.pyc
+submissions/23127326/.sut/
+submissions/23127326/.runtime/

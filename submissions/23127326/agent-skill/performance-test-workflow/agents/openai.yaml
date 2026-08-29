@@ -1,0 +1,4 @@
+interface:
+  display_name: "Performance Test Workflow"
+  short_description: "Build and audit data-driven JMeter performance runs"
+  default_prompt: "Use $performance-test-workflow to review this performance-test workflow and its raw JTL evidence."

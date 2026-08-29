@@ -1,0 +1,7 @@
+# AI Critique (200-300 words)
+
+AI giúp chuyển yêu cầu thành workflow, correlation token, CSV data-driven và ba workload JMeter khá nhanh. Phần có giá trị nhất là việc đọc cả API contract lẫn backend: nếu chỉ nhìn HTTP 200, người kiểm thử dễ bỏ qua lockout cộng sai số lần, thời gian khóa 180 giây thay vì 30 giây, pagination không được áp dụng, cart thêm dòng trùng và checkout không dọn cart. Raw JTL đã xác nhận một gap: Load 359/3,314, Stress 1,789/16,519, Spike 753/7,175 và Endurance 2,700/24,608 đều fail đúng assertion cart sau checkout; HTTP error ở cả bốn run là 0. Vì vậy không được gọi 10–11% này là server failure.
+
+AI cũng từng tạo rủi ro kỹ thuật: CSV dùng chung làm thread đầu tiên tiêu thụ dữ liệu, và hiểu nhầm duration của JMeter khiến run sớm bị loại. Human review đã phát hiện, chuyển sang một file input cho mỗi VU, dùng 60 dòng lặp có kiểm soát, tách run invalid, rồi chạy lại bộ chính thức. Đây là lý do không nên tin JMX “trông hợp lý” nếu chưa kiểm tra lifecycle dữ liệu, số thread thực tế, label và raw response.
+
+Các khuyến nghị như index, connection pool, WAL hoặc tối ưu SQL chỉ là giả thuyết khi chưa có profiler. Resource monitor chính thức cũng không được diễn giải: field `thcount` không tồn tại trên macOS nên các file cũ chỉ có header. Tôi đã sửa tool và xác nhận bằng mẫu process thật, nhưng không gán mẫu đó cho bốn workload. Kết luận phải truy nguyên về implementation, JTL và evidence; phần screenshot/video vẫn cần sinh viên bổ sung.

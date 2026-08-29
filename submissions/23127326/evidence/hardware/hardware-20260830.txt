@@ -1,0 +1,31 @@
+Hardware:
+
+    Hardware Overview:
+
+      Model Name: MacBook Pro
+      Model Identifier: MacBookPro18,3
+      Model Number: Z15K00135J/A
+      Chip: Apple M1 Pro
+      Total Number of Cores: 10 (8 Performance and 2 Efficiency)
+      Memory: 32 GB
+      System Firmware Version: 18000.121.3
+      OS Loader Version: 18000.121.3
+      Serial Number (system): WJ5QM21WR6
+      Hardware UUID: 684FDA4E-A97E-51E8-914D-F6A143E3853E
+      Provisioning UDID: 00006000-000C285A21D2801E
+      Activation Lock Status: Enabled
+
+Software:
+
+    System Software Overview:
+
+      System Version: macOS 26.5.2 (25F84)
+      Kernel Version: Darwin 25.5.0
+      Boot Volume: Macintosh HD
+      Boot Mode: Normal
+      Computer Name: Em la HB
+      User Name: Em la HB (mac)
+      Secure Virtual Memory: Enabled
+      System Integrity Protection: Enabled
+      Time since boot: 32 days, 10 hours, 37 minutes
+

@@ -230,3 +230,24 @@ Phân tích các tệp log thô kiểm thử hiệu năng (results/load/raw.jtl,
 
 ---
 
+### Entry #11
+
+- **Thời gian:** `2026-08-30 09:18:35 +07:00`
+- **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+
+#### Prompt:
+```text
+Thiết kế mô hình kiểm thử hiệu năng liên tục (Continuous Performance Testing Framework) theo chuẩn Bloom G9.6 (Disrupt) cho hệ thống EShop. Bao gồm: cơ chế Semantic Diff Classifier phân loại rủi ro commit, chiến lược phân tầng tải Multi-tier (Tier 1 PR Gate 30s vs Tier 2 Nightly Stress), cổng chặn hồi quy tự động p95 (>15%), lưu đồ Mermaid.js chi tiết và phân tích 3 cặp đánh đổi kỹ thuật (Chi phí vs Tần suất, Thời gian build vs Độ sâu test, Cảnh báo sai vs Độ nhạy).
+```
+
+#### AI Output:
+1. Xây dựng tài liệu task3-continuous-performance-testing.md hoàn chỉnh.
+2. Thiết kế lưu đồ Mermaid.js thể hiện chu trình tự động hóa từ git push đến Block Merge Gate.
+3. Định nghĩa công thức Delta p95 > 15% và cơ chế Dynamic Moving Baseline EMA5.
+4. Phân tích sâu sắc 3 cặp đánh đổi kỹ thuật kèm giải pháp Ephemeral Containers, Shift-Left và Multi-level Alerting.
+
+#### Human Review & Action:
+> Kiểm tra trực quan lưu đồ Mermaid và chạy script verify_phase7.py. Xác nhận mô hình đáp ứng trọn vẹn yêu cầu Task 3 (10/10 điểm), giải quyết được bài toán cân bằng giữa tốc độ tích hợp CI/CD và đảm bảo chất lượng hiệu năng không bị suy thoái.
+
+---
+

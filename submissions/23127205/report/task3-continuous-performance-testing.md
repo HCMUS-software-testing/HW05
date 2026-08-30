@@ -22,32 +22,32 @@ Dưới đây là lưu đồ chi tiết mô tả chu trình quyết định tự
 
 ```mermaid
 flowchart TD
-    A["🚀 Developer thực hiện Git Push hoặc Tạo Pull Request"] --> B["🔍 Step 1: Semantic Commit & Git Diff Classifier"]
+    A["Developer thực hiện Git Push hoặc Tạo Pull Request"] --> B["Step 1: Semantic Commit & Git Diff Classifier"]
     
     B --> C{"Commit có rủi ro hiệu năng không?"}
     
-    C -->|"Không: Chỉ sửa Docs, CSS, Static Text"| D["⏩ Bỏ qua Test Tải & Chấp thuận Build"]
-    C -->|"Có: Thay đổi API, Database, Auth, ORM"| E["⚙️ Step 2: Phân loại Tầng Kiểm thử (Execution Tier)"]
+    C -->|"Không: Chỉ sửa Docs, CSS, Static Text"| D["Bỏ qua Test Tải & Chấp thuận Build"]
+    C -->|"Có: Thay đổi API, Database, Auth, ORM"| E["Step 2: Phân loại Tầng Kiểm thử (Execution Tier)"]
     
     E --> F{"Loại sự kiện Kích hoạt?"}
     
-    F -->|"Pull Request hoặc Feature Branch"| G["🏃 Tier 1: Micro Performance Gate (Fast Check)<br>- Tải: 10 VUs trong 30 giây<br>- Mục tiêu: Bắt lỗi nghẽn tức thời"]
-    F -->|"Nightly Build hoặc Release Tag"| H["🏋️ Tier 2: Deep Stress & Soak Gate<br>- Tải: Stepping 50 đến 250 VUs + 12m Endurance<br>- Mục tiêu: Đo Breaking Point & Memory Leak"]
+    F -->|"Pull Request hoặc Feature Branch"| G["Tier 1: Micro Performance Gate (Fast Check)<br>- Tải: 10 VUs trong 30 giây<br>- Mục tiêu: Bắt lỗi nghẽn tức thời"]
+    F -->|"Nightly Build hoặc Release Tag"| H["Tier 2: Deep Stress & Soak Gate<br>- Tải: Stepping 50 đến 250 VUs + 12m Endurance<br>- Mục tiêu: Đo Breaking Point & Memory Leak"]
     
-    G --> I["⚡ Step 3: Headless JMeter Runner (-Xms1g -Xmx4g)"]
+    G --> I["Step 3: Headless JMeter Runner (-Xms1g -Xmx4g)"]
     H --> I
     
-    I --> J["📊 Step 4: Python JTL Parser Engine<br>Trích xuất Ground Truth: p50, p90, p95, Throughput, Error %"]
+    I --> J["Step 4: Python JTL Parser Engine<br>Trích xuất Ground Truth: p50, p90, p95, Throughput, Error %"]
     
-    J --> K["⚖️ Step 5: So sánh với Baseline Historical Matrix"]
+    J --> K["Step 5: So sánh với Baseline Historical Matrix"]
     
     K --> L{"Kiểm tra Điều kiện Hồi quy p95?"}
     
-    L -->|"Delta p95 tăng trên 15% HOẶC Error Rate trên 0.1%"| M["🚫 PIPELINE FAILED (Block Merge Gate)<br>- Tự động tạo GitHub Issue gắn nhãn regression<br>- Gửi cảnh báo Slack/Teams kèm diff số liệu<br>- Khóa Merge và giữ nguyên Baseline cũ"]
+    L -->|"Delta p95 tăng trên 15% HOẶC Error Rate trên 0.1%"| M["PIPELINE FAILED (Block Merge Gate)<br>- Tự động tạo GitHub Issue gắn nhãn regression<br>- Gửi cảnh báo Slack/Teams kèm diff số liệu<br>- Khóa Merge và giữ nguyên Baseline cũ"]
     
-    L -->|"Delta p95 tăng từ 5% đến 15%"| N["⚠️ PIPELINE WARNING<br>- Gửi cảnh báo nhắc nhở lập trình viên tối ưu<br>- Cho phép Merge có điều kiện"]
+    L -->|"Delta p95 tăng từ 5% đến 15%"| N["PIPELINE WARNING<br>- Gửi cảnh báo nhắc nhở lập trình viên tối ưu<br>- Cho phép Merge có điều kiện"]
     
-    L -->|"p95 duy trì ổn định (dưới hoặc bằng 5%)"| O["🎉 PIPELINE PASSED<br>- Chấp thuận Merge vào Main Branch<br>- Tự động cập nhật Baseline p95 mới (EMA5)<br>- Lưu trữ Artifact HTML Dashboard Report"]
+    L -->|"p95 duy trì ổn định (dưới hoặc bằng 5%)"| O["PIPELINE PASSED<br>- Chấp thuận Merge vào Main Branch<br>- Tự động cập nhật Baseline p95 mới (EMA5)<br>- Lưu trữ Artifact HTML Dashboard Report"]
 ```
 
 ---
@@ -86,7 +86,7 @@ Việc áp dụng Continuous Performance Testing đòi hỏi đội ngũ kỹ th
       (Pipeline Duration)                 (False Positives / Flakiness)
 ```
 
-### ⚖️ Đánh đổi 1: Chi phí Hạ tầng (Server Cost) vs Tần suất Kiểm thử (Testing Frequency)
+### 4.1. Đánh đổi 1: Chi phí Hạ tầng (Server Cost) vs Tần suất Kiểm thử (Testing Frequency)
 - **Vấn đề:** Nếu duy trì một cụm server môi trường Staging mạnh mẽ hoạt động 24/7 để chạy test tải sau mỗi commit, chi phí cloud sẽ tăng vọt theo cấp số nhân.
 - **Giải pháp tối ưu:** 
   - Sử dụng **Ephemeral Test Containers (Docker/Kubernetes)** hoặc **Cloud Spot Instances** chỉ được khởi tạo khi có sự kiện test tải và tự động hủy sau khi xuất file `.jtl`.
@@ -94,14 +94,14 @@ Việc áp dụng Continuous Performance Testing đòi hỏi đội ngũ kỹ th
 
 ---
 
-### ⚖️ Đánh đổi 2: Thời gian Chờ Build (CI Pipeline Duration) vs Độ Sâu của Test (Test Depth)
+### 4.2. Đánh đổi 2: Thời gian Chờ Build (CI Pipeline Duration) vs Độ Sâu của Test (Test Depth)
 - **Vấn đề:** Lập trình viên cần nhận kết quả PR nhanh chóng (trong 3–5 phút). Một kịch bản kiểm thử tải đầy đủ (như Endurance 12 phút hoặc Stress 6 phút) sẽ làm chậm tiến độ tích hợp mã nguồn của toàn đội ngũ.
 - **Giải pháp tối ưu:**
   - Áp dụng nguyên lý **Shift-Left Phân tầng**: Trên các nhánh Pull Request, chỉ chạy **Micro Benchmark 30s** để phát hiện lỗi logic thuật toán. Các bài test tải sâu (Endurance / Spike) được đẩy hoàn toàn sang tiến trình bất đồng bộ chạy ban đêm (Nightly Asynchronous Pipeline).
 
 ---
 
-### ⚖️ Đánh đổi 3: Cảnh báo Sai (False Positive Alarms) vs Độ Nhạy Hồi Quy (Sensitivity Threshold)
+### 4.3. Đánh đổi 3: Cảnh báo Sai (False Positive Alarms) vs Độ Nhạy Hồi Quy (Sensitivity Threshold)
 - **Vấn đề:** Môi trường đám mây chia sẻ (Shared Virtualized CI Runners) thường có hiện tượng "nhiễu hạ tầng" (CPU Throttling, IOPS biến động). Nếu đặt ngưỡng hồi quy quá nhạy (ví dụ $p95 > +5\%$), pipeline sẽ liên tục báo lỗi đỏ giả (False Alarms), làm mất lòng tin của lập trình viên (Alert Fatigue). Ngược lại, nếu đặt ngưỡng quá cao (ví dụ $+50\%$), hệ thống sẽ bỏ lọt các lỗi suy thoái nguy hiểm.
 - **Giải pháp tối ưu:**
   - Thiết lập ngưỡng cảnh báo **2 tầng**: 

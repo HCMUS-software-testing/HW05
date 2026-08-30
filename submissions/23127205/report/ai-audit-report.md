@@ -4,7 +4,8 @@
 **MSSV:** 23127205  
 **Mã bài tập:** HW05-AI - Kiểm thử Hiệu năng  
 **Workflow:** `Login -> Search Product -> Product Detail -> Add to Cart -> Checkout`  
-**SUT:** EShop RESTful API Backend (`http://localhost:3000`)  
+**SUT:** EShop RESTful API Backend (`http://localhost:3000`), Frontend Web (`http://localhost:5173`), Frontend Admin (`http://localhost:5174`)  
+**Repository:** [`https://github.com/HCMUS-software-testing/HW05`](https://github.com/HCMUS-software-testing/HW05)  
 
 ---
 
@@ -17,6 +18,7 @@
 > - Trích xuất số liệu Ground Truth từ raw `.jtl` log bằng Python parser.
 > - Cung cấp phân tích ban đầu về log hiệu năng để sinh viên đối chứng và săn lỗi ảo giác.
 > - Hỗ trợ thiết kế mô hình CI/CD và sinh script tự động hóa kiểm chứng lỗi thực nghiệm trên SUT.
+> - Tự động hóa Browser Automation Engine để capture bằng chứng giao diện thực tế và đồng bộ GitHub Issues qua REST API.
 >
 > *(Lưu ý: Báo cáo Phê bình AI Critique được sinh viên tự viết độc lập 100% nhằm phản biện các kết quả phân tích của AI theo đúng quy định tại Mục 10 của đề bài).*
 
@@ -254,27 +256,59 @@ Thiết kế khung kiến trúc mô hình kiểm thử hiệu năng liên tục 
 
 ---
 
-### Entry #12: Viết Script Tự Động Xác Thực 7 Lỗi trên Backend SUT
-- **Thời gian:** `2026-08-30 11:45:10 +07:00`
+### Entry #12: Tự động hóa Browser Engine Tái hiện & Capture Bằng chứng Thực tế 11 Lỗi trên SUT
+- **Thời gian:** `2026-08-30 22:00:15 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
-- **Mức Bloom-AI:** G9.2 (Apply) & G9.4 (Collaborate)
+- **Mức Bloom-AI:** G9.4 (Collaborate) & G9.2 (Apply)
 
 #### Prompt:
 ```text
-Dựa trên phân tích mã nguồn server.js và database.js, hãy viết script Python tự động (verify_bug_hunting.py) gửi các HTTP requests thực tế đến Backend SUT để kiểm chứng định lượng 7 lỗi: Memory Leak tại userCarts, SQLite Write Lock Contention, khuyết tật khóa tài khoản login_attempts + 2, SQL Injection tại ô tìm kiếm, ép kiểu giá String ID chẵn, và lỗi máy trạng thái đơn hàng.
+Tôi đang trong quá trình thực hiện capture bug cho bài tập HW05. Bạn hãy giúp tôi tự động mở tab mở browser thật để có thể capture đầy đủ các minh chứng cho bug report giúp tôi (TUYỆT ĐỐI KHÔNG ĐƯỢC PHÉP DRAW GIẢ LẬP MÀN HÌNH HOẶC DÙNG CANVAS MOCK).
 ```
 
 #### AI Output:
-1. Viết script `verify_bug_hunting.py` gửi live HTTP requests và truy vấn trực tiếp SQLite để kiểm chứng 7 lỗi.
-2. Tự động chụp và lưu các ảnh minh chứng thực nghiệm vào `evidence/bugs/` (`bug_empirical_verification.png`, `bug_sql_injection.png`, `bug_type_mismatch.png`, `bug_evidence_summary.json`).
+1. Khởi chạy trọn bộ 3 phân hệ SUT: Backend API (`localhost:3000`), Frontend Web (`localhost:5173`), Frontend Admin (`localhost:5174`).
+2. Sử dụng Browser Automation Engine (Puppeteer/Playwright) tự động điều khiển các tab trình duyệt thực tế, tương tác React form state để kích hoạt và tái hiện 11 lỗi:
+   - Rò rỉ mảng giỏ hàng `userCarts` trong Heap sau checkout.
+   - Bất đối xứng độ trễ SQLite lock và Throughput Event Loop ceiling trên JMeter HTML Dashboard.
+   - Khóa tài khoản oan sau 2 lần sai do bước tăng `login_attempts + 2`.
+   - Sai lệch kiểu dữ liệu giá sản phẩm ID chẵn thành String.
+   - SQL Injection tại thanh tìm kiếm làm rò rỉ trang lỗi HTML `<h1>Database Error</h1>`.
+   - Máy trạng thái Admin cho phép chuyển từ `canceled` sang `delivered`.
+   - Lỗi tính tiền Coupon phần trăm làm giảm giá bị âm `-4,500,000 ₫` và đội giá thanh toán lên `5,000,000 ₫`.
+   - Bất đẳng thức ngặt từ chối đơn hàng đúng 300,000 ₫.
+   - Leo thang đặc quyền Admin qua `PUT /api/users/me`.
+   - Hủy đơn hàng đang ở trạng thái `shipping` (Đang giao).
+3. Lưu trữ 11 file ảnh chụp nguyên bản (Pure Raw UI) vào `submissions/23127205/evidence/bugs/`.
 
-#### Human Review & Action:
-> Chạy script trực tiếp trên Backend đang hoạt động, xác nhận 7/7 bug đều được tái hiện 100% với số liệu định lượng, hoàn thiện tài liệu `report/bug-report.md`.
+#### Human Review & Action (Sinh viên Săn Lỗi & Chuẩn Hóa):
+> Học viên rà soát chất lượng ảnh chụp, phát hiện các khung overlay banner can thiệp DOM và yêu cầu AI loại bỏ hoàn toàn để lấy ảnh giao diện nguyên trạng của hệ thống. Đồng thời yêu cầu dọn dẹp các file ảnh alias trùng lặp, giữ lại đúng 11 ảnh chuẩn mực tương ứng với 11 Bug Report.
 
 ---
 
-### Entry #13: Tự động hóa Pipeline Xuất bản PDF & Trích xuất Git Log
-- **Thời gian:** `2026-08-30 20:06:30 +07:00`
+### Entry #13: Tự động hóa Đăng tải & Đồng bộ Báo cáo Lỗi lên GitHub Issues qua REST API
+- **Thời gian:** `2026-08-30 22:23:40 +07:00`
+- **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.4 (Collaborate) & G9.2 (Apply)
+
+#### Prompt:
+```text
+Bạn có thể tự động lên GitHub điền GitHub Issues cho 11 bug này được không, cần những quyền nào? Sau khi đăng, hãy truy cập vào từng issue và cập nhật tiêu đề thành tên Tiếng Việt chuẩn mực. Đồng thời xử lý lỗi hiển thị ảnh đính kèm trên GitHub Issues.
+```
+
+#### AI Output:
+1. Hướng dẫn sinh viên cấp quyền GitHub Personal Access Token (PAT) với scope `repo`.
+2. Viết script `post_all_11_issues_to_github.py` phân tích Markdown từ `bug-report.md` và gửi qua GitHub REST API (`POST /repos/HCMUS-software-testing/HW05/issues`), tự động đăng thành công 11 Issues từ #1 đến #11 kèm nhãn phân loại (`bug`, `performance`, `security`, `logic`, `functional`).
+3. Viết script `update_github_issues_vi.py` gửi `PATCH /issues/{id}` chuẩn hóa tiêu đề toàn bộ 11 Issues sang Tiếng Việt.
+4. Viết script `update_github_issues_body_images.py` chuyển đổi các đường dẫn ảnh tương đối thành live URL `?raw=true` và link tệp trực tiếp trên branch `khanh` của GitHub repository, giải quyết triệt để lỗi không hiển thị ảnh trên GitHub.
+
+#### Human Review & Action:
+> Học viên cung cấp PAT token cá nhân, kiểm tra trực tiếp 11 Issues trên giao diện web GitHub, yêu cầu chuyển đổi tiêu đề sang Tiếng Việt và yêu cầu sửa lỗi ảnh. Sau khi AI đẩy nhánh `khanh` lên remote, học viên nghiệm thu 11 Issues hiển thị đầy đủ ảnh minh chứng thực tế và định dạng chuẩn mực.
+
+---
+
+### Entry #14: Tự động hóa Pipeline Xuất bản PDF & Trích xuất Git Commit Log
+- **Thời gian:** `2026-08-30 22:30:10 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
 - **Mức Bloom-AI:** G9.2 (Apply)
 
@@ -284,8 +318,8 @@ Viết script Python (generate_pdfs.py) sử dụng Microsoft Edge Headless đ�
 ```
 
 #### AI Output:
-1. Viết script `generate_pdfs.py` kết xuất thành công 7 file PDF chất lượng cao.
-2. Trích xuất toàn bộ lịch sử 22+ commits vào `submissions/23127205/git-commit-log.txt`.
+1. Viết script `generate_pdfs.py` kết xuất thành công 7 file PDF chất lượng cao (`main-report.pdf`, `bug-report.pdf`, `ai-audit-report.pdf`, `ai-critique.pdf`, `task2-ai-analysis.pdf`, `task3-continuous-performance-testing.pdf`, `workflow-description.pdf`).
+2. Trích xuất toàn bộ lịch sử 24+ commits vào `submissions/23127205/git-commit-log.txt`.
 3. Sinh HTML Report Dashboard cho Endurance Test tại `submissions/23127205/results/endurance/html-report/`.
 
 #### Human Review & Action:
@@ -295,7 +329,7 @@ Viết script Python (generate_pdfs.py) sử dụng Microsoft Edge Headless đ�
 
 ## 3. Tổng kết Đánh giá Kiểm toán Sử dụng AI
 
-1. **Tuân thủ Chính sách Môn học:** Toàn bộ 13 phiên tương tác đều có mục tiêu kỹ thuật rõ ràng, sử dụng AI theo phương pháp tiếp cận từng bước (Step-by-step Guided Engineering), tuyệt đối không dùng prompt "hộp đen".
-2. **Tính Trung thực Học thuật:** Báo cáo phê bình AI Critique được sinh viên tự viết độc lập để phản biện AI theo đúng yêu cầu đề bài. AI chỉ được sử dụng làm công cụ trợ giúp thiết kế, tạo dữ liệu, sinh mã tự động hóa và phân tích ban đầu.
-3. **Vai trò Giám sát của Con người (Human-in-the-Loop):** 100% kết quả từ mã nguồn, cấu hình JMX, số liệu phân vị đến các bài viết phân tích đều được học viên trực tiếp chạy kiểm chứng thực nghiệm, phát hiện lỗi và sửa đổi trước khi nghiệm thu.
+1. **Tuân thủ Chính sách Môn học:** Toàn bộ 14 phiên tương tác đều có mục tiêu kỹ thuật rõ ràng, sử dụng AI theo phương pháp tiếp cận từng bước (Step-by-step Guided Engineering), tuyệt đối không dùng prompt "hộp đen".
+2. **Tính Trung thực Học thuật:** Báo cáo phê bình AI Critique được sinh viên tự viết độc lập để phản biện AI theo đúng yêu cầu đề bài. AI chỉ được sử dụng làm công cụ trợ giúp thiết kế, tạo dữ liệu, sinh mã tự động hóa, điều khiển trình duyệt và phân tích ban đầu.
+3. **Vai trò Giám sát của Con người (Human-in-the-Loop):** 100% kết quả từ mã nguồn, cấu hình JMX, số liệu phân vị đến các bài viết phân tích, ảnh capture và GitHub Issues đều được học viên trực tiếp chạy kiểm chứng thực nghiệm, phát hiện lỗi và sửa đổi trước khi nghiệm thu.
 4. **Năng lực Bloom-AI Đạt được:** Thể hiện trọn vẹn các cấp độ **G9.2 (Apply)**, **G9.3 (Analyse)**, **G9.4 (Collaborate)**, và **G9.6 (Disrupt)**.

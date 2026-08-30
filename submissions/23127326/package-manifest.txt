@@ -4,6 +4,8 @@ Tên file đích: `23127326_HW05_AI_Performance_100.zip`
 
 Bao gồm: README.md; Agent Skill; dữ liệu; test plan; tools; báo cáo; evidence; kết quả chính thức Load, Stress, Spike, Endurance; kết quả resource-rerun với monitor CPU/RSS/thread hợp lệ.
 
+Kho GitHub công khai: `https://github.com/HB4305/23127326-HW05-AI-Performance`; GitHub Issues #1-#4 và ảnh tương ứng nằm trong `evidence/issues/`.
+
 Loại khỏi gói: `.sut` và `.runtime` local tooling; thử nghiệm invalid-duration và invalid-early-csv; các lần smoke phụ; thông tin định danh phần cứng nhạy cảm; video sinh viên (sẽ bổ sung thủ công).
 
 Trước khi nộp: thêm URL video không công khai vào `report/main-report.md` và `README.md`. Self-assessment hiện là 100/100. Kiểm tra đây là mức điểm bạn muốn tự đánh giá.

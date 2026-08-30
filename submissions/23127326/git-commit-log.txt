@@ -14,6 +14,9 @@ b5817fa test: thêm evidence resource và self-assessment
 491af58 docs: hoàn thiện gói performance có chấm điểm
 0dd1474 docs: cập nhật log commit performance
 90ed44e docs: chuẩn hóa screenshot performance
+748d599 docs: chuyển tài liệu và evidence HW05 sang tiếng Việt
+3a76811 docs: hoàn thiện gói HW05 tiếng Việt
+d659aec docs: thêm evidence GitHub Issue
 ```
 
 Không thay các hash này bằng hash tự tạo.

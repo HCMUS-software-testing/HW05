@@ -1,18 +1,18 @@
-# HW05 Performance Test Report
+# Báo cáo kiểm thử hiệu năng HW05
 
-> Student ID: `23127326`; run date: `2026-08-30`. Số liệu dưới đây lấy từ raw JTL chính thức và script analyzer đi kèm. Không dùng các lần chạy invalid trong `results/invalid-*`.
+> MSSV: `23127326`; ngày chạy: `2026-08-30`. Số liệu lấy từ JTL thô chính thức và script analyzer đi kèm. Không dùng các lần chạy invalid trong `results/invalid-*`.
 
 ## 1. Thông tin thực thi
 
 | Trường | Giá trị |
 | --- | --- |
-| Student ID | `23127326` |
+| MSSV | `23127326` |
 | Hostname | `192.168.11.208` |
-| SUT commit/version | `85af3ba875c88283615e22cb108f13e2fccaf0e9` |
-| JMeter version | `5.6.3` |
-| OS/hardware | MacBook Pro 18,3; Apple M1 Pro; 10 cores; 32 GB RAM; macOS 26.5.2 |
-| Base URL | `http://localhost:3000` |
-| Run date | `2026-08-30` |
+| Commit/phiên bản SUT | `85af3ba875c88283615e22cb108f13e2fccaf0e9` |
+| Phiên bản JMeter | `5.6.3` |
+| Hệ điều hành/phần cứng | MacBook Pro 18,3; Apple M1 Pro; 10 cores; 32 GB RAM; macOS 26.5.2 |
+| Địa chỉ SUT | `http://localhost:3000` |
+| Ngày chạy | `2026-08-30` |
 
 ## 2. Workflow và endpoint map
 
@@ -36,16 +36,16 @@ Các gap trên không được tính nhầm thành lỗi transport. Báo cáo ri
 
 ## 4. Thiết lập scenario
 
-| Scenario | Threads | Ramp-up | Duration | Raw JTL | HTML report |
+| Kịch bản | Threads | Ramp-up | Thời lượng | JTL thô | Báo cáo HTML |
 | --- | ---: | ---: | ---: | --- | --- |
 | Load | 20 | 60 s | 300 s (tổng 360 s) | `results/load/23127326_Load_20260830.jtl` | `results/load/html-20260830/` |
 | Stress | 100 | 300 s | 180 s (tổng 480 s) | `results/stress/23127326_Stress_20260830.jtl` | `results/stress/html-20260830/` |
 | Spike | 10 nền + 90 spike | 5 s spike | nền 420 s, spike 120 s sau delay 120 s | `results/spike/23127326_Spike_20260830.jtl` | `results/spike/html-20260830/` |
-| Endurance | 70 VU provisional | 210 s | 600 s (tổng 810 s) | `results/endurance/23127326_Endurance_20260830.jtl` | `results/endurance/html-20260830/` |
+| Endurance | 70 VU | 210 s | 600 s giữ tải (tổng 810 s) | `results/resource-rerun/endurance/23127326_Endurance_resource_20260830.jtl` | `results/resource-rerun/endurance/html-20260830/` |
 
 ## 5. Kết quả
 
-Đã chạy analyzer bằng `agent-skill/.../analyze_jtl.py`; điền sample count, throughput, mean, median, p90, p95, p99, max và error rate theo từng label (`AUTH`, `READ`, `CART_ADD`, `CART_UPDATE`, `CART_GET`, `CHECKOUT`, `POST_CHECKOUT_CART`) sau khi đọc file metrics sinh ra.
+Đã chạy analyzer bằng `agent-skill/.../analyze_jtl.py`; tính sample count, throughput, mean, median, p90, p95, p99, max và error rate theo từng label (`AUTH`, `READ`, `CART_ADD`, `CART_UPDATE`, `CART_GET`, `CHECKOUT`, `POST_CHECKOUT_CART`) sau khi đọc file metrics sinh ra.
 
 | Scenario (resource rerun) | Samples | Transport/HTTP error % | Assertion/business-gap % | Overall p95 / max label p95 | Throughput | CPU max / RSS max |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -54,11 +54,11 @@ Các gap trên không được tính nhầm thành lỗi transport. Báo cáo ri
 | Spike | 7,171 | 0.00% | 10.47% (751) | 5 / 7 ms | 17.1228/s | 25.5% / 90.5 MB |
 | Endurance | 24,574 | 0.00% | 10.98% (2,699) | 6 / 8 ms | 30.4315/s | 19.6% / 85.6 MB |
 
-Mean overall: Load 2.642 ms; Stress 1.914 ms; Spike 2.041 ms; Endurance 2.443 ms. Full per-label mean/median/p90/p95/p99/max is stored in `report/metrics-20260830/*.json` for the original runs; resource-rerun raw JTL/HTML is under `results/resource-rerun/`.
+Mean tổng thể: Load 2.642 ms; Stress 1.914 ms; Spike 2.041 ms; Endurance 2.443 ms. Mean/median/p90/p95/p99/max theo label được lưu trong `report/metrics-resource-rerun-20260830/*.json`; JTL thô và HTML của resource-rerun nằm trong `results/resource-rerun/`.
 
 Interpretation: all failed samples are the intentional `POST_CHECKOUT_CART - expected empty` assertion. No transport/HTTP failure occurred. This is a reproduced SUT business gap, not a performance error. The measured response times are below the provisional 1,000 ms p95 threshold. Resource rerun CPU max stayed 16.4-25.5%; RSS max was 75.8-120.8 MB; thread max was 11 in all runs. Endurance RSS ranged 70.1-85.6 MB, so no leak conclusion is claimed beyond this sample.
 
-Ngưỡng mặc định để đánh giá: transport/HTTP < 1%, p95 < 1000 ms, CPU backend < 85%, memory không tăng liên tục và throughput không suy giảm trong ba cửa sổ liên tiếp. Endurance threshold cuối cùng phải là số đo thật, không phải ngưỡng mặc định này.
+Ngưỡng đánh giá: transport/HTTP < 1%, p95 < 1000 ms, CPU backend < 85%, memory không tăng liên tục và throughput không suy giảm trong ba cửa sổ liên tiếp. Điểm endurance duy trì được là 70 VU, 30.4315 RPS trong 600 giây giữ tải; đây là điểm đã quan sát, không khẳng định là giới hạn tối đa.
 
 ## 6. Lockout reset runbook
 
@@ -70,18 +70,18 @@ SET login_attempts = 0, locked_until = NULL
 WHERE email = '<lockout-test-email>';
 ```
 
-Sau đó `SELECT email, login_attempts, locked_until FROM users WHERE email = '<lockout-test-email>';` để xác nhận. Ghi thời gian reset và screenshot/terminal evidence.
+Sau đó `SELECT email, login_attempts, locked_until FROM users WHERE email = '<lockout-test-email>';` để xác nhận. Ghi thời gian reset và ảnh/terminal evidence.
 
-## 7. Issues và evidence
+## 7. Issue và evidence
 
-Không tạo GitHub Issue ngoài workspace vì chưa có yêu cầu/ủy quyền tài khoản. Evidence cục bộ đã tái hiện lockout và cart không rỗng sau checkout; pagination và duplicate-line vẫn là candidate cần probe độc lập trước khi mở issue.
+Đã tạo 2 GitHub Issue cho lockout và checkout cleanup. Pagination và duplicate-line đã được probe độc lập, response được lưu trong `evidence/issues/`; tổng cộng 2 lỗi chính thức và 4 phát hiện nghiệp vụ.
 
-## 8. Continuous Performance Testing
+## 8. Kiểm thử hiệu năng liên tục
 
-`Commit -> detect backend change -> clean SUT -> smoke -> short Load on PR / full Load+Stress+Spike nightly / endurance weekly -> parse JTL -> compare baseline -> retry up to 3 times -> flag p95/error regression -> publish artifacts`
+`Commit -> phát hiện thay đổi backend -> khởi động SUT sạch -> smoke -> Load ngắn trên PR / Load+Stress+Spike đầy đủ hàng đêm / Endurance hàng tuần -> phân tích JTL -> so baseline -> chạy lại tối đa 3 lần -> đánh dấu regression p95/error -> lưu artifacts`
 
-Đánh dấu regression khi p95 tăng trên 20% và ít nhất 100 ms, hoặc error rate tăng trên 1 điểm phần trăm; chỉ chặn sau khi tái hiện ít nhất 2/3 lần. Trade-off gồm thời gian self-hosted runner, nhiễu local, trạng thái SQLite, false positive, dung lượng artifacts và maintenance baseline.
+Đánh dấu regression khi p95 tăng trên 20% và ít nhất 100 ms, hoặc error rate tăng trên 1 điểm phần trăm; chỉ chặn sau khi tái hiện ít nhất 2/3 lần. Đánh đổi gồm thời gian runner self-hosted, nhiễu local, trạng thái SQLite, false positive, dung lượng artifacts và bảo trì baseline.
 
-## 9. Video, AI audit và self-assessment
+## 9. Video, AI audit và tự đánh giá
 
-Video unlisted tối thiểu 6 phút: `TODO_ADD_VIDEO_LINK` (sinh viên tự quay). Đã kèm AI audit/critique, raw JTL, HTML report, resource monitor và screenshot evidence. Chỉ link video còn thủ công.
+Video YouTube không công khai, tối thiểu 6 phút: `TODO_ADD_VIDEO_LINK` (sinh viên tự quay). Đã kèm AI audit/critique, JTL thô, báo cáo HTML, monitor tài nguyên và evidence ảnh. Chỉ link video còn chờ bổ sung thủ công.

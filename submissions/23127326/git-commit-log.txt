@@ -1,17 +1,19 @@
-This file is regenerated after the local task commit. It contains actual repository history, not invented hashes:
+Đây là lịch sử commit thật của repository, không phải hash tự tạo:
 
 ```bash
 git log --oneline -- submissions/23127326
 ```
 
-Current history:
+Lịch sử liên quan hiện tại:
 
 ```text
-d0e8dce test: add HW05 performance submission
-a962ba3 docs: record HW05 commit log
-afe312d chore: ignore local performance artifacts
-b5817fa test: add resource evidence and final assessment
-491af58 docs: finalize graded performance package
+d0e8dce test: thêm bài nộp kiểm thử hiệu năng HW05
+a962ba3 docs: ghi log commit HW05
+afe312d chore: bỏ qua artifact hiệu năng local
+b5817fa test: thêm evidence resource và self-assessment
+491af58 docs: hoàn thiện gói performance có chấm điểm
+0dd1474 docs: cập nhật log commit performance
+90ed44e docs: chuẩn hóa screenshot performance
 ```
 
 Do not replace this with invented commit hashes.

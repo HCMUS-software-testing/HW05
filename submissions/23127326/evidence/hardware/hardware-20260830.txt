@@ -10,10 +10,10 @@ Hardware:
       Memory: 32 GB
       System Firmware Version: 18000.121.3
       OS Loader Version: 18000.121.3
-      Serial Number (system): WJ5QM21WR6
-      Hardware UUID: 684FDA4E-A97E-51E8-914D-F6A143E3853E
-      Provisioning UDID: 00006000-000C285A21D2801E
-      Activation Lock Status: Enabled
+      Serial Number (system): [đã che]
+      Hardware UUID: [đã che]
+      Provisioning UDID: [đã che]
+      Activation Lock Status: [đã che]
 
 Software:
 
@@ -24,8 +24,7 @@ Software:
       Boot Volume: Macintosh HD
       Boot Mode: Normal
       Computer Name: Em la HB
-      User Name: Em la HB (mac)
+      User Name: [đã che]
       Secure Virtual Memory: Enabled
       System Integrity Protection: Enabled
       Time since boot: 32 days, 10 hours, 37 minutes
-

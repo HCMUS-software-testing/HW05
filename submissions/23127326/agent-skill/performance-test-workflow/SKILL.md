@@ -1,31 +1,30 @@
 ---
 name: performance-test-workflow
-description: Build and review a data-driven JMeter performance workflow for Load, Stress, Spike and Endurance runs, with raw-JTL metric checks and explicit separation of transport errors from business assertions.
+description: Xây dựng và review workflow JMeter có dữ liệu, cho Load, Stress, Spike và Endurance, kèm kiểm tra metric từ JTL thô và tách rõ lỗi transport khỏi assertion nghiệp vụ.
 metadata:
-  short-description: Reusable EShop performance workflow
+  short-description: Workflow kiểm thử hiệu năng EShop có thể tái sử dụng
 ---
 
-# Performance test workflow
+# Workflow kiểm thử hiệu năng
 
-Use this skill when preparing or reviewing a JMeter API performance submission.
+Dùng skill này khi chuẩn bị hoặc review bài kiểm thử hiệu năng API bằng JMeter.
 
-## Required workflow
+## Quy trình bắt buộc
 
-1. Read the selected API contract and the SUT implementation. Record any contract/implementation gap as a test assertion or issue candidate; never change the SUT to make the run pass.
-2. Use separate CSV rows per virtual user. Configure `Recycle on EOF=false`, `Stop thread on EOF=true`, and plan fixture creation outside measured time.
-3. Correlate runtime values from responses: JWT token, product id/name/price and order id. Do not hard-code tokens or trust client-provided totals.
-4. Keep one end-to-end flow across scenario plans: login, read/search, cart add, cart update probe, cart read, checkout and post-checkout cart check.
-5. Keep lockout negative-path probes separate and disabled for official positive runs. Reset only the named test account between runs and record before/after state.
-6. Use non-GUI JMeter for official runs. Keep one distinct listener/report view per scenario, but disable listeners while measuring.
-7. Analyze raw JTL by label with `scripts/analyze_jtl.py`. Recalculate sample count, throughput, mean, median, p90, p95, p99, max and error categories before accepting any AI interpretation.
-8. Report metrics only when traceable to raw JTL and resource evidence. Mark unverified optimization claims as hypotheses rather than causes.
+1. Đọc contract API và implementation của SUT. Ghi mọi khoảng cách contract/implementation thành assertion hoặc candidate issue; không sửa SUT để làm run pass.
+2. Dùng CSV riêng cho từng virtual user. Cấu hình `Recycle on EOF=false`, `Stop thread on EOF=true`, và tạo fixture ngoài thời gian đo.
+3. Correlate giá trị runtime từ response: JWT token, product id/name/price và order id. Không hard-code token hoặc tin total do client gửi.
+4. Giữ một E2E flow chung giữa các plan: login, search/read, cart add, cart update probe, cart read, checkout và kiểm tra cart sau checkout.
+5. Tách lockout negative-path và tắt nó trong positive run chính thức. Chỉ reset đúng tài khoản test và ghi trạng thái trước/sau.
+6. Dùng JMeter non-GUI cho lần chạy chính thức. Giữ một report view riêng cho từng kịch bản nhưng tắt listener khi đo.
+7. Phân tích JTL thô theo label bằng `scripts/analyze_jtl.py`. Tính lại sample count, throughput, mean, median, p90, p95, p99, max và nhóm lỗi trước khi chấp nhận diễn giải của AI.
+8. Chỉ báo cáo metric có thể truy nguyên về JTL thô và resource evidence. Claim tối ưu chưa được xác minh phải ghi là giả thuyết, không phải nguyên nhân.
 
-## EShop-specific review points
+## Điểm review riêng của EShop
 
-- The current implementation may ignore `page` and `limit` on product search.
-- A second `POST /api/cart` may create a second row instead of updating quantity.
-- Checkout may accept `total_amount` from the client and may leave the cart populated.
-- Login lockout behavior must be measured rather than inferred from the specification.
+- Implementation hiện tại có thể bỏ qua `page` và `limit` khi tìm sản phẩm.
+- POST `/api/cart` lần hai có thể tạo dòng mới thay vì cập nhật quantity.
+- Checkout có thể nhận `total_amount` từ client và không làm rỗng cart.
+- Hành vi lockout phải được đo, không được suy ra chỉ từ đặc tả.
 
-The API-specific notes are in [references/eshop-contract.md](references/eshop-contract.md). Use the analyzer in [scripts/analyze_jtl.py](scripts/analyze_jtl.py) for raw evidence only; it must not invent missing runs.
-
+Ghi chú API nằm trong [references/eshop-contract.md](references/eshop-contract.md). Dùng analyzer tại [scripts/analyze_jtl.py](scripts/analyze_jtl.py) chỉ cho evidence JTL thô; không tự tạo run còn thiếu.

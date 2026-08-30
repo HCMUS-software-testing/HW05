@@ -1,0 +1,3 @@
+{"timestamp":"2026-08-30T06:54:57.511699Z","step":"pagination","path":"/api/products?search=iPhone&page=1&limit=1","status":200,"count":1,"ids":[1]}
+{"timestamp":"2026-08-30T06:54:57.512571Z","step":"pagination","path":"/api/products?search=iPhone&page=2&limit=1","status":200,"count":1,"ids":[1]}
+{"timestamp":"2026-08-30T06:54:57.513399Z","step":"pagination","path":"/api/products?search=iPhone&page=1&limit=20","status":200,"count":1,"ids":[1]}

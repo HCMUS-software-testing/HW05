@@ -1,21 +1,20 @@
-# EShop contract notes
+# Ghi chú contract EShop
 
-Source documents reviewed on 2026-08-29:
+Tài liệu nguồn đã review ngày 2026-08-29:
 
-- API specification: <https://github.com/ttbhanh/eshop-sut/blob/main/api_specification.md>
-- Backend implementation: <https://github.com/ttbhanh/eshop-sut/blob/main/backend/server.js>
-- Seed data/setup: <https://github.com/ttbhanh/eshop-sut/blob/main/backend/database.js>
+- Đặc tả API: <https://github.com/ttbhanh/eshop-sut/blob/main/api_specification.md>
+- Implementation backend: <https://github.com/ttbhanh/eshop-sut/blob/main/backend/server.js>
+- Dữ liệu seed/setup: <https://github.com/ttbhanh/eshop-sut/blob/main/backend/database.js>
 
-Selected calls:
+## Các request được chọn
 
-| Method | Path | Runtime data |
+| Method | Path | Dữ liệu runtime |
 | --- | --- | --- |
-| POST | `/api/login` | `email`, `password`; extract `token` |
-| GET | `/api/products` | `search`, `page`, `limit`; extract first `id`, `name`, `price` |
-| POST | `/api/cart` | extracted product fields and CSV quantity |
-| GET | `/api/cart` | verify one matching line and requested quantity |
-| POST | `/api/checkout` | computed total and CSV shipping address; extract `orderId` |
-| GET | `/api/cart` | expected empty after checkout |
+| POST | `/api/login` | `email`, `password`; trích xuất `token` |
+| GET | `/api/products` | `search`, `page`, `limit`; trích xuất `id`, `name`, `price` đầu tiên |
+| POST | `/api/cart` | field sản phẩm đã trích xuất và quantity từ CSV |
+| GET | `/api/cart` | kiểm tra một dòng matching và quantity yêu cầu |
+| POST | `/api/checkout` | total đã tính và địa chỉ giao hàng từ CSV; trích xuất `orderId` |
+| GET | `/api/cart` | kỳ vọng cart rỗng sau checkout |
 
-Do not treat the specification as proof of actual behavior. Confirm contract gaps from the live SUT and raw responses.
-
+Không xem đặc tả là bằng chứng cho hành vi thật. Phải xác nhận gap contract từ SUT đang chạy và raw response.

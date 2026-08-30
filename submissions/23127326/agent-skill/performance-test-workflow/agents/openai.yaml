@@ -1,4 +1,4 @@
 interface:
-  display_name: "Performance Test Workflow"
-  short_description: "Build and audit data-driven JMeter performance runs"
-  default_prompt: "Use $performance-test-workflow to review this performance-test workflow and its raw JTL evidence."
+  display_name: "Workflow kiểm thử hiệu năng"
+  short_description: "Xây dựng và audit lần chạy JMeter có dữ liệu"
+  default_prompt: "Dùng $performance-test-workflow để review workflow kiểm thử hiệu năng và evidence JTL thô."

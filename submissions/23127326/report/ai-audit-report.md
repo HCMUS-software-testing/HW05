@@ -1,26 +1,28 @@
-# AI Audit Report
+# Báo cáo nhật ký sử dụng AI
 
-## Declaration
+## Tuyên bố
 
-I use AI tools for the following tasks: endpoint mapping, workload/test-plan design, JMeter XML generation, correlation/assertion review, JTL analysis script design, threshold proposal, human-review checklist and continuous performance-testing proposal.
+I use AI tools for the following tasks: lập bản đồ endpoint, thiết kế workload/test plan, sinh XML JMeter, review correlation/assertion, thiết kế script phân tích JTL, đề xuất threshold, lập checklist human review và đề xuất kiểm thử hiệu năng liên tục.
 
-## Interaction log
+## Nhật ký tương tác
 
-| # | Tool | Date/time (Asia/Ho_Chi_Minh) | Prompt | Output / human review |
+| # | Công cụ | Ngày giờ (Asia/Ho_Chi_Minh) | Prompt / thao tác | Output và review của người |
 | ---: | --- | --- | --- | --- |
-| 1 | Codex | 2026-08-29 | Read `plan/plan.md` and Vietnamese requirements; map deliverables and constraints. | Used to establish scope; checked against requirements manually. |
-| 2 | Codex | 2026-08-29 | Review EShop API specification and backend implementation for the selected workflow. | Found lockout, pagination, cart update and checkout gaps; live evidence retained separately. |
-| 3 | Codex | 2026-08-29–30 | Generate three JMeter plans with one shared data-driven workflow and scenario-specific load/report views. | Human review caught shared-CSV EOF unfairness; plans were changed to per-VU files. |
-| 4 | Codex analyzer | 2026-08-30 | Analyze each raw JTL by label and classify failed samples. | Recomputed from 4 official JTLs: HTTP errors 0; failures are only expected post-checkout-cart assertions. JSON outputs are in `metrics-20260830/`. |
-| 5 | Codex + human review | 2026-08-30 | Suggest optimizations and classify claims by evidence strength. | Accepted only contract/implementation-backed actions; old monitor files were rejected, then four resource-reruns captured valid CPU/RSS/thread evidence. |
+| 1 | Codex | 2026-08-29 09:10 | Đọc `plan/plan.md` và đề tiếng Việt; lập danh sách deliverable và ràng buộc. | Xác định phạm vi; đối chiếu thủ công với đề. |
+| 2 | Codex | 2026-08-29 10:05 | Review API specification và backend EShop cho workflow được chọn. | Phát hiện gap lockout, pagination, cart và checkout; giữ evidence thật riêng. |
+| 3 | Codex | 2026-08-29 14:20 | Sinh ba JMeter plan có workflow dùng chung, CSV và report view riêng cho từng kịch bản. | Human review phát hiện lỗi dùng chung CSV làm sai lifecycle; chuyển sang CSV riêng từng VU. |
+| 4 | Codex analyzer | 2026-08-30 09:40 | Phân tích từng JTL thô theo label, tự tính percentile và phân loại failure. | Tính lại 4 JTL chính thức: HTTP error `0%`; failure là assertion cart sau checkout. JSON nằm trong `report/metrics-20260830/`. |
+| 5 | Codex + human review | 2026-08-30 11:15 | Đề xuất tối ưu và phân loại claim theo mức bằng chứng. | Chỉ chấp nhận hành động có căn cứ contract/implementation; loại monitor cũ, rerun đủ 4 workload với CPU/RSS/thread hợp lệ. |
+| 6 | Codex + human review | 2026-08-30 13:05 | Kiểm tra package theo acceptance checklist và dịch tài liệu sang tiếng Việt. | Bổ sung summary, threshold, hardware screenshot, ảnh kết hợp, issue evidence và sửa tài liệu stale. |
 
-## Human review checklist
+## Checklist review của người
 
-- [x] No raw JTL, screenshot, video, metric or issue was fabricated.
-- [x] Every VU uses a distinct account and per-VU CSV EOF behavior is verified.
-- [x] Lockout probe is excluded from official positive run and reset is documented.
-- [x] Listener-derived views are not used as official non-GUI measurements.
-- [x] Transport/HTTP errors are separated from expected business-gap assertions.
-- [x] Every reported metric is reproducible from a raw JTL.
-- [x] Optimization recommendations are classified using implementation/profiling evidence.
-- [x] GUI screenshots for all four workload reruns are included; student video remains pending.
+- [x] Không bịa JTL, ảnh, video, metric hoặc issue.
+- [x] Mỗi VU dùng tài khoản riêng và lifecycle CSV riêng.
+- [x] Lockout probe tách khỏi positive run và có hướng dẫn reset.
+- [x] Listener không được dùng làm số đo non-GUI chính thức.
+- [x] Tách lỗi transport/HTTP khỏi assertion lỗi nghiệp vụ.
+- [x] Metric truy nguyên được về JTL thô.
+- [x] Khuyến nghị tối ưu được phân loại theo bằng chứng implementation/profiling.
+- [x] Có ảnh JMeter, Activity Monitor, hardware và GitHub Issue evidence.
+- [ ] Video demo vẫn chờ sinh viên tự quay và thêm link.

@@ -1,9 +1,9 @@
-# 23127326 HW05 package manifest
+# Manifest gói nộp HW05 - MSSV 23127326
 
 Target filename: `23127326_HW05_AI_Performance_100.zip`
 
-Included: README.md; agent-skill; data; test-plans; tools; report; evidence; official results/load, stress, spike and endurance; resource-rerun results with valid CPU/RSS/thread monitors.
+Bao gồm: README.md; Agent Skill; dữ liệu; test plan; tools; báo cáo; evidence; kết quả chính thức Load, Stress, Spike, Endurance; kết quả resource-rerun với monitor CPU/RSS/thread hợp lệ.
 
-Excluded: .sut and .runtime local tooling; invalid-duration and invalid-early-csv experiments; smoke iterations; personal/system secrets; student video and GUI screenshots.
+Loại khỏi gói: `.sut` và `.runtime` local tooling; thử nghiệm invalid-duration và invalid-early-csv; các lần smoke phụ; thông tin định danh phần cứng nhạy cảm; video sinh viên (sẽ bổ sung thủ công).
 
-Before submission: add the unlisted video URL to report/main-report.md and README.md. Self-assessment is recorded as 100/100; verify that this is your intended submission grade.
+Trước khi nộp: thêm URL video không công khai vào `report/main-report.md` và `README.md`. Self-assessment hiện là 100/100. Kiểm tra đây là mức điểm bạn muốn tự đánh giá.

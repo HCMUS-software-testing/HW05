@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create compact, Unicode-safe PDF deliverables from the completed reports."""
+"""Tạo các PDF ngắn gọn, hỗ trợ Unicode từ báo cáo đã hoàn thiện."""
 
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -46,8 +46,8 @@ def header_footer(canvas, doc):
     canvas.line(18*mm, 14*mm, 192*mm, 14*mm)
     canvas.setFont("Arial", 7)
     canvas.setFillColor(colors.HexColor("#64748B"))
-    canvas.drawString(18*mm, 9*mm, "HW05 Performance Testing | MSSV 23127326")
-    canvas.drawRightString(192*mm, 9*mm, f"Page {doc.page}")
+    canvas.drawString(18*mm, 9*mm, "HW05 Kiểm thử hiệu năng | MSSV 23127326")
+    canvas.drawRightString(192*mm, 9*mm, f"Trang {doc.page}")
     canvas.restoreState()
 
 
@@ -74,35 +74,35 @@ def table(rows, widths, styles):
 
 def main_report(styles):
     path = OUT / "main-report.pdf"
-    story = [p("HW05 Performance Test Report", styles["title"]), p("Student ID 23127326 | Local run date 2026-08-30", styles["small"]), Spacer(1, 4*mm)]
-    story += [p("1. Execution context", styles["h1"]), table([
-        ["Field", "Value"], ["SUT", "http://localhost:3000 | commit 85af3ba875c88283615e22cb108f13e2fccaf0e9"],
-        ["Host", "MacBook Pro 18,3 | Apple M1 Pro | 10 cores | 32 GB RAM | macOS 26.5.2"], ["Tool", "Apache JMeter 5.6.3 | Java 21 | headless non-GUI run"],
+    story = [p("Báo cáo kiểm thử hiệu năng HW05", styles["title"]), p("MSSV 23127326 | Ngày chạy local 2026-08-30", styles["small"]), Spacer(1, 4*mm)]
+    story += [p("1. Bối cảnh thực thi", styles["h1"]), table([
+        ["Trường", "Giá trị"], ["SUT", "http://localhost:3000 | commit 85af3ba875c88283615e22cb108f13e2fccaf0e9"],
+        ["Máy đo", "MacBook Pro 18,3 | Apple M1 Pro | 10 cores | 32 GB RAM | macOS 26.5.2"], ["Công cụ", "Apache JMeter 5.6.3 | Java 21 | chạy non-GUI"],
     ], [32*mm, 142*mm], styles)]
-    story += [p("2. Workflow", styles["h1"]), p("Lockout probe -> valid login -> product search -> cart add -> cart quantity update -> cart read -> checkout -> post-checkout cart assertion. Each official VU uses a distinct synthetic account and a per-VU CSV file.", styles["body"])]
-    story += [p("3. Scenario results", styles["h1"]), table([
-        ["Scenario", "Samples", "HTTP err", "Assertion gap", "p95 overall / max label", "TPS"],
+    story += [p("2. Workflow", styles["h1"]), p("Lockout probe -> login hợp lệ -> tìm sản phẩm -> thêm cart -> gửi quantity cập nhật -> đọc cart -> checkout -> assertion cart sau checkout. Mỗi VU chính thức dùng một tài khoản kiểm thử riêng và một file CSV riêng.", styles["body"])]
+    story += [p("3. Kết quả kịch bản", styles["h1"]), table([
+        ["Kịch bản", "Mẫu", "Lỗi HTTP", "Gap assertion", "p95 tổng / max label", "RPS"],
         ["Load", "3,287", "0 (0.00%)", "356 (10.83%)", "6 / 7 ms", "9.1583"],
         ["Stress", "16,433", "0 (0.00%)", "1,780 (10.83%)", "5 / 7 ms", "34.4137"],
         ["Spike", "7,171", "0 (0.00%)", "751 (10.47%)", "5 / 7 ms", "17.1228"],
         ["Endurance", "24,574", "0 (0.00%)", "2,699 (10.98%)", "6 / 8 ms", "30.4315"],
-    ], [25*mm, 19*mm, 20*mm, 28*mm, 42*mm, 20*mm], styles), p("Weighted mean: Load 2.642 ms; Stress 1.914 ms; Spike 2.041 ms; Endurance 2.443 ms. Resource monitor: CPU max 16.4-25.5%; RSS max 75.8-120.8 MB; 11 threads.", styles["small"])]
-    story += [p("4. Interpretation", styles["h1"]), p("All failed samples are the explicit POST_CHECKOUT_CART - expected empty assertion. The SUT leaves the cart non-empty after checkout. Therefore the 10.47-10.98% failure rates are business-gap evidence, not transport or HTTP failure. Response times are below the provisional 1,000 ms p95 threshold.", styles["body"]), p("Resource rerun used the corrected macOS monitor. Endurance RSS ranged 70.1-85.6 MB in this 13.5-minute local run; no leak conclusion is claimed beyond this sample.", styles["body"])]
-    story += [p("5. Reproduced SUT gaps", styles["h1"]), table([
-        ["Gap", "Evidence"], ["Lockout", "Four responses: 401, 401, 403, 403; DB attempts 4; locked window 180 s. See evidence/issues/lockout-probe-20260830.jsonl."],
-        ["Checkout cleanup", "Post-checkout assertion fails for every observed checkout in all four official workloads."], ["Pagination / duplicate line", "Implementation candidates retained; independent response probe still required before external issue."],
+    ], [25*mm, 19*mm, 20*mm, 28*mm, 42*mm, 20*mm], styles), p("Mean tổng thể: Load 2.642 ms; Stress 1.914 ms; Spike 2.041 ms; Endurance 2.443 ms. Monitor resource: CPU tối đa 16,4-25,5%; RSS tối đa 75,8-120,8 MB; tối đa 11 thread.", styles["small"])]
+    story += [p("4. Diễn giải", styles["h1"]), p("Tất cả mẫu fail là assertion cụ thể POST_CHECKOUT_CART - expected empty. SUT để cart không rỗng sau checkout. Vì vậy tỷ lệ fail 10,47-10,98% là bằng chứng gap nghiệp vụ, không phải lỗi transport hoặc HTTP. Response time thấp hơn threshold p95 1.000 ms.", styles["body"]), p("Lần rerun resource dùng monitor macOS đã sửa. RSS Endurance dao động 70,1-85,6 MB trong lần chạy local 13,5 phút; không kết luận leak ngoài mẫu này.", styles["body"])]
+    story += [p("5. Gap SUT đã tái hiện", styles["h1"]), table([
+        ["Gap", "Bằng chứng"], ["Lockout", "Bốn response: 401, 401, 403, 403; DB attempts 4; thời gian khóa 180 s. Xem evidence/issues/lockout-probe-20260830.jsonl."],
+        ["Dọn cart sau checkout", "Assertion sau checkout fail ở mọi checkout quan sát được trong bốn workload."], ["Pagination / dòng cart trùng", "Đã có response probe độc lập trong evidence/issues/."],
     ], [38*mm, 136*mm], styles)]
-    story += [p("6. Reproduction and evidence", styles["h1"]), p("Raw JTL and JMeter HTML are under results/{load,stress,spike,endurance}. Plans are under test-plans. Synthetic data and provisioning scripts are under data/ and tools/. AI audit, critique and continuous-testing proposal are included. Video and GUI screenshots remain manual tasks for the student.", styles["body"])]
+    story += [p("6. Tái hiện và bằng chứng", styles["h1"]), p("JTL thô và HTML JMeter nằm trong results/{load,stress,spike,endurance}; resource-rerun có bản đo CPU/RSS/thread hợp lệ. Plan nằm trong test-plans; dữ liệu và script tạo fixture nằm trong data/ và tools/. AI audit, critique, đề xuất kiểm thử liên tục, hardware screenshot và GitHub Issue evidence được đính kèm. Video vẫn chờ sinh viên tự quay.", styles["body"])]
     d = doc(path); d.build(story); return path
 
 
 def audit_report(styles):
     path = OUT / "ai-audit-report.pdf"
-    story = [p("AI Audit Report", styles["title"]), p("MSSV 23127326 | Audit date 2026-08-30", styles["small"]), p("Declaration", styles["h1"]), p("AI was used for endpoint mapping, workload/test-plan design, JMeter XML generation, correlation/assertion review, JTL analyzer design, threshold proposal, human-review checklist and continuous performance-testing proposal.", styles["body"]), p("Interaction log", styles["h1"]), table([
-        ["#", "Prompt / action", "Output and human review"], ["1", "Read plan and Vietnamese requirements.", "Established deliverables and constraints; checked manually."], ["2", "Review SUT API and backend.", "Found lockout, pagination, cart and checkout gaps; retained live evidence."], ["3", "Generate three JMeter plans.", "Human review found shared-CSV EOF unfairness; changed to per-VU CSV."], ["4", "Analyze four raw JTLs.", "HTTP errors 0; all failures are post-checkout assertions. JSON is reproducible."], ["5", "Propose optimization actions.", "Accepted contract-backed actions; old monitor rejected, four reruns captured valid CPU/RSS/thread evidence."],
-    ], [10*mm, 63*mm, 101*mm], styles), p("Human review checklist", styles["h1"])]
-    for item in ["No raw JTL, screenshot, video, metric or issue was fabricated.", "Every VU uses a distinct account and per-VU CSV lifecycle.", "Lockout probe is separate from positive workloads and reset is documented.", "Listener views are not treated as non-GUI measurements.", "HTTP errors are separated from business-gap assertions.", "Metrics are reproducible from raw JTL.", "Optimization claims are classified by implementation/profiling evidence.", "GUI screenshots included; student video remains pending."]:
-        story.append(p("[x] " + item if not item.endswith("pending.") else "[ ] " + item, styles["body"]))
+    story = [p("Báo cáo nhật ký sử dụng AI", styles["title"]), p("MSSV 23127326 | Ngày audit 2026-08-30", styles["small"]), p("Tuyên bố", styles["h1"]), p("AI được dùng để lập bản đồ endpoint, thiết kế workload/test plan, sinh XML JMeter, review correlation/assertion, thiết kế analyzer JTL, đề xuất threshold, checklist human review và đề xuất kiểm thử hiệu năng liên tục.", styles["body"]), p("Nhật ký tương tác", styles["h1"]), table([
+        ["#", "Prompt / thao tác", "Output và review của người"], ["1", "Đọc plan và đề tiếng Việt.", "Xác định deliverable và ràng buộc; đối chiếu thủ công."], ["2", "Review API và backend SUT.", "Phát hiện gap lockout, pagination, cart, checkout; giữ evidence thật."], ["3", "Sinh ba JMeter plan.", "Human review phát hiện lỗi dùng chung CSV; chuyển sang CSV riêng từng VU."], ["4", "Phân tích bốn JTL thô.", "HTTP error 0%; mọi failure là assertion sau checkout; JSON truy nguyên được."], ["5", "Đề xuất tối ưu.", "Chỉ nhận claim có căn cứ; loại monitor cũ và rerun đủ bốn workload."], ["6", "Audit package và dịch tài liệu.", "Bổ sung summary, threshold, hardware screenshot, ảnh kết hợp và issue evidence."],
+    ], [10*mm, 63*mm, 101*mm], styles), p("Checklist review của người", styles["h1"])]
+    for item in ["Không bịa JTL, ảnh, video, metric hoặc issue.", "Mỗi VU dùng tài khoản riêng và lifecycle CSV riêng.", "Lockout probe tách khỏi positive workload và có hướng dẫn reset.", "Listener không được dùng làm số đo non-GUI chính thức.", "Tách lỗi HTTP khỏi assertion lỗi nghiệp vụ.", "Metric truy nguyên được về JTL thô.", "Claim tối ưu được phân loại theo bằng chứng implementation/profiling.", "Có ảnh JMeter, Activity Monitor, hardware và GitHub Issue evidence.", "Video demo vẫn chờ sinh viên tự quay."]:
+        story.append(p("[x] " + item if not item.endswith("quay.") else "[ ] " + item, styles["body"]))
     d = doc(path); d.build(story); return path
 
 
@@ -112,7 +112,7 @@ def critique_report(styles):
             "Phần có giá trị nhất là việc đọc cả API contract lẫn backend: nếu chỉ nhìn HTTP 200, người kiểm thử dễ bỏ qua lockout cộng sai số lần, thời gian khóa 180 giây thay vì 30 giây, pagination không được áp dụng, cart thêm dòng trùng và checkout không dọn cart. Raw JTL đã xác nhận một gap: Load 359/3,314, Stress 1,789/16,519, Spike 753/7,175 và Endurance 2,700/24,608 đều fail đúng assertion cart sau checkout; HTTP error ở cả bốn run là 0. Vì vậy không được gọi 10-11% này là server failure.\n\n"
             "AI cũng từng tạo rủi ro kỹ thuật: CSV dùng chung làm thread đầu tiên tiêu thụ dữ liệu, và hiểu nhầm duration của JMeter khiến run sớm bị loại. Human review đã phát hiện, chuyển sang một file input cho mỗi VU, dùng 60 dòng lặp có kiểm soát, tách run invalid, rồi chạy lại bộ chính thức. Đây là lý do không nên tin JMX trông hợp lý nếu chưa kiểm tra lifecycle dữ liệu, số thread thực tế, label và raw response.\n\n"
             "Các khuyến nghị như index, connection pool, WAL hoặc tối ưu SQL chỉ là giả thuyết khi chưa có profiler. Resource monitor đầu tiên không được diễn giải: field thcount không tồn tại trên macOS nên các file cũ chỉ có header. Tôi đã sửa tool và rerun đủ bốn workload; CPU max đo được 16.4-25.5%, RSS max 75.8-120.8 MB, 11 threads. Kết luận phải truy nguyên về implementation, JTL và evidence; chỉ video vẫn cần sinh viên bổ sung.")
-    story = [p("AI Critique", styles["title"]), p("Human-reviewed critique of the AI-assisted workflow", styles["small"]), p(text, styles["body"]), p("Source evidence: raw JTLs, SUT commit, lockout probe, metrics JSON, resource-rerun JTL/HTML and valid CPU/RSS/thread monitors.", styles["small"])]
+    story = [p("Phê bình việc cộng tác với AI", styles["title"]), p("Review của người đối với workflow có hỗ trợ AI", styles["small"]), p(text, styles["body"]), p("Evidence nguồn: JTL thô, commit SUT, lockout probe, JSON metric, JTL/HTML resource-rerun và monitor CPU/RSS/thread hợp lệ.", styles["small"])]
     d = doc(path); d.build(story); return path
 
 

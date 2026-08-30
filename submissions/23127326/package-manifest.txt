@@ -1,7 +1,9 @@
 # 23127326 HW05 package manifest
 
-Included: README.md; agent-skill; data; test-plans; tools; report; evidence; official results/load, stress, spike and endurance.
+Target filename: `23127326_HW05_AI_Performance_100.zip`
+
+Included: README.md; agent-skill; data; test-plans; tools; report; evidence; official results/load, stress, spike and endurance; resource-rerun results with valid CPU/RSS/thread monitors.
 
 Excluded: .sut and .runtime local tooling; invalid-duration and invalid-early-csv experiments; smoke iterations; personal/system secrets; student video and GUI screenshots.
 
-Before submission: add the unlisted video URL to report/main-report.md and README.md; add GUI/Activity Monitor screenshots; optionally rerun workloads with the fixed resource monitor and update the report; choose and record self-assessed grade.
+Before submission: add the unlisted video URL to report/main-report.md and README.md. Self-assessment is recorded as 100/100; verify that this is your intended submission grade.

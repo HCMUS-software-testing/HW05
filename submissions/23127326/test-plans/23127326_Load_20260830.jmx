@@ -70,7 +70,7 @@
           </collectionProp>
         </HeaderManager>
         <hashTree />
-        <UniformRandomTimer guiclass="TestBeanGUI" testclass="UniformRandomTimer" testname="Think time 1-3 seconds" enabled="true">
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think time 1-3 seconds" enabled="true">
           <stringProp name="ConstantTimer.delay">${thinkMinMs}</stringProp>
           <stringProp name="RandomTimer.range">${thinkMaxMs}</stringProp>
         </UniformRandomTimer>
@@ -117,7 +117,7 @@ vars.put('basePort', matcher.group(3) ?: (matcher.group(1) == 'https' ? '443' : 
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <JSONPostProcessor guiclass="TestBeanGUI" testclass="JSONPostProcessor" testname="token" enabled="true">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="token" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">token</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
@@ -195,21 +195,21 @@ vars.put('basePort', matcher.group(3) ?: (matcher.group(1) == 'https' ? '443' : 
               <boolProp name="Assertion.assume_success">false</boolProp>
             </ResponseAssertion>
             <hashTree />
-            <JSONPostProcessor guiclass="TestBeanGUI" testclass="JSONPostProcessor" testname="productId" enabled="true">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="productId" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">productId</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$[0].id</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
               <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
             </JSONPostProcessor>
             <hashTree />
-            <JSONPostProcessor guiclass="TestBeanGUI" testclass="JSONPostProcessor" testname="productName" enabled="true">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="productName" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">productName</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$[0].name</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
               <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
             </JSONPostProcessor>
             <hashTree />
-            <JSONPostProcessor guiclass="TestBeanGUI" testclass="JSONPostProcessor" testname="productPrice" enabled="true">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="productPrice" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">productPrice</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$[0].price</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
@@ -395,7 +395,7 @@ vars.put('orderTotal', total.toBigInteger().toString())</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
             </ResponseAssertion>
             <hashTree />
-            <JSONPostProcessor guiclass="TestBeanGUI" testclass="JSONPostProcessor" testname="orderId" enabled="true">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="orderId" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">orderId</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$.orderId</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
@@ -658,7 +658,7 @@ vars.put('basePort', matcher.group(3) ?: (matcher.group(1) == 'https' ? '443' : 
           <hashTree />
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="ListenerVisualizer" testclass="org.apache.jmeter.visualizers.ViewResultsFullVisualizer" testname="Load report view - View Results Tree" enabled="false" />
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Load report view - View Results Tree" enabled="false" />
       <hashTree />
     </hashTree>
   </hashTree>

@@ -22,6 +22,7 @@ Phần output bên dưới lưu nội dung quan trọng đã được chấp nh�
 | 6 | Codex + human review | 2026-08-30 13:05 | Audit package và evidence | Checklist package, hardware/resource/issue evidence |
 | 7 | Codex + human review | 2026-08-30 15:35 | Sửa metric canonical và tìm endurance threshold | Staircase 70/100/150/200 VU và soak 200 VU |
 | 8 | Codex + Computer Use | 2026-08-30 18:04 | Chụp evidence same-screen | Ảnh Stress/Spike/Endurance có PID khớp |
+| 9 | Codex + JMeter GUI | 2026-08-30 19:16 | Kiểm tra ba listener trong JMeter | Sửa metadata GUI và xác nhận ba JMX tải không lỗi |
 
 ## Chi tiết prompt và output
 
@@ -185,6 +186,29 @@ Mọi failure canonical nằm ở assertion `POST_CHECKOUT_CART - expected empty
 - Endurance: backend PID `54267` khớp; JMeter hiển thị `Active: 200`.
 - Load cũ chưa có bằng chứng PID rõ tương đương và được giữ là mục cần chụp lại, không đánh dấu hoàn tất.
 - Không record video; video phải do sinh viên tự quay và thuyết minh.
+
+### Tương tác 9 - Kiểm tra listener bằng JMeter GUI
+
+**Công cụ:** Codex + Apache JMeter GUI 5.6.3
+**Thời gian:** 2026-08-30 19:16
+
+**Prompt:**
+
+> Kiểm tra ba listener riêng của Load/Stress/Spike và sửa phần evidence liên quan. Không dùng HTML dashboard chung để thay cho View Results Tree, Summary Report và Aggregate Report; không tạo ảnh evidence giả.
+
+**Output AI/công cụ ban đầu:**
+
+- JMeter báo lỗi khi mở JMX vì metadata XML đặt sai vai trò của `guiclass` và `testclass` cho `ResultCollector`.
+- `UniformRandomTimer` và `JSONPostProcessor` cũng đang dùng `TestBeanGUI`, không phải GUI class tương ứng.
+
+**Output sau khi sửa và kiểm tra lại:**
+
+- Generator dùng `testclass="ResultCollector"` và ba `guiclass` chuẩn: `ViewResultsFullVisualizer`, `SummaryReport`, `StatVisualizer`.
+- Timer dùng `UniformRandomTimerGui`; JSON extractor dùng `JSONPostProcessorGui`.
+- Cả ba file Load/Stress/Spike được JMeter 5.6.3 tải thành công; log không có `ERROR` hoặc exception khi parse plan.
+- Listener vẫn để `enabled="false"` cho execution non-GUI. Sinh viên cần mở JTL bằng listener tương ứng và tự chụp ba ảnh evidence trước khi nộp.
+
+**Artifact hoàn chỉnh:** `test-plans/generate_plans.py` và ba file `test-plans/23127326_*_20260830.jmx`.
 
 ## Checklist review của người
 

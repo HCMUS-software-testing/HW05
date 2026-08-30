@@ -36,8 +36,8 @@ def groovy(*lines):
     return "\n".join(lines)
 
 
-def bean(tag, name, testclass, properties):
-    element = make(tag, {"guiclass": "TestBeanGUI", "testclass": testclass, "testname": name, "enabled": "true"})
+def bean(tag, name, testclass, properties, guiclass="TestBeanGUI"):
+    element = make(tag, {"guiclass": guiclass, "testclass": testclass, "testname": name, "enabled": "true"})
     for kind, key, value in properties:
         prop(element, kind, key, value)
     return element
@@ -81,7 +81,7 @@ def status_assertion(code):
 
 
 def extract(name, path):
-    return bean("JSONPostProcessor", name, "JSONPostProcessor", [("stringProp", "JSONPostProcessor.referenceNames", name), ("stringProp", "JSONPostProcessor.jsonPathExprs", path), ("stringProp", "JSONPostProcessor.match_numbers", "1"), ("stringProp", "JSONPostProcessor.defaultValues", "NOT_FOUND")])
+    return bean("JSONPostProcessor", name, "JSONPostProcessor", [("stringProp", "JSONPostProcessor.referenceNames", name), ("stringProp", "JSONPostProcessor.jsonPathExprs", path), ("stringProp", "JSONPostProcessor.match_numbers", "1"), ("stringProp", "JSONPostProcessor.defaultValues", "NOT_FOUND")], guiclass="JSONPostProcessorGui")
 
 
 def jsr_sampler(name, script):
@@ -111,7 +111,7 @@ def header_manager():
 
 
 def timer():
-    return bean("UniformRandomTimer", "Think time 1-3 seconds", "UniformRandomTimer", [("stringProp", "ConstantTimer.delay", "${thinkMinMs}"), ("stringProp", "RandomTimer.range", "${thinkMaxMs}")])
+    return bean("UniformRandomTimer", "Think time 1-3 seconds", "UniformRandomTimer", [("stringProp", "ConstantTimer.delay", "${thinkMinMs}"), ("stringProp", "RandomTimer.range", "${thinkMaxMs}")], guiclass="UniformRandomTimerGui")
 
 
 def setup_url():
@@ -190,8 +190,16 @@ def lockout_group():
     return element, steps
 
 
-def listener(testclass, name):
-    return make("ResultCollector", {"guiclass": "ListenerVisualizer", "testclass": testclass, "testname": name, "enabled": "false"})
+def listener(guiclass, name):
+    return make(
+        "ResultCollector",
+        {
+            "guiclass": guiclass,
+            "testclass": "ResultCollector",
+            "testname": name,
+            "enabled": "false",
+        },
+    )
 
 
 def plan(kind):
@@ -210,13 +218,13 @@ def plan(kind):
         prop(item, "stringProp", "Argument.metadata", "=")
     if kind == "Load":
         children = [group("LOAD - 20 VU", "${__P(threads,20)}", "${__P(rampSeconds,60)}", "${__P(durationSeconds,360)}")]
-        view = listener("org.apache.jmeter.visualizers.ViewResultsFullVisualizer", "Load report view - View Results Tree")
+        view = listener("ViewResultsFullVisualizer", "Load report view - View Results Tree")
     elif kind == "Stress":
         children = [group("STRESS - 100 VU", "${__P(threads,100)}", "${__P(rampSeconds,300)}", "${__P(durationSeconds,480)}")]
-        view = listener("org.apache.jmeter.visualizers.SummaryReport", "Stress report view - Summary Report")
+        view = listener("SummaryReport", "Stress report view - Summary Report")
     else:
         children = [group("SPIKE - background", "${__P(backgroundThreads,10)}", "${__P(backgroundRampSeconds,60)}", "${__P(backgroundDurationSeconds,420)}", input_file="per-vu/input-${__threadNum}.csv"), group("SPIKE - burst", "${__P(spikeThreads,90)}", "${__P(spikeRampSeconds,5)}", "${__P(spikeDurationSeconds,120)}", "${__P(spikeDelaySeconds,120)}", input_file="per-vu/input-${__intSum(${__threadNum},10)}.csv")]
-        view = listener("org.apache.jmeter.visualizers.StatVisualizer", "Spike report view - Aggregate Report")
+        view = listener("StatVisualizer", "Spike report view - Aggregate Report")
     children.extend([lockout_group(), (view, ())])
     pair(root_hash, element, children)
     return ET.ElementTree(root)

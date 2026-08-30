@@ -178,9 +178,9 @@ SUT + DB test sạch --> smoke -- fail --> lưu log và chặn
 
 Video YouTube không công khai, tối thiểu 6 phút: `TODO_ADD_VIDEO_LINK` (sinh viên tự quay). Video phải hiển thị JMeter và resource monitor trong cùng khung hình, có thuyết minh tiếng Việt, đồng thời minh họa Agent Skill trên một nhóm endpoint hoàn chỉnh.
 
-Đã kèm AI audit/critique, JTL thô, báo cáo HTML, monitor tài nguyên, ảnh dashboard/resource riêng và issue evidence. Ba ảnh combined Stress/Spike/Endurance là screenshot thật cùng phiên với backend PID `31159`/`35179`/`54267`; ảnh Endurance được chụp tại `Active: 200`. Ảnh Load hiện tại chưa xác định rõ backend PID và JMeter `Active`, nên phải chụp lại trước khi nộp.
+Đã kèm AI audit/critique, JTL thô, báo cáo HTML, monitor tài nguyên, ảnh dashboard/resource riêng và issue evidence. Bốn ảnh combined Load/Stress/Spike/Endurance là screenshot thật cùng phiên. Load được chụp tại `Active=20`, backend `HW05_LOAD_BE` PID `97107`; ba PID còn lại là `31159`/`35179`/`54267`, đều khớp Activity Monitor. Ảnh Endurance được chụp tại `Active: 200`.
 
-Ba GUI listener được cấu hình riêng trong JMX nhưng tắt khi chạy non-GUI để không làm sai phép đo. Trước khi nộp, nạp JTL sau khi chạy vào listener tương ứng và chụp evidence: Load - View Results Tree; Stress - Summary Report; Spike - Aggregate Report.
+Ba GUI listener được cấu hình riêng trong JMX nhưng tắt khi chạy non-GUI để không làm sai phép đo. Sau chạy, JTL canonical trong `results/resource-rerun/` đã được nạp bằng component JMeter 5.6.3 và lưu evidence: Load - View Results Tree; Stress - Summary Report; Spike - Aggregate Report.
 
 ## 11. Phụ lục - AI Critique (200-300 từ)
 

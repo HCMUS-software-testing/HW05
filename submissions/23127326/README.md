@@ -51,9 +51,8 @@ Mẫu/s bao gồm cả sampler nội bộ; HTTP RPS chỉ đếm JTL row có URL
 ## Ghi chú bàn giao
 
 - Video YouTube vẫn cần bạn tự quay và thêm link bên dưới; video phải có thuyết minh tiếng Việt và minh họa Agent Skill end-to-end.
-- Ba ảnh combined Stress, Spike và Endurance đều là screenshot thật cùng phiên: backend PID lần lượt `31159`, `35179` và `54267`, khớp giữa terminal và Activity Monitor. Ảnh Endurance còn hiển thị tải `Active: 200`.
-- Ảnh Load cần chụp lại trong một khung hình, hiển thị JMeter `Active`, backend PID và Activity Monitor khớp PID.
-- Ba listener vẫn tắt trong non-GUI run. Sau khi chạy, mở JTL và chụp evidence riêng cho View Results Tree, Summary Report và Aggregate Report.
+- Bốn ảnh combined Load, Stress, Spike và Endurance đều là screenshot thật cùng phiên. Load hiển thị `Active=20` và backend PID `97107`; ba PID còn lại lần lượt là `31159`, `35179`, `54267`; tất cả khớp Activity Monitor.
+- Ba listener vẫn tắt trong non-GUI run để không ảnh hưởng phép đo. Bộ JTL canonical đã được nạp sau chạy vào View Results Tree, Summary Report và Aggregate Report; ba ảnh tương ứng nằm trong `evidence/screenshots/`.
 - Evidence resource hợp lệ nằm trong `evidence/hardware/`; thông số phần cứng nằm trong `evidence/hardware/hardware-20260830.png` và file văn bản đi kèm.
 
 Xem checklist chi tiết tại `evidence/README.md`; báo cáo chính, AI Audit, AI Critique và Continuous Performance Testing nằm trong `report/`.

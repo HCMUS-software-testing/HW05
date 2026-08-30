@@ -16,9 +16,9 @@ Không đóng gói: `.sut`, `.runtime`, `__pycache__`, `.DS_Store`, source recor
 - [x] AI Critique 200-300 từ đã nhúng vào main report, đồng thời giữ file riêng.
 - [x] AI Audit ghi tên tool, thời gian, prompt, output, human review và gắn nhãn prompt khôi phục.
 - [x] Stress/Spike/Endurance có screenshot same-screen với PID khớp.
+- [x] Load có screenshot same-screen với `Active=20`, backend PID `97107` khớp Activity Monitor.
+- [x] Có ba screenshot listener đọc JTL canonical: View Results Tree, Summary Report, Aggregate Report.
 - [ ] PDF chưa xuất; sinh viên sẽ xuất lại từ Markdown sau khi hoàn thiện nội dung.
-- [ ] Load cần screenshot same-screen mới, có JMeter `Active` và backend PID khớp Activity Monitor.
-- [ ] Cần ba screenshot listener sau khi nạp JTL: View Results Tree, Summary Report, Aggregate Report.
 - [ ] Cần thêm URL video YouTube không công khai, tối thiểu 6 phút, có thuyết minh tiếng Việt và minh họa Agent Skill.
 - [ ] Sau khi hoàn tất các mục trên, cập nhật self-assessment và ba chữ số cuối của tên ZIP.
 

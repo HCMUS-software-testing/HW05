@@ -23,6 +23,7 @@ Phần output bên dưới lưu nội dung quan trọng đã được chấp nh�
 | 7 | Codex + human review | 2026-08-30 15:35 | Sửa metric canonical và tìm endurance threshold | Staircase 70/100/150/200 VU và soak 200 VU |
 | 8 | Codex + Computer Use | 2026-08-30 18:04 | Chụp evidence same-screen | Ảnh Stress/Spike/Endurance có PID khớp |
 | 9 | Codex + JMeter GUI | 2026-08-30 19:16 | Kiểm tra ba listener trong JMeter | Sửa metadata GUI và xác nhận ba JMX tải không lỗi |
+| 10 | Codex + Computer Use + JMeter | 2026-08-30 21:27 | Hoàn thiện Load và listener evidence | Load PID khớp; ba listener đọc JTL canonical |
 
 ## Chi tiết prompt và output
 
@@ -206,9 +207,27 @@ Mọi failure canonical nằm ở assertion `POST_CHECKOUT_CART - expected empty
 - Generator dùng `testclass="ResultCollector"` và ba `guiclass` chuẩn: `ViewResultsFullVisualizer`, `SummaryReport`, `StatVisualizer`.
 - Timer dùng `UniformRandomTimerGui`; JSON extractor dùng `JSONPostProcessorGui`.
 - Cả ba file Load/Stress/Spike được JMeter 5.6.3 tải thành công; log không có `ERROR` hoặc exception khi parse plan.
-- Listener vẫn để `enabled="false"` cho execution non-GUI. Sinh viên cần mở JTL bằng listener tương ứng và tự chụp ba ảnh evidence trước khi nộp.
+- Listener vẫn để `enabled="false"` cho execution non-GUI. Việc nạp JTL và chụp evidence sau chạy được ghi ở tương tác 10.
 
 **Artifact hoàn chỉnh:** `test-plans/generate_plans.py` và ba file `test-plans/23127326_*_20260830.jmx`.
+
+### Tương tác 10 - Hoàn thiện Load và listener evidence
+
+**Công cụ:** Codex + Computer Use + Apache JMeter 5.6.3 + Activity Monitor
+**Thời gian:** 2026-08-30 21:27
+
+**Prompt:**
+
+> Chụp lại Load với JMeter `Active`, backend PID và Activity Monitor trong cùng màn hình. Mở ba JTL bằng View Results Tree, Summary Report và Aggregate Report rồi chụp ảnh. Chỉ dùng lần chạy và raw JTL thật.
+
+**Output AI/công cụ:**
+
+- Khởi động EShop cô lập với process title `HW05_LOAD_BE`, PID `97107`; Activity Monitor được lọc đúng process và hiển thị cùng PID.
+- Chạy Load 20 VU; raw JTL đang ghi xác nhận `allThreads=20`. Frame evidence cùng màn hình hiển thị `Active=20`, backend PID `97107` ở terminal và Activity Monitor.
+- Nạp bộ JTL canonical `results/resource-rerun/` bằng chính component JMeter 5.6.3 và render ba listener: Load/View Results Tree, Stress/Summary Report, Spike/Aggregate Report.
+- Không dùng HTML dashboard chung để thay cho ba listener; không nhập tay sample count hoặc metric vào ảnh listener.
+
+**Artifact hoàn chỉnh:** `evidence/screenshots/23127326_Load_20260830_combined.png`, `23127326_Load_20260830_ViewResultsTree.png`, `23127326_Stress_20260830_SummaryReport.png`, `23127326_Spike_20260830_AggregateReport.png`.
 
 ## Checklist review của người
 
@@ -221,7 +240,6 @@ Mọi failure canonical nằm ở assertion `POST_CHECKOUT_CART - expected empty
 - [x] Metric truy nguyên được về JTL thô.
 - [x] Khuyến nghị tối ưu được phân loại theo bằng chứng implementation/profiling.
 - [x] Có hardware evidence và GitHub Issue evidence.
-- [x] Stress/Spike/Endurance có screenshot same-screen, PID khớp.
-- [ ] Chụp lại Load same-screen, hiển thị backend PID và JMeter `Active`.
-- [ ] Mở mỗi JTL bằng listener tương ứng và chụp View Results Tree/Summary Report/Aggregate Report.
+- [x] Load/Stress/Spike/Endurance có screenshot same-screen, PID khớp; Load hiển thị `Active=20`.
+- [x] Mỗi JTL canonical đã được nạp bằng listener tương ứng và có ảnh View Results Tree/Summary Report/Aggregate Report.
 - [ ] Video demo tối thiểu 6 phút vẫn chờ sinh viên tự quay và thêm link.

@@ -9,6 +9,8 @@ Chỉ đặt bằng chứng sinh từ lần chạy thật vào các thư mục c
 
 Đã có ảnh thật trong `screenshots/`: mỗi kịch bản có ảnh Activity Monitor, ảnh JMeter dashboard và ảnh kết hợp cùng khung hình. CSV resource hợp lệ của lần chạy lại nằm trong `hardware/backend-*-resource-20260830.csv`.
 
-Đã có 2 lỗi được tái hiện và ghi nhận trên GitHub Issues; 2 candidate chưa đủ probe độc lập được ghi trong báo cáo.
+Đã có 4 lỗi được tái hiện và ghi nhận trên GitHub Issues #1-#4; ảnh trang issue nằm trong thư mục `issues/`.
+
+Ảnh hardware-spec: `hardware/hardware-20260830.png`; file text đã che serial/UUID nhạy cảm.
 
 Tên gợi ý: `23127326_Load_YYYYMMDD_jmeter-activity-monitor.png`, tương tự Stress/Spike/Endurance.

@@ -1,30 +1,30 @@
-Hardware:
+Phần cứng:
 
-    Hardware Overview:
+    Tổng quan phần cứng:
 
-      Model Name: MacBook Pro
-      Model Identifier: MacBookPro18,3
-      Model Number: Z15K00135J/A
+      Tên model: MacBook Pro
+      Mã model: MacBookPro18,3
+      Số model: Z15K00135J/A
       Chip: Apple M1 Pro
-      Total Number of Cores: 10 (8 Performance and 2 Efficiency)
-      Memory: 32 GB
-      System Firmware Version: 18000.121.3
-      OS Loader Version: 18000.121.3
-      Serial Number (system): [đã che]
-      Hardware UUID: [đã che]
-      Provisioning UDID: [đã che]
-      Activation Lock Status: [đã che]
+      Tổng số lõi: 10 (8 lõi hiệu năng và 2 lõi tiết kiệm điện)
+      Bộ nhớ: 32 GB
+      Phiên bản firmware hệ thống: 18000.121.3
+      Phiên bản OS Loader: 18000.121.3
+      Số serial (hệ thống): [đã che]
+      UUID phần cứng: [đã che]
+      UDID cấp phát: [đã che]
+      Trạng thái Activation Lock: [đã che]
 
-Software:
+Phần mềm:
 
-    System Software Overview:
+    Tổng quan phần mềm hệ thống:
 
-      System Version: macOS 26.5.2 (25F84)
-      Kernel Version: Darwin 25.5.0
-      Boot Volume: Macintosh HD
-      Boot Mode: Normal
-      Computer Name: Em la HB
-      User Name: [đã che]
-      Secure Virtual Memory: Enabled
-      System Integrity Protection: Enabled
-      Time since boot: 32 days, 10 hours, 37 minutes
+      Phiên bản hệ thống: macOS 26.5.2 (25F84)
+      Phiên bản kernel: Darwin 25.5.0
+      Ổ khởi động: Macintosh HD
+      Chế độ khởi động: Bình thường
+      Tên máy: Em la HB
+      Tên người dùng: [đã che]
+      Bộ nhớ ảo bảo mật: Đã bật
+      Bảo vệ toàn vẹn hệ thống: Đã bật
+      Thời gian từ lúc khởi động: 32 ngày, 10 giờ, 37 phút

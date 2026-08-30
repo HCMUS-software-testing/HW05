@@ -16,4 +16,4 @@ b5817fa test: thêm evidence resource và self-assessment
 90ed44e docs: chuẩn hóa screenshot performance
 ```
 
-Do not replace this with invented commit hashes.
+Không thay các hash này bằng hash tự tạo.

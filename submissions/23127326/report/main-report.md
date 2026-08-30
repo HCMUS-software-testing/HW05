@@ -14,6 +14,8 @@
 | Địa chỉ SUT | `http://localhost:3000` |
 | Ngày chạy | `2026-08-30` |
 
+Kho GitHub công khai: `https://github.com/HB4305/23127326-HW05-AI-Performance`
+
 ## 2. Workflow và endpoint map
 
 1. `POST /api/login` với credentials riêng từng VU; lấy JWT từ response.
@@ -23,7 +25,7 @@
 5. Tính `orderTotal` từ giá đã extract và quantity cập nhật; `POST /api/checkout`.
 6. `GET /api/cart` sau checkout để kiểm tra cart phải rỗng.
 
-## 3. Human review các khoảng cách đã giữ lại
+## 3. Review của người đối với các khoảng cách đã giữ lại
 
 | Quy tắc đặc tả | Hành vi implementation cần xác minh | Cách đo/ghi nhận |
 | --- | --- | --- |
@@ -34,7 +36,7 @@
 
 Các gap trên không được tính nhầm thành lỗi transport. Báo cáo riêng `HTTP/network`, `assertion/business-gap` và `thread stopped`.
 
-## 4. Thiết lập scenario
+## 4. Thiết lập kịch bản
 
 | Kịch bản | Threads | Ramp-up | Thời lượng | JTL thô | Báo cáo HTML |
 | --- | ---: | ---: | ---: | --- | --- |
@@ -45,9 +47,9 @@ Các gap trên không được tính nhầm thành lỗi transport. Báo cáo ri
 
 ## 5. Kết quả
 
-Đã chạy analyzer bằng `agent-skill/.../analyze_jtl.py`; tính sample count, throughput, mean, median, p90, p95, p99, max và error rate theo từng label (`AUTH`, `READ`, `CART_ADD`, `CART_UPDATE`, `CART_GET`, `CHECKOUT`, `POST_CHECKOUT_CART`) sau khi đọc file metrics sinh ra.
+Đã chạy analyzer bằng `agent-skill/.../analyze_jtl.py`; tính số mẫu, throughput, mean, median, p90, p95, p99, max và error rate theo từng label (`AUTH`, `READ`, `CART_ADD`, `CART_UPDATE`, `CART_GET`, `CHECKOUT`, `POST_CHECKOUT_CART`) sau khi đọc file metrics sinh ra.
 
-| Scenario (resource rerun) | Samples | Transport/HTTP error % | Assertion/business-gap % | Overall p95 / max label p95 | Throughput | CPU max / RSS max |
+| Kịch bản (resource-rerun) | Số mẫu | Lỗi transport/HTTP % | Assertion/gap nghiệp vụ % | p95 tổng / p95 label cao nhất | Throughput | CPU tối đa / RSS tối đa |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
 | Load | 3,287 | 0.00% | 10.83% (356) | 6 / 7 ms | 9.1583/s | 16.4% / 75.8 MB |
 | Stress | 16,433 | 0.00% | 10.83% (1,780) | 5 / 7 ms | 34.4137/s | 17.4% / 120.8 MB |
@@ -56,13 +58,13 @@ Các gap trên không được tính nhầm thành lỗi transport. Báo cáo ri
 
 Mean tổng thể: Load 2.642 ms; Stress 1.914 ms; Spike 2.041 ms; Endurance 2.443 ms. Mean/median/p90/p95/p99/max theo label được lưu trong `report/metrics-resource-rerun-20260830/*.json`; JTL thô và HTML của resource-rerun nằm trong `results/resource-rerun/`.
 
-Interpretation: all failed samples are the intentional `POST_CHECKOUT_CART - expected empty` assertion. No transport/HTTP failure occurred. This is a reproduced SUT business gap, not a performance error. The measured response times are below the provisional 1,000 ms p95 threshold. Resource rerun CPU max stayed 16.4-25.5%; RSS max was 75.8-120.8 MB; thread max was 11 in all runs. Endurance RSS ranged 70.1-85.6 MB, so no leak conclusion is claimed beyond this sample.
+Diễn giải: mọi mẫu fail đều do assertion có chủ đích `POST_CHECKOUT_CART - expected empty`. Không có lỗi transport/HTTP. Đây là gap nghiệp vụ đã tái hiện của SUT, không phải lỗi hiệu năng. Response time đo được thấp hơn threshold p95 1.000 ms. Resource-rerun có CPU tối đa 16,4-25,5%; RSS tối đa 75,8-120,8 MB; tối đa 11 thread ở mọi run. RSS Endurance dao động 70,1-85,6 MB, vì vậy không kết luận leak vượt quá mẫu này.
 
 Ngưỡng đánh giá: transport/HTTP < 1%, p95 < 1000 ms, CPU backend < 85%, memory không tăng liên tục và throughput không suy giảm trong ba cửa sổ liên tiếp. Điểm endurance duy trì được là 70 VU, 30.4315 RPS trong 600 giây giữ tải; đây là điểm đã quan sát, không khẳng định là giới hạn tối đa.
 
 ## 6. Lockout reset runbook
 
-Không chạy lại toàn bộ `database.js` giữa các scenario vì việc đó xóa dữ liệu không liên quan. Với DB test local của SUT, chạy câu lệnh có điều kiện:
+Không chạy lại toàn bộ `database.js` giữa các kịch bản vì việc đó xóa dữ liệu không liên quan. Với DB test local của SUT, chạy câu lệnh có điều kiện:
 
 ```sql
 UPDATE users
@@ -74,7 +76,7 @@ Sau đó `SELECT email, login_attempts, locked_until FROM users WHERE email = '<
 
 ## 7. Issue và evidence
 
-Đã tạo 2 GitHub Issue cho lockout và checkout cleanup. Pagination và duplicate-line đã được probe độc lập, response được lưu trong `evidence/issues/`; tổng cộng 2 lỗi chính thức và 4 phát hiện nghiệp vụ.
+Đã tạo 4 GitHub Issue cho lockout, checkout cleanup, pagination và cart quantity; response và ảnh trang issue được lưu trong `evidence/issues/`. Tổng cộng 4 lỗi nghiệp vụ đã tái hiện.
 
 ## 8. Kiểm thử hiệu năng liên tục
 

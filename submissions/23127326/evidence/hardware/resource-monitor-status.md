@@ -1,7 +1,7 @@
 # Resource-monitor status
 
-The first official runs used `ps -o %cpu=,rss=,thcount=`. macOS does not provide `thcount`, so the four official CSV files contain headers only and are not valid CPU/RSS evidence.
+Các lần chạy chính thức đầu tiên dùng `ps -o %cpu=,rss=,thcount=`. macOS không cung cấp `thcount`, vì vậy bốn CSV chính thức cũ chỉ có header và không phải evidence CPU/RSS hợp lệ.
 
-`tools/monitor_backend.py` is fixed to read CPU/RSS and count threads with `ps -M`. The fix was validated with a real Node process in `monitor-pid-check-20260830-v6.csv`. That check is tool validation only, not a workload result; no CPU/RSS conclusion is assigned to Load, Stress, Spike or Endurance.
+`tools/monitor_backend.py` đã được sửa để đọc CPU/RSS và đếm thread bằng `ps -M`. Bản sửa được xác nhận với tiến trình Node thật trong `monitor-pid-check-20260830-v6.csv`. Đây chỉ là kiểm tra tool, không phải kết quả workload; không dùng file cũ để kết luận CPU/RSS cho Load, Stress, Spike hoặc Endurance.
 
 Đã rerun mỗi workload bằng monitor macOS đã sửa. CSV hợp lệ nằm tại `backend-*-resource-20260830.csv`; ảnh Activity Monitor/JMeter nằm trong `evidence/screenshots/`. Ảnh hardware-spec là `hardware-20260830.png`.

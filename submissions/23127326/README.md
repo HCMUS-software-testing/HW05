@@ -46,7 +46,7 @@ Thay `Load` bằng `Stress` hoặc `Spike` và dùng thư mục output riêng. D
 | Spike | 10 + 90 | 17.1228 RPS | 5 ms | 0% | 25.5% | 90.5 MB |
 | Endurance | 70 | 30.4315 RPS | 6 ms | 0% | 19.6% | 85.6 MB |
 
-Điểm duy trì bền vững quan sát được: **70 VU, 30.4315 RPS trong 600 giây giữ tải**, p95 6 ms, CPU tối đa 19.6%, RSS tối đa 85.6 MB. Đây là điểm duy trì đã đo được, không khẳng định là giới hạn tối đa của phần cứng. Có 2 lỗi nghiệp vụ đã tái hiện và tạo GitHub Issue; 2 candidate khác được ghi riêng trong `report/issue-candidates.md`.
+Điểm duy trì bền vững quan sát được: **70 VU, 30.4315 RPS trong 600 giây giữ tải**, p95 6 ms, CPU tối đa 19.6%, RSS tối đa 85.6 MB. Đây là điểm duy trì đã đo được, không khẳng định là giới hạn tối đa của phần cứng. Có 4 lỗi nghiệp vụ đã tái hiện và tạo GitHub Issue #1-#4; evidence response và ảnh issue nằm trong `evidence/issues/`.
 
 ## Ghi chú bàn giao
 

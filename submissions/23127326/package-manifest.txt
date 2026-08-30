@@ -1,6 +1,6 @@
 # Manifest gói nộp HW05 - MSSV 23127326
 
-Target filename: `23127326_HW05_AI_Performance_100.zip`
+Tên file đích: `23127326_HW05_AI_Performance_100.zip`
 
 Bao gồm: README.md; Agent Skill; dữ liệu; test plan; tools; báo cáo; evidence; kết quả chính thức Load, Stress, Spike, Endurance; kết quả resource-rerun với monitor CPU/RSS/thread hợp lệ.
 

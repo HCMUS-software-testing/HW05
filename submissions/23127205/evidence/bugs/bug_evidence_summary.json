@@ -1,0 +1,79 @@
+{
+  "BUG-FUNC-05": {
+    "title": "Product Price Data Type Inconsistency (Even IDs Coerced to String)",
+    "confirmed": true,
+    "evidence": {
+      "product_id_1": {
+        "price": 30000000,
+        "type": "int"
+      },
+      "product_id_2": {
+        "price": "28000000",
+        "type": "str"
+      },
+      "source_code_line": "server.js:L162 (if (row.id % 2 === 0) row.price = row.price.toString();)"
+    }
+  },
+  "BUG-SEC-06": {
+    "title": "Unsanitized SQL Query Injection & HTML Error Body Serialization",
+    "confirmed": true,
+    "evidence": {
+      "sqli_bypass": true,
+      "html_error_leak": true,
+      "response_body_sample": "<h1>Database Error</h1><p>SQLITE_ERROR: near \"SYNTAX_ERR\": syntax error</p>"
+    }
+  },
+  "BUG-LOGIC-07": {
+    "title": "Order State Machine Flaw: Allows Illegal Transition from Canceled to Delivered",
+    "confirmed": true,
+    "evidence": {
+      "order_id": 10827,
+      "illegal_response_status": 200,
+      "illegal_response_body": {
+        "message": "Order status updated"
+      }
+    }
+  },
+  "BUG-CONCUR-04": {
+    "title": "Premature Account Lockout Due to `login_attempts + 2` Increment Flaw",
+    "confirmed": true,
+    "evidence": {
+      "attempt_1_status": 401,
+      "attempt_2_status": 401,
+      "valid_attempt_3_status": 403,
+      "locked_response": {
+        "error": "Tài khoản đã bị khóa. Vui lòng thử lại sau."
+      }
+    }
+  },
+  "BUG-PERF-02": {
+    "title": "SQLite File-Lock Contention & Response Time Asymmetry",
+    "confirmed": false,
+    "evidence": {
+      "cart_avg_ms": 11.03,
+      "cart_p95_ms": 25.9,
+      "checkout_avg_ms": 15.43,
+      "checkout_p95_ms": 30.19,
+      "asymmetry_factor": "1.4x"
+    }
+  },
+  "BUG-PERF-01": {
+    "title": "Global In-Memory Cart Object Uncollected Accumulation Leak",
+    "confirmed": true,
+    "evidence": {
+      "items_after_checkout": 241,
+      "expected_items": 0,
+      "defect_description": "userCarts[userId] array is never emptied or deleted on /api/checkout"
+    }
+  },
+  "BUG-PERF-03": {
+    "title": "Single-Thread Event Loop Throughput Ceiling Bottleneck",
+    "confirmed": true,
+    "evidence": {
+      "hardware_cpus": 16,
+      "cpu_utilized": "~1 Core (6.25% total system CPU)",
+      "measured_throughput_ceiling": "109.4 req/s",
+      "root_cause": "Node.js runs single-threaded without cluster / multi-worker configuration"
+    }
+  }
+}

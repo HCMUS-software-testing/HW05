@@ -7,9 +7,11 @@ Lệnh dùng để tạo snapshot này:
 git log --oneline -- submissions/23127326
 ```
 
-Kết quả tại commit nội dung `0a9dab8`:
+Kết quả tại commit nội dung `7bf34e3`:
 
 ```text
+7bf34e3 test: fix JMeter listener GUI metadata
+87b1318 docs: refresh HW05 commit log
 0a9dab8 docs: complete HW05 audit and submission review
 c240d1f docs: record final PDF commit
 fc68b79 docs: refresh Vietnamese PDF reports

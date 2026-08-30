@@ -12,7 +12,7 @@ I use AI tools for the following tasks: endpoint mapping, workload/test-plan des
 | 2 | Codex | 2026-08-29 | Review EShop API specification and backend implementation for the selected workflow. | Found lockout, pagination, cart update and checkout gaps; live evidence retained separately. |
 | 3 | Codex | 2026-08-29–30 | Generate three JMeter plans with one shared data-driven workflow and scenario-specific load/report views. | Human review caught shared-CSV EOF unfairness; plans were changed to per-VU files. |
 | 4 | Codex analyzer | 2026-08-30 | Analyze each raw JTL by label and classify failed samples. | Recomputed from 4 official JTLs: HTTP errors 0; failures are only expected post-checkout-cart assertions. JSON outputs are in `metrics-20260830/`. |
-| 5 | Codex + human review | 2026-08-30 | Suggest optimizations and classify claims by evidence strength. | Accepted only contract/implementation-backed actions; CPU/RSS conclusions rejected because official monitor files were invalid. |
+| 5 | Codex + human review | 2026-08-30 | Suggest optimizations and classify claims by evidence strength. | Accepted only contract/implementation-backed actions; old monitor files were rejected, then four resource-reruns captured valid CPU/RSS/thread evidence. |
 
 ## Human review checklist
 
@@ -23,4 +23,4 @@ I use AI tools for the following tasks: endpoint mapping, workload/test-plan des
 - [x] Transport/HTTP errors are separated from expected business-gap assertions.
 - [x] Every reported metric is reproducible from a raw JTL.
 - [x] Optimization recommendations are classified using implementation/profiling evidence.
-- [ ] GUI screenshots and student-recorded video remain pending.
+- [x] GUI screenshots for all four workload reruns are included; student video remains pending.

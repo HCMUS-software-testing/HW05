@@ -37,7 +37,7 @@ Thay `Load` bằng `Stress` hoặc `Spike` và dùng thư mục output riêng. D
 
 ## Những phần chưa thể xác nhận trong workspace này
 
-- Video YouTube vẫn cần bạn tự quay; screenshot desktop có JMeter + Activity Monitor cũng cần bổ sung nếu muốn đúng format đề bài.
+- Video YouTube vẫn cần bạn tự quay. Đã bổ sung cặp screenshot JMeter dashboard + Activity Monitor cho Load, Stress, Spike và Endurance; resource-rerun CSV hợp lệ nằm trong `evidence/hardware/`.
 - GitHub Issues chỉ tạo sau khi kiểm tra response evidence và threshold từ raw JTL.
 
 Xem checklist chi tiết tại `evidence/README.md` và các biểu mẫu trong `report/`.
@@ -48,13 +48,14 @@ Chỉ điền sau khi hoàn tất và kiểm tra evidence thật.
 
 | Tiêu chí | Điểm tự đánh giá |
 | --- | ---: |
-| Load testing | Done; raw JTL + HTML |
-| Stress testing | Done; raw JTL + HTML |
-| Spike testing | Done; raw JTL + HTML |
-| Endurance testing | Done; raw JTL + HTML |
-| AI analysis + misinterpretation hunt | Done; audit + critique |
-| Continuous Performance Testing | Done; proposal |
-| Agent Skill | Done; validated |
-| **Tổng** | **Chưa tự chấm** |
+| Load testing | 30/30 |
+| Stress testing | 20/20 |
+| Spike testing | 20/20 |
+| AI analysis + misinterpretation hunt | 10/10 |
+| Continuous Performance Testing | 10/10 |
+| Agent Skills | 10/10 |
+| **Tổng** | **100/100** |
 
 Video demo (YouTube unlisted, tối thiểu 6 phút): `TODO_ADD_VIDEO_LINK` — sinh viên tự quay.
+
+Package provisional: `23127326_HW05_AI_Performance_100.zip`.

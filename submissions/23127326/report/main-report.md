@@ -47,16 +47,16 @@ Các gap trên không được tính nhầm thành lỗi transport. Báo cáo ri
 
 Đã chạy analyzer bằng `agent-skill/.../analyze_jtl.py`; điền sample count, throughput, mean, median, p90, p95, p99, max và error rate theo từng label (`AUTH`, `READ`, `CART_ADD`, `CART_UPDATE`, `CART_GET`, `CHECKOUT`, `POST_CHECKOUT_CART`) sau khi đọc file metrics sinh ra.
 
-| Scenario | Samples | Transport/HTTP error % | Assertion/business-gap % | Overall p95 / max label p95 | Throughput | CPU/RSS backend |
+| Scenario (resource rerun) | Samples | Transport/HTTP error % | Assertion/business-gap % | Overall p95 / max label p95 | Throughput | CPU max / RSS max |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| Load | 3,314 | 0.00% | 10.83% (359) | 5 / 7 ms | 9.2766/s | **Unavailable**: old monitor had macOS-invalid `thcount` field |
-| Stress | 16,519 | 0.00% | 10.83% (1,789) | 6 / 8 ms | 34.5021/s | **Unavailable**: same monitor defect |
-| Spike | 7,175 | 0.00% | 10.49% (753) | 6 / 9 ms | 17.1743/s | **Unavailable**: same monitor defect |
-| Endurance | 24,608 | 0.00% | 10.97% (2,700) | 5 / 7 ms | 30.4317/s | **Unavailable**: same monitor defect |
+| Load | 3,287 | 0.00% | 10.83% (356) | 6 / 7 ms | 9.1583/s | 16.4% / 75.8 MB |
+| Stress | 16,433 | 0.00% | 10.83% (1,780) | 5 / 7 ms | 34.4137/s | 17.4% / 120.8 MB |
+| Spike | 7,171 | 0.00% | 10.47% (751) | 5 / 7 ms | 17.1228/s | 25.5% / 90.5 MB |
+| Endurance | 24,574 | 0.00% | 10.98% (2,699) | 6 / 8 ms | 30.4315/s | 19.6% / 85.6 MB |
 
-Mean overall: Load 2.435 ms; Stress 2.297 ms; Spike 2.437 ms; Endurance 1.888 ms. Full per-label mean/median/p90/p95/p99/max is stored in `report/metrics-20260830/*.json`; HTML reports remain the JMeter visualization source.
+Mean overall: Load 2.642 ms; Stress 1.914 ms; Spike 2.041 ms; Endurance 2.443 ms. Full per-label mean/median/p90/p95/p99/max is stored in `report/metrics-20260830/*.json` for the original runs; resource-rerun raw JTL/HTML is under `results/resource-rerun/`.
 
-Interpretation: all failed samples are the intentional `POST_CHECKOUT_CART - expected empty` assertion. No transport/HTTP failure occurred. This is a reproduced SUT business gap, not a performance error. The measured response times are below the provisional 1,000 ms p95 threshold, but resource acceptance cannot be concluded because the official monitor files were invalid. The monitor implementation is now fixed for future reruns and validated with a real macOS process sample (`evidence/hardware/monitor-pid-check-20260830-v6.csv`).
+Interpretation: all failed samples are the intentional `POST_CHECKOUT_CART - expected empty` assertion. No transport/HTTP failure occurred. This is a reproduced SUT business gap, not a performance error. The measured response times are below the provisional 1,000 ms p95 threshold. Resource rerun CPU max stayed 16.4-25.5%; RSS max was 75.8-120.8 MB; thread max was 11 in all runs. Endurance RSS ranged 70.1-85.6 MB, so no leak conclusion is claimed beyond this sample.
 
 Ngưỡng mặc định để đánh giá: transport/HTTP < 1%, p95 < 1000 ms, CPU backend < 85%, memory không tăng liên tục và throughput không suy giảm trong ba cửa sổ liên tiếp. Endurance threshold cuối cùng phải là số đo thật, không phải ngưỡng mặc định này.
 
@@ -84,4 +84,4 @@ Không tạo GitHub Issue ngoài workspace vì chưa có yêu cầu/ủy quyền
 
 ## 9. Video, AI audit và self-assessment
 
-Video unlisted tối thiểu 6 phút: `TODO_ADD_VIDEO_LINK` (sinh viên tự quay). Đã kèm AI audit/critique, raw JTL, HTML report và lockout evidence. Screenshot GUI/Activity Monitor và link video vẫn là phần thủ công cần bổ sung.
+Video unlisted tối thiểu 6 phút: `TODO_ADD_VIDEO_LINK` (sinh viên tự quay). Đã kèm AI audit/critique, raw JTL, HTML report, resource monitor và screenshot evidence. Chỉ link video còn thủ công.

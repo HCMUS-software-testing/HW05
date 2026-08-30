@@ -7,7 +7,15 @@ Chỉ đặt bằng chứng sinh từ lần chạy thật vào các thư mục c
 - `issues/`: ảnh GitHub Issue và bằng chứng response cho lỗi đã tái hiện.
 - Video YouTube không công khai, tối thiểu 6 phút, phải do sinh viên tự quay và thuyết minh tiếng Việt.
 
-Đã có ảnh thật trong `screenshots/`: mỗi kịch bản có ảnh Activity Monitor, ảnh JMeter dashboard và ảnh kết hợp cùng khung hình. CSV resource hợp lệ của lần chạy lại nằm trong `hardware/backend-*-resource-20260830.csv`.
+Đã thay ba ảnh combined Stress/Spike/Endurance bằng screenshot thật trong cùng phiên thực thi. Stress hiển thị backend PID `31159`; Spike hiển thị PID `35179`; Endurance hiển thị PID `54267` và tải `Active: 200`. PID đều khớp giữa terminal và Activity Monitor.
+
+## Evidence còn phải bổ sung
+
+- [ ] Chụp lại Load khi JMeter đang chạy, có `Active`, backend PID và Activity Monitor trong cùng khung hình.
+- [ ] Sau khi chạy non-GUI, mở JTL bằng report view tương ứng và chụp ba ảnh: Load/View Results Tree, Stress/Summary Report, Spike/Aggregate Report.
+- [ ] Quay video không công khai tối thiểu 6 phút, có thuyết minh tiếng Việt và phần minh họa Agent Skill end-to-end.
+
+CSV resource hợp lệ của lần chạy lại nằm trong `hardware/backend-*-resource-20260830.csv`. Staircase/soak bổ sung ghi CSV theo từng mức tại `hardware/staircase-20260830/`.
 
 Đã có 4 lỗi được tái hiện và ghi nhận trên GitHub Issues #1-#4; ảnh trang issue nằm trong thư mục `issues/`.
 

@@ -27,7 +27,7 @@ flowchart TD
 
 - Pull Request: smoke và Load ngắn để phản hồi nhanh.
 - Hàng đêm: chạy đầy đủ Load, Stress và Spike với fixture mới.
-- Hàng tuần: Endurance tại 70% mức concurrency cao nhất đã duy trì ổn định.
+- Hàng tuần: Endurance tại 140 VU, bằng 70% ngưỡng vận hành 200 VU đã duy trì ổn định trong thí nghiệm bounded staircase.
 - Lưu cùng nhau JTL thô, báo cáo HTML, phiên bản JMeter, commit SUT, phiên bản fixture và bằng chứng monitor tài nguyên.
 - So sánh theo label và kịch bản ổn định. Tách assertion lỗi nghiệp vụ đã biết khỏi lỗi transport/HTTP.
 

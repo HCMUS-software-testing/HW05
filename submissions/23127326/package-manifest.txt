@@ -1,11 +1,25 @@
 # Manifest gói nộp HW05 - MSSV 23127326
 
-Tên file đích: `23127326_HW05_AI_Performance_100.zip`
+Tên file tạm thời: `23127326_HW05_AI_Performance_090.zip`.
 
-Bao gồm: README.md; Agent Skill; dữ liệu; test plan; tools; báo cáo; evidence; kết quả chính thức Load, Stress, Spike, Endurance; kết quả resource-rerun với monitor CPU/RSS/thread hợp lệ.
+Nguồn nộp nằm trong `submissions/23127326/` và bao gồm: README; Agent Skill; data; ba test plan; tools; báo cáo Markdown trong `report/`; evidence; JTL/HTML Load, Stress, Spike, Endurance; resource-rerun; staircase/soak; metric JSON; Git commit log và issue evidence.
 
-Kho GitHub công khai: `https://github.com/HB4305/23127326-HW05-AI-Performance`; GitHub Issues #1-#4 và ảnh tương ứng nằm trong `evidence/issues/`.
+Kho GitHub công khai: `https://github.com/HB4305/23127326-HW05-AI-Performance`. GitHub Issues #1-#4 và ảnh tương ứng nằm trong `evidence/issues/`.
 
-Loại khỏi gói: `.sut` và `.runtime` local tooling; thử nghiệm invalid-duration và invalid-early-csv; các lần smoke phụ; thông tin định danh phần cứng nhạy cảm; video sinh viên (sẽ bổ sung thủ công).
+Không đóng gói: `.sut`, `.runtime`, `__pycache__`, `.DS_Store`, source recording, run invalid/smoke phụ và thông tin định danh phần cứng nhạy cảm.
 
-Trước khi nộp: thêm URL video không công khai vào `report/main-report.md` và `README.md`. Self-assessment hiện là 100/100. Kiểm tra đây là mức điểm bạn muốn tự đánh giá.
+## Trạng thái hiện tại
+
+- [x] Ba JMX đúng tên và ba listener riêng.
+- [x] JTL thô, HTML report, CSV input và metric canonical.
+- [x] Endurance 200 VU giữ tải 600 giây và resource evidence.
+- [x] AI Critique 200-300 từ đã nhúng vào main report, đồng thời giữ file riêng.
+- [x] AI Audit ghi tên tool, thời gian, prompt, output, human review và gắn nhãn prompt khôi phục.
+- [x] Stress/Spike/Endurance có screenshot same-screen với PID khớp.
+- [ ] PDF chưa xuất; sinh viên sẽ xuất lại từ Markdown sau khi hoàn thiện nội dung.
+- [ ] Load cần screenshot same-screen mới, có JMeter `Active` và backend PID khớp Activity Monitor.
+- [ ] Cần ba screenshot listener sau khi nạp JTL: View Results Tree, Summary Report, Aggregate Report.
+- [ ] Cần thêm URL video YouTube không công khai, tối thiểu 6 phút, có thuyết minh tiếng Việt và minh họa Agent Skill.
+- [ ] Sau khi hoàn tất các mục trên, cập nhật self-assessment và ba chữ số cuối của tên ZIP.
+
+Không dùng gói `_100.zip` cũ: gói đó chứa PDF và nội dung trước lần audit cuối.

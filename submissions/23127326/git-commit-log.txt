@@ -17,6 +17,8 @@ b5817fa test: thêm evidence resource và self-assessment
 748d599 docs: chuyển tài liệu và evidence HW05 sang tiếng Việt
 3a76811 docs: hoàn thiện gói HW05 tiếng Việt
 d659aec docs: thêm evidence GitHub Issue
+cd4940b docs: đồng bộ manifest và log commit
+fc68b79 docs: làm mới PDF báo cáo tiếng Việt
 ```
 
 Không thay các hash này bằng hash tự tạo.

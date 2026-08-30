@@ -27,12 +27,12 @@ Kho GitHub công khai: `https://github.com/HB4305/23127326-HW05-AI-Performance`
 
 ```bash
 jmeter -n \
-  -t submission/test-plans/23127326_Load_20260830.jmx \
-  -JdataDir=submission/data \
+  -t submissions/23127326/test-plans/23127326_Load_20260830.jmx \
+  -JdataDir=submissions/23127326/data \
   -JbaseUrl=http://localhost:3000 \
   -JdurationSeconds=360 \
-  -l submission/results/load/23127326_Load_20260830.jtl \
-  -e -o submission/results/load/html-20260830
+  -l submissions/23127326/results/resource-rerun/load/23127326_Load_resource_20260830.jtl \
+  -e -o submissions/23127326/results/resource-rerun/load/html-20260830
 ```
 
 Thay `Load` bằng `Stress` hoặc `Spike` và dùng thư mục output riêng. Duration của Load/Stress là tổng thời gian gồm ramp-up và hold (`360 s` / `480 s`). Ba listener trong JMX được tắt khi chạy non-GUI; chúng chỉ dùng làm các dạng báo cáo khi mở plan/JTL bằng giao diện.

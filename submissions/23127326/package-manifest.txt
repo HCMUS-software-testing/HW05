@@ -2,11 +2,11 @@
 
 Tên file tạm thời: `23127326_HW05_AI_Performance_090.zip`.
 
-Nguồn nộp nằm trong `submissions/23127326/` và bao gồm: README; Agent Skill; data; ba test plan; tools; báo cáo Markdown trong `report/`; evidence; JTL/HTML Load, Stress, Spike, Endurance; resource-rerun; staircase/soak; metric JSON; Git commit log và issue evidence.
+Nguồn nộp nằm trong `submissions/23127326/` và bao gồm: README; Agent Skill; data; ba test plan; tools; báo cáo Markdown trong `report/`; evidence; JTL/HTML canonical Load, Stress, Spike, Endurance trong `results/resource-rerun/`; staircase/soak; metric JSON; Git commit log và issue evidence.
 
 Kho GitHub công khai: `https://github.com/HB4305/23127326-HW05-AI-Performance`. GitHub Issues #1-#4 và ảnh tương ứng nằm trong `evidence/issues/`.
 
-Không đóng gói: `.sut`, `.runtime`, `__pycache__`, `.DS_Store`, source recording, run invalid/smoke phụ và thông tin định danh phần cứng nhạy cảm.
+Không đóng gói: `.sut`, `.runtime`, `__pycache__`, `.DS_Store`, source recording, run invalid/smoke/phụ, bản chạy cũ không canonical và thông tin định danh phần cứng nhạy cảm.
 
 ## Trạng thái hiện tại
 

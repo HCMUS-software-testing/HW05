@@ -46,9 +46,9 @@ Các gap trên không được tính nhầm thành lỗi transport. Báo cáo ri
 
 | Kịch bản | Threads | Ramp-up | Thời lượng | JTL thô | Báo cáo HTML |
 | --- | ---: | ---: | ---: | --- | --- |
-| Load | 20 | 60 s | 300 s (tổng 360 s) | `results/load/23127326_Load_20260830.jtl` | `results/load/html-20260830/` |
-| Stress | 100 | 300 s | 180 s (tổng 480 s) | `results/stress/23127326_Stress_20260830.jtl` | `results/stress/html-20260830/` |
-| Spike | 10 nền + 90 spike | 5 s spike | nền 420 s, spike 120 s sau delay 120 s | `results/spike/23127326_Spike_20260830.jtl` | `results/spike/html-20260830/` |
+| Load | 20 | 60 s | 300 s (tổng 360 s) | `results/resource-rerun/load/23127326_Load_resource_20260830.jtl` | `results/resource-rerun/load/html-20260830/` |
+| Stress | 100 | 300 s | 180 s (tổng 480 s) | `results/resource-rerun/stress/23127326_Stress_resource_20260830.jtl` | `results/resource-rerun/stress/html-20260830/` |
+| Spike | 10 nền + 90 spike | 5 s spike | nền 420 s, spike 120 s sau delay 120 s | `results/resource-rerun/spike/23127326_Spike_resource_20260830.jtl` | `results/resource-rerun/spike/html-20260830/` |
 | Endurance baseline | 70 VU | 210 s | 600 s giữ tải (tổng 810 s) | `results/resource-rerun/endurance/23127326_Endurance_resource_20260830.jtl` | `results/resource-rerun/endurance/html-20260830/` |
 | Staircase screening | 70/100/150/200 VU | 30/30/45/60 s | mỗi mức giữ 90 s | `results/staircase-20260830/{70vu,100vu,150vu,200vu}/*.jtl` | JSON metrics theo từng mức |
 | Endurance threshold | 200 VU | 120 s | 600 s giữ tải (tổng 720 s) | `results/staircase-20260830/endurance-200vu/23127326_Endurance_200VU_20260830.jtl` | `results/staircase-20260830/endurance-200vu/html-20260830/` |
@@ -108,7 +108,7 @@ Trong bản phân tích ban đầu, AI đã gộp mọi dòng `success=false` th
 | p95 thấp chứng minh toàn bộ checkout đúng | p95 tổng 5-6 ms, nhưng assertion sau checkout fail 100% ở label đó | Latency và correctness là hai trục độc lập; nhanh không có nghĩa là đúng. |
 | RSS tăng là memory leak | RSS chỉ được quan sát trong từng run và không tăng đơn điệu ở Endurance | Chưa có heap profile hoặc chuỗi soak dài lặp lại, nên không kết luận leak. |
 
-Bộ số liệu duy nhất dùng làm chuẩn cho Load/Stress/Spike và lần Endurance 70 VU là `report/metrics-resource-rerun-20260830/*.json`, truy nguyên về `results/resource-rerun/`. Các JTL/HTML ở `results/load`, `results/stress`, `results/spike` và `results/endurance` chỉ là lần chạy trước, không dùng để trích số chính thức.
+Bộ số liệu duy nhất dùng làm chuẩn cho Load/Stress/Spike và lần Endurance 70 VU là `report/metrics-resource-rerun-20260830/*.json`, truy nguyên về `results/resource-rerun/`. Các bản chạy cũ không canonical đã được loại khỏi gói nộp để tránh nhầm nguồn số liệu.
 
 ### 6.2 Phân loại đề xuất tối ưu
 

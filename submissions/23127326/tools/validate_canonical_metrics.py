@@ -16,12 +16,10 @@ EXPECTED = {
 }
 
 DOCUMENTS = (
+    ROOT / "README.md",
     ROOT / "report" / "main-report.md",
     ROOT / "report" / "ai-critique.md",
     ROOT / "report" / "issue-candidates.md",
-    ROOT / "results" / "load" / "README.md",
-    ROOT / "results" / "stress" / "README.md",
-    ROOT / "results" / "spike" / "README.md",
 )
 
 STALE_TOKENS = ("3.314", "16.519", "7.175", "24.608", "359/", "1.789/", "753/", "2.700/")

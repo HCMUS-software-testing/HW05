@@ -8,6 +8,10 @@ Current history:
 
 ```text
 d0e8dce test: add HW05 performance submission
+a962ba3 docs: record HW05 commit log
+afe312d chore: ignore local performance artifacts
+b5817fa test: add resource evidence and final assessment
+491af58 docs: finalize graded performance package
 ```
 
 Do not replace this with invented commit hashes.

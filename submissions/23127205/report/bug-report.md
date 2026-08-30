@@ -270,7 +270,7 @@ Khi áp dụng mã giảm giá phần trăm qua `POST /api/apply-coupon`, mã ng
 `discount_amount = Math.floor(total_amount * (1 - coupon.discount_value));`
 Với mã giảm giá `SAVE10` có `discount_value = 10` (được seed trong CSDL), công thức tính thành:
 `500,000 * (1 - 10) = 500,000 * (-9) = -4,500,000` VND!
-Hậu quả là số tiền giảm bị âm ($-4,500,000\text{ đ}$) và tổng tiền đơn hàng bị đội lên:
+Hậu quả là số tiền giảm bị âm (-4,500,000 đ) và tổng tiền đơn hàng bị đội lên:
 `final_amount = 500,000 - (-4,500,000) = 5,000,000` VND (Gấp 10 lần giá trị thực)!
 
 #### 2. Bằng chứng thực nghiệm (Empirical Proof)
@@ -298,10 +298,10 @@ Hậu quả là số tiền giảm bị âm ($-4,500,000\text{ đ}$) và tổng 
 #### 1. Mô tả chi tiết (Description)
 Tại `server.js:L380`, điều kiện kiểm tra giá trị tối thiểu của mã giảm giá là:
 `if (total_amount > coupon.min_order_amount)`
-Sử dụng dấu so sánh lớn hơn ngặt (`>`) thay vì lớn hơn hoặc bằng (`>=`). Khi khách hàng đặt đơn hàng có giá trị đúng bằng mức tối thiểu quy định (ví dụ đơn hàng $300,000\text{ đ}$ với mã `SAVE10` có `min_order_amount = 300000`), hệ thống từ chối áp dụng và báo lỗi sai.
+Sử dụng dấu so sánh lớn hơn ngặt (`>`) thay vì lớn hơn hoặc bằng (`>=`). Khi khách hàng đặt đơn hàng có giá trị đúng bằng mức tối thiểu quy định (ví dụ đơn hàng 300,000 đ với mã `SAVE10` có `min_order_amount = 300000`), hệ thống từ chối áp dụng và báo lỗi sai.
 
 #### 2. Bằng chứng thực nghiệm (Empirical Proof)
-* Gửi đơn $300,000\text{ đ}$ áp mã `SAVE10` (min: 300,000) -> Server trả về `400 Bad Request`: `{"error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"}`.
+* Gửi đơn 300,000 đ áp mã `SAVE10` (min: 300,000) -> Server trả về `400 Bad Request`: `{"error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"}`.
 * **Minh chứng ảnh chụp thực tế từ trình duyệt:**
 
 ![Minh chứng BUG-LOGIC-09: Coupon Boundary Defect](../evidence/bugs/bug_logic_09_coupon_boundary.png)

@@ -24,18 +24,17 @@ Dữ liệu toán học chính xác 100% được trích xuất trực tiếp t�
 
 Dưới đây là nội dung phân tích ban đầu được sinh ra bởi mô hình AI (Claude 3.5 Sonnet / Gemini 3.7) khi được cấp log dữ liệu thô:
 
-> ### [AI Analysis Output]:
-> *"Hệ thống EShop hoạt động ổn định dưới tải 50 VUs với thời gian phản hồi trung bình 2.92 ms. Tuy nhiên, khi tăng tải lên 250 VUs trong kịch bản Stress Test, các hiện tượng nghẽn nghiêm trọng đã xuất hiện:*
-> 1. *Throughput của hệ thống bị bão hòa ở mức xấp xỉ 109 req/s do **nghẽn băng thông mạng máy chủ (Network Bandwidth Saturation)** và độ trễ kết nối TCP giữa client và backend.*
-> 2. *Độ trễ phân vị p95 tổng thể của Stress Test ước tính đạt khoảng **5.2 ms** (tính bằng trung bình cộng phân vị p95 của 5 API endpoints: $(7 + 5 + 5 + 1 + 8) / 5 = 5.2\text{ ms}$).*
-> 3. *Trong kịch bản Spike Test (350 VUs), hệ thống bị quá tải socket khiến độ trễ phục hồi kéo dài sau khi hạ tải, tiềm ẩn nguy cơ rớt kết nối Socket Exhaustion.*
-> 4. *Ước tính có khoảng 2–5% request bị lỗi âm thầm (HTTP 500 / Connection Dropped) do hàng đợi socket bị tràn.*
-> 
-> *Khuyến nghị tối ưu:*
-> - *Khuyến nghị 1: Bật chế độ SQLite WAL (Write-Ahead Logging).*
-> - *Khuyến nghị 2: Thêm Index cho cơ sở dữ liệu trên bảng `products`.*
-> - *Khuyến nghị 3: Cấu hình Connection Pool cho SQLite với `maxPoolSize = 50` để chia sẻ kết nối DB giữa các luồng.*
-> - *Khuyến nghị 4: Sử dụng Node.js Cluster Module / PM2 để tận dụng đa nhân CPU.*"
+### 2.1. Đánh giá sơ bộ của AI về hiệu năng hệ thống:
+- **Tình trạng tải 250 VUs:** Throughput của hệ thống bị bão hòa ở mức xấp xỉ 109 req/s do *nghẽn băng thông mạng máy chủ (Network Bandwidth Saturation)* và độ trễ kết nối TCP giữa client và backend.
+- **Ước tính độ trễ:** Độ trễ phân vị p95 tổng thể của Stress Test ước tính đạt khoảng **5.2 ms** (tính bằng trung bình cộng phân vị p95 của 5 API endpoints: (7 + 5 + 5 + 1 + 8) / 5 = 5.2 ms).
+- **Quá tải Spike 350 VUs:** Hệ thống bị quá tải socket khiến độ trễ phục hồi kéo dài sau khi hạ tải, tiềm ẩn nguy cơ rớt kết nối Socket Exhaustion.
+- **Ước tính tỷ lệ lỗi:** Ước tính có khoảng 2–5% request bị lỗi âm thầm (HTTP 500 / Connection Dropped) do hàng đợi socket bị tràn.
+
+### 2.2. Khuyến nghị tối ưu hóa ban đầu của AI:
+- **Khuyến nghị 1:** Bật chế độ SQLite WAL (Write-Ahead Logging).
+- **Khuyến nghị 2:** Thêm Index cho cơ sở dữ liệu trên bảng `products`.
+- **Khuyến nghị 3:** Cấu hình Connection Pool cho SQLite với `maxPoolSize = 50` để chia sẻ kết nối DB giữa các luồng.
+- **Khuyến nghị 4:** Sử dụng Node.js Cluster Module / PM2 để tận dụng đa nhân CPU.
 
 ---
 
@@ -46,12 +45,11 @@ Sau khi đối chiếu phân tích của AI với bộ số liệu Ground Truth 
 ---
 
 ### Lỗi 1: Ngụy biện Tính Trung bình Phân vị (Percentile Aggregation Fallacy)
-- **AI tuyên bố:** Phân vị p95 tổng thể của Stress test là `5.2 ms` (tính bằng cách lấy trung bình cộng: $(7 + 5 + 5 + 1 + 8) / 5 = 5.2\text{ ms}$).
+- **AI tuyên bố:** Phân vị p95 tổng thể của Stress test là `5.2 ms` (tính bằng cách lấy trung bình cộng: (7 + 5 + 5 + 1 + 8) / 5 = 5.2 ms).
 - **Số liệu Ground Truth thực tế:** Phân vị p95 gộp của toàn bộ 41,456 samples trong `results/stress/raw.jtl` là **`6.0 ms`**.
 - **Lập luận phản biện của Con người (Human Critique):**
   - **Sai lầm toán học:** Theo chuẩn kiểm thử hiệu năng quốc tế (ISTQB Performance Testing Syllabus) và nguyên lý thống kê, **Percentiles không có tính chất cộng tính (Non-additive & Non-linear)**. Việc lấy trung bình cộng của các giá trị phân vị là một lỗi toán học sơ đẳng.
-  - Phân vị 95th thực sự phải được tính bằng cách xếp hạng toàn bộ $N = 41,456$ mẫu theo thứ tự tăng dần của thời gian đáp ứng và lấy giá trị tại vị trí $index = \l\rceil 0.95 \times 41,456 
-\rceil = 39,384$, cho ra kết quả chính xác là **`6.0 ms`**. AI đã tính thấp hơn thực tế **13.3%** (`5.2 ms` so với `6.0 ms`).
+  - Phân vị 95th thực sự phải được tính bằng cách xếp hạng toàn bộ N = 41,456 mẫu theo thứ tự tăng dần của thời gian đáp ứng và lấy giá trị tại vị trí index = ceil(0.95 * 41,456) = 39,384, cho ra kết quả chính xác là **`6.0 ms`**. AI đã tính thấp hơn thực tế **13.3%** (`5.2 ms` so với `6.0 ms`).
 
 ---
 

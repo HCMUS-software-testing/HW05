@@ -99,9 +99,7 @@ Toàn bộ dữ liệu dưới đây được trích xuất trực tiếp từ c
 | `04_POST_Cart` | 8,291 | 21.88 req/s | 0.00% | 1.24 ms | 1.0 ms | 1.0 ms | 32.0 ms |
 | `05_POST_Checkout` | 8,291 | 21.88 req/s | 0.00% | **4.66 ms** | **7.0 ms** | **14.0 ms** | 41.0 ms |
 
-> [!NOTE]
-> **Nhận xét quan trọng về Điểm nghẽn (Bottleneck):**  
-> Endpoint `POST /api/checkout` có độ trễ trung bình $4.66\text{ ms}$ và $p95 = 14.0\text{ ms}$, **chậm hơn gấp 3.75 lần** so với thao tác đọc sản phẩm và gấp 6 lần so với `POST /api/cart`. Nguyên nhân trực tiếp là do thao tác ghi CSDL SQLite áp đặt `EXCLUSIVE LOCK` lên tệp `database.sqlite` khi nhiều thread cùng checkout đồng thời.
+- **Nhận xét quan trọng về Điểm nghẽn (Bottleneck):** Endpoint `POST /api/checkout` có độ trễ trung bình 4.66 ms và p95 = 14.0 ms, **chậm hơn gấp 3.75 lần** so với thao tác đọc sản phẩm và gấp 6 lần so với `POST /api/cart`. Nguyên nhân trực tiếp là do thao tác ghi CSDL SQLite áp đặt `EXCLUSIVE LOCK` lên tệp `database.sqlite` khi nhiều thread cùng checkout đồng thời.
 
 ---
 
@@ -122,7 +120,7 @@ Kịch bản Endurance được duy trì liên tục trong **12 phút (718.34 gi
 - **Throughput Bền vững Định mức (Sustainable RPS):** **`22.82 req/s`** (tương đương 1,369 requests/phút) khi có Think-time thực tế. *(Lưu ý: Nếu chạy không Think-time (Burst mode), Throughput đỉnh có thể đạt ~120–150 req/s).*
 - **Độ trễ Phân vị p95 Bền vững:** **`8.0 ms`** (dao động tối đa không vượt quá 40 ms).
 - **Tỷ lệ Lỗi (Error Rate):** **`0.00%`** (16,394 / 16,394 requests thành công).
-- **Trần Bộ nhớ RAM (Memory Ceiling):** Mức chiếm dụng RAM của tiến trình `node.exe` tăng từ $59\text{ MB}$ lên đỉnh $86\text{ MB}$ và duy trì ổn định. Không ghi nhận hiện tượng tràn bộ nhớ mất kiểm soát (Out of Memory crash), dù phát hiện có hiện tượng rò rỉ nhẹ tại biến `userCarts`.
+- **Trần Bộ nhớ RAM (Memory Ceiling):** Mức chiếm dụng RAM của tiến trình `node.exe` tăng từ 59 MB lên đỉnh 86 MB và duy trì ổn định. Không ghi nhận hiện tượng tràn bộ nhớ mất kiểm soát (Out of Memory crash), dù phát hiện có hiện tượng rò rỉ nhẹ tại biến `userCarts`.
 - **Mức chiếm dụng CPU Backend:** Ổn định ở mức **~4.5% – 6.2%** trên tổng thể hệ thống (tương đương ~70–100% của 1 Core đơn luồng Node.js).
 
 ---
@@ -171,7 +169,7 @@ Mô hình kiểm thử hiệu năng liên tục được đề xuất nhằm chu
 2. **Multi-tier Execution:**
    - **Tier 1 (PR Fast Feedback Gate):** Chạy 30 giây với 10 VUs để bắt lỗi nghẽn tức thời.
    - **Tier 2 (Nightly Stress/Endurance):** Chạy sâu ban đêm với 250 VUs và 12 phút Endurance để phát hiện Memory Leak.
-3. **Automated p95 Regression Gate:** Tự động chặn Merge (`status: failure`) nếu $\Delta p95 > +15\%$ hoặc $\text{Error Rate} > 0.10\%$ so với đường cơ sở động $EMA_5$.
+3. **Automated p95 Regression Gate:** Tự động chặn Merge (`status: failure`) nếu Delta p95 > 15% hoặc Error Rate > 0.10% so với đường cơ sở động EMA5.
 4. **Phân tích Đánh đổi Kỹ thuật:** Cân bằng giữa Chi phí hạ tầng (Ephemeral Spot Containers), Thời gian CI/CD (Phân tầng Shift-Left) và Cảnh báo sai (Hệ thống cảnh báo 2 cấp Notice vs Hard Block).
 
 *(Chi tiết lưu đồ Mermaid và kiến trúc xem tại tệp [`report/task3-continuous-performance-testing.md`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Kiểm%20thử%20phần%20mềm/HW/HW5/HW05/submissions/23127205/report/task3-continuous-performance-testing.md)).*

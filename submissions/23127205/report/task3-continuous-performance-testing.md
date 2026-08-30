@@ -66,10 +66,12 @@ Hệ thống CI/CD không chạy test tải mù quáng cho mọi commit để tr
 ### 3.3. Cổng Chặn Hồi Quy Tự Động (Automated p95 Latency Gate)
 Sử dụng công thức kiểm toán toán học:
 
-$$\Delta p95 = rac{p95_{\text{current}} - p95_{\text{baseline}}}{p95_{\text{baseline}}} \times 100\%$$
+```text
+Delta p95 = ((p95_current - p95_baseline) / p95_baseline) * 100%
+```
 
-- **Ngưỡng Block Merge:** Nếu $\Delta p95 > +15\%$ hoặc $\text{Error Rate} > 0.10\%$, GitHub Action tự động gán trạng thái `status: failure`, khóa nút Merge và chỉ định lập trình viên gây ra commit phải tối ưu lại.
-- **Cập nhật Baseline Động (Dynamic Moving Baseline):** Khi một bản build đạt chuẩn và tối ưu hơn, giá trị Baseline được tự động tính theo trung bình trượt 5 lần chạy gần nhất ($EMA_5$) để tránh hiện tượng Baseline bị cũ kỹ.
+- **Ngưỡng Block Merge:** Nếu Delta p95 > 15% hoặc Error Rate > 0.10%, GitHub Action tự động gán trạng thái `status: failure`, khóa nút Merge và chỉ định lập trình viên gây ra commit phải tối ưu lại.
+- **Cập nhật Baseline Động (Dynamic Moving Baseline):** Khi một bản build đạt chuẩn và tối ưu hơn, giá trị Baseline được tự động tính theo trung bình trượt 5 lần chạy gần nhất (EMA5) để tránh hiện tượng Baseline bị cũ kỹ.
 
 ---
 

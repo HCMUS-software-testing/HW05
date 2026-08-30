@@ -11,16 +11,16 @@
 
 ## 1. Khai báo Sử dụng AI (AI Usage Declaration)
 
-> **Declaration:** *Tôi khai báo sử dụng công cụ AI (Google Antigravity IDE / Gemini 3.7 Flash) để hỗ trợ trong quá trình thực hiện bài tập này dưới sự kiểm soát và rà soát của con người (Human-in-the-loop):*
-> - Phân tích yêu cầu và ánh xạ API endpoints theo phân công nhóm.
-> - Thiết kế dữ liệu test độc lập và sinh mã script tự động hóa.
-> - Sinh cấu trúc XML JMeter Test Plan (`.jmx`) với Custom Thread Groups.
-> - Trích xuất số liệu Ground Truth từ raw `.jtl` log bằng Python parser.
-> - Cung cấp phân tích ban đầu về log hiệu năng để sinh viên đối chứng và săn lỗi ảo giác.
-> - Hỗ trợ thiết kế mô hình CI/CD và sinh script tự động hóa kiểm chứng lỗi thực nghiệm trên SUT.
-> - Tự động hóa Browser Automation Engine để capture bằng chứng giao diện thực tế và đồng bộ GitHub Issues qua REST API.
->
-> *(Lưu ý: Báo cáo Phê bình AI Critique được sinh viên tự viết độc lập 100% nhằm phản biện các kết quả phân tích của AI theo đúng quy định tại Mục 10 của đề bài).*
+Tôi khai báo sử dụng công cụ AI (Google Antigravity IDE / Gemini 3.7 Flash) để hỗ trợ trong quá trình thực hiện bài tập này dưới sự kiểm soát và rà soát của con người (Human-in-the-loop):
+- Phân tích yêu cầu và ánh xạ API endpoints theo phân công nhóm.
+- Thiết kế dữ liệu test độc lập và sinh mã script tự động hóa.
+- Sinh cấu trúc XML JMeter Test Plan (`.jmx`) với Custom Thread Groups.
+- Trích xuất số liệu Ground Truth từ raw `.jtl` log bằng Python parser.
+- Cung cấp phân tích ban đầu về log hiệu năng để sinh viên đối chứng và săn lỗi ảo giác.
+- Hỗ trợ thiết kế mô hình CI/CD và sinh script tự động hóa kiểm chứng lỗi thực nghiệm trên SUT.
+- Tự động hóa Browser Automation Engine để capture bằng chứng giao diện thực tế và đồng bộ GitHub Issues qua REST API.
+
+*(Lưu ý: Báo cáo Phê bình AI Critique được sinh viên tự viết độc lập 100% nhằm phản biện các kết quả phân tích của AI theo đúng quy định tại Mục 10 của đề bài).*
 
 ---
 
@@ -46,7 +46,7 @@ Dựa vào yêu cầu bài tập HW05 và phân công nhiệm vụ cho Member 1 
 2. Đề xuất kế hoạch phân chia kịch bản chi tiết từ chuẩn bị môi trường đến báo cáo và đóng gói.
 
 #### Human Review & Action:
-> Lựa chọn endpoint chính xác, logic chuỗi hành động đúng thực tế người dùng e-commerce. Chấp thuận đưa vào tài liệu `submissions/23127205/report/workflow-description.md`.
+- Lựa chọn endpoint chính xác, logic chuỗi hành động đúng thực tế người dùng e-commerce. Chấp thuận đưa vào tài liệu `submissions/23127205/report/workflow-description.md`.
 
 ---
 
@@ -68,7 +68,7 @@ Cần thiết kế dữ liệu đầu vào cho 5 API trên. Hệ thống có cơ
 Cấu hình JMeter CSV Data Set: `Sharing mode: All threads`, `Recycle on EOF: True`, `Stop thread on EOF: False`.
 
 #### Human Review & Action:
-> Giải pháp 50 accounts độc lập giải quyết triệt để rủi ro nghẽn CSDL khi test tải lớn. Đã tạo các file CSV trong `submissions/23127205/data/`.
+- Giải pháp 50 accounts độc lập giải quyết triệt để rủi ro nghẽn CSDL khi test tải lớn. Đã tạo các file CSV trong `submissions/23127205/data/`.
 
 ---
 
@@ -86,7 +86,7 @@ Hãy viết script tự động tải Apache JMeter 5.6.3 Portable, cài đặt 
 Viết script `setup_jmeter.py` tải JMeter từ Apache mirror, tải các file jar plugin vào `lib/ext/` và cấu hình biến môi trường `HEAP="-Xms1g -Xmx4g"`.
 
 #### Human Review & Action:
-> Đã thực thi script, tải thành công JMeter 5.6.3 vào `tools/apache-jmeter-5.6.3/` và kiểm tra lệnh `jmeter -v` hoạt động hoàn hảo.
+- Đã thực thi script, tải thành công JMeter 5.6.3 vào `tools/apache-jmeter-5.6.3/` và kiểm tra lệnh `jmeter -v` hoạt động hoàn hảo.
 
 ---
 
@@ -104,7 +104,7 @@ Viết script Python để khởi tạo CSDL SQLite của SUT backend (database.
 Tạo script `seed_test_accounts.py`: Sử dụng `bcrypt` / cấu trúc password của SUT để insert 50 bản ghi người dùng vào bảng `users`, đồng thời xuất dữ liệu ra `submissions/23127205/data/credentials.csv`.
 
 #### Human Review & Action:
-> Đã chạy script, kiểm tra CSDL có đủ 52 users (2 user mặc định + 50 user test). CSDL hoạt động ổn định.
+- Đã chạy script, kiểm tra CSDL có đủ 52 users (2 user mặc định + 50 user test). CSDL hoạt động ổn định.
 
 ---
 
@@ -127,7 +127,7 @@ Tạo script `smoke_test_sut.py`:
 - Bước 5: Gọi Checkout với Bearer Token -> nhận `orderId`.
 
 #### Human Review & Action:
-> 5/5 endpoint phản hồi 200 OK chính xác 100%, sẵn sàng cho việc test tải bằng JMeter.
+- 5/5 endpoint phản hồi 200 OK chính xác 100%, sẵn sàng cho việc test tải bằng JMeter.
 
 ---
 
@@ -148,7 +148,7 @@ Xây dựng trọn bộ Agent Skill (SKILL.md, jmx_generator.py, jtl_parser.py, 
 4. Viết `audit_logger.py` tự động cập nhật nhật ký AI Audit Report.
 
 #### Human Review & Action:
-> Kiểm tra tính hợp lệ của cú pháp XML ElementTree đối với cả 3 file JMX được sinh ra, xác nhận chạy thành công 100% không lỗi.
+- Kiểm tra tính hợp lệ của cú pháp XML ElementTree đối với cả 3 file JMX được sinh ra, xác nhận chạy thành công 100% không lỗi.
 
 ---
 
@@ -168,7 +168,7 @@ Tiến hành thẩm định và code review chuyên sâu đối với Test Plan 
 3. Đề xuất giải pháp khắc phục: Chuyển toàn bộ CSV path trong JMX sang relative path (`../data/credentials.csv`); đồng thời nâng cấp `run_jmeter.py` tự động ánh xạ relative path từ thư mục `jmeter_bin` và bổ sung các cờ UTF-8.
 
 #### Human Review & Action:
-> Phê duyệt và áp dụng ngay 2 bản vá: Cập nhật `jmx_generator.py` tái sinh 3 file JMX portable; cập nhật `run_jmeter.py`; chạy test thử nghiệm thu được log `dry_run_test.jtl` và xác nhận `jtl_parser.py` trích xuất thành công 100% Ground Truth.
+- Phê duyệt và áp dụng ngay 2 bản vá: Cập nhật `jmx_generator.py` tái sinh 3 file JMX portable; cập nhật `run_jmeter.py`; chạy test thử nghiệm thu được log `dry_run_test.jtl` và xác nhận `jtl_parser.py` trích xuất thành công 100% Ground Truth.
 
 ---
 
@@ -190,7 +190,7 @@ Sinh và hoàn thiện 4 file kịch bản kiểm thử hiệu năng JMeter Test
 5. Cả 4 file đều cấu hình CSV relative path `../data/credentials.csv`, `../data/products.csv`, `../data/orders.csv`.
 
 #### Human Review & Action:
-> Kiểm tra cú pháp XML ElementTree và chạy script `verify_phase3.py`. Xác nhận 100% các file test plan đều chuẩn xác, đáp ứng đầy đủ yêu cầu 3 Listeners độc lập và bao phủ 3 nhóm endpoint.
+- Kiểm tra cú pháp XML ElementTree và chạy script `verify_phase3.py`. Xác nhận 100% các file test plan đều chuẩn xác, đáp ứng đầy đủ yêu cầu 3 Listeners độc lập và bao phủ 3 nhóm endpoint.
 
 ---
 
@@ -212,7 +212,7 @@ Thực thi toàn bộ chuỗi kịch bản kiểm thử hiệu năng chính th�
 5. Khởi chạy kịch bản Endurance Soak Test (35 VUs trong 12 phút / 718.34s) tại `results/endurance/raw.jtl`.
 
 #### Human Review & Action:
-> Kiểm tra trực tiếp các thư mục kết quả. Xác nhận đầy đủ file `raw.jtl` và `index.html` dashboard cho cả 3 kịch bản chính, đối chiếu số liệu Ground Truth từ `jtl_parser.py` đạt độ chính xác 100%.
+- Kiểm tra trực tiếp các thư mục kết quả. Xác nhận đầy đủ file `raw.jtl` và `index.html` dashboard cho cả 3 kịch bản chính, đối chiếu số liệu Ground Truth từ `jtl_parser.py` đạt độ chính xác 100%.
 
 ---
 
@@ -231,7 +231,7 @@ Phân tích các tệp log thô kiểm thử hiệu năng (results/load/raw.jtl,
 2. Đề xuất tối ưu: (1) Bật SQLite WAL mode, (2) Thêm database index, (3) Cấu hình SQLite connection pool maxPoolSize=50, (4) Dùng Node.js Cluster Module.
 
 #### Human Review & Action (Sinh viên Săn Lỗi AI):
-> Học viên chủ động đối chiếu phân tích của AI với công cụ Ground Truth `jtl_parser.py`. Vạch trần 4 điểm ảo giác kỹ thuật của AI: (1) Lỗi tính trung bình phân vị p95 (5.2ms vs 6.0ms thực tế do Percentiles là non-additive), (2) Nhầm lẫn nghẽn mạng trên localhost (nguyên nhân thật là do SQLite Write Lock), (3) Ảo giác suy thoái kéo dài sau Spike (hồi phục trong 1.5s), (4) Giả định lỗi 2-5% trong khi thực tế đạt 0.00% lỗi. Phản biện đề xuất SQLite Connection Pool là ảo giác kỹ thuật do SQLite là CSDL nhúng. Soạn thảo tài liệu `report/task2-ai-analysis.md`.
+- Học viên chủ động đối chiếu phân tích của AI với công cụ Ground Truth `jtl_parser.py`. Vạch trần 4 điểm ảo giác kỹ thuật của AI: (1) Lỗi tính trung bình phân vị p95 (5.2ms vs 6.0ms thực tế do Percentiles là non-additive), (2) Nhầm lẫn nghẽn mạng trên localhost (nguyên nhân thật là do SQLite Write Lock), (3) Ảo giác suy thoái kéo dài sau Spike (hồi phục trong 1.5s), (4) Giả định lỗi 2-5% trong khi thực tế đạt 0.00% lỗi. Phản biện đề xuất SQLite Connection Pool là ảo giác kỹ thuật do SQLite là CSDL nhúng. Soạn thảo tài liệu `report/task2-ai-analysis.md`.
 
 ---
 
@@ -252,7 +252,7 @@ Thiết kế khung kiến trúc mô hình kiểm thử hiệu năng liên tục 
 4. Phân tích sâu sắc 3 cặp đánh đổi kỹ thuật kèm giải pháp Ephemeral Containers, Shift-Left và Multi-level Alerting.
 
 #### Human Review & Action:
-> Kiểm tra trực quan lưu đồ Mermaid và chạy script `verify_phase7.py`. Xác nhận mô hình đáp ứng trọn vẹn yêu cầu Task 3 (10/10 điểm), giải quyết được bài toán cân bằng giữa tốc độ tích hợp CI/CD và đảm bảo chất lượng hiệu năng không bị suy thoái.
+- Kiểm tra trực quan lưu đồ Mermaid và chạy script `verify_phase7.py`. Xác nhận mô hình đáp ứng trọn vẹn yêu cầu Task 3 (10/10 điểm), giải quyết được bài toán cân bằng giữa tốc độ tích hợp CI/CD và đảm bảo chất lượng hiệu năng không bị suy thoái.
 
 ---
 
@@ -282,7 +282,7 @@ Tôi đang trong quá trình thực hiện capture bug cho bài tập HW05. Bạ
 3. Lưu trữ 11 file ảnh chụp nguyên bản (Pure Raw UI) vào `submissions/23127205/evidence/bugs/`.
 
 #### Human Review & Action (Sinh viên Săn Lỗi & Chuẩn Hóa):
-> Học viên rà soát chất lượng ảnh chụp, phát hiện các khung overlay banner can thiệp DOM và yêu cầu AI loại bỏ hoàn toàn để lấy ảnh giao diện nguyên trạng của hệ thống. Đồng thời yêu cầu dọn dẹp các file ảnh alias trùng lặp, giữ lại đúng 11 ảnh chuẩn mực tương ứng với 11 Bug Report.
+- Học viên rà soát chất lượng ảnh chụp, phát hiện các khung overlay banner can thiệp DOM và yêu cầu AI loại bỏ hoàn toàn để lấy ảnh giao diện nguyên trạng của hệ thống. Đồng thời yêu cầu dọn dẹp các file ảnh alias trùng lặp, giữ lại đúng 11 ảnh chuẩn mực tương ứng với 11 Bug Report.
 
 ---
 
@@ -303,7 +303,7 @@ Bạn có thể tự động lên GitHub điền GitHub Issues cho 11 bug này �
 4. Viết script `update_github_issues_body_images.py` chuyển đổi các đường dẫn ảnh tương đối thành live URL `?raw=true` và link tệp trực tiếp trên branch `khanh` của GitHub repository, giải quyết triệt để lỗi không hiển thị ảnh trên GitHub.
 
 #### Human Review & Action:
-> Học viên cung cấp PAT token cá nhân, kiểm tra trực tiếp 11 Issues trên giao diện web GitHub, yêu cầu chuyển đổi tiêu đề sang Tiếng Việt và yêu cầu sửa lỗi ảnh. Sau khi AI đẩy nhánh `khanh` lên remote, học viên nghiệm thu 11 Issues hiển thị đầy đủ ảnh minh chứng thực tế và định dạng chuẩn mực.
+- Học viên cung cấp PAT token cá nhân, kiểm tra trực tiếp 11 Issues trên giao diện web GitHub, yêu cầu chuyển đổi tiêu đề sang Tiếng Việt và yêu cầu sửa lỗi ảnh. Sau khi AI đẩy nhánh `khanh` lên remote, học viên nghiệm thu 11 Issues hiển thị đầy đủ ảnh minh chứng thực tế và định dạng chuẩn mực.
 
 ---
 
@@ -323,7 +323,7 @@ Viết script Python (generate_pdfs.py) sử dụng Microsoft Edge Headless đ�
 3. Sinh HTML Report Dashboard cho Endurance Test tại `submissions/23127205/results/endurance/html-report/`.
 
 #### Human Review & Action:
-> Mở và kiểm tra trực quan các file PDF được sinh ra, xác nhận bố cục tài liệu chuyên nghiệp, chuẩn mực và sẵn sàng nộp bài.
+- Mở và kiểm tra trực quan các file PDF được sinh ra, xác nhận bố cục tài liệu chuyên nghiệp, chuẩn mực và sẵn sàng nộp bài.
 
 ---
 

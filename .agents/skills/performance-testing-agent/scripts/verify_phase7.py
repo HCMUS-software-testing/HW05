@@ -44,7 +44,7 @@ def run_phase7_verification():
         # -------------------------------------------------------------
         print("\n[2] Kiểm tra Lưu đồ Kiến trúc CI/CD (Mermaid.js Flowchart):")
         has_mermaid = "```mermaid" in content and "flowchart TD" in content and "Git Push" in content
-        has_nodes = "Semantic Commit Classifier" in content and "Block Merge" in content
+        has_nodes = "Classifier" in content and "Block Merge" in content and "Tier 1" in content and "Tier 2" in content
         p2 = has_mermaid and has_nodes
         all_passed &= print_check("Lưu đồ Flowchart Mermaid chuẩn xác với đầy đủ các bước quyết định", p2, "Luồng từ Commit -> Classifier -> Tier 1/2 -> JMeter -> p95 Gate -> Merge/Block")
 

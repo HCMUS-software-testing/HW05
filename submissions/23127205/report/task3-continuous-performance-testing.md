@@ -22,31 +22,32 @@ Dưới đây là lưu đồ chi tiết mô tả chu trình quyết định tự
 
 ```mermaid
 flowchart TD
-    A([🚀 Developer thực hiện Git Push / Tạo PR]) --> B[🔍 Step 1: Git Diff & Semantic Commit Classifier]
+    A["🚀 Developer thực hiện Git Push hoặc Tạo Pull Request"] --> B["🔍 Step 1: Semantic Commit & Git Diff Classifier"]
     
-    B --> C{Commit có tác động đến Performance?}
-    C -- "Không (Chỉ sửa Docs, CSS, Static Text)" --> D[⏩ Bỏ qua Test Tải & Chấp thuận Build]
-    C -- "Có (Thay đổi API, Database, Auth, Query)" --> E[⚙️ Step 2: Phân loại Tầng Kiểm thử (Execution Tier)]
+    B --> C{"Commit có rủi ro hiệu năng không?"}
     
-    E --> F{Loại sự kiện Kích hoạt?}
+    C -->|"Không: Chỉ sửa Docs, CSS, Static Text"| D["⏩ Bỏ qua Test Tải & Chấp thuận Build"]
+    C -->|"Có: Thay đổi API, Database, Auth, ORM"| E["⚙️ Step 2: Phân loại Tầng Kiểm thử (Execution Tier)"]
     
-    F -- "Pull Request / Feature Branch" --> G["🏃 Tier 1: Micro Performance Gate (Fast Check)\n• Tải: 10 VUs\n• Thời lượng: 30s\n• Mục tiêu: Bắt lỗi nghẽn tức thời"]
-    F -- "Nightly Build / Main Merge / Release Tag" --> H["🏋️ Tier 2: Deep Stress & Soak Gate\n• Tải: 50 -> 250 VUs (Stepping) + 12m Endurance\n• Mục tiêu: Đo Breaking Point & Memory Leak"]
+    E --> F{"Loại sự kiện Kích hoạt?"}
     
-    G --> I[⚡ Step 3: Headless JMeter Runner -Xms1g -Xmx4g]
+    F -->|"Pull Request hoặc Feature Branch"| G["🏃 Tier 1: Micro Performance Gate (Fast Check)<br>- Tải: 10 VUs trong 30 giây<br>- Mục tiêu: Bắt lỗi nghẽn tức thời"]
+    F -->|"Nightly Build hoặc Release Tag"| H["🏋️ Tier 2: Deep Stress & Soak Gate<br>- Tải: Stepping 50 đến 250 VUs + 12m Endurance<br>- Mục tiêu: Đo Breaking Point & Memory Leak"]
+    
+    G --> I["⚡ Step 3: Headless JMeter Runner (-Xms1g -Xmx4g)"]
     H --> I
     
-    I --> J[📊 Step 4: Python JTL Parser Engine\nTrích xuất Ground Truth: p50, p90, p95, Throughput, Error %]
+    I --> J["📊 Step 4: Python JTL Parser Engine<br>Trích xuất Ground Truth: p50, p90, p95, Throughput, Error %"]
     
-    J --> K[⚖️ Step 5: So sánh với Baseline Historical Matrix]
+    J --> K["⚖️ Step 5: So sánh với Baseline Historical Matrix"]
     
-    K --> L{Kiểm tra Điều kiện Hồi quy p95?}
+    K --> L{"Kiểm tra Điều kiện Hồi quy p95?"}
     
-    L -- "❌ p95 tăng > 15% HOẶC Error Rate > 0.1%" --> M["🚫 PIPELINE FAILED (Block Merge Gate)\n• Tự động tạo GitHub Issue gắn nhãn 'performance-regression'\n• Gửi cảnh báo Slack / Teams kèm diff số liệu\n• Giữ nguyên Baseline cũ"]
+    L -->|"Delta p95 tăng trên 15% HOẶC Error Rate trên 0.1%"| M["🚫 PIPELINE FAILED (Block Merge Gate)<br>- Tự động tạo GitHub Issue gắn nhãn regression<br>- Gửi cảnh báo Slack/Teams kèm diff số liệu<br>- Khóa Merge và giữ nguyên Baseline cũ"]
     
-    L -- "⚠️ p95 tăng từ 5% đến 15%" --> N["⚠️ PIPELINE WARNING\n• Cảnh báo lập trình viên xem xét tối ưu\n• Cho phép Merge có điều kiện"]
+    L -->|"Delta p95 tăng từ 5% đến 15%"| N["⚠️ PIPELINE WARNING<br>- Gửi cảnh báo nhắc nhở lập trình viên tối ưu<br>- Cho phép Merge có điều kiện"]
     
-    L -- "✅ p95 duy trì ổn định (<= +5%)" --> O["🎉 PIPELINE PASSED\n• Cho phép Merge vào Main Branch\n• Tự động cập nhật Baseline p95 mới\n• Lưu trữ Artifact HTML Dashboard"]
+    L -->|"p95 duy trì ổn định (dưới hoặc bằng 5%)"| O["🎉 PIPELINE PASSED<br>- Chấp thuận Merge vào Main Branch<br>- Tự động cập nhật Baseline p95 mới (EMA5)<br>- Lưu trữ Artifact HTML Dashboard Report"]
 ```
 
 ---

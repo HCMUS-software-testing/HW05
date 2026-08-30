@@ -1,0 +1,57 @@
+[
+  {
+    "number": 1,
+    "title": "[BUG-PERF-01] Global `userCarts` Object Memory Leak in Node.js Process",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/1"
+  },
+  {
+    "number": 2,
+    "title": "[BUG-PERF-02] SQLite Single-Writer Lock Contention Causing Latency Asymmetry",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/2"
+  },
+  {
+    "number": 3,
+    "title": "[BUG-PERF-03] Single-Threaded Node.js Event Loop Limiting System Throughput",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/3"
+  },
+  {
+    "number": 4,
+    "title": "[BUG-CONCUR-04] Premature Account Lockout Due to `login_attempts + 2` Flawed Step",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/4"
+  },
+  {
+    "number": 5,
+    "title": "[BUG-FUNC-05] Product Price Data Type Inconsistency (Even IDs Coerced to String)",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/5"
+  },
+  {
+    "number": 6,
+    "title": "[BUG-SEC-06] SQL Injection in Search Query & Inconsistent HTML Error Response",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/6"
+  },
+  {
+    "number": 7,
+    "title": "[BUG-LOGIC-07] Order State Machine Flaw (Allows `canceled` to `delivered` Transition)",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/7"
+  },
+  {
+    "number": 8,
+    "title": "[BUG-FUNC-08] Percentage Coupon Math Error Resulting in Negative Discount & Inflated Total",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/8"
+  },
+  {
+    "number": 9,
+    "title": "[BUG-LOGIC-09] Strict Inequality Boundary Rejects Valid Minimum Order Amount",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/9"
+  },
+  {
+    "number": 10,
+    "title": "[BUG-SEC-10] Privilege Escalation Vulnerability in Profile Update API",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/10"
+  },
+  {
+    "number": 11,
+    "title": "[BUG-LOGIC-11] Permitted Cancellation of Orders in Active Shipping State",
+    "url": "https://github.com/HCMUS-software-testing/HW05/issues/11"
+  }
+]

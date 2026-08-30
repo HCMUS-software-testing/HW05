@@ -56,8 +56,8 @@ flowchart TD
 
 ### 3.1. Phân Loại Rủi Ro Commit Thông Minh (Semantic Diff Classifier)
 Hệ thống CI/CD không chạy test tải mù quáng cho mọi commit để tránh lãng phí tài nguyên. Bộ lọc thông minh phân tích cây thay đổi:
-- **High-Risk Triggers:** Thay đổi tại các tệp `models/*`, `controllers/*`, `middleware/*`, câu lệnh SQL, migration database, hoặc thuật toán băm mật khẩu ➔ Bắt buộc kích hoạt Tier 1 hoặc Tier 2.
-- **Zero-Risk Bypass:** Thay đổi tại `*.md`, `*.css`, `.gitignore`, hoặc unit test thuần túy ➔ Tự động bỏ qua.
+- **High-Risk Triggers:** Thay đổi tại các tệp `models/*`, `controllers/*`, `middleware/*`, câu lệnh SQL, migration database, hoặc thuật toán băm mật khẩu -> Bắt buộc kích hoạt Tier 1 hoặc Tier 2.
+- **Zero-Risk Bypass:** Thay đổi tại `*.md`, `*.css`, `.gitignore`, hoặc unit test thuần túy -> Tự động bỏ qua.
 
 ### 3.2. Chiến Lược Phân Tầng Kiểm Thử (Multi-Tier Strategy)
 - **Tier 1 (PR Fast Feedback Gate):** Chạy trong vòng **30–45 giây** với 10 VUs nhằm đảm bảo không làm tắc nghẽn hàng đợi CI/CD của nhóm phát triển.
@@ -66,7 +66,7 @@ Hệ thống CI/CD không chạy test tải mù quáng cho mọi commit để tr
 ### 3.3. Cổng Chặn Hồi Quy Tự Động (Automated p95 Latency Gate)
 Sử dụng công thức kiểm toán toán học:
 
-$$\Delta p95 = \frac{p95_{\text{current}} - p95_{\text{baseline}}}{p95_{\text{baseline}}} \times 100\%$$
+$$\Delta p95 = rac{p95_{\text{current}} - p95_{\text{baseline}}}{p95_{\text{baseline}}} \times 100\%$$
 
 - **Ngưỡng Block Merge:** Nếu $\Delta p95 > +15\%$ hoặc $\text{Error Rate} > 0.10\%$, GitHub Action tự động gán trạng thái `status: failure`, khóa nút Merge và chỉ định lập trình viên gây ra commit phải tối ưu lại.
 - **Cập nhật Baseline Động (Dynamic Moving Baseline):** Khi một bản build đạt chuẩn và tối ưu hơn, giá trị Baseline được tự động tính theo trung bình trượt 5 lần chạy gần nhất ($EMA_5$) để tránh hiện tượng Baseline bị cũ kỹ.
@@ -86,7 +86,7 @@ Việc áp dụng Continuous Performance Testing đòi hỏi đội ngũ kỹ th
       (Pipeline Duration)                 (False Positives / Flakiness)
 ```
 
-### 4.1. Đánh đổi 1: Chi phí Hạ tầng (Server Cost) vs Tần suất Kiểm thử (Testing Frequency)
+### Đánh đổi 1: Chi phí Hạ tầng (Server Cost) vs Tần suất Kiểm thử (Testing Frequency)
 - **Vấn đề:** Nếu duy trì một cụm server môi trường Staging mạnh mẽ hoạt động 24/7 để chạy test tải sau mỗi commit, chi phí cloud sẽ tăng vọt theo cấp số nhân.
 - **Giải pháp tối ưu:** 
   - Sử dụng **Ephemeral Test Containers (Docker/Kubernetes)** hoặc **Cloud Spot Instances** chỉ được khởi tạo khi có sự kiện test tải và tự động hủy sau khi xuất file `.jtl`.
@@ -94,14 +94,14 @@ Việc áp dụng Continuous Performance Testing đòi hỏi đội ngũ kỹ th
 
 ---
 
-### 4.2. Đánh đổi 2: Thời gian Chờ Build (CI Pipeline Duration) vs Độ Sâu của Test (Test Depth)
+### Đánh đổi 2: Thời gian Chờ Build (CI Pipeline Duration) vs Độ Sâu của Test (Test Depth)
 - **Vấn đề:** Lập trình viên cần nhận kết quả PR nhanh chóng (trong 3–5 phút). Một kịch bản kiểm thử tải đầy đủ (như Endurance 12 phút hoặc Stress 6 phút) sẽ làm chậm tiến độ tích hợp mã nguồn của toàn đội ngũ.
 - **Giải pháp tối ưu:**
   - Áp dụng nguyên lý **Shift-Left Phân tầng**: Trên các nhánh Pull Request, chỉ chạy **Micro Benchmark 30s** để phát hiện lỗi logic thuật toán. Các bài test tải sâu (Endurance / Spike) được đẩy hoàn toàn sang tiến trình bất đồng bộ chạy ban đêm (Nightly Asynchronous Pipeline).
 
 ---
 
-### 4.3. Đánh đổi 3: Cảnh báo Sai (False Positive Alarms) vs Độ Nhạy Hồi Quy (Sensitivity Threshold)
+### Đánh đổi 3: Cảnh báo Sai (False Positive Alarms) vs Độ Nhạy Hồi Quy (Sensitivity Threshold)
 - **Vấn đề:** Môi trường đám mây chia sẻ (Shared Virtualized CI Runners) thường có hiện tượng "nhiễu hạ tầng" (CPU Throttling, IOPS biến động). Nếu đặt ngưỡng hồi quy quá nhạy (ví dụ $p95 > +5\%$), pipeline sẽ liên tục báo lỗi đỏ giả (False Alarms), làm mất lòng tin của lập trình viên (Alert Fatigue). Ngược lại, nếu đặt ngưỡng quá cao (ví dụ $+50\%$), hệ thống sẽ bỏ lọt các lỗi suy thoái nguy hiểm.
 - **Giải pháp tối ưu:**
   - Thiết lập ngưỡng cảnh báo **2 tầng**: 

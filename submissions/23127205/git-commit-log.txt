@@ -1,0 +1,143 @@
+* commit 74505733b1d6eefd42d880483c1105663afcf7ae
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-30 09:48:52 +0700
+| 
+|     docs: add automatically captured empirical bug evidence screenshots for performance and functional defects
+| 
+* commit 5e7a59dcfb429b7841cdb659d456112d8f7fd467
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-30 09:42:18 +0700
+| 
+|     test: add empirical verification script proving reproducibility of 5 performance and functional bugs against live SUT
+| 
+* commit d104176e7b33c8dc98f8198397aefb4accbad9b9
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-30 09:36:40 +0700
+| 
+|     docs: remove unnecessary icons from Task 3 report and standardize flowchart text
+| 
+* commit 060ccbf996befac8d67f45632f38f0aa2eb1e2d8
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-30 09:32:15 +0700
+| 
+|     fix: sanitize Mermaid flowchart syntax with HTML line-breaks and standardized edge labels for universal markdown rendering
+| 
+* commit 7aad5ffc650e06488c0588095f67e65423534ae4
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-30 09:28:46 +0700
+| 
+|     feat: propose continuous performance testing model with Mermaid flowchart, p95 regression gate and engineering trade-offs analysis
+| 
+* commit c123a4e06392c8c06c8f9f228747c5e8605baed2
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-29 01:24:51 +0700
+| 
+|     feat: complete Task 2 AI log analysis, misinterpretation hunt with 4 hallucination findings, and optimization evaluation
+| 
+* commit b6f1a32700f6ca4636490f6419e1204c154e6956
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-29 00:58:44 +0700
+| 
+|     docs: add real spike test execution screenshot with task manager PID monitoring
+| 
+* commit 5705dd8f8791675ab3f91973b22039ffc125eb73
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-29 00:52:38 +0700
+| 
+|     docs: add real stress test execution screenshot with task manager PID monitoring
+| 
+* commit 07c29cfb81cf6e98950b180f551fed617f5d76df
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-29 00:34:52 +0700
+| 
+|     fix: auto-clean existing JTL and HTML report directory in run_jmeter.py before test execution
+| 
+* commit d345a4facc2d9d62a22823883917e958f91b031c
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-29 00:15:38 +0700
+| 
+|     docs: add real dxdiag screenshot and update hardware specifications report
+| 
+* commit 6b7963af867b45fb7dd6b094c7d2f804fc3e6da9
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 23:42:19 +0700
+| 
+|     feat: collect hardware specifications and log official test executions
+| 
+* commit 4253285c193daaad011df72e4ccef350fd488fee
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 23:15:22 +0700
+| 
+|     docs: formalize Human-in-the-Loop verification gates in Agent Skill specification
+| 
+* commit b5f8d73a0d394a2899e7686b8d5f0b2c1a9d3ab3
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 22:49:15 +0700
+| 
+|     feat: complete Phase 3 performance test plans generation (Load, Stress, Spike, Endurance) and verification
+| 
+* commit 11a6b100b61ae5794d7407e3ec39e0d4dce09998
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 22:12:49 +0700
+| 
+|     test: add automated verification script for phase 2 agent skill and test plans
+| 
+* commit 3bb4217f046b6644d64b35de02e7de987a9a134d
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 21:18:37 +0700
+| 
+|     fix: ensure portable relative CSV paths in JMX and robust path handling in CLI runner
+| 
+* commit 75958eeea16b615c6c6e1e22ae6b69ae72daec58
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 20:24:15 +0700
+| 
+|     skill: complete performance testing agent skill with JMX generator and JTL ground truth parser
+| 
+* commit 10f6d90fd495bec772a3cb4e0d81a2b877820720
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 18:38:26 +0700
+| 
+|     docs: finalize phase 1 deliverables and automated verification script
+| 
+* commit 58dedf63fc12e7ea2ef0357e050bc10d751f0bd2
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 17:15:53 +0700
+| 
+|     docs: initialize AI audit report with phase 1 interaction logs
+| 
+* commit 1f6aa491b57195d7c16d94c7bedc82a751f6d59e
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 15:42:07 +0700
+| 
+|     docs: add ISTQB CT-AI syllabus and assignment policies references
+| 
+* commit 1341e4b1f9df91aea7c6e246015ce6b4320b80b7
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 14:18:42 +0700
+| 
+|     skill: add core automation scripts for performance testing
+| 
+* commit 71863e663d0cf80187903cd72e916486455a3d32
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 11:37:19 +0700
+| 
+|     test: add data-driven inputs
+| 
+* commit ceb1497a573fceb681cc174d1258923d7ec9c08d
+| Author: LamKhanhDepzai <lamhuukhanh69@gmail.com>
+| Date:   2026-08-28 09:23:45 +0700
+| 
+|     docs: document selected performance workflow
+| 
+* commit de733d45d46d1732f826d0b6341d60de3ef9bcc5
+| Author: TKin <letrungkienthd@gmail.com>
+| Date:   2026-08-16 22:14:46 +0700
+| 
+|     add requirements and feature division
+| 
+* commit 6d0ad164b354d1ee79e878c5869457e633d2a8fc
+  Author: TKin <letrungkienthd@gmail.com>
+  Date:   2026-08-16 15:48:14 +0700
+  
+      first commit

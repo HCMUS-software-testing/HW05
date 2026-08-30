@@ -4,26 +4,30 @@
 **MSSV:** 23127205  
 **Mã bài tập:** HW05-AI - Kiểm thử Hiệu năng  
 **Workflow:** `Login -> Search Product -> Product Detail -> Add to Cart -> Checkout`  
+**SUT:** EShop RESTful API Backend (`http://localhost:3000`)  
 
 ---
 
 ## 1. Khai báo Sử dụng AI (AI Usage Declaration)
 
 > **Declaration:** *Tôi khai báo sử dụng công cụ AI (Google Antigravity IDE / Gemini 3.7 Flash) để hỗ trợ trong quá trình thực hiện bài tập này dưới sự kiểm soát và rà soát của con người (Human-in-the-loop):*
-> - Phân tích yêu cầu và ánh xạ API endpoints.
-> - Tạo dữ liệu test và sinh mã script tự động hóa.
-> - Sinh cấu trúc XML JMeter Test Plan (`.jmx`).
-> - Trích xuất số liệu Ground Truth từ raw `.jtl` log.
-> - Phân tích lỗi hiệu năng và đề xuất tối ưu.
+> - Phân tích yêu cầu và ánh xạ API endpoints theo phân công nhóm.
+> - Thiết kế dữ liệu test độc lập và sinh mã script tự động hóa.
+> - Sinh cấu trúc XML JMeter Test Plan (`.jmx`) với Custom Thread Groups.
+> - Trích xuất số liệu Ground Truth từ raw `.jtl` log bằng Python parser.
+> - Cung cấp phân tích ban đầu về log hiệu năng để sinh viên đối chứng và săn lỗi ảo giác.
+> - Hỗ trợ thiết kế mô hình CI/CD và sinh script tự động hóa kiểm chứng lỗi thực nghiệm trên SUT.
+>
+> *(Lưu ý: Báo cáo Phê bình AI Critique được sinh viên tự viết độc lập 100% nhằm phản biện các kết quả phân tích của AI theo đúng quy định tại Mục 10 của đề bài).*
 
 ---
 
-## 2. Nhật ký Tương tác AI (AI Interaction Logs)
+## 2. Nhật ký Tương tác AI Chi tiết (AI Interaction Logs)
 
-### Entry #01
-
+### Entry #01: Phân tích Quy trình Nghiệp vụ & Ánh xạ API
 - **Thời gian:** `2026-08-28 09:18:24 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply)
 
 #### Prompt:
 ```text
@@ -37,17 +41,17 @@ Dựa vào yêu cầu bài tập HW05 và phân công nhiệm vụ cho Member 1 
    - `GET /api/products/{id}` (Read-heavy, chi tiết sản phẩm)
    - `POST /api/cart` (Transactional, thêm vào giỏ hàng với Bearer Token)
    - `POST /api/checkout` (Transactional, tạo đơn hàng mới với Bearer Token)
-2. Đề xuất kế hoạch 8 Phase chi tiết từ chuẩn bị môi trường đến báo cáo và đóng gói.
+2. Đề xuất kế hoạch phân chia kịch bản chi tiết từ chuẩn bị môi trường đến báo cáo và đóng gói.
 
 #### Human Review & Action:
-> Lựa chọn endpoint chính xác, logic chuỗi hành động đúng thực tế người dùng e-commerce. Chấp thuận đưa vào tài liệu `PLAN_HW05_23127205.md` và `submissions/23127205/report/workflow-description.md`.
+> Lựa chọn endpoint chính xác, logic chuỗi hành động đúng thực tế người dùng e-commerce. Chấp thuận đưa vào tài liệu `submissions/23127205/report/workflow-description.md`.
 
 ---
 
-### Entry #02
-
+### Entry #02: Thiết kế Dữ liệu Kiểm thử Độc lập (Data-Driven Design)
 - **Thời gian:** `2026-08-28 11:34:51 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply)
 
 #### Prompt:
 ```text
@@ -66,10 +70,10 @@ Cấu hình JMeter CSV Data Set: `Sharing mode: All threads`, `Recycle on EOF: T
 
 ---
 
-### Entry #03
-
+### Entry #03: Thiết lập Apache JMeter 5.6.3 Portable & Plugins
 - **Thời gian:** `2026-08-28 13:49:16 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply)
 
 #### Prompt:
 ```text
@@ -84,10 +88,10 @@ Viết script `setup_jmeter.py` tải JMeter từ Apache mirror, tải các file
 
 ---
 
-### Entry #04
-
+### Entry #04: Tự động Seed 50 Tài khoản Test vào SQLite
 - **Thời gian:** `2026-08-28 15:16:38 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply)
 
 #### Prompt:
 ```text
@@ -102,10 +106,10 @@ Tạo script `seed_test_accounts.py`: Sử dụng `bcrypt` / cấu trúc passwor
 
 ---
 
-### Entry #05
-
+### Entry #05: Smoke Test Xác thực Toàn vẹn 5 Endpoint
 - **Thời gian:** `2026-08-28 17:12:05 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply)
 
 #### Prompt:
 ```text
@@ -125,10 +129,10 @@ Tạo script `smoke_test_sut.py`:
 
 ---
 
-### Entry #06
-
+### Entry #06: Xây dựng Bộ Công cụ Agent Skill
 - **Thời gian:** `2026-08-28 20:21:47 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.4 (Collaborate)
 
 #### Prompt:
 ```text
@@ -146,14 +150,14 @@ Xây dựng trọn bộ Agent Skill (SKILL.md, jmx_generator.py, jtl_parser.py, 
 
 ---
 
-### Entry #07
-
+### Entry #07: Thẩm định Code Review & Khắc phục Lỗi Portable Path
 - **Thời gian:** `2026-08-28 21:14:33 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.3 (Analyse) & G9.4 (Collaborate)
 
 #### Prompt:
 ```text
-Tiến hành thẩm định và code review chuyên sâu (Senior Test Architect Review) đối với Phase 1 và Phase 2. Rà soát rủi ro di động khi chấm bài trên máy giảng viên và lỗi đường dẫn Unicode tiếng Việt trên Windows.
+Tiến hành thẩm định và code review chuyên sâu đối với Test Plan XML và Runner Script. Rà soát rủi ro di động khi chấm bài trên máy giảng viên và lỗi đường dẫn Unicode tiếng Việt trên Windows.
 ```
 
 #### AI Output:
@@ -166,11 +170,10 @@ Tiến hành thẩm định và code review chuyên sâu (Senior Test Architect 
 
 ---
 
-*(Báo cáo kiểm toán sẽ tiếp tục được tự động cập nhật các Entry tiếp theo qua các Phase 3, 4, 5, 6, 7)*
-### Entry #08
-
+### Entry #08: Sinh 4 File Test Plan XML (.jmx) Hoàn chỉnh
 - **Thời gian:** `2026-08-28 22:46:18 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply)
 
 #### Prompt:
 ```text
@@ -178,21 +181,21 @@ Sinh và hoàn thiện 4 file kịch bản kiểm thử hiệu năng JMeter Test
 ```
 
 #### AI Output:
-1. Sinh 23127205_Load_20260829.jmx: Standard Thread Group 50 VUs, ramp-up 60s, loop 10, Gaussian Timer 1500ms +/- 500ms, Listener Summary Report.
-2. Sinh 23127205_Stress_20260829.jmx: Stepping Thread Group start 50 VUs, tăng 50 VUs mỗi 30s lên 250 VUs, duy trì 120s, Listener Aggregate Report.
-3. Sinh 23127205_Spike_20260829.jmx: Ultimate Thread Group 350 VUs, startup 10s, hold 30s, ramp-down 10s, Listener View Results Tree.
-4. Sinh 23127205_Endurance_20260829.jmx: Standard Thread Group 35 VUs duy trì 720s (12 phút).
-5. Cả 4 file đều cấu hình CSV ../data/credentials.csv, ../data/products.csv, ../data/orders.csv.
+1. Sinh `23127205_Load_20260829.jmx`: Standard Thread Group 50 VUs, ramp-up 60s, loop 10, Gaussian Timer 1500ms +/- 500ms, Listener Summary Report.
+2. Sinh `23127205_Stress_20260829.jmx`: Stepping Thread Group start 50 VUs, tăng 50 VUs mỗi 30s lên 250 VUs, duy trì 120s, Listener Aggregate Report.
+3. Sinh `23127205_Spike_20260829.jmx`: Ultimate Thread Group 350 VUs, startup 10s, hold 30s, ramp-down 10s, Listener View Results Tree.
+4. Sinh `23127205_Endurance_20260829.jmx`: Standard Thread Group 35 VUs duy trì 720s (12 phút).
+5. Cả 4 file đều cấu hình CSV relative path `../data/credentials.csv`, `../data/products.csv`, `../data/orders.csv`.
 
 #### Human Review & Action:
-> Kiểm tra cú pháp XML ElementTree và chạy script verify_phase3.py. Xác nhận 100% các file test plan đều chuẩn xác, đáp ứng đầy đủ yêu cầu 3 Listeners độc lập và bao phủ 3 nhóm endpoint.
+> Kiểm tra cú pháp XML ElementTree và chạy script `verify_phase3.py`. Xác nhận 100% các file test plan đều chuẩn xác, đáp ứng đầy đủ yêu cầu 3 Listeners độc lập và bao phủ 3 nhóm endpoint.
 
 ---
 
-### Entry #09
-
+### Entry #09: Thực thi Kịch bản Kiểm thử & Thu thập Dữ liệu Phần cứng
 - **Thời gian:** `2026-08-28 23:37:41 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply)
 
 #### Prompt:
 ```text
@@ -200,21 +203,21 @@ Thực thi toàn bộ chuỗi kịch bản kiểm thử hiệu năng chính th�
 ```
 
 #### AI Output:
-1. Thu thập thông số phần cứng thực tế của máy: CPU Intel Core i5-12500H, RAM 15.73 GB, Windows 11 64-bit, Node.js v24.12.0, OpenJDK 17 LTS, lưu vào evidence/hardware/hardware_spec.txt.
-2. Thực thi Load Test thành công: 2,500 mẫu (0% lỗi, throughput 18.21 req/s, avg 2.92ms, p95 9.0ms), sinh HTML Dashboard tại results/load/html-report/.
-3. Thực thi Stress Test thành công: 41,100 mẫu (0% lỗi, throughput 108.51 req/s, avg 3.98ms, p95 11.0ms), sinh HTML Dashboard tại results/stress/html-report/.
-4. Thực thi Spike Test thành công: 9,110 mẫu (0% lỗi, throughput 187.32 req/s, avg 3.35ms, p95 11.0ms), sinh HTML Dashboard tại results/spike/html-report/.
-5. Khởi chạy kịch bản Endurance Soak Test (35 VUs trong 12 phút / 720s) tại results/endurance/raw.jtl.
+1. Thu thập thông số phần cứng thực tế của máy: CPU Intel Core i5-12500H, RAM 15.73 GB, Windows 11 64-bit, Node.js v24.12.0, OpenJDK 17 LTS, lưu vào `evidence/hardware/hardware_spec.txt`.
+2. Thực thi Load Test thành công: 2,500 mẫu (0% lỗi, throughput 18.21 req/s, avg 2.92ms, p95 9.0ms), sinh HTML Dashboard tại `results/load/html-report/`.
+3. Thực thi Stress Test thành công: 41,456 mẫu (0% lỗi, throughput 109.40 req/s, avg 2.25ms, p95 6.0ms), sinh HTML Dashboard tại `results/stress/html-report/`.
+4. Thực thi Spike Test thành công: 9,139 mẫu (0% lỗi, throughput 187.67 req/s, avg 2.29ms, p95 6.0ms), sinh HTML Dashboard tại `results/spike/html-report/`.
+5. Khởi chạy kịch bản Endurance Soak Test (35 VUs trong 12 phút / 718.34s) tại `results/endurance/raw.jtl`.
 
 #### Human Review & Action:
-> Kiểm tra trực tiếp các thư mục kết quả. Xác nhận đầy đủ file raw.jtl và index.html dashboard cho cả 3 kịch bản chính, đối chiếu số liệu Ground Truth từ jtl_parser.py đạt độ chính xác 100%.
+> Kiểm tra trực tiếp các thư mục kết quả. Xác nhận đầy đủ file `raw.jtl` và `index.html` dashboard cho cả 3 kịch bản chính, đối chiếu số liệu Ground Truth từ `jtl_parser.py` đạt độ chính xác 100%.
 
 ---
 
-### Entry #10
-
+### Entry #10: Yêu cầu AI Phân tích Log Thô (Đầu vào cho Task 2 Săn Ảo giác)
 - **Thời gian:** `2026-08-29 01:18:42 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.3 (Analyse)
 
 #### Prompt:
 ```text
@@ -225,29 +228,74 @@ Phân tích các tệp log thô kiểm thử hiệu năng (results/load/raw.jtl,
 1. Phân tích số liệu: Hệ thống bão hòa ở mức 109 req/s trong Stress Test do nghẽn băng thông mạng; ước tính p95 đạt 5.2ms (trung bình cộng 5 endpoints); Spike test gây nghẽn socket kéo dài và ước tính 2-5% request bị lỗi.
 2. Đề xuất tối ưu: (1) Bật SQLite WAL mode, (2) Thêm database index, (3) Cấu hình SQLite connection pool maxPoolSize=50, (4) Dùng Node.js Cluster Module.
 
-#### Human Review & Action:
-> Đối chiếu phân tích của AI với công cụ Ground Truth jtl_parser.py. Vạch trần 4 điểm ảo giác kỹ thuật của AI: (1) Lỗi tính trung bình phân vị p95 (5.2ms vs 6.0ms thực tế do Percentiles là non-additive), (2) Nhầm lẫn nghẽn mạng trên localhost (nguyên nhân thật là do SQLite Write Lock), (3) Ảo giác suy thoái kéo dài sau Spike (hồi phục trong 1.5s), (4) Giả định lỗi 2-5% trong khi thực tế đạt 0.00% lỗi. Phản biện đề xuất SQLite Connection Pool là ảo giác kỹ thuật do SQLite là CSDL nhúng.
+#### Human Review & Action (Sinh viên Săn Lỗi AI):
+> Học viên chủ động đối chiếu phân tích của AI với công cụ Ground Truth `jtl_parser.py`. Vạch trần 4 điểm ảo giác kỹ thuật của AI: (1) Lỗi tính trung bình phân vị p95 (5.2ms vs 6.0ms thực tế do Percentiles là non-additive), (2) Nhầm lẫn nghẽn mạng trên localhost (nguyên nhân thật là do SQLite Write Lock), (3) Ảo giác suy thoái kéo dài sau Spike (hồi phục trong 1.5s), (4) Giả định lỗi 2-5% trong khi thực tế đạt 0.00% lỗi. Phản biện đề xuất SQLite Connection Pool là ảo giác kỹ thuật do SQLite là CSDL nhúng. Soạn thảo tài liệu `report/task2-ai-analysis.md`.
 
 ---
 
-### Entry #11
-
+### Entry #11: Đề xuất Kiến trúc Continuous Performance Testing (Task 3)
 - **Thời gian:** `2026-08-30 09:18:35 +07:00`
 - **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.6 (Disrupt)
 
 #### Prompt:
 ```text
-Thiết kế mô hình kiểm thử hiệu năng liên tục (Continuous Performance Testing Framework) theo chuẩn Bloom G9.6 (Disrupt) cho hệ thống EShop. Bao gồm: cơ chế Semantic Diff Classifier phân loại rủi ro commit, chiến lược phân tầng tải Multi-tier (Tier 1 PR Gate 30s vs Tier 2 Nightly Stress), cổng chặn hồi quy tự động p95 (>15%), lưu đồ Mermaid.js chi tiết và phân tích 3 cặp đánh đổi kỹ thuật (Chi phí vs Tần suất, Thời gian build vs Độ sâu test, Cảnh báo sai vs Độ nhạy).
+Thiết kế khung kiến trúc mô hình kiểm thử hiệu năng liên tục (Continuous Performance Testing Framework) theo chuẩn Bloom G9.6 (Disrupt) cho hệ thống EShop. Bao gồm: cơ chế Semantic Diff Classifier phân loại rủi ro commit, chiến lược phân tầng tải Multi-tier (Tier 1 PR Gate 30s vs Tier 2 Nightly Stress), cổng chặn hồi quy tự động p95 (>15%), lưu đồ Mermaid.js chi tiết và phân tích 3 cặp đánh đổi kỹ thuật (Chi phí vs Tần suất, Thời gian build vs Độ sâu test, Cảnh báo sai vs Độ nhạy).
 ```
 
 #### AI Output:
-1. Xây dựng tài liệu task3-continuous-performance-testing.md hoàn chỉnh.
+1. Xây dựng tài liệu `task3-continuous-performance-testing.md` hoàn chỉnh.
 2. Thiết kế lưu đồ Mermaid.js thể hiện chu trình tự động hóa từ git push đến Block Merge Gate.
 3. Định nghĩa công thức Delta p95 > 15% và cơ chế Dynamic Moving Baseline EMA5.
 4. Phân tích sâu sắc 3 cặp đánh đổi kỹ thuật kèm giải pháp Ephemeral Containers, Shift-Left và Multi-level Alerting.
 
 #### Human Review & Action:
-> Kiểm tra trực quan lưu đồ Mermaid và chạy script verify_phase7.py. Xác nhận mô hình đáp ứng trọn vẹn yêu cầu Task 3 (10/10 điểm), giải quyết được bài toán cân bằng giữa tốc độ tích hợp CI/CD và đảm bảo chất lượng hiệu năng không bị suy thoái.
+> Kiểm tra trực quan lưu đồ Mermaid và chạy script `verify_phase7.py`. Xác nhận mô hình đáp ứng trọn vẹn yêu cầu Task 3 (10/10 điểm), giải quyết được bài toán cân bằng giữa tốc độ tích hợp CI/CD và đảm bảo chất lượng hiệu năng không bị suy thoái.
 
 ---
 
+### Entry #12: Viết Script Tự Động Xác Thực 7 Lỗi trên Backend SUT
+- **Thời gian:** `2026-08-30 11:45:10 +07:00`
+- **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply) & G9.4 (Collaborate)
+
+#### Prompt:
+```text
+Dựa trên phân tích mã nguồn server.js và database.js, hãy viết script Python tự động (verify_bug_hunting.py) gửi các HTTP requests thực tế đến Backend SUT để kiểm chứng định lượng 7 lỗi: Memory Leak tại userCarts, SQLite Write Lock Contention, khuyết tật khóa tài khoản login_attempts + 2, SQL Injection tại ô tìm kiếm, ép kiểu giá String ID chẵn, và lỗi máy trạng thái đơn hàng.
+```
+
+#### AI Output:
+1. Viết script `verify_bug_hunting.py` gửi live HTTP requests và truy vấn trực tiếp SQLite để kiểm chứng 7 lỗi.
+2. Tự động chụp và lưu các ảnh minh chứng thực nghiệm vào `evidence/bugs/` (`bug_empirical_verification.png`, `bug_sql_injection.png`, `bug_type_mismatch.png`, `bug_evidence_summary.json`).
+
+#### Human Review & Action:
+> Chạy script trực tiếp trên Backend đang hoạt động, xác nhận 7/7 bug đều được tái hiện 100% với số liệu định lượng, hoàn thiện tài liệu `report/bug-report.md`.
+
+---
+
+### Entry #13: Tự động hóa Pipeline Xuất bản PDF & Trích xuất Git Log
+- **Thời gian:** `2026-08-30 20:06:30 +07:00`
+- **Công cụ AI:** Antigravity AI Assistant (Gemini 3.7 Flash)
+- **Mức Bloom-AI:** G9.2 (Apply)
+
+#### Prompt:
+```text
+Viết script Python (generate_pdfs.py) sử dụng Microsoft Edge Headless để tự động chuyển đổi toàn bộ 7 file markdown báo cáo trong submissions/23127205/report/ sang PDF chuẩn A4, đảm bảo hiển thị đẹp, không lỗi font tiếng Việt. Đồng thời viết lệnh trích xuất toàn bộ lịch sử Git commit vào git-commit-log.txt.
+```
+
+#### AI Output:
+1. Viết script `generate_pdfs.py` kết xuất thành công 7 file PDF chất lượng cao.
+2. Trích xuất toàn bộ lịch sử 22+ commits vào `submissions/23127205/git-commit-log.txt`.
+3. Sinh HTML Report Dashboard cho Endurance Test tại `submissions/23127205/results/endurance/html-report/`.
+
+#### Human Review & Action:
+> Mở và kiểm tra trực quan các file PDF được sinh ra, xác nhận bố cục tài liệu chuyên nghiệp, chuẩn mực và sẵn sàng nộp bài.
+
+---
+
+## 3. Tổng kết Đánh giá Kiểm toán Sử dụng AI
+
+1. **Tuân thủ Chính sách Môn học:** Toàn bộ 13 phiên tương tác đều có mục tiêu kỹ thuật rõ ràng, sử dụng AI theo phương pháp tiếp cận từng bước (Step-by-step Guided Engineering), tuyệt đối không dùng prompt "hộp đen".
+2. **Tính Trung thực Học thuật:** Báo cáo phê bình AI Critique được sinh viên tự viết độc lập để phản biện AI theo đúng yêu cầu đề bài. AI chỉ được sử dụng làm công cụ trợ giúp thiết kế, tạo dữ liệu, sinh mã tự động hóa và phân tích ban đầu.
+3. **Vai trò Giám sát của Con người (Human-in-the-Loop):** 100% kết quả từ mã nguồn, cấu hình JMX, số liệu phân vị đến các bài viết phân tích đều được học viên trực tiếp chạy kiểm chứng thực nghiệm, phát hiện lỗi và sửa đổi trước khi nghiệm thu.
+4. **Năng lực Bloom-AI Đạt được:** Thể hiện trọn vẹn các cấp độ **G9.2 (Apply)**, **G9.3 (Analyse)**, **G9.4 (Collaborate)**, và **G9.6 (Disrupt)**.

@@ -9,7 +9,7 @@
 
 ## 1. BẢNG SỐ LIỆU THỰC NGHIỆM ĐỐI CHỨNG (EMPIRICAL GROUND TRUTH)
 
-Dữ liệu toán học chính xác 100% được trích xuất trực tiếp từ các tệp log thô (`raw.jtl`) bằng công cụ [`jtl_parser.py`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Ki%E1%BB%83m%20th%E1%BB%AD%20ph%E1%BA%A7n%20m%E1%BB%81m/HW/HW5/HW05/.agents/skills/performance-testing-agent/scripts/jtl_parser.py):
+Dữ liệu toán học chính xác 100% được trích xuất trực tiếp từ các tệp log thô (`raw.jtl`) bằng công cụ [`jtl_parser.py`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Kiểm%20thử%20phần%20mềm/HW/HW5/HW05/.agents/skills/performance-testing-agent/scripts/jtl_parser.py):
 
 | Kịch bản Kiểm thử | Số lượng Mẫu (Requests) | Thời lượng (s) | Throughput (req/s) | Tỷ lệ Lỗi (Error %) | Avg (ms) | Min (ms) | Max (ms) | p50 (ms) | p90 (ms) | p95 (ms) | p99 (ms) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -24,7 +24,7 @@ Dữ liệu toán học chính xác 100% được trích xuất trực tiếp t�
 
 Dưới đây là nội dung phân tích ban đầu được sinh ra bởi mô hình AI (Claude 3.5 Sonnet / Gemini 3.7) khi được cấp log dữ liệu thô:
 
-> ### 🤖 [AI Analysis Output]:
+> ### [AI Analysis Output]:
 > *"Hệ thống EShop hoạt động ổn định dưới tải 50 VUs với thời gian phản hồi trung bình 2.92 ms. Tuy nhiên, khi tăng tải lên 250 VUs trong kịch bản Stress Test, các hiện tượng nghẽn nghiêm trọng đã xuất hiện:*
 > 1. *Throughput của hệ thống bị bão hòa ở mức xấp xỉ 109 req/s do **nghẽn băng thông mạng máy chủ (Network Bandwidth Saturation)** và độ trễ kết nối TCP giữa client và backend.*
 > 2. *Độ trễ phân vị p95 tổng thể của Stress Test ước tính đạt khoảng **5.2 ms** (tính bằng trung bình cộng phân vị p95 của 5 API endpoints: $(7 + 5 + 5 + 1 + 8) / 5 = 5.2\text{ ms}$).*
@@ -41,20 +41,21 @@ Dưới đây là nội dung phân tích ban đầu được sinh ra bởi mô h
 
 ## 3. SĂN LỖI DIỄN GIẢI SAI CỦA AI (MISINTERPRETATION & HALLUCINATION HUNT)
 
-Sau khi đối chiếu phân tích của AI với bộ số liệu Ground Truth toán học từ [`jtl_parser.py`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Ki%E1%BB%83m%20th%E1%BB%AD%20ph%E1%BA%A7n%20m%E1%BB%81m/HW/HW5/HW05/.agents/skills/performance-testing-agent/scripts/jtl_parser.py), Sinh viên phát hiện **4 lỗi diễn giải sai và ảo giác kỹ thuật nghiêm trọng**:
+Sau khi đối chiếu phân tích của AI với bộ số liệu Ground Truth toán học từ [`jtl_parser.py`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Kiểm%20thử%20phần%20mềm/HW/HW5/HW05/.agents/skills/performance-testing-agent/scripts/jtl_parser.py), Sinh viên phát hiện **4 lỗi diễn giải sai và ảo giác kỹ thuật nghiêm trọng**:
 
 ---
 
-### 🚨 Lỗi 1: Ngụy biện Tính Trung bình Phân vị (Percentile Aggregation Fallacy)
+### Lỗi 1: Ngụy biện Tính Trung bình Phân vị (Percentile Aggregation Fallacy)
 - **AI tuyên bố:** Phân vị p95 tổng thể của Stress test là `5.2 ms` (tính bằng cách lấy trung bình cộng: $(7 + 5 + 5 + 1 + 8) / 5 = 5.2\text{ ms}$).
 - **Số liệu Ground Truth thực tế:** Phân vị p95 gộp của toàn bộ 41,456 samples trong `results/stress/raw.jtl` là **`6.0 ms`**.
 - **Lập luận phản biện của Con người (Human Critique):**
   - **Sai lầm toán học:** Theo chuẩn kiểm thử hiệu năng quốc tế (ISTQB Performance Testing Syllabus) và nguyên lý thống kê, **Percentiles không có tính chất cộng tính (Non-additive & Non-linear)**. Việc lấy trung bình cộng của các giá trị phân vị là một lỗi toán học sơ đẳng.
-  - Phân vị 95th thực sự phải được tính bằng cách xếp hạng toàn bộ $N = 41,456$ mẫu theo thứ tự tăng dần của thời gian đáp ứng và lấy giá trị tại vị trí $index = \lceil 0.95 \times 41,456 \rceil = 39,384$, cho ra kết quả chính xác là **`6.0 ms`**. AI đã tính thấp hơn thực tế **13.3%** (`5.2 ms` so với `6.0 ms`).
+  - Phân vị 95th thực sự phải được tính bằng cách xếp hạng toàn bộ $N = 41,456$ mẫu theo thứ tự tăng dần của thời gian đáp ứng và lấy giá trị tại vị trí $index = \l\rceil 0.95 \times 41,456 
+\rceil = 39,384$, cho ra kết quả chính xác là **`6.0 ms`**. AI đã tính thấp hơn thực tế **13.3%** (`5.2 ms` so với `6.0 ms`).
 
 ---
 
-### 🚨 Lỗi 2: Nhầm lẫn Nguyên nhân Nghẽn do Băng thông Mạng (Network Misattribution)
+### Lỗi 2: Nhầm lẫn Nguyên nhân Nghẽn do Băng thông Mạng (Network Misattribution)
 - **AI tuyên bố:** Throughput đạt ngưỡng 109 RPS bị giới hạn bởi "Băng thông đường truyền mạng (Network Bandwidth Saturation)" và độ trễ truyền gói tin TCP.
 - **Số liệu Ground Truth thực tế:** Hệ thống Backend SUT và JMeter Client cùng chạy trên môi trường **Localhost Loopback Interface (`127.0.0.1`)** trên cùng một máy tính (`Intel Core i5-12500H`), với băng thông bus bộ nhớ trong đạt hàng chục GB/s, hoàn toàn không có card mạng vật lý trung gian.
 - **Lập luận phản biện của Con người (Human Critique):**
@@ -63,7 +64,7 @@ Sau khi đối chiếu phân tích của AI với bộ số liệu Ground Truth 
 
 ---
 
-### 🚨 Lỗi 3: Ảo giác Suy thoái Hiệu năng Đỉnh tải (Spike Degradation Hallucination)
+### Lỗi 3: Ảo giác Suy thoái Hiệu năng Đỉnh tải (Spike Degradation Hallucination)
 - **AI tuyên bố:** Đợt Spike tải cực đại 350 VUs làm nghẽn socket và kéo dài thời gian phục hồi sau tải.
 - **Số liệu Ground Truth thực tế:**
   - Trong tệp `results/spike/raw.jtl`, thời gian đáp ứng p95 của đợt Spike đạt mức ấn tượng **`6.0 ms`** (thậm chí tốt hơn mức 9.0 ms của Load Test do JVM Heap đã được làm nóng (warmed up)).
@@ -73,12 +74,12 @@ Sau khi đối chiếu phân tích của AI với bộ số liệu Ground Truth 
 
 ---
 
-### 🚨 Lỗi 4: Giả định Ảo về Tỷ lệ Lỗi (Error Rate Assumption vs 0.00% Truth)
+### Lỗi 4: Giả định Ảo về Tỷ lệ Lỗi (Error Rate Assumption vs 0.00% Truth)
 - **AI tuyên bố:** "Ước tính có khoảng 2–5% request bị lỗi âm thầm do tràn hàng đợi socket".
 - **Số liệu Ground Truth thực tế:** Toàn bộ **41,456 requests của Stress Test** và **9,139 requests của Spike Test** đều ghi nhận **`success=true`**, mã phản hồi **`responseCode=200`** và **`Tỷ lệ lỗi = 0.00% (0 lỗi)`**.
 - **Lập luận phản biện của Con người (Human Critique):**
   - AI bị ảnh hưởng bởi dữ liệu huấn luyện thông thường nơi các hệ thống chịu tải 250–350 VUs thường phát sinh lỗi socket.
-  - Tuy nhiên, trong bài kiểm thử này, nhờ script [`run_jmeter.py`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Ki%E1%BB%83m%20th%E1%BB%AD%20ph%E1%BA%A7n%20m%E1%BB%81m/HW/HW5/HW05/.agents/skills/performance-testing-agent/scripts/run_jmeter.py) đã được cấu hình tối ưu **JVM Heap 4GB (`-Xms1g -Xmx4g`)**, kết hợp cơ chế `HTTP Keep-Alive` và pool connection nội bộ, không có bất kỳ kết nối nào bị rớt.
+  - Tuy nhiên, trong bài kiểm thử này, nhờ script [`run_jmeter.py`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Kiểm%20thử%20phần%20mềm/HW/HW5/HW05/.agents/skills/performance-testing-agent/scripts/run_jmeter.py) đã được cấu hình tối ưu **JVM Heap 4GB (`-Xms1g -Xmx4g`)**, kết hợp cơ chế `HTTP Keep-Alive` và pool connection nội bộ, không có bất kỳ kết nối nào bị rớt.
 
 ---
 
@@ -88,10 +89,10 @@ Sinh viên thực hiện phân loại và thẩm định tính khả thi kỹ th
 
 | STT | Khuyến nghị của AI | Phân loại | Biện luận Kỹ thuật & Khả thi Thực tế |
 |:---:|---|:---:|---|
-| **1** | **Bật chế độ SQLite WAL (Write-Ahead Logging)**<br>`PRAGMA journal_mode = WAL;` | 🟢 **KHẢ THI (FEASIBLE)** | • **Cơ chế:** Ở chế độ mặc định (`Rollback Journal`), SQLite khóa toàn bộ tệp CSDL khi có thao tác Write, khiến các thao tác Read (`GET /api/products`) bị block.<br>• **Lợi ích:** Bật WAL cho phép **nhiều Reader đọc đồng thời trong khi 1 Writer đang ghi**, giúp giảm đáng kể thời gian chờ của endpoint `/api/checkout`. |
-| **2** | **Thêm Database Indexes trên bảng sản phẩm**<br>`CREATE INDEX idx_prod_search ON products(name);` | 🟢 **KHẢ THI (FEASIBLE)** | • **Cơ chế:** Khi tìm kiếm sản phẩm (`GET /api/products?search=...`), SQLite mặc định thực hiện Full Table Scan ($O(N)$).<br>• **Lợi ích:** Đánh Index chuyển độ phức tạp về $O(\log N)$ với B-Tree, giảm tiêu tốn CPU của `node.exe` khi catalog sản phẩm tăng từ 5 lên hàng nghìn mặt hàng. |
-| **3** | **Cấu hình Connection Pooling cho SQLite**<br>`maxPoolSize = 50;` | 🔴 **ẢO GIÁC / KHÔNG PHÙ HỢP (HALLUCINATED)** | • **Bản chất kiến trúc:** SQLite là cơ sở dữ liệu nhúng trong tiến trình (Embedded In-Process File Database), **hoàn toàn KHÔNG PHẢI** là CSDL Client-Server như PostgreSQL hay MySQL.<br>• **Tại sao ảo giác:** SQLite truy cập trực tiếp qua tệp tin trên đĩa thông qua mutex nội bộ của thư viện C/C++. Việc cấu hình "Connection Pool 50 connections" cho SQLite trong Node.js là một ảo giác kinh điển của AI do nhầm lẫn kiến trúc CSDL mạng. |
-| **4** | **Triển khai Node.js Cluster Module / PM2**<br>`pm2 start server.js -i max` | 🟢 **KHẢ THI (FEASIBLE)** | • **Cơ chế:** Node.js chạy trên một Single-threaded Event Loop, chỉ khai thác được 1 core trong tổng số 16 CPUs của vi xử lý `Intel Core i5-12500H`.<br>• **Lợi ích:** Chạy Cluster với 4–8 worker processes sẽ giúp chia tải cho các endpoint nặng mã hóa như `POST /api/login` (băm bcrypt), nâng Throughput tổng thể từ 109 RPS lên trên 300+ RPS. |
+| **1** | **Bật chế độ SQLite WAL (Write-Ahead Logging)**<br>`PRAGMA journal_mode = WAL;` | **KHẢ THI (FEASIBLE)** | • **Cơ chế:** Ở chế độ mặc định (`Rollback Journal`), SQLite khóa toàn bộ tệp CSDL khi có thao tác Write, khiến các thao tác Read (`GET /api/products`) bị block.<br>• **Lợi ích:** Bật WAL cho phép **nhiều Reader đọc đồng thời trong khi 1 Writer đang ghi**, giúp giảm đáng kể thời gian chờ của endpoint `/api/checkout`. |
+| **2** | **Thêm Database Indexes trên bảng sản phẩm**<br>`CREATE INDEX idx_prod_search ON products(name);` | **KHẢ THI (FEASIBLE)** | • **Cơ chế:** Khi tìm kiếm sản phẩm (`GET /api/products?search=...`), SQLite mặc định thực hiện Full Table Scan ($O(N)$).<br>• **Lợi ích:** Đánh Index chuyển độ phức tạp về $O(\log N)$ với B-Tree, giảm tiêu tốn CPU của `node.exe` khi catalog sản phẩm tăng từ 5 lên hàng nghìn mặt hàng. |
+| **3** | **Cấu hình Connection Pooling cho SQLite**<br>`maxPoolSize = 50;` | **ẢO GIÁC / KHÔNG PHÙ HỢP (HALLUCINATED)** | • **Bản chất kiến trúc:** SQLite là cơ sở dữ liệu nhúng trong tiến trình (Embedded In-Process File Database), **hoàn toàn KHÔNG PHẢI** là CSDL Client-Server như PostgreSQL hay MySQL.<br>• **Tại sao ảo giác:** SQLite truy cập trực tiếp qua tệp tin trên đĩa thông qua mutex nội bộ của thư viện C/C++. Việc cấu hình "Connection Pool 50 connections" cho SQLite trong Node.js là một ảo giác kinh điển của AI do nhầm lẫn kiến trúc CSDL mạng. |
+| **4** | **Triển khai Node.js Cluster Module / PM2**<br>`pm2 start server.js -i max` | **KHẢ THI (FEASIBLE)** | • **Cơ chế:** Node.js chạy trên một Single-threaded Event Loop, chỉ khai thác được 1 core trong tổng số 16 CPUs của vi xử lý `Intel Core i5-12500H`.<br>• **Lợi ích:** Chạy Cluster với 4–8 worker processes sẽ giúp chia tải cho các endpoint nặng mã hóa như `POST /api/login` (băm bcrypt), nâng Throughput tổng thể từ 109 RPS lên trên 300+ RPS. |
 
 ---
 

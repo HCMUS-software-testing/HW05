@@ -31,7 +31,7 @@ REPORTS = (
             "Lockout reset runbook",
             "Kiểm thử hiệu năng liên tục",
             "Phụ lục - AI Critique",
-            "TODO_ADD_VIDEO_LINK",
+            "https://youtu.be/lAfLKjpHHRM",
         ),
     },
     {
@@ -39,8 +39,10 @@ REPORTS = (
         "pdf": REPORT_DIR / "ai-audit-report.pdf",
         "minimum_pages": 2,
         "required": (
-            "Công cụ",
-            "Ngày giờ",
+            "Tên công cụ AI",
+            "Ngày và giờ",
+            "Prompt của bạn",
+            "Đầu ra của AI",
             "Codex",
             "2026-08-30",
             "Chi tiết prompt và output",

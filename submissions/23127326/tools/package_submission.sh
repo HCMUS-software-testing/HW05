@@ -2,14 +2,14 @@
 set -eo pipefail
 
 submission_dir="$(cd "$(dirname "$0")/.." && pwd)"
-archive_name="23127326_HW05_AI_Performance_090.zip"
+archive_name="23127326_HW05_AI_Performance_100.zip"
 archive_path="$submission_dir/$archive_name"
 temp_dir="$(mktemp -d /tmp/hw05-package.XXXXXX)"
 temp_archive="$temp_dir/$archive_name"
 
 python3 -B "$submission_dir/tools/validate_canonical_metrics.py"
 
-if rg -q 'TODO_ADD_VIDEO_LINK' "$submission_dir/README.md" "$submission_dir/report/main-report.md"; then
+if rg -q 'TODO_ADD_(VIDEO_LINK|PERFORMANCE_VIDEO_LINK)' "$submission_dir/README.md" "$submission_dir/report/main-report.md"; then
   echo "Warning: video link is still pending manual replacement." >&2
 fi
 

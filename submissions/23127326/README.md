@@ -50,7 +50,7 @@ Mẫu/s bao gồm cả sampler nội bộ; HTTP RPS chỉ đếm JTL row có URL
 
 ## Ghi chú bàn giao
 
-- Video YouTube vẫn cần bạn tự quay và thêm link bên dưới; video phải có thuyết minh tiếng Việt và minh họa Agent Skill end-to-end.
+- Video Agent Skill và video performance demo đã được bổ sung bên dưới; video performance có thuyết minh tiếng Việt và hiển thị JMeter cùng resource monitor trong một khung hình.
 - Bốn ảnh combined Load, Stress, Spike và Endurance đều là screenshot thật cùng phiên. Load hiển thị `Active=20` và backend PID `97107`; ba PID còn lại lần lượt là `31159`, `35179`, `54267`; tất cả khớp Activity Monitor.
 - Ba listener vẫn tắt trong non-GUI run để không ảnh hưởng phép đo. Bộ JTL canonical đã được nạp sau chạy vào View Results Tree, Summary Report và Aggregate Report; ba ảnh tương ứng nằm trong `evidence/screenshots/`.
 - Evidence resource hợp lệ nằm trong `evidence/hardware/`; thông số phần cứng nằm trong `evidence/hardware/hardware-20260830.png` và file văn bản đi kèm.
@@ -68,9 +68,11 @@ Chỉ điền sau khi hoàn tất và kiểm tra evidence thật.
 | Kiểm thử Spike | 20/20 |
 | Phân tích AI và săn lỗi diễn giải | 10/10 |
 | Kiểm thử hiệu năng liên tục | 10/10 |
-| Agent Skill | 0/10 - chưa có video minh họa |
-| **Tổng tạm thời** | **90/100** |
+| Agent Skill | 10/10 - đã có video minh họa Agent Skill |
+| **Tổng** | **100/100** |
 
-Video demo YouTube không công khai, tối thiểu 6 phút: `TODO_ADD_VIDEO_LINK` — sinh viên tự quay.
+Video performance demo YouTube không công khai, tối thiểu 6 phút: <https://youtu.be/lAfLKjpHHRM> — sinh viên tự quay.
 
-Tên gói tạm thời: `23127326_HW05_AI_Performance_090.zip`. Sau khi bổ sung video/evidence và tự đánh giá lại, cập nhật ba chữ số cuối trước khi đóng gói.
+Video demo Agent Skill: <https://youtu.be/-QRnhBWwJL0>.
+
+Tên gói dự kiến: `23127326_HW05_AI_Performance_100.zip`.

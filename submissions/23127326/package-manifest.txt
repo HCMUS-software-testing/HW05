@@ -1,6 +1,6 @@
 # Manifest gói nộp HW05 - MSSV 23127326
 
-Tên file tạm thời: `23127326_HW05_AI_Performance_090.zip`.
+Tên file dự kiến: `23127326_HW05_AI_Performance_100.zip`.
 
 Nguồn nộp nằm trong `submissions/23127326/` và bao gồm: README; Agent Skill; data; ba test plan; tools; báo cáo Markdown trong `report/`; evidence; JTL/HTML canonical Load, Stress, Spike, Endurance trong `results/resource-rerun/`; staircase/soak; metric JSON; Git commit log và issue evidence.
 
@@ -19,7 +19,8 @@ Không đóng gói: `.sut`, `.runtime`, `__pycache__`, `.DS_Store`, source recor
 - [x] Load có screenshot same-screen với `Active=20`, backend PID `97107` khớp Activity Monitor.
 - [x] Có ba screenshot listener đọc JTL canonical: View Results Tree, Summary Report, Aggregate Report.
 - [ ] PDF chưa xuất; sinh viên sẽ xuất lại từ Markdown sau khi hoàn thiện nội dung.
-- [ ] Cần thêm URL video YouTube không công khai, tối thiểu 6 phút, có thuyết minh tiếng Việt và minh họa Agent Skill.
-- [ ] Sau khi hoàn tất các mục trên, cập nhật self-assessment và ba chữ số cuối của tên ZIP.
+- [x] Video demo Agent Skill: `https://youtu.be/-QRnhBWwJL0`.
+- [x] Video performance demo YouTube: `https://youtu.be/lAfLKjpHHRM` (không công khai, tối thiểu 6 phút, có thuyết minh tiếng Việt và resource monitor).
+- [x] Self-assessment đã cập nhật: 100/100; tên ZIP dự kiến dùng hậu tố `_100`.
 
-Không dùng gói `_100.zip` cũ: gói đó chứa PDF và nội dung trước lần audit cuối.
+Không dùng các gói ZIP cũ: chúng chứa PDF và nội dung trước lần audit cuối.

@@ -176,7 +176,9 @@ SUT + DB test sạch --> smoke -- fail --> lưu log và chặn
 
 ## 10. Video, AI audit và tự đánh giá
 
-Video YouTube không công khai, tối thiểu 6 phút: `TODO_ADD_VIDEO_LINK` (sinh viên tự quay). Video phải hiển thị JMeter và resource monitor trong cùng khung hình, có thuyết minh tiếng Việt, đồng thời minh họa Agent Skill trên một nhóm endpoint hoàn chỉnh.
+Video performance demo YouTube không công khai, tối thiểu 6 phút: <https://youtu.be/lAfLKjpHHRM> (sinh viên tự quay). Video hiển thị JMeter và resource monitor trong cùng khung hình và có thuyết minh tiếng Việt.
+
+Video demo Agent Skill trên một workflow hoàn chỉnh: <https://youtu.be/-QRnhBWwJL0>.
 
 Đã kèm AI audit/critique, JTL thô, báo cáo HTML, monitor tài nguyên, ảnh dashboard/resource riêng và issue evidence. Bốn ảnh combined Load/Stress/Spike/Endurance là screenshot thật cùng phiên. Load được chụp tại `Active=20`, backend `HW05_LOAD_BE` PID `97107`; ba PID còn lại là `31159`/`35179`/`54267`, đều khớp Activity Monitor. Ảnh Endurance được chụp tại `Active: 200`.
 

@@ -7,9 +7,11 @@ Lệnh dùng để tạo snapshot này:
 git log --oneline -- submissions/23127326
 ```
 
-Kết quả tại commit nội dung `90fbdb7`:
+Kết quả tại commit nội dung `a6de986`:
 
 ```text
+a6de986 chore: prune non-required submission evidence
+20c01d4 docs: refresh cleanup commit log
 90fbdb7 chore: prune redundant submission artifacts
 6d36909 docs: refresh evidence commit log
 bc2c017 test: add Load and listener evidence

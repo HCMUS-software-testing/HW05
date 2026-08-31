@@ -12,11 +12,11 @@ Kho GitHub công khai: `https://github.com/HB4305/23127326-HW05-AI-Performance`
 
 `Lockout probe -> login hợp lệ -> lọc/tìm sản phẩm -> thêm sản phẩm -> gửi quantity cập nhật -> đọc cart -> checkout -> kiểm tra cart sau checkout`
 
-| Nhóm | Endpoint | Kiểm tra chính |
-| --- | --- | --- |
-| Auth-heavy | `POST /api/login` | HTTP 200, JSON có `token`; lockout probe riêng kiểm tra 3 lần sai |
-| Read-heavy | `GET /api/products?search=...&page=...&limit=...` | HTTP 200, mảng không rỗng, tên khớp từ khóa; ghi nhận SUT không phân trang |
-| Transactional | `POST /api/cart`, `GET /api/cart`, `POST /api/checkout` | Dữ liệu CSV, token, orderId và các kiểm tra gap về quantity/cart |
+| Nhóm          | Endpoint                                                | Kiểm tra chính                                                             |
+| ------------- | ------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Auth-heavy    | `POST /api/login`                                       | HTTP 200, JSON có `token`; lockout probe riêng kiểm tra 3 lần sai          |
+| Read-heavy    | `GET /api/products?search=...&page=...&limit=...`       | HTTP 200, mảng không rỗng, tên khớp từ khóa; ghi nhận SUT không phân trang |
+| Transactional | `POST /api/cart`, `GET /api/cart`, `POST /api/checkout` | Dữ liệu CSV, token, orderId và các kiểm tra gap về quantity/cart           |
 
 ## Cách chạy
 
@@ -39,12 +39,12 @@ Thay `Load` bằng `Stress` hoặc `Spike` và dùng thư mục output riêng. D
 
 ## Tóm tắt kết quả và ngưỡng endurance
 
-| Kịch bản | VU | Mẫu/s | HTTP RPS | p95 | HTTP/network | CPU backend tối đa | RSS tối đa |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Load | 20 | 9.1583 | 7.1076 | 6 ms | 0% | 16.4% | 75.8 MB |
-| Stress | 100 | 34.4137 | 26.7113 | 5 ms | 0% | 17.4% | 120.8 MB |
-| Spike | 10 + 90 | 17.1228 | 13.2665 | 5 ms | 0% | 25.5% | 90.5 MB |
-| Endurance threshold | 200 | 99.5533 (hold) | 77.4400 (hold) | 5 ms | 0% | 17.7% | 119.3 MB |
+| Kịch bản            |      VU |          Mẫu/s |       HTTP RPS |  p95 | HTTP/network | CPU backend tối đa | RSS tối đa |
+| ------------------- | ------: | -------------: | -------------: | ---: | -----------: | -----------------: | ---------: |
+| Load                |      20 |         9.1583 |         7.1076 | 6 ms |           0% |              16.4% |    75.8 MB |
+| Stress              |     100 |        34.4137 |        26.7113 | 5 ms |           0% |              17.4% |   120.8 MB |
+| Spike               | 10 + 90 |        17.1228 |        13.2665 | 5 ms |           0% |              25.5% |    90.5 MB |
+| Endurance threshold |     200 | 99.5533 (hold) | 77.4400 (hold) | 5 ms |           0% |              17.7% |   119.3 MB |
 
 Mẫu/s bao gồm cả sampler nội bộ; HTTP RPS chỉ đếm JTL row có URL. Staircase 70/100/150/200 VU đều đạt SLO; soak mức cao nhất giữ đủ 600 giây với **77.4400 HTTP RPS**, p95 5 ms, HTTP error 0%, CPU tối đa 17.7%, RSS trần 119.3 MB và RSS cuối hold 109.3 MB. Đây là maximum stable observed trong dải đã thử; tiêu chí fail của mức kế tiếp được ghi trong `main-report.md`. Có 4 lỗi nghiệp vụ đã tái hiện và tạo GitHub Issue #1-#4; evidence response và ảnh issue nằm trong `evidence/issues/`.
 
@@ -61,18 +61,17 @@ Xem checklist chi tiết tại `evidence/README.md`; báo cáo chính, AI Audit,
 
 Chỉ điền sau khi hoàn tất và kiểm tra evidence thật.
 
-| Tiêu chí | Điểm tự đánh giá |
-| --- | ---: |
-| Kiểm thử Load | 30/30 |
-| Kiểm thử Stress | 20/20 |
-| Kiểm thử Spike | 20/20 |
-| Phân tích AI và săn lỗi diễn giải | 10/10 |
-| Kiểm thử hiệu năng liên tục | 10/10 |
-| Agent Skill | 10/10 - đã có video minh họa Agent Skill |
-| **Tổng** | **100/100** |
+| Tiêu chí                          |                         Điểm tự đánh giá |
+| --------------------------------- | ---------------------------------------: |
+| Kiểm thử Load                     |                                    30/30 |
+| Kiểm thử Stress                   |                                    20/20 |
+| Kiểm thử Spike                    |                                    20/20 |
+| Phân tích AI và săn lỗi diễn giải |                                    10/10 |
+| Kiểm thử hiệu năng liên tục       |                                    10/10 |
+| Agent Skill                       | 10/10 - đã có video minh họa Agent Skill |
+| **Tổng**                          |                              **100/100** |
 
 Video performance demo YouTube không công khai, tối thiểu 6 phút: <https://youtu.be/lAfLKjpHHRM> — sinh viên tự quay.
 
 Video demo Agent Skill: <https://youtu.be/-QRnhBWwJL0>.
 
-Tên gói dự kiến: `23127326_HW05_AI_Performance_100.zip`.

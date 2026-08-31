@@ -22,7 +22,7 @@ Tài liệu này chia công việc HW05 cho nhóm 4 thành viên, đồng thời
 | Thành viên 1 | Người dùng có sẵn đăng nhập -> tìm kiếm sản phẩm -> xem chi tiết sản phẩm -> thêm vào giỏ hàng -> checkout | Đăng nhập người dùng có sẵn và xử lý session token/cookie | Tìm kiếm sản phẩm và chi tiết sản phẩm | Thêm vào giỏ hàng và checkout/tạo đơn hàng | Think-time phải thực tế và tránh khóa tài khoản khi chạy Stress/Spike |
 | Thành viên 2 | Người dùng mới đăng ký/đăng nhập -> duyệt danh mục -> xem chi tiết sản phẩm -> checkout bằng mã giảm giá | Đăng ký tài khoản và đăng nhập lần đầu | Danh sách sản phẩm theo danh mục và chi tiết sản phẩm | Kiểm tra mã giảm giá và checkout | Cô lập dữ liệu: email/user phải duy nhất và dữ liệu sản phẩm/coupon có thể tái dùng |
 | Thành viên 3 | Đăng nhập có xét negative/positive path liên quan lockout -> phân trang/lọc danh sách sản phẩm -> cập nhật số lượng giỏ hàng -> checkout | Đăng nhập và tài liệu hóa quy trình reset khóa sau 3 lần sai | Phân trang/lọc danh sách sản phẩm | Cập nhật số lượng trong giỏ hàng và checkout | Reset đúng tài khoản bị khóa giữa các lần chạy Stress/Spike |
-| Thành viên 4 | Admin đăng nhập -> dashboard/danh sách sản phẩm -> CRUD sản phẩm/danh mục hoặc import CSV | Admin login và kiểm soát truy cập | Dashboard admin/danh sách sản phẩm/danh mục | CRUD sản phẩm/danh mục hoặc import CSV | Tránh thay đổi dữ liệu thật; dùng bản ghi test-only và có bước cleanup |
+| Thành viên 4 (Lê Trung Kiên - 23127075) | Admin đăng nhập -> dashboard/danh sách sản phẩm -> CRUD sản phẩm/danh mục hoặc import CSV | Admin login và kiểm soát truy cập | Dashboard admin/danh sách sản phẩm/danh mục | CRUD sản phẩm/danh mục hoặc import CSV | Tránh thay đổi dữ liệu thật; dùng bản ghi test-only và có bước cleanup |
 
 ## Công việc chung của nhóm
 
@@ -34,7 +34,7 @@ Các việc này có thể phối hợp một lần, sau đó mỗi thành viên
 | Xác định endpoint API chính xác cho cả 4 workflow | Tất cả thành viên | Bảng endpoint map cho từng workflow |
 | Thống nhất cấu trúc thư mục JMeter và quy ước đặt tên | Thành viên 2 | Folder template và ví dụ tên file |
 | Thống nhất quy ước đặt tên screenshot và checklist bằng chứng | Thành viên 3 | Evidence checklist |
-| Chuẩn bị khung báo cáo chung | Thành viên 4 | Chỉ là outline Markdown; mỗi thành viên tự viết nội dung riêng |
+| Chuẩn bị khung báo cáo chung | Thành viên 4 (Lê Trung Kiên - 23127075) | Chỉ là outline Markdown; mỗi thành viên tự viết nội dung riêng |
 
 ## Công việc cá nhân bắt buộc của mỗi thành viên
 

@@ -22,7 +22,7 @@ This document divides HW05 work for a group of 4 members while respecting the as
 | Member 1 | Existing user login -> product search -> product detail -> add to cart -> checkout | Existing user login and session token/cookie handling | Product search and product detail | Add to cart and checkout/order creation | Realistic think-time and avoiding account lockout during Stress/Spike |
 | Member 2 | New user registration/login -> category browsing -> product detail -> coupon checkout | Account registration and first login | Category product listing and product detail | Coupon validation and checkout | Data isolation: unique emails/users and reusable product/coupon data |
 | Member 3 | Login with lockout-aware negative/positive path -> product listing pagination/filter -> cart quantity update -> checkout | Login plus documented 3-fail lockout reset process | Product listing pagination/filter | Cart update quantity and checkout | Correctly resetting locked accounts between Stress/Spike runs |
-| Member 4 | Admin login -> dashboard/product list -> product/category CRUD or CSV import | Admin login and access control | Admin dashboard/product/category list | Product/category CRUD or CSV import | Avoiding destructive data changes; use test-only records and cleanup steps |
+| Member 4 (Lê Trung Kiên - 23127075) | Admin login -> dashboard/product list -> product/category CRUD or CSV import | Admin login and access control | Admin dashboard/product/category list | Product/category CRUD or CSV import | Avoiding destructive data changes; use test-only records and cleanup steps |
 
 ## Shared Team Work
 
@@ -34,7 +34,7 @@ These tasks can be coordinated once, then each member adapts the result to their
 | Identify exact API endpoints for all 4 workflows | All members | Endpoint map per workflow |
 | Agree on JMeter project folder structure and naming convention | Member 2 | Folder template and filename examples |
 | Agree on screenshot naming convention and evidence checklist | Member 3 | Evidence checklist |
-| Prepare common report skeleton sections | Member 4 | Markdown outline only; each member writes their own content |
+| Prepare common report skeleton sections | Member 4 (Lê Trung Kiên - 23127075) | Markdown outline only; each member writes their own content |
 
 ## Individual Work Required From Every Member
 

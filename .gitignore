@@ -18,3 +18,5 @@ tools/apache-jmeter-5.6.3/
 Thumbs.db
 __pycache__/
 *.pyc
+VIDEO_RECORDING_SCRIPT.md
+scratch/

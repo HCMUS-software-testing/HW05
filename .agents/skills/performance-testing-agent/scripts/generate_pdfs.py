@@ -428,20 +428,29 @@ def markdown_to_simple_clean_html(md_text, base_dir, title="Report"):
 </html>"""
     return full_html
 
-def convert_md_to_pdf(playwright_browser, md_filename):
-    md_path = os.path.join(REPORT_DIR, md_filename)
+def convert_md_to_pdf(playwright_browser, md_input):
+    if os.path.isabs(md_input):
+        md_path = md_input
+    elif os.path.exists(os.path.join(REPORT_DIR, md_input)):
+        md_path = os.path.join(REPORT_DIR, md_input)
+    elif os.path.exists(os.path.join(WS_ROOT, md_input)):
+        md_path = os.path.join(WS_ROOT, md_input)
+    else:
+        md_path = os.path.join(REPORT_DIR, md_input)
+        
     if not os.path.exists(md_path):
         print(f"[-] File not found: {md_path}")
         return False
     
-    base_name = os.path.splitext(md_filename)[0]
-    html_path = os.path.join(REPORT_DIR, f"{base_name}.tmp.html")
-    pdf_path = os.path.join(REPORT_DIR, f"{base_name}.pdf")
+    target_dir = os.path.dirname(md_path)
+    base_name = os.path.splitext(os.path.basename(md_path))[0]
+    html_path = os.path.join(target_dir, f"{base_name}.tmp.html")
+    pdf_path = os.path.join(target_dir, f"{base_name}.pdf")
     
     with open(md_path, "r", encoding="utf-8") as f:
         md_content = f.read()
     
-    rendered_html = markdown_to_simple_clean_html(md_content, REPORT_DIR, title=base_name)
+    rendered_html = markdown_to_simple_clean_html(md_content, target_dir, title=base_name)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(rendered_html)
         
@@ -482,10 +491,10 @@ def convert_md_to_pdf(playwright_browser, md_filename):
                 "right": "15mm"
             }
         )
-        print(f"[+] Successfully created: {base_name}.pdf ({os.path.getsize(pdf_path)} bytes)")
+        print(f"[+] Successfully created: {os.path.relpath(pdf_path, WS_ROOT)} ({os.path.getsize(pdf_path)} bytes)")
         return True
     except Exception as e:
-        print(f"[-] Failed to create PDF for {md_filename}: {e}")
+        print(f"[-] Failed to create PDF for {md_input}: {e}")
         return False
     finally:
         page.close()
@@ -500,7 +509,9 @@ def main():
         "task2-ai-analysis.md",
         "task3-continuous-performance-testing.md",
         "bug-report.md",
-        "workflow-description.md"
+        "workflow-description.md",
+        os.path.join(WS_ROOT, "submissions", "23127205", "README.md"),
+        os.path.join(WS_ROOT, "README.md")
     ]
     
     print("=" * 70)

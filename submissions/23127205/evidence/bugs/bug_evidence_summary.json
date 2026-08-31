@@ -1,51 +1,42 @@
 {
-  "BUG-PERF-01": {
-    "title": "Global In-Memory Cart Object Uncollected Accumulation Leak",
-    "category": "Performance / Memory Leak",
-    "severity": "CRITICAL",
+  "BUG-FUNC-05": {
+    "title": "Product Price Data Type Inconsistency (Even IDs Coerced to String)",
     "confirmed": true,
-    "source_code_line": "server.js:L14, L291, L297",
-    "screenshot": "evidence/bugs/bug_perf_01_cart_memory_leak.png",
     "evidence": {
-      "items_after_checkout": 80,
-      "expected_items": 0,
-      "defect_description": "userCarts[userId] array is never emptied or deleted on /api/checkout, accumulating memory indefinitely in Node.js heap."
+      "product_id_1": {
+        "price": 30000000,
+        "type": "int"
+      },
+      "product_id_2": {
+        "price": "28000000",
+        "type": "str"
+      },
+      "source_code_line": "server.js:L162 (if (row.id % 2 === 0) row.price = row.price.toString();)"
     }
   },
-  "BUG-PERF-02": {
-    "title": "SQLite File-Lock Contention & Response Time Asymmetry",
-    "category": "Performance / Concurrency Bottleneck",
-    "severity": "HIGH",
+  "BUG-SEC-06": {
+    "title": "Unsanitized SQL Query Injection & HTML Error Body Serialization",
     "confirmed": true,
-    "source_code_line": "server.js:L297 & database.js:L5",
-    "screenshot": "evidence/bugs/bug_perf_02_sqlite_lock.png",
     "evidence": {
-      "cart_avg_ms": 3.35,
-      "checkout_avg_ms": 7.12,
-      "asymmetry_factor": "2.1x - 6.04x slower for database write operations due to exclusive SQLite file locking."
+      "sqli_bypass": true,
+      "html_error_leak": true,
+      "response_body_sample": "<h1>Database Error</h1><p>SQLITE_ERROR: near \"SYNTAX_ERR\": syntax error</p>"
     }
   },
-  "BUG-PERF-03": {
-    "title": "Single-Thread Event Loop Throughput Ceiling Bottleneck",
-    "category": "Performance / Architectural Scalability",
-    "severity": "MEDIUM",
+  "BUG-LOGIC-07": {
+    "title": "Order State Machine Flaw: Allows Illegal Transition from Canceled to Delivered",
     "confirmed": true,
-    "source_code_line": "server.js:L1-13",
-    "screenshot": "evidence/bugs/bug_perf_03_event_loop_ceiling.png",
     "evidence": {
-      "hardware_cpus": 16,
-      "cpu_utilized": "~1 Core (6.25% total system CPU on Intel Core i5-12500H)",
-      "measured_throughput_ceiling": "109.4 - 187 req/s",
-      "root_cause": "Node.js runs as a single-threaded event loop without cluster mode or worker threads."
+      "order_id": 13676,
+      "illegal_response_status": 200,
+      "illegal_response_body": {
+        "message": "Order status updated"
+      }
     }
   },
   "BUG-CONCUR-04": {
     "title": "Premature Account Lockout Due to `login_attempts + 2` Increment Flaw",
-    "category": "Concurrency / Security Logic",
-    "severity": "HIGH",
     "confirmed": true,
-    "source_code_line": "server.js:L54-63",
-    "screenshot": "evidence/bugs/bug_concur_04_account_lockout.png",
     "evidence": {
       "attempt_1_status": 401,
       "attempt_2_status": 401,
@@ -55,107 +46,34 @@
       }
     }
   },
-  "BUG-FUNC-05": {
-    "title": "Product Price Data Type Inconsistency (Even IDs Coerced to String)",
-    "category": "Functional / Data Serialization",
-    "severity": "MEDIUM",
-    "confirmed": true,
-    "source_code_line": "server.js:L162 (if (row.id % 2 === 0) row.price = row.price.toString();)",
-    "screenshot": "evidence/bugs/bug_func_05_price_type.png",
+  "BUG-PERF-02": {
+    "title": "SQLite File-Lock Contention & Response Time Asymmetry",
+    "confirmed": false,
     "evidence": {
-      "product_id_1": {
-        "price": 30000000,
-        "type": "number"
-      },
-      "product_id_2": {
-        "price": "28000000",
-        "type": "string"
-      }
+      "cart_avg_ms": 3.89,
+      "cart_p95_ms": 11.73,
+      "checkout_avg_ms": 9.18,
+      "checkout_p95_ms": 15.77,
+      "asymmetry_factor": "2.4x"
     }
   },
-  "BUG-SEC-06": {
-    "title": "Unsanitized SQL Query Injection & HTML Error Body Serialization",
-    "category": "Security / Error Handling",
-    "severity": "HIGH",
+  "BUG-PERF-01": {
+    "title": "Global In-Memory Cart Object Uncollected Accumulation Leak",
     "confirmed": true,
-    "source_code_line": "server.js:L144, L148",
-    "screenshot": "evidence/bugs/bug_sec_06_sql_injection.png",
     "evidence": {
-      "sqli_bypass": true,
-      "html_error_leak": true,
-      "response_body_sample": "<h1>Database Error</h1><p>SQLITE_ERROR: near \"SYNTAX_ERR\": syntax error</p>"
+      "items_after_checkout": 298,
+      "expected_items": 0,
+      "defect_description": "userCarts[userId] array is never emptied or deleted on /api/checkout"
     }
   },
-  "BUG-LOGIC-07": {
-    "title": "Order State Machine Flaw: Allows Illegal Transition from Canceled to Delivered",
-    "category": "Business Logic / State Machine",
-    "severity": "MEDIUM",
+  "BUG-PERF-03": {
+    "title": "Single-Thread Event Loop Throughput Ceiling Bottleneck",
     "confirmed": true,
-    "source_code_line": "server.js:L550",
-    "screenshot": "evidence/bugs/bug_logic_07_state_machine.png",
     "evidence": {
-      "order_id": 570,
-      "illegal_response_status": 200,
-      "illegal_response_body": {
-        "message": "Order status updated"
-      }
-    }
-  },
-  "BUG-FUNC-08": {
-    "title": "Percentage Coupon Math Error Resulting in Negative Discount & Inflated Total",
-    "category": "Functional / Financial Calculation",
-    "severity": "CRITICAL",
-    "confirmed": true,
-    "source_code_line": "server.js:L399-401",
-    "screenshot": "evidence/bugs/bug_func_08_coupon_math.png",
-    "evidence": {
-      "code": "SAVE10",
-      "total_amount": 500000,
-      "discount_amount": -4500000,
-      "final_amount": 5000000
-    }
-  },
-  "BUG-LOGIC-09": {
-    "title": "Strict Inequality Boundary Rejects Valid Minimum Order Amount",
-    "category": "Business Logic / Boundary Condition",
-    "severity": "LOW",
-    "confirmed": true,
-    "source_code_line": "server.js:L380",
-    "screenshot": "evidence/bugs/bug_logic_09_coupon_boundary.png",
-    "evidence": {
-      "code": "SAVE10",
-      "min_order_amount": 300000,
-      "cart_total": 300000,
-      "status": 400,
-      "error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"
-    }
-  },
-  "BUG-SEC-10": {
-    "title": "Privilege Escalation Vulnerability in Profile Update API",
-    "category": "Security / Broken Access Control",
-    "severity": "HIGH",
-    "confirmed": true,
-    "source_code_line": "server.js:L118-135",
-    "screenshot": "evidence/bugs/bug_sec_10_privilege_escalation.png",
-    "evidence": {
-      "user_email": "loadtest_user01@eshop.com",
-      "original_role": "user",
-      "escalated_role": "admin",
-      "status": 200
-    }
-  },
-  "BUG-LOGIC-11": {
-    "title": "Permitted Cancellation of Orders in Active Shipping State",
-    "category": "Business Logic / State Lifecycle",
-    "severity": "MEDIUM",
-    "confirmed": true,
-    "source_code_line": "server.js:L329-331 & Profile.jsx:L200",
-    "screenshot": "evidence/bugs/bug_logic_11_cancel_shipping.png",
-    "evidence": {
-      "order_id": 572,
-      "status": "shipping",
-      "cancel_status": 200,
-      "cancel_message": "Order canceled successfully"
+      "hardware_cpus": 16,
+      "cpu_utilized": "~1 Core (6.25% total system CPU)",
+      "measured_throughput_ceiling": "109.4 req/s",
+      "root_cause": "Node.js runs single-threaded without cluster / multi-worker configuration"
     }
   }
 }

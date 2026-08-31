@@ -6,6 +6,8 @@
 **Workflow:** `Login -> Search Product -> Product Detail -> Add to Cart -> Checkout`  
 **SUT:** EShop RESTful API Backend (`http://localhost:3000`), Frontend Web (`http://localhost:5173`), Frontend Admin (`http://localhost:5174`)  
 **Repository:** [`https://github.com/HCMUS-software-testing/HW05`](https://github.com/HCMUS-software-testing/HW05)  
+**Video Demo Tổng Thể:** [`https://youtu.be/z5PPt3cIplY`](https://youtu.be/z5PPt3cIplY)  
+**Video Demo Agent Skill:** [`https://youtu.be/cxdNTWo8-mE`](https://youtu.be/cxdNTWo8-mE)  
 
 ---
 

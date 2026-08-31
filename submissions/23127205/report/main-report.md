@@ -8,6 +8,8 @@
 **Hệ thống kiểm thử (SUT):** EShop Backend API (`http://localhost:3000`)  
 **Public GitHub Repository:** [`https://github.com/HCMUS-software-testing/HW05`](https://github.com/HCMUS-software-testing/HW05)  
 **GitHub Issues Page:** [`https://github.com/HCMUS-software-testing/HW05/issues`](https://github.com/HCMUS-software-testing/HW05/issues)  
+**Video Demo Tổng Thể:** [`https://youtu.be/z5PPt3cIplY`](https://youtu.be/z5PPt3cIplY)  
+**Video Demo Agent Skill:** [`https://youtu.be/cxdNTWo8-mE`](https://youtu.be/cxdNTWo8-mE)  
 **Bộ công cụ:** Apache JMeter 5.6.3 Portable, Custom Thread Groups (`jpgc-casutg`), Python Automation Suite  
 **Ngày hoàn thành:** 30/08/2026  
 
@@ -145,19 +147,23 @@ Khi thực thi các kịch bản Stress và Spike tải cao, cơ chế an ninh c
 
 ## 7. TỔNG HỢP CÁC PHÁT HIỆN LỖI (DEFECT REPOSITORY)
 
-Trong quá trình thực nghiệm và rà soát mã nguồn Backend SUT (`server.js`), nhóm kiểm thử đã phát hiện và xác thực thành công **7 lỗi nghiêm trọng** (bao gồm cả lỗi hiệu năng, đồng thời và lỗi nghiệp vụ):
+Trong quá trình thực nghiệm và rà soát mã nguồn Backend SUT (`server.js`), nhóm kiểm thử đã phát hiện, xác thực thành công và đăng tải lên GitHub Issues **11 lỗi hệ thống** (bao gồm cả lỗi hiệu năng, bảo mật, đồng thời và lỗi nghiệp vụ):
 
-| Mã Bug | Loại Lỗi | Mức độ | Vị trí Source Code | Tóm tắt Hiện tượng |
-|:---:|---|:---:|---|---|
-| **BUG-PERF-01** | Memory Leak | **CRITICAL** | `server.js:L14, L297` | Không giải phóng mảng giỏ hàng `userCarts[userId]` sau khi Checkout thành công, làm RAM tăng dần. |
-| **BUG-PERF-02** | Lock Contention | **HIGH** | `server.js:L297` | Khóa độc quyền tệp SQLite khiến `POST /api/checkout` chậm hơn gấp 6 lần thao tác khác. |
-| **BUG-PERF-03** | CPU Scalability | **MEDIUM** | `server.js:L1-13` | Node.js chạy đơn luồng chỉ khai thác được 1 trong 16 CPUs của vi xử lý i5-12500H. |
-| **BUG-CONCUR-04** | Security / Lockout | **HIGH** | `server.js:L54-63` | Bước tăng `login_attempts + 2` khiến tài khoản bị khóa oan chỉ sau đúng 2 lần đăng nhập sai. |
-| **BUG-FUNC-05** | Data Consistency | **MEDIUM** | `server.js:L162` | Ép kiểu chuỗi sai lệch: Sản phẩm ID chẵn có `price` dạng String (`"28000000"`), ID lẻ dạng Number. |
-| **BUG-SEC-06** | SQL Injection | **HIGH** | `server.js:L144` | Lỗ hổng SQLi tại ô tìm kiếm `GET /api/products?search=...` và trả về body lỗi dạng HTML. |
-| **BUG-LOGIC-07** | State Machine | **MEDIUM** | `server.js:L550` | Cho phép chuyển trạng thái đơn hàng bất hợp lệ từ `canceled` (đã hủy) sang `delivered` (đã giao). |
+| Mã Bug | Loại Lỗi | Mức độ | Vị trí Source Code | Tóm tắt Hiện tượng | GitHub Issue |
+|:---:|---|:---:|---|---|:---:|
+| **BUG-PERF-01** | Memory Leak | **CRITICAL** | `server.js:L14, L297` | Không giải phóng mảng giỏ hàng `userCarts[userId]` sau khi Checkout thành công, làm RAM tăng dần. | [#1](https://github.com/HCMUS-software-testing/HW05/issues/1) |
+| **BUG-PERF-02** | Lock Contention | **HIGH** | `server.js:L297` | Khóa độc quyền tệp SQLite khiến `POST /api/checkout` chậm hơn gấp 6 lần thao tác khác. | [#2](https://github.com/HCMUS-software-testing/HW05/issues/2) |
+| **BUG-PERF-03** | CPU Scalability | **MEDIUM** | `server.js:L1-13` | Node.js chạy đơn luồng chỉ khai thác được 1 trong 16 CPUs của vi xử lý i5-12500H. | [#3](https://github.com/HCMUS-software-testing/HW05/issues/3) |
+| **BUG-CONCUR-04** | Security / Lockout | **HIGH** | `server.js:L54-63` | Bước tăng `login_attempts + 2` khiến tài khoản bị khóa oan chỉ sau đúng 2 lần đăng nhập sai. | [#4](https://github.com/HCMUS-software-testing/HW05/issues/4) |
+| **BUG-FUNC-05** | Data Consistency | **MEDIUM** | `server.js:L162` | Ép kiểu chuỗi sai lệch: Sản phẩm ID chẵn có `price` dạng String (`"28000000"`), ID lẻ dạng Number. | [#5](https://github.com/HCMUS-software-testing/HW05/issues/5) |
+| **BUG-SEC-06** | SQL Injection | **HIGH** | `server.js:L144` | Lỗ hổng SQLi tại ô tìm kiếm `GET /api/products?search=...` và trả về body lỗi dạng HTML. | [#6](https://github.com/HCMUS-software-testing/HW05/issues/6) |
+| **BUG-LOGIC-07** | State Machine | **MEDIUM** | `server.js:L550` | Cho phép chuyển trạng thái đơn hàng bất hợp lệ từ `canceled` (đã hủy) sang `delivered` (đã giao). | [#7](https://github.com/HCMUS-software-testing/HW05/issues/7) |
+| **BUG-FUNC-08** | Math Defect | **HIGH** | `server.js:L388` | Công thức giảm giá phần trăm sai làm giảm giá bị âm `-4,500,000 ₫` và đội tổng tiền lên `5,000,000 ₫`. | [#8](https://github.com/HCMUS-software-testing/HW05/issues/8) |
+| **BUG-LOGIC-09** | Boundary Condition | **LOW** | `server.js:L380` | Bất đẳng thức ngặt (`>`) từ chối Coupon có giá trị đơn hàng bằng đúng mức tối thiểu (`300,000 ₫`). | [#9](https://github.com/HCMUS-software-testing/HW05/issues/9) |
+| **BUG-SEC-10** | Privilege Escalation | **CRITICAL** | `server.js:L218` | Lỗ hổng cho phép người dùng thường tự ý gửi `role: "admin"` qua `PUT /api/users/me` để chiếm quyền quản trị. | [#10](https://github.com/HCMUS-software-testing/HW05/issues/10) |
+| **BUG-LOGIC-11** | Business Logic | **MEDIUM** | `server.js:L338` | Cho phép người dùng hủy đơn hàng đang trong trạng thái `shipping` (Đang giao hàng). | [#11](https://github.com/HCMUS-software-testing/HW05/issues/11) |
 
-*(Chi tiết đầy đủ các bước tái hiện, mã khai thác và bản vá `diff` xem tại tệp [`report/bug-report.md`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Kiểm%20thử%20phần%20mềm/HW/HW5/HW05/submissions/23127205/report/bug-report.md)).*
+*(Chi tiết đầy đủ các bước tái hiện, ảnh minh chứng chụp thật từ trình duyệt, và bản vá `diff` xem tại tệp [`report/bug-report.md`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Kiểm%20thử%20phần%20mềm/HW/HW5/HW05/submissions/23127205/report/bug-report.md) & [`bug-report.pdf`](file:///d:/LEARNING/CNTT_CLC(2023-2027)/NamBa/HK3/Kiểm%20thử%20phần%20mềm/HW/HW5/HW05/submissions/23127205/report/bug-report.pdf)).*
 
 ---
 

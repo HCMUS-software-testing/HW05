@@ -134,7 +134,15 @@ Sau đó `SELECT email, login_attempts, locked_until FROM users WHERE email = '<
 
 ## 8. Issue và evidence
 
-Đã tạo 4 GitHub Issue cho lockout, checkout cleanup, pagination và cart quantity; response và ảnh trang issue được lưu trong `evidence/issues/`. Tổng cộng 4 lỗi nghiệp vụ đã tái hiện.
+Đã tạo 4 GitHub Issue cho lockout, checkout cleanup, pagination và cart quantity; mỗi issue có response evidence, link công khai và ảnh trang issue trong [issue-candidates.md](issue-candidates.md). Tổng cộng 4 lỗi nghiệp vụ đã tái hiện.
+
+![GitHub Issue #1 — Lockout](evidence/issues/github-issue-1.png)
+
+![GitHub Issue #2 — Checkout](evidence/issues/github-issue-2.png)
+
+![GitHub Issue #3 — Pagination](evidence/issues/github-issue-3.png)
+
+![GitHub Issue #4 — Cart quantity](evidence/issues/github-issue-4.png)
 
 ## 9. Kiểm thử hiệu năng liên tục
 
@@ -181,6 +189,16 @@ Video performance demo YouTube không công khai, tối thiểu 6 phút: <https:
 Video demo Agent Skill trên một workflow hoàn chỉnh: <https://youtu.be/-QRnhBWwJL0>.
 
 Đã kèm AI audit/critique, JTL thô, báo cáo HTML, monitor tài nguyên, ảnh dashboard/resource riêng và issue evidence. Bốn ảnh combined Load/Stress/Spike/Endurance là screenshot thật cùng phiên. Load được chụp tại `Active=20`, backend `HW05_LOAD_BE` PID `97107`; ba PID còn lại là `31159`/`35179`/`54267`, đều khớp Activity Monitor. Ảnh Endurance được chụp tại `Active: 200`.
+
+![Load — JMeter và Activity Monitor](evidence/screenshots/23127326_Load_20260830_combined.png)
+
+![Stress — JMeter và Activity Monitor](evidence/screenshots/23127326_Stress_20260830_combined.png)
+
+![Spike — JMeter và Activity Monitor](evidence/screenshots/23127326_Spike_20260830_combined.png)
+
+![Endurance — JMeter và Activity Monitor](evidence/screenshots/23127326_Endurance_20260830_combined.png)
+
+![Hardware specification](evidence/hardware/hardware-20260830.png)
 
 Ba GUI listener được cấu hình riêng trong JMX nhưng tắt khi chạy non-GUI để không làm sai phép đo. Sau chạy, JTL canonical trong `results/resource-rerun/` đã được nạp bằng component JMeter 5.6.3 và lưu evidence: Load - View Results Tree; Stress - Summary Report; Spike - Aggregate Report.
 

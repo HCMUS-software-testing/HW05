@@ -55,7 +55,17 @@ Mẫu/s bao gồm cả sampler nội bộ; HTTP RPS chỉ đếm JTL row có URL
 - Ba listener vẫn tắt trong non-GUI run để không ảnh hưởng phép đo. Bộ JTL canonical đã được nạp sau chạy vào View Results Tree, Summary Report và Aggregate Report; ba ảnh tương ứng nằm trong `evidence/screenshots/`.
 - Evidence resource hợp lệ nằm trong `evidence/hardware/`; thông số phần cứng nằm trong `evidence/hardware/hardware-20260830.png` và file văn bản đi kèm.
 
-Xem checklist chi tiết tại `evidence/README.md`; báo cáo chính, AI Audit, AI Critique và Continuous Performance Testing nằm trong thư mục gốc submission.
+Báo cáo chính, AI Audit, AI Critique và Continuous Performance Testing nằm trong thư mục gốc submission.
+
+Ảnh evidence chính:
+
+![Load — JMeter và Activity Monitor](evidence/screenshots/23127326_Load_20260830_combined.png)
+
+![Stress — JMeter và Activity Monitor](evidence/screenshots/23127326_Stress_20260830_combined.png)
+
+![Spike — JMeter và Activity Monitor](evidence/screenshots/23127326_Spike_20260830_combined.png)
+
+![Endurance — JMeter và Activity Monitor](evidence/screenshots/23127326_Endurance_20260830_combined.png)
 
 ## Self-assessment
 
@@ -74,4 +84,3 @@ Chỉ điền sau khi hoàn tất và kiểm tra evidence thật.
 Video performance demo YouTube không công khai, tối thiểu 6 phút: <https://youtu.be/lAfLKjpHHRM> — sinh viên tự quay.
 
 Video demo Agent Skill: <https://youtu.be/-QRnhBWwJL0>.
-

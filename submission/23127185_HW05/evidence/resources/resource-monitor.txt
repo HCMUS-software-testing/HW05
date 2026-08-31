@@ -1,5 +1,6 @@
-2026-08-30T21:40:10+07:00
+2026-08-31T09:36:02+07:00
     PID    PPID %CPU %MEM   RSS     ELAPSED CMD
+  30000    5073  1.4  0.4 75228       00:18 node server.js
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       7.3Gi       2.0Gi       1.6Gi       8.1Gi       8.0Gi
-Swap:          8.0Gi       312Mi       7.7Gi
+Mem:            15Gi       6.3Gi       2.2Gi       1.0Gi       8.1Gi       9.0Gi
+Swap:          8.0Gi          0B       8.0Gi

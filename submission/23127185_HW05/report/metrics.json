@@ -3,11 +3,11 @@
     "samples": 90,
     "errors": 0,
     "errorRate": 0,
-    "averageMs": 3.17,
+    "averageMs": 2.3,
     "medianMs": 1,
-    "p90Ms": 12,
-    "p95Ms": 13,
-    "p99Ms": 41,
+    "p90Ms": 4,
+    "p95Ms": 12,
+    "p99Ms": 18,
     "byLabel": {
       "Register": {
         "samples": 10,
@@ -99,11 +99,11 @@
     "samples": 90,
     "errors": 0,
     "errorRate": 0,
-    "averageMs": 2.79,
+    "averageMs": 2.02,
     "medianMs": 1,
-    "p90Ms": 13,
-    "p95Ms": 13,
-    "p99Ms": 30,
+    "p90Ms": 4,
+    "p95Ms": 5,
+    "p99Ms": 18,
     "byLabel": {
       "Register": {
         "samples": 10,
@@ -147,11 +147,11 @@
     "samples": 90,
     "errors": 0,
     "errorRate": 0,
-    "averageMs": 2.63,
+    "averageMs": 2.48,
     "medianMs": 1,
-    "p90Ms": 12,
+    "p90Ms": 5,
     "p95Ms": 13,
-    "p99Ms": 28,
+    "p99Ms": 25,
     "byLabel": {
       "Register": {
         "samples": 10,

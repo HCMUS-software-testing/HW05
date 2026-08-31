@@ -4,7 +4,8 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 function parse(file) {
   const raw = fs.readFileSync(file, "utf8").trim().split(/\r?\n/);
-  const header = raw.shift().split(",");
+  const hasHeader = raw[0].startsWith("timeStamp,");
+  const header = hasHeader ? raw.shift().split(",") : ["timeStamp", "elapsed", "label", "responseCode", "responseMessage", "threadName", "dataType", "success", "failureMessage", "bytes", "sentBytes", "grpThreads", "allThreads", "URL", "Latency", "IdleTime", "Connect"];
   const index = name => header.indexOf(name);
   const lines = raw;
   const values = lines.map(line => { const p = line.split(/","|,(?=[^\"]*(?:\"|$))/).map(x => x.replace(/^"|"$/g, "")); const successAt = index("success"); return { elapsed: Number(p[index("elapsed")]), success: p[successAt] === "true", label: p[index("label")], error: p[index("failureMessage")] || p[index("failureMessage")] }; });

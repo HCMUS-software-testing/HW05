@@ -33,16 +33,16 @@ Runner sử dụng email đăng ký duy nhất cùng dữ liệu sản phẩm/m�
 
 | Kịch bản | Samples | Tỷ lệ lỗi | Trung bình (ms) | Trung vị (ms) | P95 (ms) | P99 (ms) |
 |---|---:|---:|---:|---:|---:|---:|
-| Load | 90 | 0% | 3.17 | 1 | 13 | 41 |
-| Stress | 90 | 0% | 2.63 | 1 | 13 | 28 |
-| Spike | 90 | 0% | 2.79 | 1 | 13 | 30 |
+| Load | 90 | 0% | 2.30 | 1 | 12 | 18 |
+| Stress | 90 | 0% | 2.48 | 1 | 13 | 25 |
+| Spike | 90 | 0% | 2.02 | 1 | 5 | 18 |
 | Soak | 291,384 | 0% | 3.85 | 2 | 6 | 49 |
 
 Đây là kết quả trên kết nối loopback cục bộ, không phải năng lực production. Không được suy rộng kết quả này cho môi trường mạng hoặc triển khai nhiều node.
 
 ## Phát hiện khi rà soát thủ công
 
-Bản nháp JMeter do AI sinh cần được sửa. Ban đầu extractor nằm ngoài hash tree của sampler Login nên các request cần xác thực nhận 401. Sau khi sửa cây JMX và chạy khi backend đang hoạt động, JMeter Load, Stress và Spike đều tạo 90 samples với tỷ lệ lỗi 0%. Agent Skill runner cũng thực hiện đăng nhập độc lập và truyền JWT nhận được một cách tường minh; JTL thô của runner cũng có 0 lỗi.
+Bản nháp JMeter do AI sinh cần được sửa. Ban đầu extractor nằm ngoài hash tree của sampler Login nên các request cần xác thực nhận 401. Sau khi sửa cây JMX và chạy khi backend đang hoạt động, JMeter Load, Stress và Spike đều tạo 90 samples với tỷ lệ lỗi 0%. Các báo cáo HTML được sinh lại tại `jmeter/reports/load-recheck-20260831/`, `jmeter/reports/stress-recheck-20260831/` và `jmeter/reports/spike-recheck-20260831/`. Agent Skill runner cũng thực hiện đăng nhập độc lập và truyền JWT nhận được một cách tường minh; JTL thô của runner cũng có 0 lỗi.
 
 Rà soát source cũng phát hiện lỗi trong SUT: đăng nhập thất bại tăng số lần thử thêm 2 thay vì 1 và khóa 180 giây thay vì 30 giây; kiểm tra ngưỡng mã giảm giá dùng `>` thay vì `>=`; công thức giảm phần trăm sai; `apply-coupon` không có middleware xác thực; checkout chấp nhận `total_amount` từ client mà không tính lại tổng giỏ hàng. Đây là phát hiện về triển khai, không phải lỗi hiệu năng được bịa ra.
 

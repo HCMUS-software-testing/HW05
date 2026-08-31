@@ -17,9 +17,9 @@ EXPECTED = {
 
 DOCUMENTS = (
     ROOT / "README.md",
-    ROOT / "report" / "main-report.md",
-    ROOT / "report" / "ai-critique.md",
-    ROOT / "report" / "issue-candidates.md",
+    ROOT / "main-report.md",
+    ROOT / "ai-critique.md",
+    ROOT / "issue-candidates.md",
 )
 
 STALE_TOKENS = ("3.314", "16.519", "7.175", "24.608", "359/", "1.789/", "753/", "2.700/")
@@ -51,7 +51,7 @@ def main():
     assert endurance["hold_cpu_percent_max"] == 17.7
     assert endurance["rss_mb_max"] == 119.328
 
-    report_text = (ROOT / "report" / "main-report.md").read_text(encoding="utf-8")
+    report_text = (ROOT / "main-report.md").read_text(encoding="utf-8")
     for token in ("77.4400", "65,859", "17,7%", "119.3 MB"):
         assert token in report_text, ("main-report.md", "missing threshold token", token)
 

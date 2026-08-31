@@ -9,14 +9,14 @@ temp_archive="$temp_dir/$archive_name"
 
 python3 -B "$submission_dir/tools/validate_canonical_metrics.py"
 
-if rg -q 'TODO_ADD_(VIDEO_LINK|PERFORMANCE_VIDEO_LINK)' "$submission_dir/README.md" "$submission_dir/report/main-report.md"; then
+if rg -q 'TODO_ADD_(VIDEO_LINK|PERFORMANCE_VIDEO_LINK)' "$submission_dir/README.md" "$submission_dir/main-report.md"; then
   echo "Warning: video link is still pending manual replacement." >&2
 fi
 
 missing_pdf=0
 for required_pdf in main-report.pdf ai-audit-report.pdf ai-critique.pdf; do
-  if [[ ! -f "$submission_dir/report/$required_pdf" ]]; then
-    echo "Error: report/$required_pdf has not been exported yet." >&2
+  if [[ ! -f "$submission_dir/$required_pdf" ]]; then
+    echo "Error: $required_pdf has not been exported yet." >&2
     missing_pdf=1
   fi
 done

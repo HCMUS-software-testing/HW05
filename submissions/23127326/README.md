@@ -46,7 +46,7 @@ Thay `Load` bằng `Stress` hoặc `Spike` và dùng thư mục output riêng. D
 | Spike | 10 + 90 | 17.1228 | 13.2665 | 5 ms | 0% | 25.5% | 90.5 MB |
 | Endurance threshold | 200 | 99.5533 (hold) | 77.4400 (hold) | 5 ms | 0% | 17.7% | 119.3 MB |
 
-Mẫu/s bao gồm cả sampler nội bộ; HTTP RPS chỉ đếm JTL row có URL. Staircase 70/100/150/200 VU đều đạt SLO; soak mức cao nhất giữ đủ 600 giây với **77.4400 HTTP RPS**, p95 5 ms, HTTP error 0%, CPU tối đa 17.7%, RSS trần 119.3 MB và RSS cuối hold 109.3 MB. Đây là maximum stable observed trong dải đã thử; tiêu chí fail của mức kế tiếp được ghi trong `report/main-report.md`. Có 4 lỗi nghiệp vụ đã tái hiện và tạo GitHub Issue #1-#4; evidence response và ảnh issue nằm trong `evidence/issues/`.
+Mẫu/s bao gồm cả sampler nội bộ; HTTP RPS chỉ đếm JTL row có URL. Staircase 70/100/150/200 VU đều đạt SLO; soak mức cao nhất giữ đủ 600 giây với **77.4400 HTTP RPS**, p95 5 ms, HTTP error 0%, CPU tối đa 17.7%, RSS trần 119.3 MB và RSS cuối hold 109.3 MB. Đây là maximum stable observed trong dải đã thử; tiêu chí fail của mức kế tiếp được ghi trong `main-report.md`. Có 4 lỗi nghiệp vụ đã tái hiện và tạo GitHub Issue #1-#4; evidence response và ảnh issue nằm trong `evidence/issues/`.
 
 ## Ghi chú bàn giao
 
@@ -55,7 +55,7 @@ Mẫu/s bao gồm cả sampler nội bộ; HTTP RPS chỉ đếm JTL row có URL
 - Ba listener vẫn tắt trong non-GUI run để không ảnh hưởng phép đo. Bộ JTL canonical đã được nạp sau chạy vào View Results Tree, Summary Report và Aggregate Report; ba ảnh tương ứng nằm trong `evidence/screenshots/`.
 - Evidence resource hợp lệ nằm trong `evidence/hardware/`; thông số phần cứng nằm trong `evidence/hardware/hardware-20260830.png` và file văn bản đi kèm.
 
-Xem checklist chi tiết tại `evidence/README.md`; báo cáo chính, AI Audit, AI Critique và Continuous Performance Testing nằm trong `report/`.
+Xem checklist chi tiết tại `evidence/README.md`; báo cáo chính, AI Audit, AI Critique và Continuous Performance Testing nằm trong thư mục gốc submission.
 
 ## Self-assessment
 

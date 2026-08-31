@@ -16,7 +16,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPORT_DIR = ROOT / "report"
+REPORT_DIR = ROOT
 CHROME = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 CSS = Path(__file__).with_name("report-print.css")
 

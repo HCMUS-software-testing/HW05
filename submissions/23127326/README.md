@@ -71,16 +71,16 @@ Báo cáo chính, AI Audit, AI Critique và Continuous Performance Testing nằm
 
 Chỉ điền sau khi hoàn tất và kiểm tra evidence thật.
 
-| Tiêu chí                          |                         Điểm tự đánh giá |
-| --------------------------------- | ---------------------------------------: |
-| Kiểm thử Load                     |                                    30/30 |
-| Kiểm thử Stress                   |                                    20/20 |
-| Kiểm thử Spike                    |                                    20/20 |
-| Phân tích AI và săn lỗi diễn giải |                                    10/10 |
-| Kiểm thử hiệu năng liên tục       |                                    10/10 |
-| Agent Skill                       | 10/10 - đã có video minh họa Agent Skill |
-| **Tổng**                          |                              **100/100** |
+| STT | Tiêu chí                                                                         |    Điểm | Điểm tự đánh giá |
+| --- | -------------------------------------------------------------------------------- | ------: | ---------------: |
+| 1   | Task 1 - Load testing                                                            |      30 |            30/30 |
+| 2   | Task 1 - Stress testing                                                          |      20 |            20/20 |
+| 3   | Task 1 - Spike testing                                                           |      20 |            20/20 |
+| 4   | Task 2 - AI analysis + misinterpretation hunt (với các giá trị đúng từ raw logs) |      10 |            10/10 |
+| 5   | Task 3 - Continuous Performance Testing proposal (G9.6)                          |      10 |            10/10 |
+| 6   | Agent Skills                                                                     |      10 |            10/10 |
+|     | **Tổng cộng**                                                                    | **100** |      **100/100** |
 
-Video performance demo YouTube không công khai, tối thiểu 6 phút: <https://youtu.be/lAfLKjpHHRM> — sinh viên tự quay.
+Video performance demo YouTube: <https://youtu.be/lAfLKjpHHRM>
 
 Video demo Agent Skill: <https://youtu.be/-QRnhBWwJL0>.

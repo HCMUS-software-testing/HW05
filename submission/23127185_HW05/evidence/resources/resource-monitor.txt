@@ -1,0 +1,5 @@
+2026-08-30T21:40:10+07:00
+    PID    PPID %CPU %MEM   RSS     ELAPSED CMD
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       7.3Gi       2.0Gi       1.6Gi       8.1Gi       8.0Gi
+Swap:          8.0Gi       312Mi       7.7Gi

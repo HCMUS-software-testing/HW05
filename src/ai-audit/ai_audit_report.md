@@ -20,6 +20,7 @@
 | 6 | Time: `2026-09-01 16:24 +07`<br>Tool: `Claude Opus 4.6`<br>Prompt:<br>/using-superpowers Tôi đã tạo data tại src/data. Dựa vào yêu cầu trong folder req, hãy tạo kịch bản Spike Test Plan cho luồng Admin (100 threads, ramp-up 1s, dùng View Results Tree listener) cho project eshop-sut và lưu tại src/test-plans/23127075_Spike_20260901.jmx. Bạn có thể sửa test data nếu chưa phù hợp. Đưa ghi nhận vào AI Audit Report. | [Manual by user] |
 | 7 | Time: `2026-09-01 19:28 +07`<br>Tool: `Gemini 3.6 Flash`<br>Prompt:<br>/using-superpowers Do thư mục src sẽ được copy ra thành thư mục nộp độc lập, hãy tạo script tự động chạy kiểm thử tại src/run_tests.sh và cập nhật lại toàn bộ đường dẫn tương đối trong các kịch bản JMeter (.jmx) cho phù hợp với thư mục thực thi src. Đưa ghi nhận vào AI Audit Report. | [Manual by user] |
 | 8 | Time: `2026-09-01 20:17 +07`<br>Tool: `Gemini 3.6 Flash`<br>Prompt:<br>/using-superpowers Hãy convert .agents/skills/ai-audit-entry/ref/13_Performance Testing.pdf ra markdown đầy đủ nội dung, layout (cố gắng convert full cả table, diagram thay vì cap ảnh) | [Manual by user] |
+| 9 | Time: `2026-09-01 21:23 +07`<br>Tool: `Claude Opus 4.6`<br>Prompt:<br>/using-superpowers /writing-skills Hãy viết agent skill: performance-testing-skills để automate hoàn thành bài tập theo đề trong folder req với các yêu cầu sau:<br>- Tham khảo lý thuyết từ slide (file markdown) trong folder ref.<br>- Tham khảo src/ai-audit/ai_audit_report.md để hiểu quá trình làm bài.<br>- Bộ skill phải đầy đủ bước cho cả workflow và đảm bảo tính độc lập, tái sử dụng, portable, không lệ thuộc vào các resource (như kiểu phải đưa slide vào để học kiến thức).<br>- Output skill nằm trong .agents/skills<br>Hãy viết 1 file hướng dẫn sử dụng bộ skill này ở root. Ghi prompt này vào ai-audit. | [Manual by user] |
 
 ### 2.2. Chi tiết audit
 
@@ -152,6 +153,33 @@ Prompt:
 /using-superpowers Hãy convert .agents/skills/ai-audit-entry/ref/13_Performance Testing.pdf ra markdown đầy đủ nội dung, layout (cố gắng convert full cả table, diagram thay vì cap ảnh)
 
 **AI Output:** Đã thực hiện OCR và đọc toàn bộ 30 trang slide của file tài liệu `13_Performance Testing.pdf` (ThS. Trần Duy Hoàng, FIT @ HCMUS). Đã trích xuất và số hóa toàn bộ nội dung sang file Markdown tại `.agents/skills/ai-audit-entry/ref/13_Performance Testing.md`. Chuyển đổi đầy đủ bảng 10 chỉ số kiểm thử hiệu năng (Resource, Time, Volume Metrics), sơ đồ tác động 1s độ trễ kinh doanh, sơ đồ 6 loại Performance Testing và sơ đồ quy trình 7 bước thực hiện kiểm thử thành các **Mermaid Flowchart** chuẩn HTML/Markdown.
+
+**Verdict:** [Manual by user]
+
+**Reasoning:** [Manual by user]
+
+**Student Fix:** [Manual by user]
+
+### 2.2.9 Entry 9
+
+**Prompt + Tool:**
+
+Time: `2026-09-01 21:23 +07`
+Tool: `Claude Opus 4.6`
+Prompt:
+/using-superpowers /writing-skills Hãy viết agent skill: performance-testing-skills để automate hoàn thành bài tập theo đề trong folder req với các yêu cầu sau:
+- Tham khảo lý thuyết từ slide (file markdown) trong folder ref.
+- Tham khảo src/ai-audit/ai_audit_report.md để hiểu quá trình làm bài.
+- Bộ skill phải đầy đủ bước cho cả workflow và đảm bảo tính độc lập, tái sử dụng, portable, không lệ thuộc vào các resource (như kiểu phải đưa slide vào để học kiến thức).
+- Output skill nằm trong .agents/skills
+Hãy viết 1 file hướng dẫn sử dụng bộ skill này ở root. Ghi prompt này vào ai-audit.
+
+**AI Output:** Đã đọc và tuân thủ skill `writing-skills` và `using-superpowers`. Tham khảo đầy đủ lý thuyết từ `.agents/skills/ai-audit-entry/ref/13_Performance Testing.md` (30 slide), đề bài `req/2026.HW05.Performance Testing_Vi.md`, và quá trình làm bài trong `src/ai-audit/ai_audit_report.md` (Entry 1-8). Đã tạo bộ skill `performance-testing-skills` tại `.agents/skills/performance-testing-skills/` gồm:
+- `SKILL.md` (11KB): Skill chính với 10-phase workflow đầy đủ, lý thuyết kiểm thử hiệu năng đã tích hợp sẵn (10 metrics, 6 test types, 7-step process), JMeter CLI reference, deliverables checklist, common mistakes table.
+- `references/jmeter-plan-template.md` (5.8KB): Template XML cho ThreadGroup, CSV DataSet, JSON Extractor, Assertion, Timer, Listener.
+- `references/report-templates.md` (4.9KB): Template báo cáo chính, README, AI Critique.
+- `scripts/run_tests_template.sh` (2.4KB): Template script chạy test với biến cấu hình.
+Đồng thời tạo file hướng dẫn sử dụng `GUIDE_PERFORMANCE_TESTING_SKILLS.md` tại root với bảng 10 phase, prompt mẫu cho từng phase, và lưu ý quan trọng.
 
 **Verdict:** [Manual by user]
 

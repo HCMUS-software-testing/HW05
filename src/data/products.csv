@@ -1,0 +1,5 @@
+name,price,description,imageUrl,category_id
+"Dell XPS 15 Test",35000000,"Laptop cao cap danh cho Admin test performance","https://placehold.co/300x300/png?text=Dell+XPS",2
+"iPad Pro M4 Test",25000000,"May tinh bang test","https://placehold.co/300x300/png?text=iPad+Pro",1
+"Man hinh LG UltraFine",12000000,"Man hinh do hoa 4K test","https://placehold.co/300x300/png?text=LG+UltraFine",3
+"Chuot Logitech MX Master 3S",2500000,"Chuot cong nghe cao test","https://placehold.co/300x300/png?text=MX+Master",3

@@ -48,7 +48,7 @@ Stress config: 50 threads, 15s ramp-up, 10 loops = 500 total iterations. Designe
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Credentials CSV" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
-          <stringProp name="filename">src/data/credentials.csv</stringProp>
+          <stringProp name="filename">data/credentials.csv</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -62,7 +62,7 @@ Stress config: 50 threads, 15s ramp-up, 10 loops = 500 total iterations. Designe
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Products CSV" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
-          <stringProp name="filename">src/data/products.csv</stringProp>
+          <stringProp name="filename">data/products.csv</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">true</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -316,7 +316,7 @@ Stress config: 50 threads, 15s ramp-up, 10 loops = 500 total iterations. Designe
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">src/results/stress/raw.jtl</stringProp>
+          <stringProp name="filename">results/stress/raw.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
 

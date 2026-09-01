@@ -48,7 +48,7 @@ Spike config: 100 threads, 1s ramp-up, 3 loops = 300 total iterations. Simulates
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Credentials CSV" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
-          <stringProp name="filename">src/data/credentials.csv</stringProp>
+          <stringProp name="filename">data/credentials.csv</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -62,7 +62,7 @@ Spike config: 100 threads, 1s ramp-up, 3 loops = 300 total iterations. Simulates
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Products CSV" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
-          <stringProp name="filename">src/data/products.csv</stringProp>
+          <stringProp name="filename">data/products.csv</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">true</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -311,7 +311,7 @@ Spike config: 100 threads, 1s ramp-up, 3 loops = 300 total iterations. Simulates
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">src/results/spike/raw.jtl</stringProp>
+          <stringProp name="filename">results/spike/raw.jtl</stringProp>
         </ResultCollector>
         <hashTree/>
 

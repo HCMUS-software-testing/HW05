@@ -18,6 +18,7 @@
 | 4 | Time: `2026-09-01 16:14 +07`<br>Tool: `Claude Opus 4.6`<br>Prompt:<br>/subagent-driven-development Tôi đã tạo data tại src/data. Dựa vào yêu cầu trong folder req, hãy thiết kế kịch bản Load Test Plan cho luồng Admin của sinh viên 23127075 (10 threads, ramp-up 10s, dùng Aggregate Report) cho project eshop-sut và lưu tại src/test-plans/23127075_Load_20260901.jmx. Bạn có thể sửa test data nếu chưa phù hợp. Đưa ghi nhận vào AI Audit Report. | [Manual by user] |
 | 5 | Time: `2026-09-01 16:19 +07`<br>Tool: `Claude Opus 4.6`<br>Prompt:<br>/using-superpowers Tôi đã tạo data tại src/data. Dựa vào yêu cầu trong folder req, hãy tạo kịch bản Stress Test Plan cho luồng Admin (50 threads, ramp-up 15s, dùng Summary Report listener) cho project eshop-sut và lưu tại src/test-plans/23127075_Stress_20260901.jmx. Bạn có thể sửa test data nếu chưa phù hợp. Đưa ghi nhận vào AI Audit Report. | [Manual by user] |
 | 6 | Time: `2026-09-01 16:24 +07`<br>Tool: `Claude Opus 4.6`<br>Prompt:<br>/using-superpowers Tôi đã tạo data tại src/data. Dựa vào yêu cầu trong folder req, hãy tạo kịch bản Spike Test Plan cho luồng Admin (100 threads, ramp-up 1s, dùng View Results Tree listener) cho project eshop-sut và lưu tại src/test-plans/23127075_Spike_20260901.jmx. Bạn có thể sửa test data nếu chưa phù hợp. Đưa ghi nhận vào AI Audit Report. | [Manual by user] |
+| 7 | Time: `2026-09-01 19:28 +07`<br>Tool: `Gemini 3.6 Flash`<br>Prompt:<br>/using-superpowers Do thư mục src sẽ được copy ra thành thư mục nộp độc lập, hãy tạo script tự động chạy kiểm thử tại src/run_tests.sh và cập nhật lại toàn bộ đường dẫn tương đối trong các kịch bản JMeter (.jmx) cho phù hợp với thư mục thực thi src. Đưa ghi nhận vào AI Audit Report. | [Manual by user] |
 
 ### 2.2. Chi tiết audit
 
@@ -116,6 +117,23 @@ Prompt:
 /using-superpowers Tôi đã tạo data tại src/data. Dựa vào yêu cầu trong folder req, hãy tạo kịch bản Spike Test Plan cho luồng Admin (100 threads, ramp-up 1s, dùng View Results Tree listener) cho project eshop-sut và lưu tại src/test-plans/23127075_Spike_20260901.jmx. Bạn có thể sửa test data nếu chưa phù hợp. Đưa ghi nhận vào AI Audit Report.
 
 **AI Output:** Tạo kịch bản Spike Test với cấu hình cực đoan: 100 threads, ramp-up chỉ 1s (gần như tất cả threads khởi động cùng lúc), 3 loops = 300 iterations. **Không có think-time timer** để tối đa hóa độ sốc đồng thời lên backend. Listener dùng **View Results Tree** (`guiclass="ViewResultsFullVisualizer"`) với `responseData=true`, `samplerData=true`, `responseHeaders=true`, `requestHeaders=true`, `responseDataOnError=true` để lưu chi tiết request/response cho từng sample — hữu ích để debug các lỗi dưới áp lực spike. Cùng luồng 6-sampler Admin giữ nguyên. Output tại `src/results/spike/raw.jtl`.
+
+**Verdict:** [Manual by user]
+
+**Reasoning:** [Manual by user]
+
+**Student Fix:** [Manual by user]
+
+### 2.2.7 Entry 7
+
+**Prompt + Tool:**
+
+Time: `2026-09-01 19:28 +07`
+Tool: `Gemini 3.6 Flash`
+Prompt:
+/using-superpowers Do thư mục src sẽ được copy ra thành thư mục nộp độc lập, hãy tạo script tự động chạy kiểm thử tại src/run_tests.sh và cập nhật lại toàn bộ đường dẫn tương đối trong các kịch bản JMeter (.jmx) cho phù hợp với thư mục thực thi src. Đưa ghi nhận vào AI Audit Report.
+
+**AI Output:** Đã tạo script `src/run_tests.sh` tự động thiết lập working directory về chính thư mục `src/`, tự động khởi tạo các thư mục kết quả (`results/load`, `results/stress`, `results/spike`, `evidence/screenshots`, `evidence/hardware`) và dọn dẹp log cũ trước khi thực thi. Đã cập nhật tất cả 3 file kịch bản `.jmx` (`23127075_Load_20260901.jmx`, `23127075_Stress_20260901.jmx`, `23127075_Spike_20260901.jmx`), đổi toàn bộ đường dẫn CSV DataSet từ `src/data/...` sang `data/...` và Listener output từ `src/results/...` sang `results/...` để đảm bảo khi copy folder `src` thành bài nộp độc lập (VD: `23127075_HW05_AI_Performance_100/`) thì mọi đường dẫn thực thi đều chính xác 100%.
 
 **Verdict:** [Manual by user]
 

@@ -47,6 +47,54 @@
       }
     }
   },
+  "soak": {
+    "samples": 292482,
+    "errors": 0,
+    "errorRate": 0,
+    "averageMs": 3.84,
+    "medianMs": 2,
+    "p90Ms": 5,
+    "p95Ms": 6,
+    "p99Ms": 49,
+    "byLabel": {
+      "Register": {
+        "samples": 32498,
+        "errors": 0
+      },
+      "Login": {
+        "samples": 32498,
+        "errors": 0
+      },
+      "Categories": {
+        "samples": 32498,
+        "errors": 0
+      },
+      "ProductList": {
+        "samples": 32498,
+        "errors": 0
+      },
+      "ProductDetail": {
+        "samples": 32498,
+        "errors": 0
+      },
+      "AddToCart": {
+        "samples": 32498,
+        "errors": 0
+      },
+      "ApplyCoupon": {
+        "samples": 32498,
+        "errors": 0
+      },
+      "Checkout": {
+        "samples": 32498,
+        "errors": 0
+      },
+      "Orders": {
+        "samples": 32498,
+        "errors": 0
+      }
+    }
+  },
   "spike": {
     "samples": 90,
     "errors": 0,

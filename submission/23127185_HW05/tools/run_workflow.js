@@ -18,13 +18,15 @@ const profiles = {
 if (!profiles[scenario]) throw new Error(`Unknown scenario: ${scenario}`);
 const profile = profiles[scenario];
 const stamp = new Date().toISOString().replace(/[-:]/g, "").slice(0, 15);
-const outDir = path.join(root, "results", scenario);
-fs.mkdirSync(outDir, { recursive: true });
+const outDir = path.join(root, "jmeter", "results", scenario);
 const out = path.join(outDir, `23127185_${scenario}_${new Date().toISOString().slice(0, 10).replaceAll("-", "")}.jtl`);
 const rows = [];
 const csvEscape = v => `"${String(v).replaceAll('"', '""')}"`;
 const csvHeader = "timeStamp,elapsed,label,responseCode,success,bytes,threadName,grpThreads,allThreads,URL,Latency,Connect,ErrorCount,FailureMessage";
-const write = () => fs.writeFileSync(out, [csvHeader, ...rows.map(r => r.map(csvEscape).join(","))].join("\n") + "\n");
+const write = () => {
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(out, [csvHeader, ...rows.map(r => r.map(csvEscape).join(","))].join("\n") + "\n");
+};
 
 async function call(label, method, url, body, token) {
   const started = Date.now();

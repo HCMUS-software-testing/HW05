@@ -25,7 +25,7 @@ Cùng một workflow được thực thi bằng ba JMeter plan chính thức; Ag
 | Load | JMeter: 10 người dùng, ramp-up 5 giây, duration 30 giây | 90 |
 | Stress | JMeter: 10 người dùng, ramp-up 5 giây, duration 60 giây | 90 |
 | Spike | JMeter: 10 người dùng, ramp-up 5 giây, duration 10 giây | 90 |
-| Soak | 2 worker đồng thời trong 600 giây | 278.460 |
+| Soak | 2 worker đồng thời trong 600 giây | 292.482 |
 
 Runner sử dụng email đăng ký duy nhất cùng dữ liệu sản phẩm/mã giảm giá từ CSV. Runner ghi lại samples thô và không sửa dữ liệu sau khi thực thi.
 
@@ -36,7 +36,7 @@ Runner sử dụng email đăng ký duy nhất cùng dữ liệu sản phẩm/m�
 | Load | 90 | 0% | 9.34 | 1 | 51 | 59 |
 | Stress | 90 | 0% | 2.00 | 1 | 12 | 13 |
 | Spike | 90 | 0% | 2.51 | 1 | 13 | 14 |
-| Soak | 278,460 | 0% | 4.05 | 2 | 7 | 49 |
+| Soak | 292,482 | 0% | 3.84 | 2 | 6 | 49 |
 
 Đây là kết quả trên kết nối loopback cục bộ, không phải năng lực production. Không được suy rộng kết quả này cho môi trường mạng hoặc triển khai nhiều node.
 
@@ -48,7 +48,7 @@ Rà soát source cũng phát hiện lỗi trong SUT: đăng nhập thất bại 
 
 ## Ngưỡng endurance
 
-Trong lần chạy MVP cục bộ này, mức ổn định quan sát được là 2 worker đồng thời trong 599,935 giây: 278.460 samples, 0% lỗi, P95 7 ms và P99 49 ms. Đây là ngưỡng quan sát trên máy kiểm thử, không phải cam kết cấp dịch vụ. Bằng chứng CPU/RAM phải đi kèm các ảnh chụp thủ công được liệt kê trong `evidence/manual-evidence-needed.md`.
+Trong lần chạy MVP cục bộ này, mức ổn định quan sát được là 2 worker đồng thời trong 600 giây: 292.482 samples, 0% lỗi, P95 6 ms và P99 49 ms. Đây là ngưỡng quan sát trên máy kiểm thử, không phải cam kết cấp dịch vụ. Bằng chứng CPU/RAM phải đi kèm các ảnh chụp thủ công được liệt kê trong `evidence/manual-evidence-needed.md`.
 
 Ba JMeter plan hiện đều dùng 10 user; khác biệt chính là thời lượng 30/60/10 giây. Vì vậy kết quả hiện tại chỉ là baseline/MVP cho workflow, chưa đủ để kết luận ngưỡng chịu tải hay spike capacity. Muốn báo cáo stress/spike đúng nghĩa cần tăng số user theo từng nấc và chạy lại JTL, HTML report cùng evidence.
 

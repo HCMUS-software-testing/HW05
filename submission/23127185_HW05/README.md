@@ -1,6 +1,8 @@
-# HW05 Kiểm thử hiệu năng có hỗ trợ AI - MSSV 23127185
+# HW05 Kiểm thử hiệu năng có hỗ trợ AI 
 
-Sinh viên: Mai Thị Kim Duyên. Vai trò: Thành viên 2. Workflow: đăng ký người dùng mới, đăng nhập, duyệt danh mục/sản phẩm, áp dụng mã giảm giá và checkout.
+- MSSV 23127185
+- Họ và tên: Mai Thị Kim Duyên. 
+- Workflow: đăng ký người dùng mới, đăng nhập, duyệt danh mục/sản phẩm, áp dụng mã giảm giá và checkout.
 
 ## Danh mục artifact
 

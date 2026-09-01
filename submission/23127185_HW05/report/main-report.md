@@ -4,7 +4,6 @@
 
 - Sinh viên: Mai Thị Kim Duyên
 - MSSV: 23127185
-- Vai trò: Thành viên 2
 - SUT: backend EShop cục bộ tại `http://localhost:3000`
 - Workflow: đăng ký người dùng mới -> đăng nhập -> duyệt danh mục -> xem/tìm kiếm sản phẩm -> xem chi tiết -> thêm vào giỏ hàng -> áp dụng `SAVE10` -> checkout -> xem lịch sử đơn hàng.
 

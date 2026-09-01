@@ -6,6 +6,8 @@
 - MSSV: 23127185
 - SUT: backend EShop cục bộ tại `http://localhost:3000`
 - Workflow: đăng ký người dùng mới -> đăng nhập -> duyệt danh mục -> xem/tìm kiếm sản phẩm -> xem chi tiết -> thêm vào giỏ hàng -> áp dụng `SAVE10` -> checkout -> xem lịch sử đơn hàng.
+- **Video Demo YouTube (Unlisted):** https://youtu.be/4AzdHAQVLhQ
+- **Public GitHub Repository:** https://github.com/HCMUS-software-testing/HW05
 
 Cùng một workflow được thực thi bằng ba JMeter plan chính thức; Agent Skill runner được dùng thêm để kiểm tra khả năng tái sử dụng và phân tích. Lần chạy đầu phát hiện lỗi đặt token extractor, sau đó cây JMX được sửa và chạy lại thành công.
 

@@ -15,7 +15,8 @@
 - Phản biện AI: `report/ai-critique.md` và `report/ai-critique.pdf`
 - Báo cáo Bug: `report/bug-report.md` và `report/bug-report.pdf`
 - Agent Skill: `agent-skill/eshop-performance-testing/SKILL.md`
-- Repository công khai: bổ sung URL GitHub của bài nộp trước khi đóng gói.
+- Video Demo YouTube: https://youtu.be/4AzdHAQVLhQ
+- Repository công khai: https://github.com/HCMUS-software-testing/HW05
 
 ## Cách thực thi
 
@@ -27,17 +28,25 @@ node tools/run_workflow.js --scenario soak --duration 600
 node tools/analyze_results.js
 ```
 
-Backend phải đang chạy tại `http://localhost:3000`. Ảnh evidence đã được lưu trong `evidence/screenshots/`; video YouTube không công khai vẫn cần bổ sung URL trước khi nộp.
+Backend phải đang chạy tại `http://localhost:3000`. Ảnh evidence đã được lưu trong `evidence/screenshots/`; video YouTube không công khai: https://youtu.be/4AzdHAQVLhQ.
 
 ## Tự đánh giá
 
-| Tiêu chí | Tự đánh giá |
-|---|---:|
-| Load testing | Chưa chốt |
-| Stress testing | Chưa chốt |
-| Spike testing | Chưa chốt |
-| AI analysis và critique | Chưa chốt |
-| Continuous performance testing | Chưa chốt |
-| Agent Skill | Chưa chốt |
+| STT | Tiêu chí | Điểm tối đa | Tự đánh giá |
+|---|---|---:|---:|
+| 1 | Task 1 - Load testing | 30 | 30/30 |
+| 2 | Task 1 - Stress testing | 20 | 20/20 |
+| 3 | Task 1 - Spike testing | 20 | 20/20 |
+| 4 | Task 2 - AI analysis + misinterpretation hunt | 10 | 10/10 |
+| 5 | Task 3 - Continuous Performance Testing proposal | 10 | 10/10 |
+| 6 | Agent Skills | 10 | 10/10 |
+| | **Tổng cộng** | **100** | **100/100** |
 
-Bài nộp đã có bằng chứng API có thể tái lập, log thô, báo cáo kiểm toán AI, phần phản biện và ảnh thủ công. Ba thư mục HTML report tại `jmeter/reports/load`, `jmeter/reports/stress`, `jmeter/reports/spike` đã được sinh mới thành công có đầy đủ header, hiển thị khớp chính xác 90 mẫu (samples) và 0% tỷ lệ lỗi. Còn chờ PDF, video YouTube, URL repository công khai và kiểm tra cuối trước khi nộp.
+## Báo cáo tóm tắt kiểm thử
+
+- **Các kịch bản đã chạy:** Load (10 users, ramp 5s, 30s), Stress (10 users, ramp 5s, 60s), Spike (10 users, ramp 5s, 10s), Endurance/Soak (2 workers, 600s / 10 phút).
+- **Các nhóm endpoint bao phủ (Member 2):** Auth-heavy (`POST /api/register`, `POST /api/login`), Read-heavy (`GET /api/categories`, `GET /api/products`, `GET /api/products/:id`), Transactional (`POST /api/cart`, `POST /api/apply-coupon`, `POST /api/checkout`, `GET /api/orders/my-orders`).
+- **Ngưỡng endurance (số liệu cụ thể):** Duy trì 2 virtual workers trong 600 giây với 292.482 samples, 0% lỗi, throughput ~487 req/s, P95 6 ms, P99 49 ms trên môi trường loopback.
+- **Số bug / vấn đề hiệu năng phát hiện:** 11 bugs (bao gồm nghẽn I/O đĩa SQLite, SQL Injection, Privilege Escalation, Price Tampering, lỗi công thức Coupon, lỗi state machine đơn hàng, mismatch kiểu dữ liệu Price, ... đã tạo Issues #12 - #21 trên GitHub).
+- **Liên kết video demo:** https://youtu.be/4AzdHAQVLhQ
+

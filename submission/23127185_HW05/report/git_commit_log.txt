@@ -1,3 +1,6 @@
+ac4f872 fix: bug report add link issue github
+1fb58a1 docs: add video recording script and update main report PDF
+4bcf8cb docs: sync git commit log file
 9a181ba docs: add soak test results and update performance metrics
 487900a docs: update performance test reports, PDF artifacts and GitHub issues
 019cae7 fix: refresh JTL analysis after evidence recheck
@@ -10,4 +13,3 @@ c9bf39c test: record performance execution evidence
 82c6336 test: add member 2 data driven inputs
 afc985a add plan
 de733d4 add requirements and feature division
-6d0ad16 first commit

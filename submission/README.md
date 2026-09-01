@@ -19,15 +19,6 @@
 - Repository công khai: https://github.com/HCMUS-software-testing/HW05/tree/melyen
 
 ## Cách thực thi
-
-```bash
-node tools/run_workflow.js --scenario load
-node tools/run_workflow.js --scenario stress
-node tools/run_workflow.js --scenario spike
-node tools/run_workflow.js --scenario soak --duration 600
-node tools/analyze_results.js
-```
-
 Backend phải đang chạy tại `http://localhost:3000`. Ảnh evidence đã được lưu trong `evidence/screenshots/`; video YouTube không công khai: https://youtu.be/4AzdHAQVLhQ.
 
 ## Tự đánh giá

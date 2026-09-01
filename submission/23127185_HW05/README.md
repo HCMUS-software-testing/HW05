@@ -16,7 +16,7 @@
 - Báo cáo Bug: `report/bug-report.md` và `report/bug-report.pdf`
 - Agent Skill: `agent-skill/eshop-performance-testing/SKILL.md`
 - Video Demo YouTube: https://youtu.be/4AzdHAQVLhQ
-- Repository công khai: https://github.com/HCMUS-software-testing/HW05
+- Repository công khai: https://github.com/HCMUS-software-testing/HW05/tree/melyen
 
 ## Cách thực thi
 

@@ -38,3 +38,8 @@ Use imperative, scoped commit subjects consistent with the existing history and 
 ## Security & Configuration Tips
 
 Do not commit real credentials, secrets, or private environment details. Use test-only accounts, products, coupons, and admin records; document cleanup and account-lockout reset steps before running repeated tests.
+
+## Token Optimization & Reference Guidelines
+
+Always prioritize reading converted Markdown files (`.md`) inside reference directories (`ref/`) and requirement directories (`req/`) instead of raw PDF files to conserve context tokens and improve processing speed. Refer to `.agents/skills/ai-audit-entry/ref/13_Performance Testing.md` as the authoritative slide reference for performance testing concepts, metrics, and methodology.
+

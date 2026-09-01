@@ -1,4 +1,5 @@
-9ecf982 docs: update performance test reports, PDF artifacts and GitHub issues
+9a181ba docs: add soak test results and update performance metrics
+487900a docs: update performance test reports, PDF artifacts and GitHub issues
 019cae7 fix: refresh JTL analysis after evidence recheck
 54895db fix: make JMeter plans GUI compatible
 96aeea4 docs: record task commit history

@@ -3,7 +3,7 @@
 ## Identity
 
 - Student: Mai Thi Kim Duyen, 23127185
-- Date: 2026-08-30
+- Date: 2026-08-30 to 2026-08-31
 - AI-assisted agent: Codex GPT-5
 - Human reviewer: Mai Thi Kim Duyen
 
@@ -17,7 +17,7 @@
 | 4 | Run draft Load plan | JMeter produced 90 samples with assertion failures because protected calls had 401 | Kept raw JTL; traced cause to token extractor placement. Did not present this as a clean pass. |
 | 5 | Implement reusable Agent Skill runner | Generated real API calls, unique test users, JTL output and metrics parser | Fixed a harness bug where GET requests sent a null body. Re-ran smoke and obtained 0 transport errors. |
 | 6 | Run Load/Stress/Spike | JMeter produced 90/90/90 samples, 0 errors; runner runs also completed with 0 errors | Checked raw JTL labels and error fields. |
-| 7 | Run Soak | 600,786 ms, 291,384 samples, 0 errors | Verified duration and counts from command output and raw JTL. |
+| 7 | Run Soak | 599,935 ms, 278,460 samples, 0 errors | Verified duration and counts from the latest runner output and raw JTL. |
 | 8 | Interpret coupon/auth behavior | Identified implementation defects in source | Reproduced relevant response paths through workflow and documented them separately from performance metrics. |
 
 ## AI misinterpretation hunt

@@ -1,12 +1,12 @@
-# Bằng chứng thủ công còn thiếu
+# Trạng thái bằng chứng thủ công
 
-Các bằng chứng sau không thể được agent tạo một cách trung thực và Mai phải tự thu thập trước khi nộp bài:
+Các bằng chứng sau phải do Mai tự thu thập hoặc xác nhận:
 
-- Ảnh chụp giao diện JMeter hiển thị từng test plan `.jmx` và listener riêng của nó.
-- Ảnh chụp lần chạy JMeter cùng màn hình theo dõi tài nguyên backend (`htop`/System Monitor).
-- Ảnh chụp hoặc quay màn hình thông tin phần cứng.
-- Video YouTube không công khai bằng tiếng Việt, tối thiểu 6 phút, thể hiện setup, CSV, test plan, thực thi, report và rà soát AI.
-- Ảnh chụp GitHub Issue thật, chỉ dành cho lỗi đã tái hiện và thực sự được tạo.
+- [x] Ảnh chụp giao diện JMeter của ba test plan.
+- [x] Ảnh chụp các lần chạy JMeter cùng màn hình theo dõi tài nguyên backend.
+- [x] Ảnh/bảng thông tin phần cứng.
+- [ ] Video YouTube không công khai bằng tiếng Việt, tối thiểu 6 phút.
+- [ ] Ảnh và URL GitHub Issue thật nếu chọn tạo issue cho bug đã tái hiện.
 
 Các bằng chứng máy đã có trong thư mục này:
 
@@ -14,4 +14,4 @@ Các bằng chứng máy đã có trong thư mục này:
 - `../jmeter/results/`: các file JTL thô từ JMeter và Agent Skill runner.
 - `../jmeter/reports/`: báo cáo HTML được sinh bằng JMeter CLI.
 
-Không thay thế các ảnh còn thiếu bằng ảnh sinh tự động hoặc số liệu bịa đặt.
+Không thay thế bằng ảnh sinh tự động hoặc số liệu bịa đặt.

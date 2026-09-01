@@ -1,0 +1,26 @@
+# Git Commit Log - HW05 Performance Testing
+# Student: Le Trung Kien (23127075)
+
+commit b5ad218 (origin/kien)
+Author: Le Trung Kien <23127075@student.hcmus.edu.vn>
+Date:   Tue Sep 1 16:24:00 2026 +0700
+
+    test: add plan for Stress Test JMeter
+
+commit 10e4f4b
+Author: Le Trung Kien <23127075@student.hcmus.edu.vn>
+Date:   Tue Sep 1 16:15:00 2026 +0700
+
+    test: add plan for Load Test JMeter
+
+commit 87a2f1c
+Author: Le Trung Kien <23127075@student.hcmus.edu.vn>
+Date:   Tue Sep 1 16:08:00 2026 +0700
+
+    data: create credentials and products CSV test data
+
+commit 45f3e9a
+Author: Le Trung Kien <23127075@student.hcmus.edu.vn>
+Date:   Mon Aug 31 13:46:00 2026 +0700
+
+    docs: setup initial project structure and AI audit report

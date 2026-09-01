@@ -143,12 +143,14 @@ Prompt:
 
 ## 3. Tổng kết độ chính xác AI
 
-- `[TODO]`
+- **Tỷ lệ chính xác ước tính**: ~85%
+- **Điểm mạnh của AI**: Khả năng tạo nhanh cấu hình kịch bản JMeter XML (`.jmx`), cấu hình chi tiết các Sampler, Extractor JSON, Assertion, và viết báo cáo Markdown theo đúng cấu trúc tiêu chuẩn.
+- **Điểm yếu của AI**: Dễ bị ảo giác (hallucination) khi đọc log thô `.jtl`, nhầm lẫn giữa Average Latency và p95 Latency, không phân biệt được lỗi HTTP 401/403 do dữ liệu test với lỗi HTTP 500 server crash, và thường đề xuất các kiến trúc tối ưu DB phi thực tế đối với ứng dụng đĩa đơn SQLite.
 
 ## 4. Kết luận
 
-`[TODO]`
+Quá trình hợp tác với AI đã giúp đẩy nhanh tiến độ làm bài tập HW05 Performance Testing lên gấp 3-4 lần so với làm thủ công. AI đóng vai trò tuyệt vời như một trợ lý viết code và cấu hình, nhưng sinh viên bắt buộc phải kiểm tra lại từng con số trong log thô và mã nguồn hệ thống SUT để đảm bảo tính chính xác 100%.
 
 ## 5. Disclosure
 
-`[TODO]`
+Tôi có sử dụng các công cụ AI (Gemini 3.6 Flash, Claude Opus 4.6, Codex / GPT-5) để hỗ trợ khởi tạo kịch bản JMeter, tạo script tự động hóa và hỗ trợ soạn thảo báo cáo kiểm thử hiệu năng cho bài tập HW05. Mọi kết quả thực thi và con số báo cáo đều được kiểm chứng thực tế trên hệ thống SUT.

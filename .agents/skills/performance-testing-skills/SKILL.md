@@ -110,11 +110,16 @@ Create 3 `.jmx` files under `src/test-plans/`:
 
 | Plan | Threads | Ramp-up | Think-time | Loops | Listener |
 |------|---------|---------|------------|-------|----------|
-| **Load** | 10 | 10s | 1-3s (Gaussian) | 5 | Aggregate Report |
-| **Stress** | 50 | 15s | 0.5-1.5s | 10 | Summary Report |
+| **Load** | 10 | 10s | mean 2s, sigma 0.333s | 5 | Aggregate Report |
+| **Stress** | 50 | 15s | mean 1s, sigma 0.167s | 10 | Summary Report |
 | **Spike** | 100 | 1s | None | 3 | View Results Tree |
 
 **IMPORTANT**: Use 3 **different** listener/report types across the 3 plans.
+
+For JMeter's Gaussian Random Timer, the offset is the mean and the range is
+the standard deviation. The stated 1-3s and 0.5-1.5s intervals are approximate
+`mean +/- 3 sigma` targets, not a hard bound. Keep sampler labels stable; put
+dynamic IDs in request paths only, otherwise HTML reports create one label per ID.
 
 Each plan must include:
 - **CSV Data Set Config** — pointing to `data/*.csv` (relative paths)
@@ -172,6 +177,10 @@ jmeter -n -t test-plans/{StudentID}_Spike_{DATE}.jmx -l results/spike/raw.jtl -e
 **Account Lockout Reset:**
 If stress/spike triggers login lockout (3 failed attempts), reset between runs and document the reset procedure.
 
+For endurance evidence, use a duration-limited Thread Group (10-15 minutes),
+run `scripts/run_endurance_template.sh`, and collect backend CPU/RSS throughout
+the run. Never infer a memory ceiling from a one-time screenshot.
+
 ### Phase 7: Report Generation
 
 Create `src/report/main-report.md` with these sections:
@@ -185,6 +194,11 @@ Create `src/report/main-report.md` with these sections:
 - Per-scenario analysis
 - Execution evidence links
 - Endurance threshold (sustained RPS, memory ceiling from 10-15 min soak test)
+
+Compute metrics with `scripts/analyze_jtl.py`. Report JMeter `elapsed` as response
+time and the JTL `Latency` column separately. Throughput is a run-average unless
+you explicitly calculate a time-bucket peak. Verify that raw JTL sample count
+matches the HTML report's `statistics.json` `Total.sampleCount` before reporting.
 
 #### Task 2: AI Analysis & Misinterpretation Hunt
 - Feed `.jtl` logs to AI for analysis
@@ -226,10 +240,11 @@ Record unlisted YouTube video (≥ 6 minutes total):
 
 1. Update `src/git-commit-log.txt` with `git log --oneline`
 2. Copy `src/` to staging folder
-3. Rename copy to `{StudentID}_HW05_AI_Performance_{SelfAssessedGrade}`
-4. Inspect for secrets, unwanted files, `.gitignore`d content
-5. ZIP the renamed copy
-6. **Never delete or rename the working `src/` folder**
+3. Copy `.agents/skills/performance-testing-skills/` into `agent-skill/` in staging
+4. Rename the staging copy to `{StudentID}_HW05_AI_Performance_{SelfAssessedGrade}`
+5. Inspect for secrets, unwanted files, `.gitignore`d content
+6. ZIP the renamed copy
+7. **Never delete or rename the working `src/` folder**
 
 ## Deliverables Checklist
 
@@ -256,6 +271,9 @@ Record unlisted YouTube video (≥ 6 minutes total):
 | AI-generated metrics without verification | Always cross-check against raw `.jtl` log values |
 | Missing hardware hostname match | Use same machine as previous homework submissions |
 | No think-time in Load/Stress | Add Gaussian Random Timer for realistic simulation |
+| Treating Gaussian settings as hard bounds | Document mean and standard deviation; use `+/- 3 sigma` only as an approximation |
+| Dynamic variables in sampler names | Keep labels stable and variables in paths/bodies so reports aggregate correctly |
+| JTL and HTML totals differ | Delete both outputs before rerun and validate `Total.sampleCount` |
 | Forgetting account lockout reset | Document reset steps between Stress/Spike runs |
 | Submitting `src/` directly | Copy `src/`, rename copy, ZIP the copy |
 

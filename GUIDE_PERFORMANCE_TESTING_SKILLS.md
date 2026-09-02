@@ -12,8 +12,12 @@ Bộ skill `performance-testing-skills` tự động hóa toàn bộ quy trình 
 ├── references/
 │   ├── jmeter-plan-template.md           # Template XML cho JMeter .jmx
 │   └── report-templates.md               # Template báo cáo Markdown
-└── scripts/
-    └── run_tests_template.sh             # Template script chạy test
+├── scripts/
+│   ├── analyze_jtl.py                    # Phân tích elapsed, latency, percentile, RPS
+│   ├── run_endurance_template.sh         # Chạy soak test và monitor backend
+│   └── run_tests_template.sh             # Template script chạy ba test chính
+└── tests/
+    └── test_skill_artifacts.py           # Kiểm tra hồi quy cho skill
 ```
 
 ## Workflow 10 Bước
@@ -25,7 +29,7 @@ Bộ skill `performance-testing-skills` tự động hóa toàn bộ quy trình 
 | 3. Test Data Creation | Tạo CSV data files (credentials, products...) | `src/data/*.csv` |
 | 4. Test Plan Design | Tạo 3 file `.jmx` (Load/Stress/Spike) | `src/test-plans/*.jmx` |
 | 5. Runner Script | Tạo script tự động chạy 3 test | `src/run_tests.sh` |
-| 6. Execution & Evidence | Chạy test, chụp htop, fastfetch | `src/results/`, `src/evidence/` |
+| 6. Execution & Evidence | Chạy test, soak 10-15 phút, chụp htop/fastfetch | `src/results/`, `src/evidence/` |
 | 7. Report Generation | Viết báo cáo Task 1+2+3 | `src/report/main-report.md` |
 | 8. README & Self-Assessment | Tạo README với bảng tự đánh giá | `src/README.md` |
 | 9. Video Demo | Quay video YouTube ≥ 6 phút | Link YouTube unlisted |
@@ -113,3 +117,6 @@ Skill đã tích hợp đầy đủ kiến thức từ bài giảng "Performance
 3. **Kiểm chứng số liệu**: Luôn đối chiếu kết quả AI phân tích với raw `.jtl` log
 4. **Hostname**: Hardware screenshot phải khớp hostname với các bài tập trước
 5. **Không sửa/xóa `src/`**: Copy ra folder mới trước khi đổi tên và ZIP
+6. **Gaussian không bị chặn cứng**: Cấu hình theo mean và standard deviation; khoảng `+/- 3 sigma` chỉ là xấp xỉ 99,7%
+7. **Đối chiếu artifact**: Tổng mẫu trong raw JTL phải bằng `Total.sampleCount` của HTML report
+8. **Đóng gói skill**: Copy `.agents/skills/performance-testing-skills/` vào `agent-skill/` trong bản staging

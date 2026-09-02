@@ -95,27 +95,31 @@ TestPlan
   <collectionProp name="Asserion.test_strings">
     <stringProp>200</stringProp>
   </collectionProp>
-  <intProp name="Assertion.test_field">6</intProp>
+  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
   <intProp name="Assertion.test_type">8</intProp>
 </ResponseAssertion>
 ```
 
 ### Gaussian Random Timer
 ```xml
-<!-- Load: 1000-3000ms range -->
+<!-- Load: mean 2000ms, sigma 333ms; about 99.7% falls within 1000-3000ms. -->
 <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer">
   <stringProp name="ConstantTimer.delay">2000</stringProp>
-  <stringProp name="RandomTimer.range">1000</stringProp>
+  <stringProp name="RandomTimer.range">333</stringProp>
 </GaussianRandomTimer>
 
-<!-- Stress: 500-1500ms range -->
+<!-- Stress: mean 1000ms, sigma 167ms; about 99.7% falls within 500-1500ms. -->
 <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer">
   <stringProp name="ConstantTimer.delay">1000</stringProp>
-  <stringProp name="RandomTimer.range">500</stringProp>
+  <stringProp name="RandomTimer.range">167</stringProp>
 </GaussianRandomTimer>
 
 <!-- Spike: No timer (omit entirely) -->
 ```
+
+`ConstantTimer.delay` is the distribution mean/offset and `RandomTimer.range`
+is the standard deviation. A Gaussian distribution is unbounded, so these are
+target ranges, not hard minimum and maximum delays.
 
 ### Listener Types (use one per plan, all different)
 

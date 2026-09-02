@@ -33,11 +33,11 @@ Kịch bản end-to-end bao phủ đầy đủ 3 nhóm API theo yêu cầu đề
 | **Số Loops** | 5 | 10 | 3 |
 | **Tổng số Samples** | {N} | {N} | {N} |
 | **Tổng thời gian chạy** | {T}s | {T}s | {T}s |
-| **Throughput (RPS)** | {X} req/s | {X} req/s | {X} req/s |
-| **Average Latency** | {X}ms | {X}ms | {X}ms |
-| **Min Latency** | {X}ms | {X}ms | {X}ms |
-| **Max Latency** | {X}ms | {X}ms | {X}ms |
-| **p95 Latency** | {X}ms | {X}ms | {X}ms |
+| **Average Throughput (RPS)** | {X} req/s | {X} req/s | {X} req/s |
+| **Average Response Time (`elapsed`)** | {X}ms | {X}ms | {X}ms |
+| **Average JTL `Latency`** | {X}ms | {X}ms | {X}ms |
+| **Min / Max Response Time** | {X}/{X}ms | {X}/{X}ms | {X}/{X}ms |
+| **p95 / p99 Response Time** | {X}/{X}ms | {X}/{X}ms | {X}/{X}ms |
 | **Tỷ lệ Lỗi (Error Rate)** | {X}% | {X}% | {X}% |
 | **Listener Sử dụng** | Aggregate Report | Summary Report | View Results Tree |
 | **File Log Thô** | `results/load/raw.jtl` | `results/stress/raw.jtl` | `results/spike/raw.jtl` |
@@ -56,7 +56,8 @@ Kịch bản end-to-end bao phủ đầy đủ 3 nhóm API theo yêu cầu đề
 
 ### 1.5. Ngưỡng Endurance
 
-{Endurance test results: sustained RPS, memory ceiling, test duration}
+{Endurance result from a real 10-15 minute run: duration, average sustained RPS,
+p95/p99 response time, errors, sampled backend RSS range and memory trend}
 
 ---
 

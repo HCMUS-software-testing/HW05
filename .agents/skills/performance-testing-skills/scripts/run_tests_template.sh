@@ -16,6 +16,7 @@ set -e
 # Always set working directory to src (directory containing this script)
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
+JMETER_BIN="${JMETER_BIN:-/opt/jmeter/bin/jmeter}"
 
 # Configuration — edit these for your submission
 STUDENT_ID="${STUDENT_ID:-XXXXXXX}"
@@ -38,29 +39,29 @@ rm -f results/load/raw.jtl results/stress/raw.jtl results/spike/raw.jtl
 
 # 3. Run Load Test
 echo "=========================================================="
-echo "🚀 1/3 Running Load Test..."
+echo "1/3 Running Load Test..."
 echo "=========================================================="
-jmeter -n -t "$LOAD_PLAN" \
+"$JMETER_BIN" -n -t "$LOAD_PLAN" \
        -l results/load/raw.jtl \
        -e -o results/load/html-report
 
 # 4. Run Stress Test
 echo "=========================================================="
-echo "🚀 2/3 Running Stress Test..."
+echo "2/3 Running Stress Test..."
 echo "=========================================================="
-jmeter -n -t "$STRESS_PLAN" \
+"$JMETER_BIN" -n -t "$STRESS_PLAN" \
        -l results/stress/raw.jtl \
        -e -o results/stress/html-report
 
 # 5. Run Spike Test
 echo "=========================================================="
-echo "🚀 3/3 Running Spike Test..."
+echo "3/3 Running Spike Test..."
 echo "=========================================================="
-jmeter -n -t "$SPIKE_PLAN" \
+"$JMETER_BIN" -n -t "$SPIKE_PLAN" \
        -l results/spike/raw.jtl \
        -e -o results/spike/html-report
 
 echo "=========================================================="
-echo "✅ ALL 3 PERFORMANCE TESTS COMPLETED SUCCESSFULLY!"
+echo "ALL 3 PERFORMANCE TESTS COMPLETED SUCCESSFULLY"
 echo "Results generated in results/"
 echo "=========================================================="

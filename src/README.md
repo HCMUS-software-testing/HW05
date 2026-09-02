@@ -17,7 +17,7 @@
 | 3 | **Task 1 - Spike testing** | 20 | **20** | Hoàn thành kịch bản 100 threads, 1s ramp-up, View Results Tree |
 | 4 | **Task 2 - AI analysis & misinterpretation hunt** | 10 | **10** | Phân tích 2 lỗi AI diễn giải sai chỉ số & phân loại Feasible vs Hallucinated DB optimizations |
 | 5 | **Task 3 - Continuous Performance Testing proposal** | 10 | **10** | Đề xuất CI/CD Pipeline kèm sơ đồ Mermaid flowchart & phân tích trade-offs |
-| 6 | **Agent Skills & Documentation** | 10 | **10** | Đầy đủ `SKILL.md`, `ai_audit_report.md` (7 entries), `run_tests.sh` |
+| 6 | **Agent Skills & Documentation** | 10 | **10** | Đầy đủ `SKILL.md`, `ai_audit_report.md` (9 entries), `run_tests.sh` |
 | **TỔNG CỘNG** | | **100** | **100 / 100** | **Tên file ZIP nộp bài**: `23127075_HW05_AI_Performance_100.zip` |
 
 ---
@@ -73,7 +73,7 @@ Workflow của Member 4 (Admin Workflow) thực thi end-to-end qua 6 API Sampler
 ```text
 src/
 ├── ai-audit/
-│   └── ai_audit_report.md        # Nhật ký AI Audit (7 Entries)
+│   └── ai_audit_report.md        # Nhật ký AI Audit (9 Entries)
 ├── data/
 │   ├── credentials.csv           # Dữ liệu tài khoản Admin
 │   └── products.csv              # Dữ liệu sản phẩm mẫu

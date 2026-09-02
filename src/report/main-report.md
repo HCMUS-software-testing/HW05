@@ -1,115 +1,146 @@
-# Báo Cáo Kiểm Thử Hiệu Năng (HW05 Performance Testing Report)
+# Báo cáo kiểm thử hiệu năng HW05
 
-- **Họ và tên**: Lê Trung Kiên
-- **MSSV**: 23127075
-- **Vai trò / Thành viên**: Thành viên 4 (Admin Workflow)
-- **Hệ thống kiểm thử (SUT)**: EShop SUT (Node.js REST Backend + SQLite DB)
-- **Luồng nghiệp vụ (Workflow)**: Admin Login -> Get Admin Users -> Get Products -> Get Categories -> Create Product -> Delete Product (Cleanup)
+- **Sinh viên**: Lê Trung Kiên - 23127075
+- **Vai trò**: Thành viên 4, Admin Workflow
+- **SUT**: EShop REST backend, Node.js và SQLite
+- **Ngày chạy chính thức**: 2026-09-03 (Asia/Ho_Chi_Minh)
 
----
+## 1. Task 1 - Thiết kế và thực thi
 
-## 1. Task 1 - Kịch bản & Kết quả Thực thi Kiểm thử Hiệu năng
+### 1.1. Workflow và dữ liệu
 
-### 1.1. Phạm vi & Nhóm API Endpoint (Member 4 - Admin Workflow)
+Cả ba test plan bắt buộc dùng cùng workflow sáu bước:
 
-Kịch bản end-to-end bao phủ đầy đủ 3 nhóm API theo yêu cầu đề bài:
-1. **Auth-heavy**: `POST /api/login` (Xác thực tài khoản Admin, trích xuất JWT Token).
-2. **Read-heavy**: `GET /api/admin/users` (Xem danh sách người dùng kèm Bearer Token), `GET /api/products`, `GET /api/categories`.
-3. **Transactional**: `POST /api/products` (Tạo sản phẩm mới từ file CSV), `DELETE /api/products/:id` (Dọn dẹp sản phẩm vừa tạo).
+1. **Auth-heavy**: `POST /api/login`, trích xuất JWT.
+2. **Read-heavy**: `GET /api/admin/users`, `GET /api/products`, `GET /api/categories`.
+3. **Transactional**: `POST /api/products`, trích xuất ID, rồi `DELETE /api/products/:id` để dọn dữ liệu.
 
-### 1.2. Tổng hợp Kết quả Thực thi (Real Test Metrics)
+`data/credentials.csv` và `data/products.csv` tham số hóa credentials và payload sản phẩm. Tất cả đường dẫn trong JMX là tương đối từ `src/`. Mỗi sampler có assertion mã phản hồi; login và create-product có thêm assertion nội dung/extractor.
 
-| Chỉ số / Metric | Load Test | Stress Test | Spike Test |
-|---|---|---|---|
-| **Số Threads (Virtual Users)** | 10 | 50 | 100 |
-| **Ramp-up Period** | 10 s | 15 s | 1 s |
-| **Số Loops** | 5 | 10 | 3 |
-| **Tổng số Samples (Requests)** | 300 | 3,000 | 1,800 |
-| **Tổng thời gian chạy** | 64 s | 76 s | 5.3 s |
-| **Throughput (RPS)** | **4.7 req/s** | **39.3 req/s** | **338.2 req/s** |
-| **Average Latency** | 10 ms | 7 ms | 225 ms |
-| **Min Latency** | 3 ms | 1 ms | 8 ms |
-| **Max Latency** | 102 ms | 88 ms | 531 ms |
-| **Tỷ lệ Lỗi (Error Rate)** | **0.00%** | **0.00%** | **0.00%** |
-| **Listener Sử dụng** | Aggregate Report | Summary Report | View Results Tree |
-| **File Log Thô** | `results/load/raw.jtl` | `results/stress/raw.jtl` | `results/spike/raw.jtl` |
+### 1.2. Human review và sửa test plan do AI sinh
 
-### 1.3. Phân tích Chi tiết từng Kịch bản
+AI ban đầu mô tả Gaussian timer là khoảng chặn cứng và đặt `${created_product_id}` trong tên sampler Delete. Gaussian Random Timer thực tế nhận mean/offset và standard deviation; biến trong label còn làm HTML report tách một transaction cho mỗi ID. Sau rà soát:
 
-- **Load Test (Tải bình thường)**: Với 10 VU và think-time 1-3s, hệ thống đạt 4.7 RPS, thời gian phản hồi trung bình cực nhanh (10ms). 100% request thành công.
-- **Stress Test (Tải áp lực)**: Tăng lên 50 VU với think-time 0.5-1.5s, throughput tăng gấp 8.3 lần lên 39.3 RPS. Hệ thống duy trì độ trễ trung bình 7ms và không xuất hiện lỗi.
-- **Spike Test (Đột biến tải cực đoan)**: 100 VU cùng ập vào trong 1 giây mà không có think-time. Throughput đạt đỉnh **338.2 RPS**, độ trễ trung bình đẩy lên 225ms (max 531ms), nhưng tỷ lệ lỗi vẫn giữ ở mức 0.00%.
+- Load dùng mean 2.000 ms, sigma 333 ms; xấp xỉ 99,7% giá trị nằm trong 1-3 giây.
+- Stress dùng mean 1.000 ms, sigma 167 ms; xấp xỉ 99,7% giá trị nằm trong 0,5-1,5 giây.
+- Spike không có think-time.
+- ID động chỉ còn trong request path; sampler label ổn định.
+- Runner xóa cả JTL và HTML cũ trước khi chạy. Validator đối chiếu số mẫu dự kiến với `statistics.json` để ngăn dữ liệu bị nối giữa các run.
 
-### 1.4. Bằng chứng Thực thi (Execution Evidence)
+### 1.3. Môi trường thực thi
 
-- **Screenshot htop (Process Resource Monitoring)**: `[TODO: Lưu ảnh chụp htop vào src/evidence/screenshots/htop.png]`
-- **Screenshot Hardware Spec (fastfetch)**: `[TODO: Lưu ảnh chụp fastfetch vào src/evidence/hardware/fastfetch.png]`
-- **Báo cáo HTML JMeter**:
-  - Load Test HTML Report: `results/load/html-report/index.html`
-  - Stress Test HTML Report: `results/stress/html-report/index.html`
-  - Spike Test HTML Report: `results/spike/html-report/index.html`
-- **Video Demo YouTube (Unlisted)**: `[TODO: Dán link video YouTube unlisted >= 6 phút tại đây]`
+| Thành phần | Thông số |
+| --- | --- |
+| Hostname | `tkin@fedora` |
+| Máy | ASUS EXPERTBOOK B5404CMA |
+| OS / Kernel | Fedora Linux 44 x86_64 / Linux 7.1.8-200.fc44.x86_64 |
+| CPU | Intel Core Ultra 7 155H (6P + 8E + 2LPE), tối đa 3,80 GHz theo fastfetch |
+| RAM / Swap | 14,92 GiB / 8,00 GiB |
+| GPU | Intel Arc Graphics tích hợp |
+| JMeter | Apache JMeter 5.6.3, non-GUI mode |
+| Backend | Node.js, SQLite, `http://localhost:3000` |
 
----
+Bằng chứng phần cứng: [`evidence/hardware/fastfetch.png`](../evidence/hardware/fastfetch.png).
 
-## 2. Task 2 - Phân tích AI & Săn Lỗi Diễn Giải Sai (Misinterpretation Hunt)
+### 1.4. Kết quả chính thức
 
-### 2.1. Phân tích Lỗi AI Diễn giải Sai chỉ số (2 Lỗi phổ biến)
+Các chỉ số thời gian dưới đây tính từ cột JTL `elapsed` (request đến khi nhận đủ response). `Avg Latency` lấy riêng từ cột `Latency`; throughput là trung bình toàn run, không phải giá trị đỉnh theo time bucket.
 
-#### 🔴 Lỗi 1: Nhầm lẫn giữa Average Latency và 95th Percentile (p95 Latency)
-- **Mô tả sai của AI**: AI nhận xét *"Hệ thống phản hồi rất tốt với độ trễ tối đa trung bình chỉ khoảng 10ms trên mọi người dùng"*.
-- **Giá trị đúng từ file log thô (`raw.jtl`)**: 
-  - Trong Spike Test, tuy độ trễ trung bình (Average) là **225ms**, nhưng giá trị bách phân p95 chạm ngưỡng **480ms** và Max Latency là **531ms**.
-  - **Giải thích lỗi**: AI có xu hướng chỉ lấy con số Average Latency từ bảng tóm tắt chung và coi đó là đại diện cho toàn bộ request. Việc bỏ qua p95/p99 khiến AI không phát hiện ra 5% người dùng chậm nhất phải chịu độ trễ gấp 50 lần so với trung bình.
+| Metric | Load | Stress | Spike |
+| --- | ---: | ---: | ---: |
+| Threads / ramp-up / loops | 10 / 10 s / 5 | 50 / 15 s / 10 | 100 / 1 s / 3 |
+| Samples | 300 | 3.000 | 1.800 |
+| Duration | 66,914 s | 74,641 s | 5,103 s |
+| Throughput trung bình | 4,4834 RPS | 40,1924 RPS | 352,7337 RPS |
+| Avg response time (`elapsed`) | 9,76 ms | 7,62 ms | 238,47 ms |
+| Avg JTL `Latency` | 9,46 ms | 7,44 ms | 238,31 ms |
+| Min / Max response time | 3 / 61 ms | 1 / 62 ms | 4 / 569 ms |
+| p95 / p99 response time | 17 / 42 ms | 15 / 20 ms | 476 / 532 ms |
+| Errors | 0 (0,00%) | 0 (0,00%) | 0 (0,00%) |
+| Listener | Aggregate Report | Summary Report | View Results Tree |
 
-#### 🔴 Lỗi 2: Nhầm lẫn giữa Error Rate hệ thống và Lỗi nghiệp vụ do sai dữ liệu đầu vào (HTTP 401/403)
-- **Mô tả sai của AI**: AI nhận xét *"Đợt Spike test tạo ra 0% lỗi nên hệ thống chịu tải hoàn hảo không có bug"*.
-- **Giá trị đúng từ file log thô (`raw.jtl`)**:
-  - Nếu trường credentials trong CSV bị sai hoặc tài khoản admin bị khóa, API `/api/login` trả về HTTP 401. Nếu JMeter không có Response Assertion kiểm tra body `{"token":...}`, sampler vẫn ghi nhận thành công hoặc ngược lại AI đánh giá nhầm lỗi HTTP 401 là do server crash (HTTP 500).
-  - **Giải thích lỗi**: AI thiếu ngữ cảnh về mã trạng thái HTTP (HTTP status code) và logic nghiệp vụ. AI không phân biệt được lỗi do server quá tải (502 Bad Gateway / Timeout) với lỗi do định dạng dữ liệu đầu vào (400 Bad Request / 401 Unauthorized).
+Nguồn dữ liệu và report:
 
-### 2.2. Đánh giá khuyến nghị Tối ưu hóa Database từ AI (Feasible vs Hallucinated)
+| Scenario | Raw JTL | HTML report | Resource screenshot |
+| --- | --- | --- | --- |
+| Load | [`results/load/raw.jtl`](../results/load/raw.jtl) | [`results/load/html-report/index.html`](../results/load/html-report/index.html) | [`htop_load.png`](../evidence/screenshots/htop_load.png) |
+| Stress | [`results/stress/raw.jtl`](../results/stress/raw.jtl) | [`results/stress/html-report/index.html`](../results/stress/html-report/index.html) | [`htop_stress.png`](../evidence/screenshots/htop_stress.png) |
+| Spike | [`results/spike/raw.jtl`](../results/spike/raw.jtl) | [`results/spike/html-report/index.html`](../results/spike/html-report/index.html) | [`htop_spike.png`](../evidence/screenshots/htop_spike.png) |
 
-AI đề xuất 3 giải pháp tối ưu cho EShop SUT backend. Đánh giá phản biện:
+Load và Stress giữ response time thấp khi có think-time. Spike đạt throughput trung bình cao hơn nhưng p95 tăng đến 476 ms, cho thấy tail latency xấu đi rõ rệt dù error rate vẫn bằng 0%.
 
-| Khuyến nghị của AI | Phân loại | Lý do & Lập luận Phản biện |
-|---|---|---|
-| **1. Thêm Index cho bảng `users(email)` & `products(id)`** | **Feasible** *(Khả thi)* | Thao tác login tra cứu `SELECT * FROM users WHERE email = ?` xảy ra liên tục. Thêm B-Tree Index giúp giảm thời gian query từ $O(N)$ xuống $O(\log N)$, cực kỳ thiết thực cho SQLite. |
-| **2. Bật chế độ SQLite WAL Mode (`PRAGMA journal_mode=WAL`)** | **Feasible** *(Khả thi)* | Mặc định SQLite dùng Rollback Journal gây lock toàn bộ DB khi có transaction ghi (`POST /api/products`). Chế độ WAL cho phép đọc và ghi diễn ra đồng thời, tăng throughput rõ rệt. |
-| **3. Dựng Redis Connection Pool Cluster & Load Balancer Nginx** | **Hallucinated** *(Ảo giác / Phi thực tế)* | EShop SUT là ứng dụng Node.js đơn tiến trình chạy trên SQLite file-based đĩa đơn. Đề xuất dựng Redis Cluster và Nginx Load Balancer hoàn toàn không phù hợp với kiến trúc đĩa đơn SQLite (SQLite không hỗ trợ ghi phân tán từ nhiều node). |
+### 1.5. Endurance 10 phút và ngưỡng phần cứng
 
----
+Endurance dùng 30 VU, ramp-up 30 giây, Gaussian think-time mean 1.000 ms, sigma 167 ms và scheduler 600 giây. Kết quả thực nghiệm:
 
-## 3. Task 3 - Đề xuất Continuous Performance Testing Pipeline (CI/CD)
+| Metric | Endurance |
+| --- | ---: |
+| Samples / errors | 17.238 / 0 (0,00%) |
+| Khoảng đo theo JTL | 598,517 s |
+| Throughput duy trì trung bình | 28,8012 RPS |
+| Avg / p95 / p99 response time | 15,46 / 16 / 55 ms |
+| Min / Max response time | 1 / 4.663 ms |
+| Backend RSS | 103,676-111,680 MiB |
+| Thay đổi RSS mẫu cuối so với mẫu đầu | -6,594 MiB |
+| Backend CPU từ `ps` | 0,9-1,5% (trung bình vòng đời tiến trình, không phải CPU tức thời) |
 
-### 3.1. Sơ đồ Pipeline Kiểm thử Hiệu năng Liên tục (Mermaid Flowchart)
+Trong 121 mẫu tài nguyên cách nhau 5 giây, RSS không tăng dần và không có request lỗi. Với cấu hình này, ngưỡng đã chứng minh là **28,80 RPS trong 10 phút, RSS không vượt 111,68 MiB**. Một outlier 4.663 ms xuất hiện gần phút thứ chín; vì p95 vẫn 16 ms nên chưa đủ bằng chứng kết luận rò rỉ hay suy giảm kéo dài.
+
+Artifact: [`raw.jtl`](../results/endurance/raw.jtl), [`HTML report`](../results/endurance/html-report/index.html), [`backend-resources.csv`](../results/endurance/backend-resources.csv).
+
+### 1.6. Account lockout và bug thật
+
+Credentials đúng không kích hoạt lockout. Nếu dữ liệu login sai, reset trước run kế tiếp từ root repository:
+
+```bash
+sqlite3 eshop-sut/backend/database.sqlite \
+  "UPDATE users SET login_attempts = 0, locked_until = NULL WHERE email = 'admin@eshop.com';"
+```
+
+Code review và phép thử không JWT xác nhận Product create/update/delete thiếu `authenticateToken`. `POST /api/products` không Authorization vẫn trả HTTP 200 và tạo ID 8943; probe đã được xóa sau kiểm tra. Chi tiết tại [`report/bug-report.md`](bug-report.md). GitHub Issue và screenshot chưa thể tạo do token `gh` hiện không hợp lệ.
+
+Video YouTube unlisted tối thiểu 6 phút chưa được bổ sung; đây là thao tác thủ công còn chặn trạng thái sẵn sàng nộp.
+
+## 2. Task 2 - AI analysis và misinterpretation hunt
+
+### 2.1. Hai diễn giải sai được đối chiếu raw log
+
+**Sai 1 - dùng average để đại diện tail latency.** AI từng kết luận hệ thống phản hồi khoảng 10 ms trên mọi người dùng. Raw Spike JTL cho thấy average `elapsed` là 238,47 ms nhưng p95 là 476 ms, p99 là 532 ms và max là 569 ms. Average không mô tả 5% request chậm nhất.
+
+**Sai 2 - gọi throughput toàn run là throughput đỉnh.** AI từng gọi 338,2 RPS là “peak throughput”. Run chính thức cho 352,7337 RPS, nhưng đây là `samples / duration`, tức throughput trung bình trong 5,103 giây. Không có phép gom time bucket nên không thể khẳng định peak RPS từ số này.
+
+**Phân biệt bổ sung - response time và latency.** JTL Spike có average `elapsed` 238,47 ms và average `Latency` 238,31 ms. Hai giá trị gần nhau trong run này nhưng không đồng nghĩa: `elapsed` đo toàn bộ response, còn `Latency` kết thúc khi byte phản hồi đầu tiên đến.
+
+### 2.2. Đánh giá khuyến nghị tối ưu
+
+| Khuyến nghị AI | Phân loại | Đánh giá sau rà soát |
+| --- | --- | --- |
+| Thêm index `users(email)` | Khả thi | Login truy vấn theo email và schema hiện không có index; nên cân nhắc unique index sau khi kiểm tra dữ liệu trùng. |
+| Thêm index `products(id)` | Không cần thiết | `id INTEGER PRIMARY KEY AUTOINCREMENT` đã dùng index/rowid của SQLite; index thứ hai là dư thừa. |
+| Bật SQLite WAL | Khả thi có điều kiện | Có thể cải thiện đồng thời đọc/ghi, nhưng phải benchmark lại và xem xét durability/checkpoint. |
+| Dựng Redis cluster và Nginx load balancer | Ảo giác / ngoài phạm vi | SUT là một Node.js process với một file SQLite; đề xuất không giải quyết write contention hiện tại và thay đổi kiến trúc quá lớn. |
+
+## 3. Task 3 - Continuous Performance Testing
 
 ```mermaid
 flowchart TD
-    A[Developer Push Code / PR] --> B{Có thay đổi Backend/API?}
-    B -- Không --> C[Skip Performance Test]
-    B -- Có --> D[Trigger GitHub Actions Pipeline]
-    D --> E[Build & Spin up EShop SUT Container]
-    E --> F[Run JMeter Non-GUI Benchmark Tests]
-    F --> G[Parse raw.jtl & Calculate Metrics]
-    G --> H{SLA Check: p95 < 500ms & Error < 1%?}
-    H -- Pass --> I[Approve PR & Merge Code]
-    H -- Fail --> J[Block PR & Notify Slack/Discord]
+    A[Commit hoặc Pull Request] --> B{Backend, API hoặc DB thay đổi?}
+    B -- Không --> C[Bỏ qua performance suite]
+    B -- Có --> D[Khởi động SUT và seed dữ liệu cố định]
+    D --> E[Chạy smoke load trên runner ổn định]
+    E --> F[Phân tích raw JTL và kiểm tra integrity]
+    F --> G{Error dưới 1% và p95 không regression quá 10%?}
+    G -- Có --> H[Đính kèm report và cho phép merge]
+    G -- Không --> I[Chặn merge và yêu cầu điều tra]
+    H --> J[Nightly Stress, Spike và Endurance]
+    J --> K[Cập nhật baseline đã phê duyệt]
 ```
 
-### 3.2. Phân tích Đánh đổi (Trade-offs) trong Pipeline
+- **Chi phí và tốc độ phản hồi**: PR chỉ chạy smoke load ngắn; Stress, Spike và Endurance chạy nightly để không kéo dài mỗi merge.
+- **Độ nhiễu hạ tầng**: Shared runner làm percentile dao động. Nên pin cấu hình runner, chạy lặp lại và chỉ so với baseline cùng loại máy.
+- **False positive**: Dùng tolerance 10%, yêu cầu lỗi lặp lại trước khi đổi baseline và giữ raw JTL để điều tra.
+- **Tính toàn vẹn**: Pipeline phải fail khi sample count sai, JTL không khớp HTML, assertion lỗi hoặc output cũ chưa được dọn.
 
-1. **Chi phí tài nguyên & Môi trường chạy (Cost vs Accuracy)**:
-   - *Đánh đổi*: Chạy JMeter full load trên runner ảo hóa (như GitHub-hosted runner) dễ gây ra tín hiệu nhiễu do chung tài nguyên CPU với các VM khác. Tuy nhiên, dựng Dedicated Performance Testing Server riêng lại tốn chi phí hạ tầng cao.
-2. **Thời gian Build vs Độ tin cậy (Feedback Loop speed)**:
-   - *Đánh đổi*: Chạy Spike/Stress test lâu (10-15 phút) làm chậm tốc độ merge PR của developer. Giải pháp là chỉ chạy Smoke Load Test (1 phút) trên mỗi PR, và chạy Full Stress/Endurance Test định kỳ hàng đêm (Nightly Build).
-3. **Cảnh báo sai (False Positives)**:
-   - *Đánh đổi*: Đặt ngưỡng SLA quá khắt khe (VD: p95 < 50ms) sẽ khiến CI fail liên tục do biến động phần cứng thời điểm đó. Cần thiết lập dải dung sai (tolerance range $\pm 10\%$) so với baseline commit trước đó.
+## 4. Kết luận
 
----
-
-## 4. Ngưỡng Endurance (Soak Test Estimation)
-
-- **Mô hình duy trì (Sustained Load)**: Tại mức tải duy trì 30 VU trong 15 phút.
-- **RPS ổn định tối đa**: $\approx 35 - 40 \text{ req/s}$.
-- **Trần bộ nhớ (Memory Ceiling)**: Tiến trình Node.js backend tiêu thụ tối đa $\approx 85 \text{ MB RAM}$, không phát hiện rò rỉ bộ nhớ (memory leak).
+Bốn run thực tế đều hoàn tất với 0 lỗi HTTP/assertion. Stress đạt 40,19 RPS với p95 15 ms; Spike làm p95 tăng lên 476 ms. Endurance chứng minh 28,80 RPS trong 10 phút với RSS tối đa 111,68 MiB, nhưng outlier 4,663 giây cần được theo dõi ở các run dài hơn. Các số liệu được sinh bởi `tools/analyze_jtl.py` và kiểm tra chéo với HTML `statistics.json`, không lấy từ ước lượng AI.

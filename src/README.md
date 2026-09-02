@@ -1,93 +1,98 @@
-# HW05 - Performance Testing with AI (Admin Workflow)
+# HW05 - Performance Testing with AI
 
 - **Sinh viên**: Lê Trung Kiên
 - **MSSV**: 23127075
-- **Lớp**: Kiểm thử phần mềm (Software Testing) - HCMUS
-- **Vai trò / Luồng thực thi**: Thành viên 4 (Admin Workflow)
-- **Repository**: [https://github.com/HCMUS-software-testing/HW05](https://github.com/HCMUS-software-testing/HW05)
+- **Workflow**: Member 4 - Admin Workflow
+- **Repository**: <https://github.com/HCMUS-software-testing/HW05>
 
----
+## 1. Tự đánh giá
 
-## 📊 1. Bảng Tự Đánh Giá Điểm (Self-Assessment Matrix)
-
-| STT | Tiêu chí đánh giá | Điểm tối đa | Điểm tự đánh giá | Trạng thái / Ghi chú |
+| STT | Tiêu chí | Tối đa | Tự đánh giá | Bằng chứng chính |
 | --- | --- | ---: | ---: | --- |
-| 1 | **Task 1 - Load testing** | 30 | **30** | Hoàn thành kịch bản 10 threads, 10s ramp-up, Aggregate Report, data CSV |
-| 2 | **Task 1 - Stress testing** | 20 | **20** | Hoàn thành kịch bản 50 threads, 15s ramp-up, Summary Report |
-| 3 | **Task 1 - Spike testing** | 20 | **20** | Hoàn thành kịch bản 100 threads, 1s ramp-up, View Results Tree |
-| 4 | **Task 2 - AI analysis & misinterpretation hunt** | 10 | **10** | Phân tích 2 lỗi AI diễn giải sai chỉ số & phân loại Feasible vs Hallucinated DB optimizations |
-| 5 | **Task 3 - Continuous Performance Testing proposal** | 10 | **10** | Đề xuất CI/CD Pipeline kèm sơ đồ Mermaid flowchart & phân tích trade-offs |
-| 6 | **Agent Skills & Documentation** | 10 | **10** | Đầy đủ `SKILL.md`, `ai_audit_report.md` (9 entries), `run_tests.sh` |
-| **TỔNG CỘNG** | | **100** | **100 / 100** | **Tên file ZIP nộp bài**: `23127075_HW05_AI_Performance_100.zip` |
+| 1 | Task 1 - Load testing | 30 | 28 | 300 samples, 0 lỗi, JTL + HTML + screenshot |
+| 2 | Task 1 - Stress testing | 20 | 18 | 3.000 samples, 0 lỗi, JTL + HTML + screenshot |
+| 3 | Task 1 - Spike testing | 20 | 18 | 1.800 samples, 0 lỗi, JTL + HTML + screenshot |
+| 4 | Task 2 - AI analysis + misinterpretation | 10 | 10 | Giá trị đúng từ raw JTL và phản biện recommendation |
+| 5 | Task 3 - Continuous testing | 10 | 10 | Pipeline Mermaid, p95 gate và trade-offs |
+| 6 | Agent Skills | 10 | 10 | Skill, analyzer, endurance runner và regression tests |
+| **Tổng nội dung kỹ thuật** | | **100** | **94 / 100** | Chưa phải trạng thái sẵn sàng nộp |
 
----
+Các mục bắt buộc còn cần thao tác thủ công: video YouTube unlisted tối thiểu 6 phút, PDF của báo cáo chính và AI Audit, GitHub Issue cùng screenshot. Không tạo ZIP cuối khi các mục này chưa đủ vì đề cảnh báo thiếu tài liệu bắt buộc có thể bị 0 điểm.
 
-## 📝 2. Tóm Tắt Kết Quả Kiểm Thử Hiệu Năng
+## 2. Phạm vi và kết quả
 
-### 2.1. Các kịch bản & Nhóm Endpoint bao phủ
-Workflow của Member 4 (Admin Workflow) thực thi end-to-end qua 6 API Samplers:
-- **Auth-heavy**: `POST /api/login` (Admin Authentication & JWT extraction)
-- **Read-heavy**: `GET /api/admin/users` (Bearer token auth), `GET /api/products`, `GET /api/categories`
-- **Transactional**: `POST /api/products` (Tạo sản phẩm test từ CSV), `DELETE /api/products/:id` (Cleanup sản phẩm)
+Workflow sáu request bao phủ:
 
-### 2.2. Bảng Tóm tắt Kết quả Thực tế
+- **Auth-heavy**: `POST /api/login`, `GET /api/admin/users` với JWT.
+- **Read-heavy**: `GET /api/products`, `GET /api/categories`.
+- **Transactional**: tạo sản phẩm từ CSV rồi xóa đúng ID vừa tạo.
 
-| Kịch bản | Threads | Ramp-up | Total Requests | Throughput (RPS) | Latency trung bình | Tỷ lệ Lỗi (Error %) |
-|---|---|---|---|---|---|---|
-| **Load Test** | 10 | 10s | 300 | **4.7 req/s** | 10 ms | **0.00%** |
-| **Stress Test** | 50 | 15s | 3,000 | **39.3 req/s** | 7 ms | **0.00%** |
-| **Spike Test** | 100 | 1s | 1,800 | **338.2 req/s** | 225 ms | **0.00%** |
+| Scenario | Threads / Ramp / Loops | Samples | Avg throughput | Avg / p95 response time | Errors |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Load | 10 / 10 s / 5 | 300 | 4,4834 RPS | 9,76 / 17 ms | 0 |
+| Stress | 50 / 15 s / 10 | 3.000 | 40,1924 RPS | 7,62 / 15 ms | 0 |
+| Spike | 100 / 1 s / 3 | 1.800 | 352,7337 RPS | 238,47 / 476 ms | 0 |
+| Endurance | 30 / 30 s / duration 600 s | 17.238 | 28,8012 RPS | 15,46 / 16 ms | 0 |
 
-### 2.3. Ngưỡng Endurance (Soak Test)
-- **RPS duy trì ổn định tối đa**: $\approx 35 - 40 \text{ req/s}$
-- **Trần bộ nhớ (Memory Ceiling)**: $\approx 85 \text{ MB RAM}$ (Backend Node.js + SQLite đĩa đơn)
-- **Số lượng Bug phát hiện**: 0 lỗi sập server (Error Rate 0.00%), phát hiện 1 lỗ hổng bảo mật SUT: API `POST/DELETE /api/products` không yêu cầu JWT auth middleware.
+Ngưỡng endurance đã chứng minh: **28,80 RPS trong 10 phút**, backend RSS **103,676-111,680 MiB**, không có xu hướng tăng bộ nhớ trong 121 mẫu giám sát. Xem [`report/main-report.md`](report/main-report.md) để biết p99, outlier, phần cứng và phương pháp tính.
 
----
+Một bug bảo mật đã được tái hiện: Product create/update/delete thiếu authentication. Báo cáo cục bộ nằm tại [`report/bug-report.md`](report/bug-report.md); GitHub Issue chưa tạo được do phiên `gh` không hợp lệ.
 
-## 📹 3. Liên Kết Video Demo (YouTube Unlisted)
+## 3. Chạy lại
 
-- **Link Video YouTube**: `[TODO: Dán link video YouTube unlisted >= 6 phút tại đây]`
-- **Nội dung video**: Thuyết minh tiếng Việt luồng Admin + hiển thị giao diện JMeter và tiến trình `htop` / `fastfetch` đồng thời.
+Khởi động SUT từ root repository:
 
----
+```bash
+cd eshop-sut/backend
+npm start
+```
 
-## 🛠️ 4. Hướng Dẫn Chạy Kiểm Thử (Quick Start)
+Chạy sạch ba scenario chính:
 
-1. **Khởi động Backend EShop**:
-   ```bash
-   cd eshop-sut/backend && npm start
-   ```
-2. **Thực thi toàn bộ kịch bản kiểm thử**:
-   ```bash
-   cd src
-   chmod +x run_tests.sh
-   ./run_tests.sh
-   ```
-3. **Kết quả**: Log `.jtl` và HTML Reports sẽ tự động sinh tại `src/results/`.
+```bash
+cd src
+./run_tests.sh
+python3 tools/analyze_jtl.py \
+  results/load/raw.jtl results/stress/raw.jtl results/spike/raw.jtl
+```
 
----
+Chạy Endurance với PID backend thực:
 
-## 📁 5. Cấu Trúc Thư Mục Bài Nộp (`src/`)
+```bash
+BACKEND_PID="$(pgrep -fo 'node .*server\.js')" ./run_endurance.sh
+```
+
+Nếu login bị khóa do credentials sai, chạy từ root repository:
+
+```bash
+sqlite3 eshop-sut/backend/database.sqlite \
+  "UPDATE users SET login_attempts = 0, locked_until = NULL WHERE email = 'admin@eshop.com';"
+```
+
+Kiểm tra bài nộp:
+
+```bash
+cd src
+./tools/validate_submission.sh
+```
+
+## 4. Cấu trúc artifact
 
 ```text
 src/
-├── ai-audit/
-│   └── ai_audit_report.md        # Nhật ký AI Audit (9 Entries)
-├── data/
-│   ├── credentials.csv           # Dữ liệu tài khoản Admin
-│   └── products.csv              # Dữ liệu sản phẩm mẫu
-├── evidence/
-│   ├── hardware/                 # Ảnh chụp fastfetch phần cứng
-│   └── screenshots/              # Ảnh chụp htop quá trình chạy
-├── report/
-│   ├── ai-critique.md            # Phê bình phân tích AI (200-300 từ)
-│   └── main-report.md            # Báo cáo chính (Task 1, 2, 3)
-├── results/                      # Dữ liệu raw.jtl & HTML reports (Load, Stress, Spike)
-├── test-plans/
-│   ├── 23127075_Load_20260901.jmx
-│   ├── 23127075_Stress_20260901.jmx
-│   └── 23127075_Spike_20260901.jmx
-├── README.md                     # File hướng dẫn & Bảng điểm tự đánh giá
-└── run_tests.sh                  # Script tự động thực thi kiểm thử
+├── ai-audit/                 # AI Audit Markdown; PDF còn thiếu
+├── data/                     # CSV credentials và products
+├── evidence/                 # fastfetch và htop cho ba scenario
+├── report/                   # main report, AI critique, bug report
+├── results/                  # Load, Stress, Spike, Endurance JTL/HTML/resource log
+├── test-plans/               # Ba plan bắt buộc và plan Endurance hỗ trợ
+├── tools/                    # analyzer, monitor, validator và regression tests
+├── run_tests.sh
+└── run_endurance.sh
 ```
+
+Skill nguồn nằm ngoài `src/` tại `.agents/skills/performance-testing-skills/`. Validator chỉ copy skill vào `agent-skill/` của bản staging; không tạo wrapper và không sửa tên thư mục `src/` đang làm việc.
+
+## 5. Video
+
+Link YouTube unlisted chưa được bổ sung. Video cuối phải dài tối thiểu 6 phút, có thuyết minh tiếng Việt và hiển thị JMeter cùng resource monitor trong một khung hình.

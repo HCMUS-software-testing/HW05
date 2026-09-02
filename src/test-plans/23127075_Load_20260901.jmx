@@ -82,10 +82,10 @@ Endpoint coverage: Auth-heavy (POST /api/login), Read-heavy (GET /api/admin/user
         </HeaderManager>
         <hashTree/>
 
-        <!-- Think Time between requests (Gaussian Random Timer: 1-3s) -->
-        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time (1-3s)" enabled="true">
-          <stringProp name="ConstantTimer.delay">1000</stringProp>
-          <stringProp name="RandomTimer.range">2000</stringProp>
+        <!-- Gaussian think time: mean 2s, sigma 0.333s; approximately 99.7% falls within 1-3s. -->
+        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time Gaussian (mean 2s; 99.7% approx. 1-3s)" enabled="true">
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+          <stringProp name="RandomTimer.range">333</stringProp>
         </GaussianRandomTimer>
         <hashTree/>
 
@@ -266,7 +266,7 @@ Endpoint coverage: Auth-heavy (POST /api/login), Read-heavy (GET /api/admin/user
         </hashTree>
 
         <!-- ========== STEP 6: TRANSACTIONAL — Delete Product (Cleanup) ========== -->
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="6. Transactional - Delete Product Cleanup (DELETE /api/products/${created_product_id})" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="6. Transactional - Delete Product Cleanup" enabled="true">
           <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
           <stringProp name="HTTPSampler.port">${PORT}</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>

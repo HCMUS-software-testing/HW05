@@ -83,10 +83,10 @@ Stress config: 50 threads, 15s ramp-up, 10 loops = 500 total iterations. Designe
         </HeaderManager>
         <hashTree/>
 
-        <!-- Think Time (shorter for stress: 500ms-1.5s) -->
-        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time (0.5-1.5s)" enabled="true">
-          <stringProp name="ConstantTimer.delay">500</stringProp>
-          <stringProp name="RandomTimer.range">1000</stringProp>
+        <!-- Gaussian think time: mean 1s, sigma 0.167s; approximately 99.7% falls within 0.5-1.5s. -->
+        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Think Time Gaussian (mean 1s; 99.7% approx. 0.5-1.5s)" enabled="true">
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
+          <stringProp name="RandomTimer.range">167</stringProp>
         </GaussianRandomTimer>
         <hashTree/>
 
@@ -259,7 +259,7 @@ Stress config: 50 threads, 15s ramp-up, 10 loops = 500 total iterations. Designe
         </hashTree>
 
         <!-- ========== STEP 6: TRANSACTIONAL — Delete Product (Cleanup) ========== -->
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="6. Transactional - Delete Product Cleanup (DELETE /api/products/${created_product_id})" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="6. Transactional - Delete Product Cleanup" enabled="true">
           <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
           <stringProp name="HTTPSampler.port">${PORT}</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>

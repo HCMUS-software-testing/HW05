@@ -1,37 +1,114 @@
 {
   "metrics": {
     "Load": {
+      "file": "/home/tkin/Documents/hcmus/software-testing/HW05/src/results/load/raw.jtl",
       "samples": 300,
-      "success": 300,
+      "successes": 300,
       "errors": 0,
-      "avg_ms": 9.85,
-      "p95_ms": 17.0,
-      "p99_ms": 19.0,
-      "max_ms": 42.0
+      "error_rate_pct": 0.0,
+      "duration_s": 66.914,
+      "throughput_rps": 4.4834,
+      "avg_elapsed_ms": 9.76,
+      "min_elapsed_ms": 3.0,
+      "max_elapsed_ms": 61.0,
+      "p95_elapsed_ms": 17.0,
+      "p99_elapsed_ms": 42.0,
+      "avg_latency_ms": 9.46,
+      "labels": {
+        "1. Auth - Admin Login (POST /api/login)": 50,
+        "2. Read - Get Admin Users (GET /api/admin/users)": 50,
+        "3. Read - Get Products List (GET /api/products)": 50,
+        "4. Read - Get Categories (GET /api/categories)": 50,
+        "5. Transactional - Create Product (POST /api/products)": 50,
+        "6. Transactional - Delete Product Cleanup": 50
+      },
+      "response_codes": {
+        "200": 300
+      }
     },
     "Stress": {
+      "file": "/home/tkin/Documents/hcmus/software-testing/HW05/src/results/stress/raw.jtl",
       "samples": 3000,
-      "success": 3000,
+      "successes": 3000,
       "errors": 0,
-      "avg_ms": 8.08,
-      "p95_ms": 16.0,
-      "p99_ms": 23.0,
-      "max_ms": 44.0
+      "error_rate_pct": 0.0,
+      "duration_s": 74.641,
+      "throughput_rps": 40.1924,
+      "avg_elapsed_ms": 7.62,
+      "min_elapsed_ms": 1.0,
+      "max_elapsed_ms": 62.0,
+      "p95_elapsed_ms": 15.0,
+      "p99_elapsed_ms": 20.0,
+      "avg_latency_ms": 7.44,
+      "labels": {
+        "1. Auth - Admin Login (POST /api/login)": 500,
+        "2. Read - Get Admin Users (GET /api/admin/users)": 500,
+        "3. Read - Get Products List (GET /api/products)": 500,
+        "4. Read - Get Categories (GET /api/categories)": 500,
+        "5. Transactional - Create Product (POST /api/products)": 500,
+        "6. Transactional - Delete Product Cleanup": 500
+      },
+      "response_codes": {
+        "200": 3000
+      }
     },
     "Spike": {
-      "samples": 14400,
-      "success": 14400,
+      "file": "/home/tkin/Documents/hcmus/software-testing/HW05/src/results/spike/raw.jtl",
+      "samples": 1800,
+      "successes": 1800,
       "errors": 0,
-      "avg_ms": 224.93,
-      "p95_ms": 497.0,
-      "p99_ms": 568.0,
-      "max_ms": 777.0
+      "error_rate_pct": 0.0,
+      "duration_s": 5.103,
+      "throughput_rps": 352.7337,
+      "avg_elapsed_ms": 238.47,
+      "min_elapsed_ms": 4.0,
+      "max_elapsed_ms": 569.0,
+      "p95_elapsed_ms": 476.0,
+      "p99_elapsed_ms": 532.0,
+      "avg_latency_ms": 238.31,
+      "labels": {
+        "1. Auth - Admin Login (POST /api/login)": 300,
+        "2. Read - Get Admin Users (GET /api/admin/users)": 300,
+        "3. Read - Get Products List (GET /api/products)": 300,
+        "4. Read - Get Categories (GET /api/categories)": 300,
+        "5. Transactional - Create Product (POST /api/products)": 300,
+        "6. Transactional - Delete Product Cleanup": 300
+      },
+      "response_codes": {
+        "200": 1800
+      }
+    },
+    "Endurance": {
+      "file": "/home/tkin/Documents/hcmus/software-testing/HW05/src/results/endurance/raw.jtl",
+      "samples": 17238,
+      "successes": 17238,
+      "errors": 0,
+      "error_rate_pct": 0.0,
+      "duration_s": 598.517,
+      "throughput_rps": 28.8012,
+      "avg_elapsed_ms": 15.46,
+      "min_elapsed_ms": 1.0,
+      "max_elapsed_ms": 4663.0,
+      "p95_elapsed_ms": 16.0,
+      "p99_elapsed_ms": 55.0,
+      "avg_latency_ms": 15.31,
+      "labels": {
+        "1. Auth - Admin Login (POST /api/login)": 2887,
+        "2. Read - Get Admin Users (GET /api/admin/users)": 2881,
+        "3. Read - Get Products List (GET /api/products)": 2878,
+        "4. Read - Get Categories (GET /api/categories)": 2869,
+        "5. Transactional - Create Product (POST /api/products)": 2864,
+        "6. Transactional - Delete Product Cleanup": 2859
+      },
+      "response_codes": {
+        "200": 17238
+      }
     }
   },
   "findings": [
     {
       "status": "PASS",
-      "message": "JMX plans: 3/3"
+      "message": "required Load/Stress/Spike JMX plans: 3/3"
     },
     {
       "status": "PASS",
@@ -47,7 +124,11 @@
     },
     {
       "status": "PASS",
-      "message": "Load samplers and assertions present"
+      "message": "Load sampler count = 6/6"
+    },
+    {
+      "status": "PASS",
+      "message": "Load response assertions present"
     },
     {
       "status": "PASS",
@@ -55,7 +136,15 @@
     },
     {
       "status": "PASS",
-      "message": "Load listener present"
+      "message": "Load has exactly one listener"
+    },
+    {
+      "status": "PASS",
+      "message": "Load sampler labels are stable"
+    },
+    {
+      "status": "PASS",
+      "message": "Load uses no absolute home path"
     },
     {
       "status": "PASS",
@@ -64,6 +153,10 @@
     {
       "status": "PASS",
       "message": "Load HTML report exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Load result consistency"
     },
     {
       "status": "PASS",
@@ -79,7 +172,11 @@
     },
     {
       "status": "PASS",
-      "message": "Stress samplers and assertions present"
+      "message": "Stress sampler count = 6/6"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress response assertions present"
     },
     {
       "status": "PASS",
@@ -87,7 +184,15 @@
     },
     {
       "status": "PASS",
-      "message": "Stress listener present"
+      "message": "Stress has exactly one listener"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress sampler labels are stable"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress uses no absolute home path"
     },
     {
       "status": "PASS",
@@ -96,6 +201,10 @@
     {
       "status": "PASS",
       "message": "Stress HTML report exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress result consistency"
     },
     {
       "status": "PASS",
@@ -111,7 +220,11 @@
     },
     {
       "status": "PASS",
-      "message": "Spike samplers and assertions present"
+      "message": "Spike sampler count = 6/6"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike response assertions present"
     },
     {
       "status": "PASS",
@@ -119,7 +232,15 @@
     },
     {
       "status": "PASS",
-      "message": "Spike listener present"
+      "message": "Spike has exactly one listener"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike sampler labels are stable"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike uses no absolute home path"
     },
     {
       "status": "PASS",
@@ -128,6 +249,42 @@
     {
       "status": "PASS",
       "message": "Spike HTML report exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike result consistency"
+    },
+    {
+      "status": "PASS",
+      "message": "three distinct listeners: StatVisualizer, SummaryReport, ViewResultsFullVisualizer"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance JMX plan exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance raw JTL exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance HTML report exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance backend resource log exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance duration = 598.517s (target >= 590s)"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance JTL errors = 0"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance JTL/HTML consistency"
     },
     {
       "status": "PASS",
@@ -166,12 +323,40 @@
       "message": "evidence: evidence/screenshots/htop_spike.png"
     },
     {
-      "status": "FAIL",
+      "status": "PASS",
       "message": "README/main report contains no TODO placeholders"
     },
     {
       "status": "FAIL",
-      "message": "AI critique word count = 309 (required 200-300)"
+      "message": "YouTube demo link exists"
+    },
+    {
+      "status": "FAIL",
+      "message": "main report PDF exists"
+    },
+    {
+      "status": "FAIL",
+      "message": "AI audit PDF exists"
+    },
+    {
+      "status": "FAIL",
+      "message": "GitHub issue screenshot exists for documented SUT bug"
+    },
+    {
+      "status": "PASS",
+      "message": "performance-testing skill exists outside src"
+    },
+    {
+      "status": "PASS",
+      "message": "skill includes reusable JTL analyzer"
+    },
+    {
+      "status": "PASS",
+      "message": "git commit log is non-empty"
+    },
+    {
+      "status": "PASS",
+      "message": "AI critique word count = 262 (required 200-300)"
     }
   ]
 }

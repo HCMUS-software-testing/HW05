@@ -254,7 +254,7 @@ Spike config: 100 threads, 1s ramp-up, 3 loops = 300 total iterations. Simulates
         </hashTree>
 
         <!-- ========== STEP 6: TRANSACTIONAL — Delete Product (Cleanup) ========== -->
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="6. Transactional - Delete Product Cleanup (DELETE /api/products/${created_product_id})" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="6. Transactional - Delete Product Cleanup" enabled="true">
           <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
           <stringProp name="HTTPSampler.port">${PORT}</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>

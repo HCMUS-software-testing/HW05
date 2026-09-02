@@ -179,7 +179,9 @@ If stress/spike triggers login lockout (3 failed attempts), reset between runs a
 
 For endurance evidence, use a duration-limited Thread Group (10-15 minutes),
 run `scripts/run_endurance_template.sh`, and collect backend CPU/RSS throughout
-the run. Never infer a memory ceiling from a one-time screenshot.
+the run. Copy `scripts/monitor_backend.py` into the submission's `tools/` folder.
+Never infer a memory ceiling from a one-time screenshot. A single load level
+proves a sustainable operating point, not the maximum sustainable threshold.
 
 ### Phase 7: Report Generation
 
@@ -274,6 +276,7 @@ Record unlisted YouTube video (≥ 6 minutes total):
 | Treating Gaussian settings as hard bounds | Document mean and standard deviation; use `+/- 3 sigma` only as an approximation |
 | Dynamic variables in sampler names | Keep labels stable and variables in paths/bodies so reports aggregate correctly |
 | JTL and HTML totals differ | Delete both outputs before rerun and validate `Total.sampleCount` |
+| Scheduler stops between create and cleanup | Compare sampler counts and remove only identified test-data orphans after the run |
 | Forgetting account lockout reset | Document reset steps between Stress/Spike runs |
 | Submitting `src/` directly | Copy `src/`, rename copy, ZIP the copy |
 

@@ -20,6 +20,7 @@ class SkillArtifactTests(unittest.TestCase):
 
     def test_skill_ships_analysis_and_endurance_automation(self):
         self.assertTrue((ROOT / "scripts" / "analyze_jtl.py").exists())
+        self.assertTrue((ROOT / "scripts" / "monitor_backend.py").exists())
         self.assertTrue((ROOT / "scripts" / "run_endurance_template.sh").exists())
 
 

@@ -12,10 +12,20 @@ from xml.etree import ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from analyze_jtl import analyze_jtl, html_total
-from validate_submission import result_consistency
+from monitor_backend import cpu_percent
+from validate_submission import (
+    package_root_name,
+    plan_assertions_valid,
+    resource_log_findings,
+    result_consistency,
+    workflow_cleanup_findings,
+)
 
 
 class JtlAnalyzerTests(unittest.TestCase):
+    def test_cpu_percent_uses_interval_jiffy_deltas(self):
+        self.assertEqual(cpu_percent((10, 100), (30, 200), cpu_count=4), 80.0)
+
     def test_reports_elapsed_and_latency_as_distinct_metrics(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "raw.jtl"
@@ -67,6 +77,45 @@ class JtlAnalyzerTests(unittest.TestCase):
             self.assertIn("JTL samples = 2, expected 3", findings)
             self.assertIn("JTL samples = 2, HTML samples = 1", findings)
 
+    def test_requires_cleanup_evidence_for_unbalanced_transactional_samples(self):
+        metrics = {"labels": {"Create Product": 4, "Delete Product Cleanup": 2}}
+        self.assertTrue(workflow_cleanup_findings(metrics, None))
+        cleanup = {"orphan_count": 2, "deleted_ids": [11, 12], "all_deleted": True}
+        self.assertEqual(workflow_cleanup_findings(metrics, cleanup), [])
+
+    def test_resource_log_must_cover_endurance_window_with_one_pid(self):
+        rows = [
+            {"timestamp_utc": "2026-09-02T17:10:50+00:00", "pid": "7", "rss_mib": "100"},
+            {"timestamp_utc": "2026-09-02T17:20:55+00:00", "pid": "7", "rss_mib": "110"},
+        ]
+        self.assertEqual(
+            resource_log_findings(
+                rows, minimum_span_s=590,
+                run_start_ms=1788369052343, run_end_ms=1788369650860,
+            ),
+            [],
+        )
+        rows[1]["pid"] = "8"
+        self.assertIn("resource log contains multiple PIDs", resource_log_findings(rows, 590))
+
+    def test_resource_log_rejects_non_overlapping_run(self):
+        rows = [
+            {"timestamp_utc": "2026-09-01T00:00:00+00:00", "pid": "7", "rss_mib": "100"},
+            {"timestamp_utc": "2026-09-01T00:10:00+00:00", "pid": "7", "rss_mib": "110"},
+        ]
+        findings = resource_log_findings(
+            rows, 590, run_start_ms=1788369052343, run_end_ms=1788369650860
+        )
+        self.assertIn("resource log does not cover the JTL run window", findings)
+
+    def test_package_name_controls_zip_and_internal_root(self):
+        self.assertEqual(
+            package_root_name(Path("23127075_HW05_AI_Performance_094.zip")),
+            "23127075_HW05_AI_Performance_094",
+        )
+        with self.assertRaises(ValueError):
+            package_root_name(Path("23127075_HW05.zip"))
+
 
 class PlanRegressionTests(unittest.TestCase):
     ROOT = Path(__file__).resolve().parents[1]
@@ -86,6 +135,10 @@ class PlanRegressionTests(unittest.TestCase):
             props = {node.attrib.get("name"): node.text for node in timer.iter("stringProp")}
             self.assertEqual((props["ConstantTimer.delay"], props["RandomTimer.range"]), values)
             self.assertIn("99.7%", timer.attrib.get("testname", ""))
+
+    def test_each_sampler_has_enabled_http_code_assertion(self):
+        for plan in sorted((self.ROOT / "test-plans").glob("*.jmx")):
+            self.assertTrue(plan_assertions_valid(ET.parse(plan).getroot()), plan.name)
 
     def test_endurance_plan_runs_sustained_load_for_ten_minutes(self):
         plans = list((self.ROOT / "test-plans").glob("*_Endurance_*.jmx"))

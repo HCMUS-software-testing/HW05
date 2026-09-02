@@ -14,6 +14,7 @@ Bộ skill `performance-testing-skills` tự động hóa toàn bộ quy trình 
 │   └── report-templates.md               # Template báo cáo Markdown
 ├── scripts/
 │   ├── analyze_jtl.py                    # Phân tích elapsed, latency, percentile, RPS
+│   ├── monitor_backend.py                # Lấy CPU theo interval và RSS đúng PID backend
 │   ├── run_endurance_template.sh         # Chạy soak test và monitor backend
 │   └── run_tests_template.sh             # Template script chạy ba test chính
 └── tests/
@@ -120,3 +121,4 @@ Skill đã tích hợp đầy đủ kiến thức từ bài giảng "Performance
 6. **Gaussian không bị chặn cứng**: Cấu hình theo mean và standard deviation; khoảng `+/- 3 sigma` chỉ là xấp xỉ 99,7%
 7. **Đối chiếu artifact**: Tổng mẫu trong raw JTL phải bằng `Total.sampleCount` của HTML report
 8. **Đóng gói skill**: Copy `.agents/skills/performance-testing-skills/` vào `agent-skill/` trong bản staging
+9. **Không nói quá endurance**: Một mức tải chỉ chứng minh điểm vận hành bền vững, chưa phải ngưỡng tối đa

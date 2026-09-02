@@ -189,7 +189,7 @@ Hãy viết 1 file hướng dẫn sử dụng bộ skill này ở root. Ghi prom
 
 **Reasoning:** Dựa trên tiêu chí Autonomous Agent Synthesis & Quality Verification (ISTQB CT-AI 2.2 & 2.7). AI tuân thủ nghiêm ngặt quy trình `writing-skills`, tự tổng hợp toàn bộ lý thuyết kiểm thử hiệu năng (10 metrics, 6 loại test, 7 bước) và 10-phase workflow vào bộ skill `performance-testing-skills` tại `.agents/skills/performance-testing-skills/`. Skill đảm bảo tính tự chứa (self-contained), có sẵn các template XML, Markdown report và script mẫu.
 
-**Student Fix:** Sinh viên yêu cầu sửa template assertion sang `Assertion.response_code`, mô tả đúng Gaussian theo mean/standard deviation, thêm analyzer JTL, runner endurance, kiểm tra hồi quy cho skill và quy tắc copy skill ngoài `src/` vào staging khi đóng gói.
+**Student Fix:** Sinh viên yêu cầu sửa template assertion sang `Assertion.response_code`, mô tả đúng Gaussian theo mean/standard deviation, thêm analyzer JTL, monitor CPU theo interval, runner endurance, kiểm tra hồi quy cho skill và quy tắc copy skill ngoài `src/` vào staging khi đóng gói.
 
 ### 2.2.10 Entry 10
 
@@ -206,7 +206,7 @@ Prompt:
 
 **Reasoning:** AI đã tạo được artifact mới và chạy kiểm chứng end-to-end: Endurance đủ 10 phút có raw JTL, HTML và 121 mẫu CPU/RSS; analyzer phân biệt `elapsed` với `Latency`; validator phát hiện sample mismatch và bốn blocker thủ công. Tuy nhiên, AI không thể tự hoàn thành video có giọng sinh viên, PDF theo lựa chọn của sinh viên, hay screenshot GitHub Issue khi token không hợp lệ.
 
-**Student Fix:** Sinh viên yêu cầu giữ nguyên bằng chứng chạy thật, không bịa video/PDF/GitHub screenshot, hạ self-assessment khỏi 100 và chỉ coi bài sẵn sàng nộp sau khi validator hết bốn blocker thủ công.
+**Student Fix:** Sinh viên yêu cầu giữ nguyên bằng chứng chạy thật, không bịa video/PDF/GitHub screenshot, hạ self-assessment khỏi 100 và chỉ coi bài sẵn sàng nộp sau khi validator hết bốn blocker thủ công. Sau review, sinh viên yêu cầu dọn năm sản phẩm test bị scheduler bỏ giữa iteration, ghi cleanup evidence, kiểm tra resource-log coverage/assertion/package naming và đổi “ngưỡng tối đa” thành “điểm tải bền vững đã chứng minh”.
 
 ## 3. Tổng kết độ chính xác AI
 - **Tỷ lệ chính xác ước tính**: Không gán phần trăm chủ quan; mỗi artifact được đánh giá theo verdict và bằng chứng riêng.

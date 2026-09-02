@@ -7,6 +7,8 @@
       "errors": 0,
       "error_rate_pct": 0.0,
       "duration_s": 66.914,
+      "start_timestamp_ms": 1788368848310.0,
+      "end_timestamp_ms": 1788368915224.0,
       "throughput_rps": 4.4834,
       "avg_elapsed_ms": 9.76,
       "min_elapsed_ms": 3.0,
@@ -33,6 +35,8 @@
       "errors": 0,
       "error_rate_pct": 0.0,
       "duration_s": 74.641,
+      "start_timestamp_ms": 1788368921431.0,
+      "end_timestamp_ms": 1788368996072.0,
       "throughput_rps": 40.1924,
       "avg_elapsed_ms": 7.62,
       "min_elapsed_ms": 1.0,
@@ -59,6 +63,8 @@
       "errors": 0,
       "error_rate_pct": 0.0,
       "duration_s": 5.103,
+      "start_timestamp_ms": 1788369001121.0,
+      "end_timestamp_ms": 1788369006224.0,
       "throughput_rps": 352.7337,
       "avg_elapsed_ms": 238.47,
       "min_elapsed_ms": 4.0,
@@ -85,6 +91,8 @@
       "errors": 0,
       "error_rate_pct": 0.0,
       "duration_s": 598.517,
+      "start_timestamp_ms": 1788369053881.0,
+      "end_timestamp_ms": 1788369652398.0,
       "throughput_rps": 28.8012,
       "avg_elapsed_ms": 15.46,
       "min_elapsed_ms": 1.0,
@@ -128,7 +136,7 @@
     },
     {
       "status": "PASS",
-      "message": "Load response assertions present"
+      "message": "Load has enabled HTTP 200 assertion per sampler"
     },
     {
       "status": "PASS",
@@ -176,7 +184,7 @@
     },
     {
       "status": "PASS",
-      "message": "Stress response assertions present"
+      "message": "Stress has enabled HTTP 200 assertion per sampler"
     },
     {
       "status": "PASS",
@@ -224,7 +232,7 @@
     },
     {
       "status": "PASS",
-      "message": "Spike response assertions present"
+      "message": "Spike has enabled HTTP 200 assertion per sampler"
     },
     {
       "status": "PASS",
@@ -276,6 +284,10 @@
     },
     {
       "status": "PASS",
+      "message": "Endurance resource log integrity"
+    },
+    {
+      "status": "PASS",
       "message": "Endurance duration = 598.517s (target >= 590s)"
     },
     {
@@ -285,6 +297,10 @@
     {
       "status": "PASS",
       "message": "Endurance JTL/HTML consistency"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance transactional cleanup"
     },
     {
       "status": "PASS",

@@ -69,7 +69,7 @@ Nguồn dữ liệu và report:
 
 Load và Stress giữ response time thấp khi có think-time. Spike đạt throughput trung bình cao hơn nhưng p95 tăng đến 476 ms, cho thấy tail latency xấu đi rõ rệt dù error rate vẫn bằng 0%.
 
-### 1.5. Endurance 10 phút và ngưỡng phần cứng
+### 1.5. Endurance 10 phút và điểm tải bền vững
 
 Endurance dùng 30 VU, ramp-up 30 giây, Gaussian think-time mean 1.000 ms, sigma 167 ms và scheduler 600 giây. Kết quả thực nghiệm:
 
@@ -84,7 +84,9 @@ Endurance dùng 30 VU, ramp-up 30 giây, Gaussian think-time mean 1.000 ms, sigm
 | Thay đổi RSS mẫu cuối so với mẫu đầu | -6,594 MiB |
 | Backend CPU từ `ps` | 0,9-1,5% (trung bình vòng đời tiến trình, không phải CPU tức thời) |
 
-Trong 121 mẫu tài nguyên cách nhau 5 giây, RSS không tăng dần và không có request lỗi. Với cấu hình này, ngưỡng đã chứng minh là **28,80 RPS trong 10 phút, RSS không vượt 111,68 MiB**. Một outlier 4.663 ms xuất hiện gần phút thứ chín; vì p95 vẫn 16 ms nên chưa đủ bằng chứng kết luận rò rỉ hay suy giảm kéo dài.
+Trong 121 mẫu tài nguyên cách nhau 5 giây, RSS không tăng dần và không có request lỗi. Cấu hình này chứng minh một **điểm tải bền vững 28,80 RPS trong 10 phút, RSS không vượt 111,68 MiB**; nó không chứng minh đây là RPS bền vững tối đa vì chưa chạy nhiều bậc tải. Một outlier 4.663 ms xuất hiện gần phút thứ chín; vì p95 vẫn 16 ms nên chưa đủ bằng chứng kết luận rò rỉ hay suy giảm kéo dài.
+
+Scheduler dừng năm thread sau Create và trước Delete, nên JTL có 2.864 Create so với 2.859 Delete. Năm sản phẩm test ID `9216-9220` đã được xác định theo đúng tên trong CSV và xóa qua API; mỗi request trả `Product deleted`. Bằng chứng cleanup có cấu trúc nằm tại [`cleanup-evidence.json`](../results/endurance/cleanup-evidence.json).
 
 Artifact: [`raw.jtl`](../results/endurance/raw.jtl), [`HTML report`](../results/endurance/html-report/index.html), [`backend-resources.csv`](../results/endurance/backend-resources.csv).
 
@@ -143,4 +145,4 @@ flowchart TD
 
 ## 4. Kết luận
 
-Bốn run thực tế đều hoàn tất với 0 lỗi HTTP/assertion. Stress đạt 40,19 RPS với p95 15 ms; Spike làm p95 tăng lên 476 ms. Endurance chứng minh 28,80 RPS trong 10 phút với RSS tối đa 111,68 MiB, nhưng outlier 4,663 giây cần được theo dõi ở các run dài hơn. Các số liệu được sinh bởi `tools/analyze_jtl.py` và kiểm tra chéo với HTML `statistics.json`, không lấy từ ước lượng AI.
+Bốn run thực tế đều hoàn tất với 0 lỗi HTTP/assertion. Stress đạt 40,19 RPS với p95 15 ms; Spike làm p95 tăng lên 476 ms. Endurance chứng minh 30 VU duy trì trung bình 28,80 RPS trong 10 phút với RSS tối đa 111,68 MiB, nhưng không xác lập tải tối đa và outlier 4,663 giây cần được theo dõi ở các run dài hơn. Các số liệu được sinh bởi `tools/analyze_jtl.py` và kiểm tra chéo với HTML `statistics.json`, không lấy từ ước lượng AI.

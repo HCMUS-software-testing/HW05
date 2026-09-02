@@ -55,6 +55,8 @@ def analyze_jtl(path: Path) -> dict[str, object]:
         "errors": samples - successes,
         "error_rate_pct": round((samples - successes) * 100 / samples, 4) if samples else 0.0,
         "duration_s": round(duration_s, 3),
+        "start_timestamp_ms": min(starts, default=None),
+        "end_timestamp_ms": max(ends, default=None),
         "throughput_rps": round(samples / duration_s, 4) if duration_s else 0.0,
         "avg_elapsed_ms": round(statistics.mean(elapsed), 2) if elapsed else 0.0,
         "min_elapsed_ms": min(elapsed, default=0.0),

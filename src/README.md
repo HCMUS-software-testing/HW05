@@ -34,7 +34,7 @@ Workflow sáu request bao phủ:
 | Spike | 100 / 1 s / 3 | 1.800 | 352,7337 RPS | 238,47 / 476 ms | 0 |
 | Endurance | 30 / 30 s / duration 600 s | 17.238 | 28,8012 RPS | 15,46 / 16 ms | 0 |
 
-Ngưỡng endurance đã chứng minh: **28,80 RPS trong 10 phút**, backend RSS **103,676-111,680 MiB**, không có xu hướng tăng bộ nhớ trong 121 mẫu giám sát. Xem [`report/main-report.md`](report/main-report.md) để biết p99, outlier, phần cứng và phương pháp tính.
+Điểm tải endurance đã chứng minh: **30 VU đạt trung bình 28,80 RPS trong 10 phút**, backend RSS **103,676-111,680 MiB**, không có xu hướng tăng bộ nhớ trong 121 mẫu giám sát. Đây không phải tải tối đa vì chưa chạy nhiều bậc tải. Xem [`report/main-report.md`](report/main-report.md) để biết p99, outlier, cleanup và phương pháp tính.
 
 Một bug bảo mật đã được tái hiện: Product create/update/delete thiếu authentication. Báo cáo cục bộ nằm tại [`report/bug-report.md`](report/bug-report.md); GitHub Issue chưa tạo được do phiên `gh` không hợp lệ.
 

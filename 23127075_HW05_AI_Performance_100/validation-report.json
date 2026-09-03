@@ -1,0 +1,378 @@
+{
+  "metrics": {
+    "Load": {
+      "file": "/home/tkin/Documents/hcmus/software-testing/HW05/src/results/load/raw.jtl",
+      "samples": 300,
+      "successes": 300,
+      "errors": 0,
+      "error_rate_pct": 0.0,
+      "duration_s": 67.491,
+      "start_timestamp_ms": 1788425773213.0,
+      "end_timestamp_ms": 1788425840704.0,
+      "throughput_rps": 4.445,
+      "avg_elapsed_ms": 10.6,
+      "min_elapsed_ms": 3.0,
+      "max_elapsed_ms": 83.0,
+      "p95_elapsed_ms": 18.0,
+      "p99_elapsed_ms": 21.0,
+      "avg_latency_ms": 10.26,
+      "labels": {
+        "1. Auth - Admin Login (POST /api/login)": 50,
+        "2. Read - Get Admin Users (GET /api/admin/users)": 50,
+        "3. Read - Get Products List (GET /api/products)": 50,
+        "4. Read - Get Categories (GET /api/categories)": 50,
+        "5. Transactional - Create Product (POST /api/products)": 50,
+        "6. Transactional - Delete Product Cleanup": 50
+      },
+      "response_codes": {
+        "200": 300
+      }
+    },
+    "Stress": {
+      "file": "/home/tkin/Documents/hcmus/software-testing/HW05/src/results/stress/raw.jtl",
+      "samples": 3000,
+      "successes": 3000,
+      "errors": 0,
+      "error_rate_pct": 0.0,
+      "duration_s": 73.515,
+      "start_timestamp_ms": 1788425945636.0,
+      "end_timestamp_ms": 1788426019151.0,
+      "throughput_rps": 40.808,
+      "avg_elapsed_ms": 7.95,
+      "min_elapsed_ms": 1.0,
+      "max_elapsed_ms": 83.0,
+      "p95_elapsed_ms": 16.0,
+      "p99_elapsed_ms": 20.0,
+      "avg_latency_ms": 7.77,
+      "labels": {
+        "1. Auth - Admin Login (POST /api/login)": 500,
+        "2. Read - Get Admin Users (GET /api/admin/users)": 500,
+        "3. Read - Get Products List (GET /api/products)": 500,
+        "4. Read - Get Categories (GET /api/categories)": 500,
+        "5. Transactional - Create Product (POST /api/products)": 500,
+        "6. Transactional - Delete Product Cleanup": 500
+      },
+      "response_codes": {
+        "200": 3000
+      }
+    },
+    "Spike": {
+      "file": "/home/tkin/Documents/hcmus/software-testing/HW05/src/results/spike/raw.jtl",
+      "samples": 1800,
+      "successes": 1800,
+      "errors": 0,
+      "error_rate_pct": 0.0,
+      "duration_s": 5.222,
+      "start_timestamp_ms": 1788426125597.0,
+      "end_timestamp_ms": 1788426130819.0,
+      "throughput_rps": 344.6955,
+      "avg_elapsed_ms": 242.07,
+      "min_elapsed_ms": 4.0,
+      "max_elapsed_ms": 520.0,
+      "p95_elapsed_ms": 474.0,
+      "p99_elapsed_ms": 499.0,
+      "avg_latency_ms": 241.93,
+      "labels": {
+        "1. Auth - Admin Login (POST /api/login)": 300,
+        "2. Read - Get Admin Users (GET /api/admin/users)": 300,
+        "3. Read - Get Products List (GET /api/products)": 300,
+        "4. Read - Get Categories (GET /api/categories)": 300,
+        "5. Transactional - Create Product (POST /api/products)": 300,
+        "6. Transactional - Delete Product Cleanup": 300
+      },
+      "response_codes": {
+        "200": 1800
+      }
+    },
+    "Endurance": {
+      "file": "/home/tkin/Documents/hcmus/software-testing/HW05/src/results/endurance/raw.jtl",
+      "samples": 17433,
+      "successes": 17433,
+      "errors": 0,
+      "error_rate_pct": 0.0,
+      "duration_s": 598.629,
+      "start_timestamp_ms": 1788426257305.0,
+      "end_timestamp_ms": 1788426855934.0,
+      "throughput_rps": 29.1215,
+      "avg_elapsed_ms": 7.46,
+      "min_elapsed_ms": 1.0,
+      "max_elapsed_ms": 70.0,
+      "p95_elapsed_ms": 15.0,
+      "p99_elapsed_ms": 19.0,
+      "avg_latency_ms": 7.33,
+      "labels": {
+        "1. Auth - Admin Login (POST /api/login)": 2918,
+        "2. Read - Get Admin Users (GET /api/admin/users)": 2914,
+        "3. Read - Get Products List (GET /api/products)": 2910,
+        "4. Read - Get Categories (GET /api/categories)": 2901,
+        "5. Transactional - Create Product (POST /api/products)": 2897,
+        "6. Transactional - Delete Product Cleanup": 2893
+      },
+      "response_codes": {
+        "200": 17433
+      }
+    }
+  },
+  "findings": [
+    {
+      "status": "PASS",
+      "message": "required Load/Stress/Spike JMX plans: 3/3"
+    },
+    {
+      "status": "PASS",
+      "message": "Load plan exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Load raw JTL exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Load parameters = threads/ramp/loops (10, 10, 5)"
+    },
+    {
+      "status": "PASS",
+      "message": "Load sampler count = 6/6"
+    },
+    {
+      "status": "PASS",
+      "message": "Load has enabled HTTP 200 assertion per sampler"
+    },
+    {
+      "status": "PASS",
+      "message": "Load CSV data sources present"
+    },
+    {
+      "status": "PASS",
+      "message": "Load has exactly one listener"
+    },
+    {
+      "status": "PASS",
+      "message": "Load sampler labels are stable"
+    },
+    {
+      "status": "PASS",
+      "message": "Load uses no absolute home path"
+    },
+    {
+      "status": "PASS",
+      "message": "Load JTL errors = 0"
+    },
+    {
+      "status": "PASS",
+      "message": "Load HTML report exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Load result consistency"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress plan exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress raw JTL exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress parameters = threads/ramp/loops (50, 15, 10)"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress sampler count = 6/6"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress has enabled HTTP 200 assertion per sampler"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress CSV data sources present"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress has exactly one listener"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress sampler labels are stable"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress uses no absolute home path"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress JTL errors = 0"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress HTML report exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Stress result consistency"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike plan exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike raw JTL exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike parameters = threads/ramp/loops (100, 1, 3)"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike sampler count = 6/6"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike has enabled HTTP 200 assertion per sampler"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike CSV data sources present"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike has exactly one listener"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike sampler labels are stable"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike uses no absolute home path"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike JTL errors = 0"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike HTML report exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Spike result consistency"
+    },
+    {
+      "status": "PASS",
+      "message": "three distinct listeners: StatVisualizer, SummaryReport, ViewResultsFullVisualizer"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance JMX plan exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance raw JTL exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance HTML report exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance backend resource log exists"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance resource log integrity"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance duration = 598.629s (target >= 590s)"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance JTL errors = 0"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance JTL/HTML consistency"
+    },
+    {
+      "status": "PASS",
+      "message": "Endurance transactional cleanup"
+    },
+    {
+      "status": "PASS",
+      "message": "required file: README.md"
+    },
+    {
+      "status": "PASS",
+      "message": "required file: report/main-report.md"
+    },
+    {
+      "status": "PASS",
+      "message": "required file: report/ai-critique.md"
+    },
+    {
+      "status": "PASS",
+      "message": "required file: ai-audit/ai_audit_report.md"
+    },
+    {
+      "status": "PASS",
+      "message": "required file: run_tests.sh"
+    },
+    {
+      "status": "PASS",
+      "message": "evidence: evidence/hardware/fastfetch.png"
+    },
+    {
+      "status": "PASS",
+      "message": "evidence: evidence/screenshots/htop_load.png"
+    },
+    {
+      "status": "PASS",
+      "message": "evidence: evidence/screenshots/htop_stress.png"
+    },
+    {
+      "status": "PASS",
+      "message": "evidence: evidence/screenshots/htop_spike.png"
+    },
+    {
+      "status": "PASS",
+      "message": "README/main report contains no TODO placeholders"
+    },
+    {
+      "status": "PASS",
+      "message": "YouTube demo link exists"
+    },
+    {
+      "status": "FAIL",
+      "message": "main report PDF exists"
+    },
+    {
+      "status": "FAIL",
+      "message": "AI audit PDF exists"
+    },
+    {
+      "status": "PASS",
+      "message": "GitHub issue screenshot exists for documented SUT bug"
+    },
+    {
+      "status": "PASS",
+      "message": "performance-testing skill exists outside src"
+    },
+    {
+      "status": "PASS",
+      "message": "skill includes reusable JTL analyzer"
+    },
+    {
+      "status": "PASS",
+      "message": "git commit log is non-empty"
+    },
+    {
+      "status": "PASS",
+      "message": "AI critique word count = 262 (required 200-300)"
+    }
+  ]
+}

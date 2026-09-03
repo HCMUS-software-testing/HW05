@@ -1,0 +1,301 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1788425773213,83,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-1,text,true,,612,226,2,2,http://localhost:3000/api/login,82,0,33
+1788425774353,28,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-2,text,true,,612,226,4,4,http://localhost:3000/api/login,28,0,3
+1788425775175,10,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-1,text,true,,505,317,4,4,http://localhost:3000/api/admin/users,10,0,1
+1788425775758,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-3,text,true,,612,226,5,5,http://localhost:3000/api/login,8,0,2
+1788425776126,7,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-4,text,true,,612,226,5,5,http://localhost:3000/api/login,7,0,1
+1788425776953,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,1210,155,6,6,http://localhost:3000/api/products,7,0,1
+1788425777379,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-5,text,true,,612,226,7,7,http://localhost:3000/api/login,9,0,2
+1788425777464,9,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-2,text,true,,505,317,7,7,http://localhost:3000/api/admin/users,9,0,2
+1788425777906,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-3,text,true,,505,317,7,7,http://localhost:3000/api/admin/users,8,0,1
+1788425778171,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-4,text,true,,505,317,7,7,http://localhost:3000/api/admin/users,7,0,1
+1788425778711,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-6,text,true,,612,226,8,8,http://localhost:3000/api/login,8,0,2
+1788425778992,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-1,text,true,,330,157,8,8,http://localhost:3000/api/categories,5,0,2
+1788425779131,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-7,text,true,,612,226,8,8,http://localhost:3000/api/login,8,0,2
+1788425779205,9,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-5,text,true,,505,317,8,8,http://localhost:3000/api/admin/users,9,0,2
+1788425779205,11,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,1210,155,8,8,http://localhost:3000/api/products,11,0,2
+1788425779729,6,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,1210,155,9,9,http://localhost:3000/api/products,5,0,2
+1788425780115,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,1210,155,9,9,http://localhost:3000/api/products,5,0,1
+1788425780472,7,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-8,text,true,,612,226,10,10,http://localhost:3000/api/login,7,0,1
+1788425780556,8,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-2,text,true,,330,157,10,10,http://localhost:3000/api/categories,8,0,3
+1788425780957,8,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,1210,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425781175,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-6,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,2
+1788425781204,12,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-9,text,true,,612,226,10,10,http://localhost:3000/api/login,11,0,2
+1788425781374,9,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-7,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,2
+1788425781444,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-3,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425781545,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,275,369,10,10,http://localhost:3000/api/products,16,0,1
+1788425781878,4,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-4,text,true,,330,157,10,10,http://localhost:3000/api/categories,4,0,1
+1788425782023,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-10,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,2
+1788425782544,5,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-8,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,5,0,1
+1788425782551,16,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,275,341,10,10,http://localhost:3000/api/products,16,0,1
+1788425782823,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-5,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425783087,9,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,1565,155,10,10,http://localhost:3000/api/products,9,0,2
+1788425783366,11,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-9,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,10,0,2
+1788425783382,20,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,275,355,10,10,http://localhost:3000/api/products,19,0,2
+1788425783598,9,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,1742,155,10,10,http://localhost:3000/api/products,8,0,2
+1788425783656,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-1,text,true,,268,179,10,10,http://localhost:3000/api/products/6,15,0,2
+1788425784275,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,1551,155,10,10,http://localhost:3000/api/products,5,0,1
+1788425784400,9,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-10,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,9,0,2
+1788425784514,15,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,275,358,10,10,http://localhost:3000/api/products,15,0,1
+1788425784636,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-2,text,true,,268,179,10,10,http://localhost:3000/api/products/7,16,0,2
+1788425784726,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-6,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425784866,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,276,369,10,10,http://localhost:3000/api/products,17,0,2
+1788425785177,8,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,1760,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425785636,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-3,text,true,,268,179,10,10,http://localhost:3000/api/products/8,16,0,2
+1788425785786,5,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-7,text,true,,330,157,10,10,http://localhost:3000/api/categories,5,0,1
+1788425786024,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-1,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425786140,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,1583,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425786269,15,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-4,text,true,,268,179,10,10,http://localhost:3000/api/products/9,14,0,2
+1788425786366,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-8,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425786470,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,276,341,10,10,http://localhost:3000/api/products,17,0,2
+1788425786575,13,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-5,text,true,,268,180,10,10,http://localhost:3000/api/products/10,12,0,2
+1788425787145,10,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-2,text,true,,612,226,10,10,http://localhost:3000/api/login,10,0,2
+1788425787317,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-9,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425787531,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-3,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425787655,13,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,276,355,10,10,http://localhost:3000/api/products,13,0,2
+1788425788052,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,276,358,10,10,http://localhost:3000/api/products,18,0,2
+1788425788314,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-5,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425788355,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-1,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,2
+1788425788437,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-6,text,true,,268,180,10,10,http://localhost:3000/api/products/11,16,0,3
+1788425788751,7,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-4,text,true,,612,226,10,10,http://localhost:3000/api/login,7,0,1
+1788425788817,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-10,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425789325,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,276,369,10,10,http://localhost:3000/api/products,18,0,3
+1788425789335,11,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-3,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,10,0,2
+1788425789366,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-2,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425789428,12,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-7,text,true,,268,180,10,10,http://localhost:3000/api/products/12,11,0,1
+1788425789919,10,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,1584,155,10,10,http://localhost:3000/api/products,9,0,2
+1788425790178,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-5,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425790211,48,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-8,text,true,,268,180,10,10,http://localhost:3000/api/products/13,48,0,1
+1788425790745,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-6,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425790833,16,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,276,341,10,10,http://localhost:3000/api/products,16,0,2
+1788425791025,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,1567,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425791101,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-9,text,true,,268,180,10,10,http://localhost:3000/api/products/14,16,0,2
+1788425791101,17,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-4,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,17,0,2
+1788425791216,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,1375,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425791379,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-7,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,2
+1788425791432,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,1375,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425791728,5,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-1,text,true,,330,157,10,10,http://localhost:3000/api/categories,5,0,1
+1788425791826,7,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-8,text,true,,612,226,10,10,http://localhost:3000/api/login,6,0,2
+1788425792267,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-10,text,true,,268,180,10,10,http://localhost:3000/api/products/15,16,0,1
+1788425792859,5,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-9,text,true,,612,226,10,10,http://localhost:3000/api/login,5,0,1
+1788425792907,11,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-6,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,10,0,2
+1788425793362,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-3,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425793433,8,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-5,text,true,,330,157,10,10,http://localhost:3000/api/categories,8,0,2
+1788425793771,8,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-2,text,true,,330,157,10,10,http://localhost:3000/api/categories,8,0,2
+1788425793799,14,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,276,355,10,10,http://localhost:3000/api/products,13,0,1
+1788425793868,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,1389,155,10,10,http://localhost:3000/api/products,5,0,1
+1788425794004,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-8,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,2
+1788425794019,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-10,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,1
+1788425794083,9,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-7,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,9,0,2
+1788425794332,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,1389,155,10,10,http://localhost:3000/api/products,5,0,2
+1788425794930,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,276,355,10,10,http://localhost:3000/api/products,17,0,2
+1788425795055,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,276,358,10,10,http://localhost:3000/api/products,18,0,2
+1788425795202,6,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-9,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788425795312,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,276,369,10,10,http://localhost:3000/api/products,17,0,2
+1788425795540,11,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-1,text,true,,268,180,10,10,http://localhost:3000/api/products/16,10,0,1
+1788425795646,5,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-4,text,true,,330,157,10,10,http://localhost:3000/api/categories,5,0,1
+1788425796062,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-10,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,2
+1788425796126,6,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,1762,155,10,10,http://localhost:3000/api/products,6,0,2
+1788425796392,8,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-6,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,1
+1788425796519,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,1762,155,10,10,http://localhost:3000/api/products,5,0,1
+1788425796804,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-5,text,true,,268,180,10,10,http://localhost:3000/api/products/17,17,0,2
+1788425797087,19,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-2,text,true,,268,180,10,10,http://localhost:3000/api/products/18,19,0,2
+1788425797136,8,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-8,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425797335,6,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-1,text,true,,612,226,10,10,http://localhost:3000/api/login,5,0,1
+1788425797443,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,1403,155,10,10,http://localhost:3000/api/products,5,0,1
+1788425797925,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-3,text,true,,268,180,10,10,http://localhost:3000/api/products/19,15,0,2
+1788425797938,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-7,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425798001,12,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,276,341,10,10,http://localhost:3000/api/products,11,0,1
+1788425798069,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,276,358,10,10,http://localhost:3000/api/products,16,0,2
+1788425798878,8,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,1556,155,10,10,http://localhost:3000/api/products,8,0,2
+1788425799063,11,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-2,text,true,,612,226,10,10,http://localhost:3000/api/login,10,0,2
+1788425799090,5,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-9,text,true,,330,157,10,10,http://localhost:3000/api/categories,5,0,1
+1788425799143,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-5,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,2
+1788425799490,21,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,276,341,10,10,http://localhost:3000/api/products,20,0,2
+1788425799518,14,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,276,369,10,10,http://localhost:3000/api/products,14,0,2
+1788425799547,5,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-1,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,5,0,1
+1788425799726,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-6,text,true,,268,180,10,10,http://localhost:3000/api/products/21,16,0,2
+1788425799919,11,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-3,text,true,,612,226,10,10,http://localhost:3000/api/login,10,0,4
+1788425800296,14,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-4,text,true,,268,180,10,10,http://localhost:3000/api/products/20,14,0,1
+1788425800465,16,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,276,355,10,10,http://localhost:3000/api/products,16,0,2
+1788425800896,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-5,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425801016,8,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-10,text,true,,330,157,10,10,http://localhost:3000/api/categories,8,0,2
+1788425801357,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-2,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,2
+1788425801566,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-8,text,true,,268,180,10,10,http://localhost:3000/api/products/22,17,0,2
+1788425801629,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-3,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,1
+1788425801680,15,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-7,text,true,,268,180,10,10,http://localhost:3000/api/products/23,15,0,1
+1788425801890,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,1389,155,10,10,http://localhost:3000/api/products,4,0,1
+1788425802141,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-6,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425802403,7,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-4,text,true,,612,226,10,10,http://localhost:3000/api/login,6,0,2
+1788425802604,18,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-9,text,true,,268,180,10,10,http://localhost:3000/api/products/24,18,0,3
+1788425803078,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,1210,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425803136,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,276,358,10,10,http://localhost:3000/api/products,17,0,2
+1788425803192,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-8,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425803265,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,1392,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425803846,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,1392,155,10,10,http://localhost:3000/api/products,6,0,1
+1788425804017,4,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-1,text,true,,330,157,10,10,http://localhost:3000/api/categories,4,0,1
+1788425804141,5,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-4,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,5,0,1
+1788425804200,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-7,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,1
+1788425804372,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-6,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,2
+1788425804815,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-9,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425804836,5,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-5,text,true,,330,157,10,10,http://localhost:3000/api/categories,4,0,1
+1788425805340,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-8,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,2
+1788425805509,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-2,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425805552,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-10,text,true,,268,180,10,10,http://localhost:3000/api/products/25,16,0,2
+1788425805629,9,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-7,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,9,0,2
+1788425805890,14,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,276,369,10,10,http://localhost:3000/api/products,14,0,1
+1788425806036,8,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-3,text,true,,330,157,10,10,http://localhost:3000/api/categories,8,0,2
+1788425806217,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,1403,155,10,10,http://localhost:3000/api/products,7,0,1
+1788425806295,4,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,1403,155,10,10,http://localhost:3000/api/products,4,0,1
+1788425806846,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-9,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,1
+1788425806962,16,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,276,341,10,10,http://localhost:3000/api/products,16,0,2
+1788425807314,6,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,1567,155,10,10,http://localhost:3000/api/products,6,0,1
+1788425807392,7,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-10,text,true,,612,226,10,10,http://localhost:3000/api/login,7,0,1
+1788425807755,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,276,358,10,10,http://localhost:3000/api/products,17,0,2
+1788425807774,10,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-1,text,true,,268,180,10,10,http://localhost:3000/api/products/26,9,0,1
+1788425807829,14,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,276,355,10,10,http://localhost:3000/api/products,13,0,2
+1788425807850,6,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,1734,155,10,10,http://localhost:3000/api/products,6,0,2
+1788425808593,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-6,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425808757,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-8,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,1
+1788425808794,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-5,text,true,,268,180,10,10,http://localhost:3000/api/products/27,17,0,2
+1788425808815,3,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-4,text,true,,330,157,10,10,http://localhost:3000/api/categories,3,0,1
+1788425809027,9,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-10,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,1
+1788425809118,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,1570,155,10,10,http://localhost:3000/api/products,6,0,2
+1788425809687,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-7,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425809833,6,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-1,text,true,,612,226,10,10,http://localhost:3000/api/login,5,0,1
+1788425810101,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-2,text,true,,268,180,10,10,http://localhost:3000/api/products/29,17,0,2
+1788425810205,14,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-3,text,true,,268,180,10,10,http://localhost:3000/api/products/28,14,0,2
+1788425810370,14,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,276,369,10,10,http://localhost:3000/api/products,13,0,2
+1788425810684,14,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,276,341,10,10,http://localhost:3000/api/products,14,0,1
+1788425810687,13,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-5,text,true,,612,226,10,10,http://localhost:3000/api/login,13,0,1
+1788425810718,13,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,276,355,10,10,http://localhost:3000/api/products,13,0,1
+1788425810935,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,1745,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425811358,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-9,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425811807,16,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,276,358,10,10,http://localhost:3000/api/products,15,0,2
+1788425811936,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-2,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425812275,5,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-1,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,5,0,1
+1788425812326,10,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-3,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,1
+1788425812415,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-4,text,true,,268,180,10,10,http://localhost:3000/api/products/31,17,0,2
+1788425812564,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-8,text,true,,268,180,10,10,http://localhost:3000/api/products/32,16,0,2
+1788425812613,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-5,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425812695,5,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-10,text,true,,330,157,10,10,http://localhost:3000/api/categories,4,0,1
+1788425812706,14,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-6,text,true,,268,180,10,10,http://localhost:3000/api/products/30,14,0,1
+1788425813436,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,276,369,10,10,http://localhost:3000/api/products,18,0,2
+1788425813589,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-7,text,true,,268,180,10,10,http://localhost:3000/api/products/33,15,0,2
+1788425813957,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-2,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425814103,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-8,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,1
+1788425814131,13,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,276,341,10,10,http://localhost:3000/api/products,13,0,1
+1788425814244,10,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-4,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,1
+1788425814345,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,1567,155,10,10,http://localhost:3000/api/products,5,0,1
+1788425814353,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-3,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788425814566,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,1567,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425815069,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-9,text,true,,268,180,10,10,http://localhost:3000/api/products/34,16,0,2
+1788425815205,10,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-6,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,2
+1788425815349,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-7,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,2
+1788425815690,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,1375,155,10,10,http://localhost:3000/api/products,6,0,2
+1788425815906,10,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-8,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,10,0,2
+1788425815932,10,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-4,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,10,0,1
+1788425816079,14,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-10,text,true,,268,180,10,10,http://localhost:3000/api/products/35,14,0,1
+1788425816265,8,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,1210,155,10,10,http://localhost:3000/api/products,7,0,1
+1788425816538,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-5,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425816583,4,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-1,text,true,,330,157,10,10,http://localhost:3000/api/categories,3,0,1
+1788425816946,9,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-6,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,9,0,1
+1788425817049,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-7,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788425817389,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-2,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425817547,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-9,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,2
+1788425817703,8,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,1210,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425818029,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,1210,155,10,10,http://localhost:3000/api/products,6,0,1
+1788425818089,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-10,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425818634,8,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-3,text,true,,330,157,10,10,http://localhost:3000/api/categories,8,0,2
+1788425818663,13,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,276,355,10,10,http://localhost:3000/api/products,13,0,1
+1788425818765,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,1389,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425819235,15,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,276,358,10,10,http://localhost:3000/api/products,14,0,1
+1788425819257,6,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,1570,155,10,10,http://localhost:3000/api/products,6,0,2
+1788425819661,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-10,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,1
+1788425819767,16,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,276,369,10,10,http://localhost:3000/api/products,16,0,2
+1788425819788,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-9,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425819795,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-4,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,1
+1788425819996,15,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-1,text,true,,268,180,10,10,http://localhost:3000/api/products/36,14,0,1
+1788425820009,5,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-8,text,true,,330,157,10,10,http://localhost:3000/api/categories,5,0,2
+1788425820296,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,276,341,10,10,http://localhost:3000/api/products,17,0,1
+1788425820930,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-7,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,1
+1788425821281,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-5,text,true,,268,180,10,10,http://localhost:3000/api/products/37,16,0,1
+1788425821285,14,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,1567,155,10,10,http://localhost:3000/api/products,14,0,1
+1788425821458,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,1567,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425821492,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-6,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,2
+1788425821894,19,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,276,355,10,10,http://localhost:3000/api/products,18,0,2
+1788425822004,12,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,276,358,10,10,http://localhost:3000/api/products,12,0,1
+1788425822040,13,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-2,text,true,,268,180,10,10,http://localhost:3000/api/products/38,13,0,2
+1788425822158,6,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-1,text,true,,612,226,10,10,http://localhost:3000/api/login,6,0,2
+1788425822413,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-3,text,true,,268,180,10,10,http://localhost:3000/api/products/39,16,0,1
+1788425822970,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,276,341,10,10,http://localhost:3000/api/products,17,0,1
+1788425823301,11,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-5,text,true,,612,226,10,10,http://localhost:3000/api/login,10,0,2
+1788425823402,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-2,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,1
+1788425823573,15,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,276,369,10,10,http://localhost:3000/api/products,15,0,2
+1788425823651,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-9,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,1
+1788425823704,15,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-4,text,true,,268,180,10,10,http://localhost:3000/api/products/40,15,0,1
+1788425823799,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-10,text,true,,330,157,10,10,http://localhost:3000/api/categories,5,0,1
+1788425824224,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-3,text,true,,612,226,10,10,http://localhost:3000/api/login,7,0,1
+1788425824250,4,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-1,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,4,0,1
+1788425824664,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-5,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425824782,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-8,text,true,,268,180,10,10,http://localhost:3000/api/products/41,15,0,2
+1788425825128,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-2,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425825376,16,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,276,358,10,10,http://localhost:3000/api/products,16,0,2
+1788425825423,13,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,276,355,10,10,http://localhost:3000/api/products,13,0,2
+1788425825478,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-4,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,1
+1788425825750,5,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,1926,155,10,10,http://localhost:3000/api/products,4,0,1
+1788425825812,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-6,text,true,,268,180,10,10,http://localhost:3000/api/products/43,16,0,1
+1788425825846,13,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-7,text,true,,268,180,10,10,http://localhost:3000/api/products/42,13,0,2
+1788425826386,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,1570,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425826533,10,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-3,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,10,0,1
+1788425826770,8,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,1570,155,10,10,http://localhost:3000/api/products,7,0,2
+1788425826823,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-8,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425826920,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-9,text,true,,268,180,10,10,http://localhost:3000/api/products/45,17,0,2
+1788425827080,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-6,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425827171,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-1,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,1
+1788425827654,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-10,text,true,,268,180,10,10,http://localhost:3000/api/products/44,17,0,1
+1788425827814,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-4,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425828058,10,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-7,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,3
+1788425828092,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-5,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425828450,6,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,1210,155,10,10,http://localhost:3000/api/products,6,0,2
+1788425828715,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-8,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788425828899,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-1,text,true,,276,369,10,10,http://localhost:3000/api/products,17,0,2
+1788425828969,8,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-9,text,true,,612,226,10,10,http://localhost:3000/api/login,8,0,2
+1788425829308,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-2,text,true,,330,157,10,10,http://localhost:3000/api/categories,7,0,2
+1788425829373,6,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,1403,155,10,10,http://localhost:3000/api/products,6,0,1
+1788425829461,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-6,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788425829869,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-7,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,1
+1788425830118,9,1. Auth - Admin Login (POST /api/login),200,OK,Admin Virtual Users (Load) 1-10,text,true,,612,226,10,10,http://localhost:3000/api/login,9,0,2
+1788425830277,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-5,text,true,,276,341,10,10,http://localhost:3000/api/products,17,0,2
+1788425830765,8,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-9,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,1
+1788425831061,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-3,text,true,,330,157,10,10,http://localhost:3000/api/categories,6,0,1
+1788425831086,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,1567,155,10,10,http://localhost:3000/api/products,6,0,2
+1788425831097,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-1,text,true,,268,180,10,10,http://localhost:3000/api/products/46,15,0,2
+1788425831188,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-4,text,true,,330,157,9,9,http://localhost:3000/api/categories,6,0,1
+1788425831305,16,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-2,text,true,,276,355,9,9,http://localhost:3000/api/products,16,0,2
+1788425831925,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,1553,155,9,9,http://localhost:3000/api/products,7,0,2
+1788425831933,4,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,1553,155,9,9,http://localhost:3000/api/products,4,0,1
+1788425832045,7,2. Read - Get Admin Users (GET /api/admin/users),200,OK,Admin Virtual Users (Load) 1-10,text,true,,505,317,9,9,http://localhost:3000/api/admin/users,7,0,2
+1788425832551,16,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-5,text,true,,268,180,9,9,http://localhost:3000/api/products/47,15,0,2
+1788425832834,6,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,1389,155,8,8,http://localhost:3000/api/products,6,0,1
+1788425833118,7,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-8,text,true,,330,157,8,8,http://localhost:3000/api/categories,6,0,2
+1788425833158,17,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-4,text,true,,276,369,8,8,http://localhost:3000/api/products,17,0,2
+1788425833399,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-3,text,true,,276,358,8,8,http://localhost:3000/api/products,17,0,3
+1788425833478,13,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-2,text,true,,268,180,8,8,http://localhost:3000/api/products/48,13,0,2
+1788425833900,7,3. Read - Get Products List (GET /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,1584,155,7,7,http://localhost:3000/api/products,7,0,2
+1788425834222,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-7,text,true,,330,157,7,7,http://localhost:3000/api/categories,6,0,2
+1788425834230,4,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-6,text,true,,330,157,7,7,http://localhost:3000/api/categories,4,0,1
+1788425834702,17,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-3,text,true,,268,180,7,7,http://localhost:3000/api/products/50,16,0,2
+1788425834737,13,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-8,text,true,,276,341,6,6,http://localhost:3000/api/products,13,0,2
+1788425834839,14,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-4,text,true,,268,180,6,6,http://localhost:3000/api/products/49,14,0,2
+1788425835485,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-9,text,true,,330,157,5,5,http://localhost:3000/api/categories,6,0,1
+1788425836063,6,4. Read - Get Categories (GET /api/categories),200,OK,Admin Virtual Users (Load) 1-10,text,true,,330,157,5,5,http://localhost:3000/api/categories,6,0,2
+1788425836478,15,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-7,text,true,,276,358,5,5,http://localhost:3000/api/products,15,0,2
+1788425836485,15,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-6,text,true,,276,355,5,5,http://localhost:3000/api/products,15,0,2
+1788425837200,18,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-9,text,true,,276,369,5,5,http://localhost:3000/api/products,17,0,2
+1788425837593,13,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-8,text,true,,268,180,5,5,http://localhost:3000/api/products/51,12,0,2
+1788425838166,15,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-6,text,true,,268,180,4,4,http://localhost:3000/api/products/53,15,0,1
+1788425838295,15,5. Transactional - Create Product (POST /api/products),200,OK,Admin Virtual Users (Load) 1-10,text,true,,276,341,3,3,http://localhost:3000/api/products,14,0,1
+1788425838390,14,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-7,text,true,,268,180,3,3,http://localhost:3000/api/products/52,14,0,2
+1788425839745,15,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-9,text,true,,268,180,2,2,http://localhost:3000/api/products/54,15,0,2
+1788425840686,18,6. Transactional - Delete Product Cleanup,200,OK,Admin Virtual Users (Load) 1-10,text,true,,268,180,1,1,http://localhost:3000/api/products/55,17,0,2

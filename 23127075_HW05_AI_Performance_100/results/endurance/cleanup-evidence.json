@@ -1,0 +1,10 @@
+{
+  "reason": "The 600-second scheduler stopped five threads after Create Product and before Delete Product Cleanup.",
+  "orphan_count": 4,
+  "deleted_ids": [9216, 9217, 9218, 9219],
+  "all_deleted": true,
+  "method": "DELETE /api/products/:id after matching exact test-data names from data/products.csv",
+  "response": "Each request returned {\"message\":\"Product deleted\"}",
+  "verified_remaining_test_products": 0,
+  "verified_at": "2026-09-03T18:45:00+07:00"
+}

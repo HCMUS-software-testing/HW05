@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Audit Entry"
+  short_description: "Offer numbered homework AI audit entries"
+  default_prompt: "Use $ai-audit-entry to ask before appending a numbered AI audit table entry for this prompt session."

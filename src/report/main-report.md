@@ -86,7 +86,7 @@ Endurance dùng 30 VU, ramp-up 30 giây, Gaussian think-time mean 1.000 ms, sigm
 
 Trong 121 mẫu tài nguyên cách nhau 5 giây, RSS không tăng dần và không có request lỗi. Cấu hình này chứng minh một **điểm tải bền vững 28,80 RPS trong 10 phút, RSS không vượt 111,68 MiB**; nó không chứng minh đây là RPS bền vững tối đa vì chưa chạy nhiều bậc tải. Một outlier 4.663 ms xuất hiện gần phút thứ chín; vì p95 vẫn 16 ms nên chưa đủ bằng chứng kết luận rò rỉ hay suy giảm kéo dài.
 
-Scheduler dừng năm thread sau Create và trước Delete, nên JTL có 2.864 Create so với 2.859 Delete. Năm sản phẩm test ID `9216-9220` đã được xác định theo đúng tên trong CSV và xóa qua API; mỗi request trả `Product deleted`. Bằng chứng cleanup có cấu trúc nằm tại [`cleanup-evidence.json`](../results/endurance/cleanup-evidence.json).
+Scheduler dừng bốn thread sau Create và trước Delete, nên JTL có 2.897 Create so với 2.893 Delete. Bốn sản phẩm test ID `9216-9219` đã được xác định theo đúng tên trong CSV và xóa qua API; mỗi request trả `Product deleted`. Bằng chứng cleanup có cấu trúc nằm tại [`cleanup-evidence.json`](../results/endurance/cleanup-evidence.json).
 
 Artifact: [`raw.jtl`](../results/endurance/raw.jtl), [`HTML report`](../results/endurance/html-report/index.html), [`backend-resources.csv`](../results/endurance/backend-resources.csv).
 
@@ -99,7 +99,7 @@ sqlite3 eshop-sut/backend/database.sqlite \
   "UPDATE users SET login_attempts = 0, locked_until = NULL WHERE email = 'admin@eshop.com';"
 ```
 
-Code review và phép thử không JWT xác nhận Product create/update/delete thiếu `authenticateToken`. `POST /api/products` không Authorization vẫn trả HTTP 200 và tạo ID 8943; probe đã được xóa sau kiểm tra. Chi tiết tại [`report/bug-report.md`](bug-report.md). GitHub Issue và screenshot chưa thể tạo do token `gh` hiện không hợp lệ.
+Code review và phép thử không JWT xác nhận Product create/update/delete thiếu `authenticateToken`. `POST /api/products` không Authorization vẫn trả HTTP 200 và tạo ID 8943; probe đã được xóa sau kiểm tra. Các issue tương ứng (#22, #23, #24) và screenshot được liên kết trong [`report/bug-report.md`](bug-report.md).
 
 Video YouTube unlisted tối thiểu 6 phút chưa được bổ sung; đây là thao tác thủ công còn chặn trạng thái sẵn sàng nộp.
 
@@ -146,3 +146,8 @@ flowchart TD
 ## 4. Kết luận
 
 Bốn run thực tế đều hoàn tất với 0 lỗi HTTP/assertion. Stress đạt 40,19 RPS với p95 15 ms; Spike làm p95 tăng lên 476 ms. Endurance chứng minh 30 VU duy trì trung bình 28,80 RPS trong 10 phút với RSS tối đa 111,68 MiB, nhưng không xác lập tải tối đa và outlier 4,663 giây cần được theo dõi ở các run dài hơn. Các số liệu được sinh bởi `tools/analyze_jtl.py` và kiểm tra chéo với HTML `statistics.json`, không lấy từ ước lượng AI.
+
+## 5. Video demo
+
+- **Flow demo**: <https://youtu.be/iJPhKGJS6jM>
+- **Agent demo**: <https://youtu.be/JUV8j6AjZdQ>

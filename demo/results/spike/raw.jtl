@@ -1,0 +1,2101 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1788431157020,115,POST Login,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,612,255,37,37,http://localhost:3000/api/login,115,0,54
+1788431157024,106,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,36,36,http://localhost:3000/api/login,106,0,49
+1788431157035,87,POST Login,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,612,255,35,35,http://localhost:3000/api/login,87,0,39
+1788431157024,104,POST Login,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,612,255,35,35,http://localhost:3000/api/login,104,0,50
+1788431157019,110,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,35,35,http://localhost:3000/api/login,109,0,54
+1788431157022,100,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,35,35,http://localhost:3000/api/login,100,0,51
+1788431157096,45,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,37,37,http://localhost:3000/api/login,45,0,2
+1788431157172,4,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,41,41,http://localhost:3000/api/login,3,0,1
+1788431157053,74,POST Login,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,612,255,35,35,http://localhost:3000/api/login,73,0,19
+1788431157130,14,POST Login,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,612,255,38,38,http://localhost:3000/api/login,14,0,1
+1788431157020,104,POST Login,200,OK,Spike: 100 users x 3 loops 1-8,text,true,,612,255,35,35,http://localhost:3000/api/login,104,0,55
+1788431157119,23,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,38,38,http://localhost:3000/api/login,23,0,1
+1788431157070,52,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,35,35,http://localhost:3000/api/login,51,0,5
+1788431157152,5,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,39,39,http://localhost:3000/api/login,5,0,0
+1788431157184,6,POST Login,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,612,255,43,43,http://localhost:3000/api/login,5,0,1
+1788431157026,97,POST Login,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,612,255,35,35,http://localhost:3000/api/login,97,0,48
+1788431157106,37,POST Login,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,612,255,38,38,http://localhost:3000/api/login,37,0,1
+1788431157020,107,POST Login,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,612,255,35,35,http://localhost:3000/api/login,106,0,54
+1788431157020,109,POST Login,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,612,255,36,36,http://localhost:3000/api/login,109,0,52
+1788431157019,110,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,35,35,http://localhost:3000/api/login,110,0,56
+1788431157144,5,POST Login,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,612,255,38,38,http://localhost:3000/api/login,5,0,2
+1788431157025,100,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,35,35,http://localhost:3000/api/login,99,0,47
+1788431157019,112,POST Login,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,612,255,36,36,http://localhost:3000/api/login,111,0,56
+1788431157022,108,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,36,36,http://localhost:3000/api/login,108,0,51
+1788431157087,54,POST Login,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,612,255,37,37,http://localhost:3000/api/login,54,0,1
+1788431157160,6,POST Login,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,612,255,40,40,http://localhost:3000/api/login,5,0,2
+1788431157022,109,POST Login,200,OK,Spike: 100 users x 3 loops 1-16,text,true,,612,255,36,36,http://localhost:3000/api/login,109,0,51
+1788431157019,103,POST Login,200,OK,Spike: 100 users x 3 loops 1-20,text,true,,612,255,35,35,http://localhost:3000/api/login,102,0,56
+1788431157024,107,POST Login,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,612,255,36,36,http://localhost:3000/api/login,107,0,49
+1788431157079,60,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,37,37,http://localhost:3000/api/login,59,0,2
+1788431157025,108,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,36,36,http://localhost:3000/api/login,108,0,49
+1788431157191,8,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-1,text,false,,273,182,44,44,http://localhost:3000/api/admin/users,8,0,1
+1788431157191,9,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,505,317,44,44,http://localhost:3000/api/admin/users,8,0,1
+1788431157021,112,POST Login,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,612,255,37,37,http://localhost:3000/api/login,112,0,53
+1788431157022,101,POST Login,200,OK,Spike: 100 users x 3 loops 1-6,text,true,,612,255,35,35,http://localhost:3000/api/login,101,0,53
+1788431157047,86,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,37,37,http://localhost:3000/api/login,86,0,26
+1788431157025,109,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,37,37,http://localhost:3000/api/login,109,0,48
+1788431157025,106,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,36,36,http://localhost:3000/api/login,106,0,49
+1788431157191,12,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-8,text,true,,505,317,44,44,http://localhost:3000/api/admin/users,12,0,1
+1788431157020,107,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,35,35,http://localhost:3000/api/login,107,0,53
+1788431157024,109,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,37,37,http://localhost:3000/api/login,108,0,48
+1788431157031,101,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,36,36,http://localhost:3000/api/login,101,0,41
+1788431157135,10,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,38,38,http://localhost:3000/api/login,9,0,1
+1788431157070,67,POST Login,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,612,255,37,37,http://localhost:3000/api/login,67,0,4
+1788431157021,101,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,35,35,http://localhost:3000/api/login,101,0,51
+1788431157191,18,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-29,text,false,,273,182,45,45,http://localhost:3000/api/admin/users,18,0,1
+1788431157191,18,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,18,0,1
+1788431157192,18,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-15,text,false,,273,182,45,45,http://localhost:3000/api/admin/users,18,0,2
+1788431157192,19,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,19,0,1
+1788431157193,18,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,18,0,1
+1788431157191,21,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-33,text,false,,273,182,45,45,http://localhost:3000/api/admin/users,21,0,4
+1788431157192,21,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,45,45,http://localhost:3000/api/login,20,0,2
+1788431157192,22,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,22,0,2
+1788431157192,23,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,23,0,3
+1788431157191,24,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-35,text,false,,273,182,45,45,http://localhost:3000/api/admin/users,24,0,3
+1788431157194,23,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,23,0,2
+1788431157194,24,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-19,text,false,,273,182,45,45,http://localhost:3000/api/admin/users,24,0,2
+1788431157194,24,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,24,0,2
+1788431157192,27,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-39,text,false,,273,182,46,46,http://localhost:3000/api/admin/users,27,0,5
+1788431157197,26,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,505,317,46,46,http://localhost:3000/api/admin/users,26,0,1
+1788431157197,26,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,505,317,46,46,http://localhost:3000/api/admin/users,26,0,3
+1788431157195,29,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-41,text,false,,273,182,46,46,http://localhost:3000/api/admin/users,28,0,5
+1788431157197,27,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,505,317,46,46,http://localhost:3000/api/admin/users,27,0,2
+1788431157199,27,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,505,317,46,46,http://localhost:3000/api/admin/users,27,0,2
+1788431157200,28,GET Products,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,1210,314,46,46,http://localhost:3000/api/products,27,0,1
+1788431157200,28,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,505,317,46,46,http://localhost:3000/api/admin/users,27,0,1
+1788431157200,29,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-16,text,true,,505,317,46,46,http://localhost:3000/api/admin/users,29,0,1
+1788431157200,29,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-31,text,false,,273,182,46,46,http://localhost:3000/api/admin/users,29,0,4
+1788431157200,30,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,505,317,46,46,http://localhost:3000/api/admin/users,30,0,2
+1788431157200,31,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-11,text,false,,273,182,46,46,http://localhost:3000/api/admin/users,31,0,2
+1788431157201,30,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-3,text,false,,273,182,47,47,http://localhost:3000/api/admin/users,30,0,2
+1788431157201,31,GET Products,200,OK,Spike: 100 users x 3 loops 1-1,text,true,,1210,179,47,47,http://localhost:3000/api/products,31,0,1
+1788431157200,32,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-13,text,false,,273,182,47,47,http://localhost:3000/api/admin/users,32,0,3
+1788431157199,34,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-9,text,false,,273,182,47,47,http://localhost:3000/api/admin/users,34,0,6
+1788431157203,31,POST Login,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,612,255,47,47,http://localhost:3000/api/login,31,0,2
+1788431157203,33,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-7,text,false,,273,182,47,47,http://localhost:3000/api/admin/users,33,0,3
+1788431157204,33,GET Products,200,OK,Spike: 100 users x 3 loops 1-8,text,true,,1210,314,47,47,http://localhost:3000/api/products,33,0,1
+1788431157203,34,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,505,317,47,47,http://localhost:3000/api/admin/users,34,0,2
+1788431157199,39,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-20,text,true,,505,317,47,47,http://localhost:3000/api/admin/users,39,0,7
+1788431157205,33,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-17,text,false,,273,182,47,47,http://localhost:3000/api/admin/users,33,0,1
+1788431157203,36,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-27,text,false,,273,182,47,47,http://localhost:3000/api/admin/users,36,0,4
+1788431157203,38,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-6,text,true,,505,317,48,48,http://localhost:3000/api/admin/users,38,0,4
+1788431157199,43,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,505,317,48,48,http://localhost:3000/api/admin/users,43,0,8
+1788431157208,34,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-25,text,false,,273,182,48,48,http://localhost:3000/api/admin/users,34,0,1
+1788431157207,36,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,505,317,48,48,http://localhost:3000/api/admin/users,35,0,1
+1788431157207,36,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-21,text,false,,273,182,48,48,http://localhost:3000/api/admin/users,36,0,2
+1788431157208,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-23,text,false,,273,182,49,49,http://localhost:3000/api/admin/users,36,0,2
+1788431157208,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-37,text,false,,273,182,49,49,http://localhost:3000/api/admin/users,36,0,2
+1788431157208,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-5,text,false,,273,182,49,49,http://localhost:3000/api/admin/users,36,0,1
+1788431157210,36,GET Products,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,1210,314,49,49,http://localhost:3000/api/products,36,0,2
+1788431157212,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,1210,314,49,49,http://localhost:3000/api/products,35,0,0
+1788431157212,36,GET Products,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,1210,314,49,49,http://localhost:3000/api/products,35,0,0
+1788431157211,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-15,text,true,,1210,179,49,49,http://localhost:3000/api/products,37,0,2
+1788431157211,39,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,49,49,http://localhost:3000/api/login,38,0,2
+1788431157213,37,GET Products,200,OK,Spike: 100 users x 3 loops 1-33,text,true,,1210,179,49,49,http://localhost:3000/api/products,37,0,1
+1788431157216,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,1210,314,49,49,http://localhost:3000/api/products,35,0,0
+1788431157216,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,1210,179,49,49,http://localhost:3000/api/products,35,0,0
+1788431157215,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-43,text,false,,273,182,49,49,http://localhost:3000/api/admin/users,36,0,1
+1788431157215,37,GET Products,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,1210,314,49,49,http://localhost:3000/api/products,37,0,1
+1788431157209,44,GET Products,200,OK,Spike: 100 users x 3 loops 1-29,text,true,,1210,179,49,49,http://localhost:3000/api/products,44,0,8
+1788431157218,36,GET Products,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,1210,314,49,49,http://localhost:3000/api/products,36,0,1
+1788431157218,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-19,text,true,,1210,179,50,50,http://localhost:3000/api/products,40,0,1
+1788431157219,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,1210,314,50,50,http://localhost:3000/api/products,40,0,1
+1788431157221,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-39,text,true,,1210,179,50,50,http://localhost:3000/api/products,40,0,2
+1788431157221,41,POST Login,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,612,255,50,50,http://localhost:3000/api/login,41,0,2
+1788431157224,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,1210,314,50,50,http://localhost:3000/api/products,40,0,1
+1788431157224,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,1210,314,50,50,http://localhost:3000/api/products,40,0,1
+1788431157225,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-41,text,true,,1210,179,50,50,http://localhost:3000/api/products,39,0,1
+1788431157225,41,GET Products,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,1210,314,50,50,http://localhost:3000/api/products,41,0,1
+1788431157226,41,GET Products,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,1210,314,50,50,http://localhost:3000/api/products,41,0,1
+1788431157228,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,1210,314,51,51,http://localhost:3000/api/products,40,0,1
+1788431157228,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,330,316,51,51,http://localhost:3000/api/categories,40,0,1
+1788431157229,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-16,text,true,,1210,314,51,51,http://localhost:3000/api/products,40,0,1
+1788431157230,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,1210,179,51,51,http://localhost:3000/api/products,39,0,0
+1788431157231,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-11,text,true,,1210,179,51,51,http://localhost:3000/api/products,39,0,1
+1788431157231,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,1210,314,51,51,http://localhost:3000/api/products,40,0,2
+1788431157233,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-13,text,true,,1210,179,51,51,http://localhost:3000/api/products,38,0,0
+1788431157232,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-3,text,true,,1210,179,51,51,http://localhost:3000/api/products,40,0,1
+1788431157233,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-1,text,true,,330,181,51,51,http://localhost:3000/api/categories,40,0,1
+1788431157234,41,GET Products,200,OK,Spike: 100 users x 3 loops 1-9,text,true,,1210,179,51,51,http://localhost:3000/api/products,41,0,1
+1788431157234,41,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,51,51,http://localhost:3000/api/login,41,0,1
+1788431157235,41,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,505,317,51,51,http://localhost:3000/api/admin/users,41,0,1
+1788431157236,42,GET Products,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,1210,179,52,52,http://localhost:3000/api/products,41,0,1
+1788431157237,41,GET Categories,200,OK,Spike: 100 users x 3 loops 1-8,text,true,,330,316,52,52,http://localhost:3000/api/categories,41,0,1
+1788431157238,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,1210,314,52,52,http://localhost:3000/api/products,40,0,0
+1788431157239,42,GET Products,200,OK,Spike: 100 users x 3 loops 1-20,text,true,,1210,314,52,52,http://localhost:3000/api/products,42,0,0
+1788431157239,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,1210,179,52,52,http://localhost:3000/api/products,42,0,1
+1788431157239,45,GET Products,200,OK,Spike: 100 users x 3 loops 1-27,text,true,,1210,179,52,52,http://localhost:3000/api/products,45,0,1
+1788431157242,42,GET Products,200,OK,Spike: 100 users x 3 loops 1-6,text,true,,1210,314,52,52,http://localhost:3000/api/products,42,0,1
+1788431157242,42,GET Products,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,1210,314,52,52,http://localhost:3000/api/products,42,0,2
+1788431157242,43,POST Login,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,612,255,52,52,http://localhost:3000/api/login,43,0,2
+1788431157244,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-21,text,true,,1210,179,53,53,http://localhost:3000/api/products,43,0,1
+1788431157244,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,1210,314,53,53,http://localhost:3000/api/products,43,0,1
+1788431157246,42,GET Products,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,1210,179,53,53,http://localhost:3000/api/products,42,0,1
+1788431157246,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,1210,179,53,53,http://localhost:3000/api/products,42,0,1
+1788431157243,47,GET Products,200,OK,Spike: 100 users x 3 loops 1-25,text,true,,1210,179,53,53,http://localhost:3000/api/products,46,0,4
+1788431157247,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,330,316,54,54,http://localhost:3000/api/categories,43,0,1
+1788431157246,45,GET Products,200,OK,Spike: 100 users x 3 loops 1-5,text,true,,1210,179,54,54,http://localhost:3000/api/products,45,0,2
+1788431157247,45,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,54,54,http://localhost:3000/api/login,45,0,2
+1788431157248,45,GET Categories,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,330,316,54,54,http://localhost:3000/api/categories,44,0,1
+1788431157249,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,330,316,54,54,http://localhost:3000/api/categories,44,0,1
+1788431157250,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-15,text,true,,330,181,54,54,http://localhost:3000/api/categories,44,0,1
+1788431157251,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,330,316,54,54,http://localhost:3000/api/categories,43,0,1
+1788431157251,44,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-45,text,false,,273,182,54,54,http://localhost:3000/api/admin/users,44,0,1
+1788431157251,45,GET Categories,200,OK,Spike: 100 users x 3 loops 1-33,text,true,,330,181,54,54,http://localhost:3000/api/categories,45,0,1
+1788431157252,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,330,181,54,54,http://localhost:3000/api/categories,44,0,1
+1788431157252,45,GET Products,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,1210,179,54,54,http://localhost:3000/api/products,45,0,1
+1788431157253,45,GET Categories,200,OK,Spike: 100 users x 3 loops 1-29,text,true,,330,181,54,54,http://localhost:3000/api/categories,45,0,1
+1788431157253,45,GET Categories,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,330,316,54,54,http://localhost:3000/api/categories,45,0,1
+1788431157255,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,330,316,54,54,http://localhost:3000/api/categories,44,0,1
+1788431157259,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-19,text,true,,330,181,55,55,http://localhost:3000/api/categories,42,0,0
+1788431157257,44,POST Login,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,612,255,54,54,http://localhost:3000/api/login,44,0,2
+1788431157260,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,330,316,55,55,http://localhost:3000/api/categories,42,0,0
+1788431157262,41,GET Categories,200,OK,Spike: 100 users x 3 loops 1-39,text,true,,330,181,55,55,http://localhost:3000/api/categories,41,0,0
+1788431157263,41,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,505,317,55,55,http://localhost:3000/api/admin/users,41,0,1
+1788431157264,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,330,316,55,55,http://localhost:3000/api/categories,40,0,0
+1788431157265,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,330,316,55,55,http://localhost:3000/api/categories,40,0,0
+1788431157265,41,GET Categories,200,OK,Spike: 100 users x 3 loops 1-41,text,true,,330,181,55,55,http://localhost:3000/api/categories,41,0,0
+1788431157266,41,GET Categories,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,330,316,55,55,http://localhost:3000/api/categories,41,0,1
+1788431157267,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,330,316,55,55,http://localhost:3000/api/categories,40,0,1
+1788431157269,39,GET Categories,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,330,316,55,55,http://localhost:3000/api/categories,39,0,1
+1788431157269,40,POST Login,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,612,382,55,55,http://localhost:3000/api/login,40,0,1
+1788431157270,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,330,181,55,55,http://localhost:3000/api/categories,40,0,0
+1788431157270,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-16,text,true,,330,316,55,55,http://localhost:3000/api/categories,41,0,1
+1788431157270,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-11,text,true,,330,181,55,55,http://localhost:3000/api/categories,42,0,1
+1788431157271,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,330,316,55,55,http://localhost:3000/api/categories,42,0,1
+1788431157270,43,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,55,55,http://localhost:3000/api/login,43,0,1
+1788431157272,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-13,text,true,,330,181,55,55,http://localhost:3000/api/categories,42,0,0
+1788431157273,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-3,text,true,,330,181,55,55,http://localhost:3000/api/categories,41,0,0
+1788431157276,39,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-47,text,false,,273,182,55,55,http://localhost:3000/api/admin/users,39,0,3
+1788431157274,42,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,55,55,http://localhost:3000/api/login,41,0,1
+1788431157278,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,1210,314,56,56,http://localhost:3000/api/products,39,0,2
+1788431157279,39,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,56,56,http://localhost:3000/api/login,39,0,1
+1788431157279,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-9,text,true,,330,181,56,56,http://localhost:3000/api/categories,39,0,1
+1788431157279,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,330,316,57,57,http://localhost:3000/api/categories,40,0,1
+1788431157278,42,POST Login,200,OK,Spike: 100 users x 3 loops 1-52,text,true,,612,255,57,57,http://localhost:3000/api/login,42,0,2
+1788431157279,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,330,181,57,57,http://localhost:3000/api/categories,42,0,1
+1788431157282,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-20,text,true,,330,316,57,57,http://localhost:3000/api/categories,42,0,1
+1788431157283,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,330,181,57,57,http://localhost:3000/api/categories,42,0,1
+1788431157286,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,330,316,57,57,http://localhost:3000/api/categories,40,0,1
+1788431157286,41,GET Categories,200,OK,Spike: 100 users x 3 loops 1-27,text,true,,330,181,57,57,http://localhost:3000/api/categories,41,0,1
+1788431157286,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-6,text,true,,330,316,57,57,http://localhost:3000/api/categories,42,0,1
+1788431157287,42,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,505,317,57,57,http://localhost:3000/api/admin/users,42,0,1
+1788431157288,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-21,text,true,,330,181,57,57,http://localhost:3000/api/categories,42,0,1
+1788431157288,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,330,316,57,57,http://localhost:3000/api/categories,43,0,2
+1788431157289,43,POST Login,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,612,255,57,57,http://localhost:3000/api/login,43,0,1
+1788431157289,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,330,181,57,57,http://localhost:3000/api/categories,43,0,1
+1788431157290,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,330,181,58,58,http://localhost:3000/api/categories,43,0,1
+1788431157291,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-25,text,true,,330,181,58,58,http://localhost:3000/api/categories,43,0,1
+1788431157291,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-5,text,true,,330,181,58,58,http://localhost:3000/api/categories,44,0,1
+1788431157291,45,POST Login,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,612,382,58,58,http://localhost:3000/api/login,45,0,1
+1788431157293,45,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-49,text,false,,273,182,59,59,http://localhost:3000/api/admin/users,44,0,2
+1788431157292,45,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,59,59,http://localhost:3000/api/login,45,0,1
+1788431157295,45,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,59,59,http://localhost:3000/api/login,44,0,1
+1788431157296,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,1210,179,59,59,http://localhost:3000/api/products,43,0,1
+1788431157295,45,POST Login,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,612,382,59,59,http://localhost:3000/api/login,45,0,0
+1788431157296,45,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,59,59,http://localhost:3000/api/login,45,0,1
+1788431157296,46,POST Login,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,612,382,59,59,http://localhost:3000/api/login,46,0,2
+1788431157297,46,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,59,59,http://localhost:3000/api/login,46,0,1
+1788431157297,47,POST Login,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,612,247,59,59,http://localhost:3000/api/login,47,0,2
+1788431157298,47,GET Categories,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,330,181,59,59,http://localhost:3000/api/categories,47,0,1
+1788431157299,47,POST Login,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,612,382,59,59,http://localhost:3000/api/login,47,0,2
+1788431157299,48,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,59,59,http://localhost:3000/api/login,48,0,2
+1788431157301,47,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,59,59,http://localhost:3000/api/login,46,0,1
+1788431157302,47,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,59,59,http://localhost:3000/api/login,47,0,1
+1788431157303,46,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,505,317,59,59,http://localhost:3000/api/admin/users,46,0,0
+1788431157303,48,POST Login,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,612,255,59,59,http://localhost:3000/api/login,47,0,1
+1788431157303,49,POST Login,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,612,382,59,59,http://localhost:3000/api/login,48,0,1
+1788431157304,48,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,59,59,http://localhost:3000/api/login,48,0,0
+1788431157305,49,POST Login,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,612,382,60,60,http://localhost:3000/api/login,49,0,0
+1788431157305,49,GET Products,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,1210,314,60,60,http://localhost:3000/api/products,49,0,1
+1788431157306,49,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,60,60,http://localhost:3000/api/login,49,0,0
+1788431157307,49,POST Login,200,OK,Spike: 100 users x 3 loops 1-41,text,true,,612,247,61,61,http://localhost:3000/api/login,49,0,1
+1788431157309,48,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,61,61,http://localhost:3000/api/login,48,0,1
+1788431157309,50,POST Login,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,612,382,61,61,http://localhost:3000/api/login,50,0,1
+1788431157310,50,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,505,317,61,61,http://localhost:3000/api/admin/users,50,0,0
+1788431157310,50,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,61,61,http://localhost:3000/api/login,50,0,1
+1788431157311,51,POST Login,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,612,247,61,61,http://localhost:3000/api/login,51,0,1
+1788431157313,50,POST Login,200,OK,Spike: 100 users x 3 loops 1-11,text,true,,612,247,61,61,http://localhost:3000/api/login,50,0,1
+1788431157313,51,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,61,61,http://localhost:3000/api/login,51,0,1
+1788431157314,50,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-51,text,false,,273,182,61,61,http://localhost:3000/api/admin/users,50,0,1
+1788431157314,51,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,61,61,http://localhost:3000/api/login,51,0,0
+1788431157315,51,POST Login,200,OK,Spike: 100 users x 3 loops 1-13,text,true,,612,247,62,62,http://localhost:3000/api/login,51,0,1
+1788431157316,51,GET Products,200,OK,Spike: 100 users x 3 loops 1-47,text,true,,1210,179,62,62,http://localhost:3000/api/products,51,0,1
+1788431157317,50,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-1,text,false,,273,182,62,62,http://localhost:3000/api/admin/users,50,0,1
+1788431157316,52,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,62,62,http://localhost:3000/api/login,52,0,1
+1788431157319,50,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-8,text,false,,273,182,62,62,http://localhost:3000/api/admin/users,50,0,1
+1788431157317,52,POST Login,200,OK,Spike: 100 users x 3 loops 1-56,text,true,,612,255,62,62,http://localhost:3000/api/login,52,0,1
+1788431157318,53,GET Categories,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,330,316,62,62,http://localhost:3000/api/categories,52,0,1
+1788431157321,51,POST Login,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,612,382,62,62,http://localhost:3000/api/login,51,0,2
+1788431157322,52,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-52,text,true,,505,317,62,62,http://localhost:3000/api/admin/users,52,0,1
+1788431157321,53,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,62,62,http://localhost:3000/api/login,53,0,2
+1788431157322,53,POST Login,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,612,247,62,62,http://localhost:3000/api/login,53,0,2
+1788431157323,53,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,62,62,http://localhost:3000/api/login,53,0,2
+1788431157326,51,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,62,62,http://localhost:3000/api/login,51,0,0
+1788431157326,52,POST Login,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,612,247,63,63,http://localhost:3000/api/login,52,0,0
+1788431157328,51,POST Login,200,OK,Spike: 100 users x 3 loops 1-27,text,true,,612,247,63,63,http://localhost:3000/api/login,51,0,0
+1788431157328,52,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,63,63,http://localhost:3000/api/login,52,0,1
+1788431157329,51,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,63,63,http://localhost:3000/api/login,51,0,0
+1788431157329,52,GET Products,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,1210,314,63,63,http://localhost:3000/api/products,52,0,1
+1788431157330,53,POST Login,200,OK,Spike: 100 users x 3 loops 1-21,text,true,,612,247,64,64,http://localhost:3000/api/login,52,0,1
+1788431157331,52,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,64,64,http://localhost:3000/api/login,52,0,0
+1788431157333,51,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,505,317,64,64,http://localhost:3000/api/admin/users,51,0,0
+1788431157333,52,POST Login,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,612,247,64,64,http://localhost:3000/api/login,52,0,1
+1788431157334,52,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,64,64,http://localhost:3000/api/login,52,0,0
+1788431157335,52,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,64,64,http://localhost:3000/api/login,52,0,0
+1788431157334,54,POST Login,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,612,247,64,64,http://localhost:3000/api/login,54,0,1
+1788431157336,53,POST Login,200,OK,Spike: 100 users x 3 loops 1-5,text,true,,612,247,64,64,http://localhost:3000/api/login,53,0,0
+1788431157337,53,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,505,317,64,64,http://localhost:3000/api/admin/users,53,0,0
+1788431157339,51,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-54,text,false,,273,182,64,64,http://localhost:3000/api/admin/users,51,0,1
+1788431157339,52,GET Products,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,1210,179,64,64,http://localhost:3000/api/products,52,0,1
+1788431157340,52,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-26,text,false,,273,182,65,65,http://localhost:3000/api/admin/users,52,0,0
+1788431157339,54,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,65,65,http://localhost:3000/api/login,54,0,1
+1788431157340,54,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,505,317,65,65,http://localhost:3000/api/admin/users,54,0,1
+1788431157341,53,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-15,text,false,,273,182,65,65,http://localhost:3000/api/admin/users,52,0,1
+1788431157341,54,GET Categories,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,330,181,65,65,http://localhost:3000/api/categories,53,0,0
+1788431157344,51,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-33,text,false,,273,182,65,65,http://localhost:3000/api/admin/users,51,0,0
+1788431157342,54,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,505,317,65,65,http://localhost:3000/api/admin/users,53,0,1
+1788431157345,53,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,505,317,65,65,http://localhost:3000/api/admin/users,53,0,1
+1788431157348,50,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-29,text,false,,273,182,65,65,http://localhost:3000/api/admin/users,50,0,0
+1788431157348,51,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-34,text,false,,273,182,65,65,http://localhost:3000/api/admin/users,51,0,0
+1788431157346,53,POST Login,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,612,247,65,65,http://localhost:3000/api/login,53,0,0
+1788431157347,52,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,505,317,65,65,http://localhost:3000/api/admin/users,52,0,1
+1788431157349,51,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-19,text,false,,273,182,65,65,http://localhost:3000/api/admin/users,51,0,1
+1788431157350,51,GET Products,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,1210,314,65,65,http://localhost:3000/api/products,51,0,0
+1788431157351,51,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,505,317,65,65,http://localhost:3000/api/admin/users,51,0,1
+1788431157353,50,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-39,text,false,,273,182,65,65,http://localhost:3000/api/admin/users,50,0,0
+1788431157352,52,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,505,317,65,65,http://localhost:3000/api/admin/users,51,0,0
+1788431157354,51,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,505,317,66,66,http://localhost:3000/api/admin/users,51,0,1
+1788431157356,49,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-18,text,false,,273,182,66,66,http://localhost:3000/api/admin/users,49,0,0
+1788431157354,52,GET Categories,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,330,316,66,66,http://localhost:3000/api/categories,52,0,1
+1788431157355,52,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,66,66,http://localhost:3000/api/login,52,0,1
+1788431157358,52,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-2,text,false,,273,182,66,66,http://localhost:3000/api/admin/users,51,0,0
+1788431157357,55,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-41,text,true,,505,317,66,66,http://localhost:3000/api/admin/users,55,0,0
+1788431157358,57,POST Login,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,612,255,67,67,http://localhost:3000/api/login,57,0,1
+1788431157359,56,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,505,317,67,67,http://localhost:3000/api/admin/users,56,0,1
+1788431157361,54,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-40,text,false,,273,182,67,67,http://localhost:3000/api/admin/users,54,0,0
+1788431157360,57,GET Products,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,1210,314,67,67,http://localhost:3000/api/products,56,0,0
+1788431157362,58,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,505,317,67,67,http://localhost:3000/api/admin/users,58,0,1
+1788431157364,59,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-16,text,false,,273,182,68,68,http://localhost:3000/api/admin/users,59,0,0
+1788431157363,61,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-11,text,true,,505,317,68,68,http://localhost:3000/api/admin/users,61,0,1
+1788431157365,60,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-32,text,false,,273,182,68,68,http://localhost:3000/api/admin/users,60,0,1
+1788431157364,62,GET Products,200,OK,Spike: 100 users x 3 loops 1-51,text,true,,1210,179,68,68,http://localhost:3000/api/products,62,0,1
+1788431157367,61,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-13,text,true,,505,317,68,68,http://localhost:3000/api/admin/users,61,0,0
+1788431157367,62,GET Categories,200,OK,Spike: 100 users x 3 loops 1-47,text,true,,330,181,68,68,http://localhost:3000/api/categories,62,0,1
+1788431157368,61,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-3,text,false,,273,182,68,68,http://localhost:3000/api/admin/users,61,0,1
+1788431157368,62,GET Products,200,OK,Spike: 100 users x 3 loops 1-1,text,true,,1210,179,68,68,http://localhost:3000/api/products,62,0,0
+1788431157367,63,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-62,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,68,68,http://localhost:3000/api/login,63,0,1
+1788431157370,61,GET Products,200,OK,Spike: 100 users x 3 loops 1-8,text,true,,1210,179,69,69,http://localhost:3000/api/products,61,0,0
+1788431157370,62,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-56,text,true,,505,317,69,69,http://localhost:3000/api/admin/users,62,0,0
+1788431157373,61,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,505,317,69,69,http://localhost:3000/api/admin/users,61,0,1
+1788431157372,62,POST Login,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,612,382,69,69,http://localhost:3000/api/login,61,0,1
+1788431157375,60,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-9,text,false,,273,182,69,69,http://localhost:3000/api/admin/users,60,0,1
+1788431157375,60,GET Products,200,OK,Spike: 100 users x 3 loops 1-52,text,true,,1210,314,69,69,http://localhost:3000/api/products,60,0,0
+1788431157376,60,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-57,text,false,,273,182,69,69,http://localhost:3000/api/admin/users,60,0,1
+1788431157376,61,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,505,317,69,69,http://localhost:3000/api/admin/users,61,0,0
+1788431157377,60,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-20,text,false,,273,182,69,69,http://localhost:3000/api/admin/users,60,0,0
+1788431157380,59,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-4,text,false,,273,182,69,69,http://localhost:3000/api/admin/users,59,0,1
+1788431157378,61,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,505,317,69,69,http://localhost:3000/api/admin/users,61,0,1
+1788431157379,61,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-27,text,true,,505,317,69,69,http://localhost:3000/api/admin/users,61,0,1
+1788431157381,59,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-6,text,false,,273,182,69,69,http://localhost:3000/api/admin/users,59,0,1
+1788431157379,62,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-63,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,70,70,http://localhost:3000/api/login,61,0,1
+1788431157382,61,GET Categories,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,330,316,70,70,http://localhost:3000/api/categories,60,0,0
+1788431157384,59,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-30,text,false,,273,182,70,70,http://localhost:3000/api/admin/users,59,0,0
+1788431157383,61,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-21,text,true,,505,317,70,70,http://localhost:3000/api/admin/users,60,0,0
+1788431157383,61,POST Login,200,OK,Spike: 100 users x 3 loops 1-64,text,true,,612,255,70,70,http://localhost:3000/api/login,61,0,0
+1788431157384,62,GET Products,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,1210,314,70,70,http://localhost:3000/api/products,61,0,1
+1788431157387,59,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-58,text,false,,273,182,70,70,http://localhost:3000/api/admin/users,59,0,0
+1788431157386,61,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,505,317,70,70,http://localhost:3000/api/admin/users,60,0,0
+1788431157387,60,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-25,text,false,,273,182,70,70,http://localhost:3000/api/admin/users,60,0,0
+1788431157389,60,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,505,317,70,70,http://localhost:3000/api/admin/users,60,0,0
+1788431157389,60,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-5,text,true,,505,317,70,70,http://localhost:3000/api/admin/users,60,0,1
+1788431157390,61,GET Products,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,1210,314,71,71,http://localhost:3000/api/products,61,0,0
+1788431157391,60,GET Products,200,OK,Spike: 100 users x 3 loops 1-54,text,true,,1210,179,71,71,http://localhost:3000/api/products,60,0,0
+1788431157391,61,GET Categories,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,330,181,71,71,http://localhost:3000/api/categories,61,0,1
+1788431157393,61,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-59,text,false,,273,182,71,71,http://localhost:3000/api/admin/users,61,0,1
+1788431157392,63,GET Products,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,1210,179,71,71,http://localhost:3000/api/products,63,0,1
+1788431157393,62,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-65,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,71,71,http://localhost:3000/api/login,61,0,0
+1788431157394,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,1210,314,71,71,http://localhost:3000/api/products,64,0,1
+1788431157394,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-15,text,true,,1210,179,71,71,http://localhost:3000/api/products,65,0,1
+1788431157396,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-33,text,true,,1210,179,71,71,http://localhost:3000/api/products,64,0,0
+1788431157396,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,1210,314,71,71,http://localhost:3000/api/products,65,0,0
+1788431157395,68,POST Login,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,612,247,71,71,http://localhost:3000/api/login,68,0,1
+1788431157398,66,GET Products,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,1210,314,72,72,http://localhost:3000/api/products,66,0,1
+1788431157398,67,GET Products,200,OK,Spike: 100 users x 3 loops 1-29,text,true,,1210,179,72,72,http://localhost:3000/api/products,67,0,1
+1788431157399,68,GET Products,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,1210,179,72,72,http://localhost:3000/api/products,68,0,1
+1788431157400,68,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,505,317,72,72,http://localhost:3000/api/admin/users,68,0,0
+1788431157400,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,1210,314,72,72,http://localhost:3000/api/products,69,0,0
+1788431157401,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-19,text,true,,1210,179,72,72,http://localhost:3000/api/products,69,0,0
+1788431157401,70,GET Categories,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,330,316,72,72,http://localhost:3000/api/categories,70,0,0
+1788431157403,70,GET Products,200,OK,Spike: 100 users x 3 loops 1-39,text,true,,1210,179,73,73,http://localhost:3000/api/products,69,0,0
+1788431157404,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,1210,314,73,73,http://localhost:3000/api/products,69,0,0
+1788431157403,71,GET Products,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,1210,314,73,73,http://localhost:3000/api/products,71,0,2
+1788431157405,71,GET Products,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,1210,314,73,73,http://localhost:3000/api/products,71,0,0
+1788431157406,71,POST Login,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,612,382,73,73,http://localhost:3000/api/login,71,0,1
+1788431157406,72,GET Products,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,1210,179,73,73,http://localhost:3000/api/products,71,0,1
+1788431157409,69,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-60,text,false,,273,182,73,73,http://localhost:3000/api/admin/users,69,0,0
+1788431157406,73,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-66,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,74,74,http://localhost:3000/api/login,73,0,1
+1788431157410,70,GET Products,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,1210,179,74,74,http://localhost:3000/api/products,70,0,0
+1788431157412,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-41,text,true,,1210,314,74,74,http://localhost:3000/api/products,69,0,1
+1788431157416,66,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,505,317,74,74,http://localhost:3000/api/admin/users,66,0,0
+1788431157416,68,GET Products,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,1210,179,74,74,http://localhost:3000/api/products,67,0,0
+1788431157415,69,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-67,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,74,74,http://localhost:3000/api/login,69,0,1
+1788431157416,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,1210,314,74,74,http://localhost:3000/api/products,69,0,1
+1788431157417,69,GET Categories,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,330,316,74,74,http://localhost:3000/api/categories,69,0,0
+1788431157420,67,GET Products,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,1210,314,74,74,http://localhost:3000/api/products,67,0,1
+1788431157424,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-16,text,true,,1210,179,74,74,http://localhost:3000/api/products,65,0,1
+1788431157423,65,POST Login,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,612,255,74,74,http://localhost:3000/api/login,65,0,1
+1788431157425,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-11,text,true,,1210,314,74,74,http://localhost:3000/api/products,65,0,0
+1788431157426,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,1210,179,74,74,http://localhost:3000/api/products,64,0,0
+1788431157426,65,GET Categories,200,OK,Spike: 100 users x 3 loops 1-51,text,true,,330,181,74,74,http://localhost:3000/api/categories,65,0,0
+1788431157428,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-13,text,true,,1210,314,74,74,http://localhost:3000/api/products,64,0,1
+1788431157430,63,GET Products,200,OK,Spike: 100 users x 3 loops 1-3,text,true,,1210,179,74,74,http://localhost:3000/api/products,63,0,0
+1788431157430,64,GET Categories,200,OK,Spike: 100 users x 3 loops 1-1,text,true,,330,181,74,74,http://localhost:3000/api/categories,63,0,0
+1788431157431,63,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-62,text,false,,273,182,74,74,http://localhost:3000/api/admin/users,63,0,1
+1788431157430,64,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,74,74,http://localhost:3000/api/login,64,0,1
+1788431157432,64,GET Categories,200,OK,Spike: 100 users x 3 loops 1-8,text,true,,330,181,75,75,http://localhost:3000/api/categories,64,0,0
+1788431157432,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-56,text,true,,1210,314,75,75,http://localhost:3000/api/products,64,0,1
+1788431157432,65,POST Login,200,OK,Spike: 100 users x 3 loops 1-69,text,true,,612,255,75,75,http://localhost:3000/api/login,65,0,1
+1788431157434,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,1210,314,75,75,http://localhost:3000/api/products,64,0,1
+1788431157435,64,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,505,317,76,76,http://localhost:3000/api/admin/users,64,0,1
+1788431157436,64,GET Categories,200,OK,Spike: 100 users x 3 loops 1-52,text,true,,330,316,76,76,http://localhost:3000/api/categories,63,0,0
+1788431157436,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-9,text,true,,1210,179,76,76,http://localhost:3000/api/products,64,0,1
+1788431157437,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-57,text,true,,1210,179,76,76,http://localhost:3000/api/products,64,0,0
+1788431157437,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,1210,314,76,76,http://localhost:3000/api/products,64,0,0
+1788431157437,66,GET Products,200,OK,Spike: 100 users x 3 loops 1-20,text,true,,1210,179,76,76,http://localhost:3000/api/products,65,0,0
+1788431157440,63,GET Products,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,1210,179,76,76,http://localhost:3000/api/products,63,0,0
+1788431157440,63,GET Products,200,OK,Spike: 100 users x 3 loops 1-6,text,true,,1210,179,76,76,http://localhost:3000/api/products,63,0,1
+1788431157440,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,1210,314,76,76,http://localhost:3000/api/products,64,0,1
+1788431157442,63,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-63,text,false,,273,182,76,76,http://localhost:3000/api/admin/users,62,0,0
+1788431157441,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-27,text,true,,1210,314,76,76,http://localhost:3000/api/products,64,0,0
+1788431157443,63,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-70,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,76,76,http://localhost:3000/api/login,63,0,0
+1788431157443,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,1210,179,76,76,http://localhost:3000/api/products,64,0,0
+1788431157443,65,POST Login,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,612,382,76,76,http://localhost:3000/api/login,65,0,1
+1788431157444,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-21,text,true,,1210,314,76,76,http://localhost:3000/api/products,65,0,1
+1788431157445,64,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-64,text,true,,505,317,76,76,http://localhost:3000/api/admin/users,64,0,0
+1788431157446,64,GET Categories,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,330,316,76,76,http://localhost:3000/api/categories,64,0,1
+1788431157447,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-58,text,true,,1210,179,77,77,http://localhost:3000/api/products,64,0,0
+1788431157447,64,GET Products,200,OK,Spike: 100 users x 3 loops 1-25,text,true,,1210,179,77,77,http://localhost:3000/api/products,64,0,1
+1788431157447,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,1210,314,77,77,http://localhost:3000/api/products,65,0,1
+1788431157450,63,GET Products,200,OK,Spike: 100 users x 3 loops 1-5,text,true,,1210,314,77,77,http://localhost:3000/api/products,63,0,0
+1788431157449,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,1210,314,77,77,http://localhost:3000/api/products,65,0,1
+1788431157451,64,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-71,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,77,77,http://localhost:3000/api/login,63,0,0
+1788431157452,63,GET Categories,200,OK,Spike: 100 users x 3 loops 1-54,text,true,,330,181,77,77,http://localhost:3000/api/categories,63,0,1
+1788431157453,63,GET Categories,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,330,316,77,77,http://localhost:3000/api/categories,63,0,1
+1788431157455,61,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-65,text,false,,273,182,77,77,http://localhost:3000/api/admin/users,61,0,1
+1788431157453,64,POST Login,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,612,247,77,77,http://localhost:3000/api/login,64,0,1
+1788431157455,63,GET Products,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,1210,179,77,77,http://localhost:3000/api/products,63,0,1
+1788431157455,63,GET Categories,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,330,181,77,77,http://localhost:3000/api/categories,63,0,1
+1788431157459,60,GET Categories,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,330,316,77,77,http://localhost:3000/api/categories,60,0,2
+1788431157460,60,GET Categories,200,OK,Spike: 100 users x 3 loops 1-33,text,true,,330,181,77,77,http://localhost:3000/api/categories,60,0,1
+1788431157460,60,GET Categories,200,OK,Spike: 100 users x 3 loops 1-15,text,true,,330,181,78,78,http://localhost:3000/api/categories,60,0,1
+1788431157462,60,GET Categories,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,330,316,78,78,http://localhost:3000/api/categories,60,0,1
+1788431157464,58,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,505,317,78,78,http://localhost:3000/api/admin/users,58,0,1
+1788431157465,58,GET Categories,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,330,316,78,78,http://localhost:3000/api/categories,58,0,1
+1788431157465,58,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-72,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,78,78,http://localhost:3000/api/login,58,0,1
+1788431157466,58,GET Categories,200,OK,Spike: 100 users x 3 loops 1-29,text,true,,330,181,78,78,http://localhost:3000/api/categories,58,0,1
+1788431157468,57,GET Categories,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,330,181,78,78,http://localhost:3000/api/categories,57,0,0
+1788431157468,57,GET Products,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,1210,314,78,78,http://localhost:3000/api/products,57,0,1
+1788431157469,57,GET Categories,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,330,316,78,78,http://localhost:3000/api/categories,57,0,1
+1788431157471,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-19,text,true,,330,181,78,78,http://localhost:3000/api/categories,56,0,1
+1788431157471,57,POST Login,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,612,382,79,79,http://localhost:3000/api/login,57,0,1
+1788431157474,54,GET Categories,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,330,316,79,79,http://localhost:3000/api/categories,54,0,0
+1788431157474,55,GET Categories,200,OK,Spike: 100 users x 3 loops 1-39,text,true,,330,181,79,79,http://localhost:3000/api/categories,55,0,1
+1788431157475,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,330,316,79,79,http://localhost:3000/api/categories,55,0,1
+1788431157475,56,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-73,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,79,79,http://localhost:3000/api/login,56,0,1
+1788431157476,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,330,316,79,79,http://localhost:3000/api/categories,56,0,1
+1788431157478,56,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,505,317,79,79,http://localhost:3000/api/admin/users,55,0,0
+1788431157478,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,330,181,79,79,http://localhost:3000/api/categories,56,0,0
+1788431157480,54,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-66,text,false,,273,182,79,79,http://localhost:3000/api/admin/users,54,0,1
+1788431157479,56,GET Products,200,OK,Spike: 100 users x 3 loops 1-60,text,true,,1210,179,79,79,http://localhost:3000/api/products,56,0,1
+1788431157480,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,330,181,80,80,http://localhost:3000/api/categories,56,0,1
+1788431157480,57,POST Login,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,612,255,80,80,http://localhost:3000/api/login,57,0,1
+1788431157481,57,GET Categories,200,OK,Spike: 100 users x 3 loops 1-41,text,true,,330,316,80,80,http://localhost:3000/api/categories,57,0,1
+1788431157483,55,GET Products,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,1210,314,80,80,http://localhost:3000/api/products,55,0,0
+1788431157485,54,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-67,text,false,,273,182,80,80,http://localhost:3000/api/admin/users,54,0,0
+1788431157484,55,GET Categories,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,330,181,80,80,http://localhost:3000/api/categories,55,0,0
+1788431157485,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,330,316,80,80,http://localhost:3000/api/categories,56,0,0
+1788431157487,54,GET Categories,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,330,316,80,80,http://localhost:3000/api/categories,54,0,1
+1788431157489,54,GET Categories,200,OK,Spike: 100 users x 3 loops 1-16,text,true,,330,181,80,80,http://localhost:3000/api/categories,54,0,0
+1788431157487,56,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,80,80,http://localhost:3000/api/login,56,0,1
+1788431157489,55,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,505,317,80,80,http://localhost:3000/api/admin/users,55,0,1
+1788431157491,53,GET Categories,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,330,181,80,80,http://localhost:3000/api/categories,53,0,0
+1788431157490,55,GET Categories,200,OK,Spike: 100 users x 3 loops 1-11,text,true,,330,316,80,80,http://localhost:3000/api/categories,55,0,1
+1788431157492,54,GET Categories,200,OK,Spike: 100 users x 3 loops 1-13,text,true,,330,316,81,81,http://localhost:3000/api/categories,54,0,1
+1788431157493,54,GET Categories,200,OK,Spike: 100 users x 3 loops 1-3,text,true,,330,181,81,81,http://localhost:3000/api/categories,54,0,1
+1788431157492,55,POST Login,200,OK,Spike: 100 users x 3 loops 1-51,text,true,,612,247,81,81,http://localhost:3000/api/login,55,0,1
+1788431157495,53,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-47,text,false,,273,182,81,81,http://localhost:3000/api/admin/users,53,0,0
+1788431157494,55,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,81,81,http://localhost:3000/api/login,55,0,1
+1788431157495,55,GET Products,200,OK,Spike: 100 users x 3 loops 1-62,text,true,,1210,179,81,81,http://localhost:3000/api/products,55,0,1
+1788431157495,56,POST Login,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,612,255,81,81,http://localhost:3000/api/login,56,0,1
+1788431157497,55,GET Categories,200,OK,Spike: 100 users x 3 loops 1-56,text,true,,330,316,81,81,http://localhost:3000/api/categories,55,0,0
+1788431157497,56,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,81,81,http://localhost:3000/api/login,56,0,1
+1788431157498,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,330,316,81,81,http://localhost:3000/api/categories,56,0,1
+1788431157498,56,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-69,text,true,,505,317,81,81,http://localhost:3000/api/admin/users,56,0,1
+1788431157499,57,GET Products,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,1210,314,81,81,http://localhost:3000/api/products,56,0,1
+1788431157501,56,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,81,81,http://localhost:3000/api/login,56,0,1
+1788431157500,58,POST Login,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,612,255,81,81,http://localhost:3000/api/login,58,0,1
+1788431157501,57,GET Categories,200,OK,Spike: 100 users x 3 loops 1-9,text,true,,330,181,81,81,http://localhost:3000/api/categories,57,0,1
+1788431157501,58,GET Categories,200,OK,Spike: 100 users x 3 loops 1-57,text,true,,330,181,82,82,http://localhost:3000/api/categories,58,0,1
+1788431157502,58,GET Categories,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,330,316,82,82,http://localhost:3000/api/categories,58,0,0
+1788431157503,58,GET Categories,200,OK,Spike: 100 users x 3 loops 1-20,text,true,,330,181,82,82,http://localhost:3000/api/categories,58,0,0
+1788431157503,59,GET Categories,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,330,181,82,82,http://localhost:3000/api/categories,58,0,1
+1788431157504,58,GET Categories,200,OK,Spike: 100 users x 3 loops 1-6,text,true,,330,181,82,82,http://localhost:3000/api/categories,58,0,0
+1788431157505,58,GET Categories,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,330,316,82,82,http://localhost:3000/api/categories,58,0,0
+1788431157505,59,GET Categories,200,OK,Spike: 100 users x 3 loops 1-27,text,true,,330,316,82,82,http://localhost:3000/api/categories,59,0,0
+1788431157505,59,GET Products,200,OK,Spike: 100 users x 3 loops 1-63,text,true,,1210,179,82,82,http://localhost:3000/api/products,59,0,1
+1788431157507,58,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-70,text,false,,273,182,82,82,http://localhost:3000/api/admin/users,58,0,1
+1788431157507,59,GET Categories,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,330,181,82,82,http://localhost:3000/api/categories,58,0,1
+1788431157509,59,GET Categories,200,OK,Spike: 100 users x 3 loops 1-21,text,true,,330,316,82,82,http://localhost:3000/api/categories,58,0,1
+1788431157509,60,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,505,317,83,83,http://localhost:3000/api/admin/users,60,0,1
+1788431157510,59,GET Products,200,OK,Spike: 100 users x 3 loops 1-64,text,true,,1210,314,83,83,http://localhost:3000/api/products,59,0,0
+1788431157510,62,POST Login,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,612,382,83,83,http://localhost:3000/api/login,61,0,1
+1788431157512,61,GET Categories,200,OK,Spike: 100 users x 3 loops 1-25,text,true,,330,181,83,83,http://localhost:3000/api/categories,61,0,0
+1788431157511,63,GET Categories,200,OK,Spike: 100 users x 3 loops 1-58,text,true,,330,181,83,83,http://localhost:3000/api/categories,63,0,1
+1788431157512,64,GET Categories,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,330,316,84,84,http://localhost:3000/api/categories,63,0,1
+1788431157512,64,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-77,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,84,84,http://localhost:3000/api/login,64,0,1
+1788431157513,64,GET Categories,200,OK,Spike: 100 users x 3 loops 1-5,text,true,,330,316,84,84,http://localhost:3000/api/categories,64,0,0
+1788431157515,63,GET Categories,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,330,316,84,84,http://localhost:3000/api/categories,63,0,0
+1788431157516,63,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-71,text,false,,273,182,84,84,http://localhost:3000/api/admin/users,63,0,0
+1788431157516,64,POST Login,200,OK,Spike: 100 users x 3 loops 1-54,text,true,,612,247,84,84,http://localhost:3000/api/login,64,0,0
+1788431157517,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-65,text,true,,1210,179,84,84,http://localhost:3000/api/products,65,0,0
+1788431157518,65,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,505,317,85,85,http://localhost:3000/api/admin/users,65,0,0
+1788431157517,67,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,85,85,http://localhost:3000/api/login,66,0,1
+1788431157518,67,GET Categories,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,330,181,85,85,http://localhost:3000/api/categories,67,0,1
+1788431157519,67,POST Login,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,612,247,85,85,http://localhost:3000/api/login,67,0,1
+1788431157520,68,POST Login,200,OK,Spike: 100 users x 3 loops 1-33,text,true,,612,247,85,85,http://localhost:3000/api/login,68,0,1
+1788431157520,68,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,85,85,http://localhost:3000/api/login,68,0,1
+1788431157521,69,POST Login,200,OK,Spike: 100 users x 3 loops 1-15,text,true,,612,247,85,85,http://localhost:3000/api/login,69,0,1
+1788431157522,69,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-78,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,85,85,http://localhost:3000/api/login,69,0,0
+1788431157523,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,1210,314,85,85,http://localhost:3000/api/products,69,0,0
+1788431157524,69,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-72,text,false,,273,182,85,85,http://localhost:3000/api/admin/users,69,0,0
+1788431157523,70,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,85,85,http://localhost:3000/api/login,70,0,1
+1788431157524,71,POST Login,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,612,382,85,85,http://localhost:3000/api/login,71,0,1
+1788431157525,72,POST Login,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,612,247,86,86,http://localhost:3000/api/login,72,0,1
+1788431157525,72,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,86,86,http://localhost:3000/api/login,72,0,1
+1788431157526,72,GET Categories,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,330,316,86,86,http://localhost:3000/api/categories,72,0,1
+1788431157526,73,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,86,86,http://localhost:3000/api/login,73,0,1
+1788431157527,74,POST Login,200,OK,Spike: 100 users x 3 loops 1-19,text,true,,612,247,86,86,http://localhost:3000/api/login,74,0,1
+1788431157529,73,POST Login,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,612,382,87,87,http://localhost:3000/api/login,73,0,0
+1788431157529,74,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,505,317,87,87,http://localhost:3000/api/admin/users,74,0,0
+1788431157530,74,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-79,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,87,87,http://localhost:3000/api/login,74,0,0
+1788431157530,75,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,87,87,http://localhost:3000/api/login,75,0,1
+1788431157532,73,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-73,text,false,,273,182,87,87,http://localhost:3000/api/admin/users,73,0,0
+1788431157531,76,POST Login,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,612,382,87,87,http://localhost:3000/api/login,76,0,1
+1788431157533,75,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,87,87,http://localhost:3000/api/login,75,0,1
+1788431157534,75,GET Products,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,1210,314,87,87,http://localhost:3000/api/products,75,0,0
+1788431157534,76,POST Login,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,612,247,87,87,http://localhost:3000/api/login,76,0,1
+1788431157534,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,1210,179,87,87,http://localhost:3000/api/products,77,0,1
+1788431157535,76,GET Categories,200,OK,Spike: 100 users x 3 loops 1-60,text,true,,330,181,87,87,http://localhost:3000/api/categories,76,0,0
+1788431157537,77,POST Login,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,612,247,87,87,http://localhost:3000/api/login,77,0,1
+1788431157538,76,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,505,317,87,87,http://localhost:3000/api/admin/users,76,0,0
+1788431157538,77,GET Categories,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,330,316,88,88,http://localhost:3000/api/categories,77,0,1
+1788431157538,78,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-80,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,88,88,http://localhost:3000/api/login,78,0,1
+1788431157539,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,1210,179,88,88,http://localhost:3000/api/products,78,0,0
+1788431157539,79,POST Login,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,612,247,88,88,http://localhost:3000/api/login,79,0,1
+1788431157539,80,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,88,88,http://localhost:3000/api/login,80,0,1
+1788431157541,79,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,88,88,http://localhost:3000/api/login,79,0,0
+1788431157542,80,POST Login,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,612,382,88,88,http://localhost:3000/api/login,80,0,0
+1788431157544,78,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-24,text,false,,273,182,88,88,http://localhost:3000/api/admin/users,78,0,1
+1788431157543,80,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,88,88,http://localhost:3000/api/login,80,0,1
+1788431157544,80,GET Products,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,1210,314,89,89,http://localhost:3000/api/products,80,0,1
+1788431157544,82,POST Login,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,612,247,89,89,http://localhost:3000/api/login,82,0,1
+1788431157546,80,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,89,89,http://localhost:3000/api/login,80,0,0
+1788431157547,80,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,89,89,http://localhost:3000/api/login,80,0,0
+1788431157547,82,POST Login,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,612,255,89,89,http://localhost:3000/api/login,82,0,1
+1788431157548,82,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-51,text,true,,505,317,89,89,http://localhost:3000/api/admin/users,82,0,0
+1788431157548,82,POST Login,200,OK,Spike: 100 users x 3 loops 1-3,text,true,,612,247,89,89,http://localhost:3000/api/login,82,0,0
+1788431157549,82,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-1,text,false,,273,182,89,89,http://localhost:3000/api/admin/users,82,0,0
+1788431157548,84,GET Products,200,OK,Spike: 100 users x 3 loops 1-47,text,true,,1210,179,89,89,http://localhost:3000/api/products,84,0,1
+1788431157551,82,GET Categories,200,OK,Spike: 100 users x 3 loops 1-62,text,true,,330,181,89,89,http://localhost:3000/api/categories,82,0,0
+1788431157554,80,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-8,text,false,,273,182,90,90,http://localhost:3000/api/admin/users,80,0,1
+1788431157553,81,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,90,90,http://localhost:3000/api/login,81,0,1
+1788431157552,82,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,505,317,90,90,http://localhost:3000/api/admin/users,82,0,0
+1788431157555,80,GET Products,200,OK,Spike: 100 users x 3 loops 1-69,text,true,,1210,314,90,90,http://localhost:3000/api/products,80,0,0
+1788431157557,79,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-52,text,false,,273,182,90,90,http://localhost:3000/api/admin/users,79,0,1
+1788431157555,82,POST Login,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,612,382,91,91,http://localhost:3000/api/login,82,0,1
+1788431157556,82,GET Categories,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,330,316,91,91,http://localhost:3000/api/categories,82,0,1
+1788431157558,85,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,505,317,91,91,http://localhost:3000/api/admin/users,85,0,1
+1788431157560,84,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,91,91,http://localhost:3000/api/login,84,0,0
+1788431157560,85,POST Login,200,OK,Spike: 100 users x 3 loops 1-9,text,true,,612,247,91,91,http://localhost:3000/api/login,85,0,1
+1788431157561,85,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,91,91,http://localhost:3000/api/login,85,0,1
+1788431157561,87,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-82,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,92,92,http://localhost:3000/api/login,86,0,1
+1788431157561,88,POST Login,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,612,382,92,92,http://localhost:3000/api/login,88,0,1
+1788431157562,88,POST Login,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,612,247,92,92,http://localhost:3000/api/login,88,0,1
+1788431157563,88,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,92,92,http://localhost:3000/api/login,88,0,0
+1788431157564,88,POST Login,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,612,382,92,92,http://localhost:3000/api/login,88,0,0
+1788431157565,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-63,text,true,,330,181,92,92,http://localhost:3000/api/categories,88,0,0
+1788431157565,89,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,92,92,http://localhost:3000/api/login,89,0,0
+1788431157566,89,POST Login,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,612,247,92,92,http://localhost:3000/api/login,89,0,0
+1788431157566,90,GET Products,200,OK,Spike: 100 users x 3 loops 1-70,text,true,,1210,179,92,92,http://localhost:3000/api/products,90,0,0
+1788431157568,89,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,92,92,http://localhost:3000/api/login,89,0,1
+1788431157569,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,1210,314,93,93,http://localhost:3000/api/products,88,0,1
+1788431157570,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-64,text,true,,330,316,93,93,http://localhost:3000/api/categories,89,0,0
+1788431157570,89,POST Login,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,612,255,93,93,http://localhost:3000/api/login,89,0,1
+1788431157573,87,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,505,317,93,93,http://localhost:3000/api/admin/users,87,0,1
+1788431157575,86,POST Login,200,OK,Spike: 100 users x 3 loops 1-58,text,true,,612,247,93,93,http://localhost:3000/api/login,86,0,1
+1788431157575,87,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,93,93,http://localhost:3000/api/login,87,0,1
+1788431157576,87,POST Login,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,612,382,93,93,http://localhost:3000/api/login,87,0,1
+1788431157578,86,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-77,text,false,,273,182,93,93,http://localhost:3000/api/admin/users,86,0,0
+1788431157577,87,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-84,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,93,93,http://localhost:3000/api/login,87,0,1
+1788431157578,87,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,94,94,http://localhost:3000/api/login,87,0,0
+1788431157579,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-71,text,true,,1210,179,94,94,http://localhost:3000/api/products,87,0,0
+1788431157579,88,POST Login,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,612,382,94,94,http://localhost:3000/api/login,88,0,0
+1788431157581,87,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-54,text,true,,505,317,94,94,http://localhost:3000/api/admin/users,87,0,0
+1788431157582,86,GET Categories,200,OK,Spike: 100 users x 3 loops 1-65,text,true,,330,181,94,94,http://localhost:3000/api/categories,86,0,0
+1788431157584,85,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-28,text,false,,273,182,94,94,http://localhost:3000/api/admin/users,85,0,0
+1788431157584,85,GET Products,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,1210,314,94,94,http://localhost:3000/api/products,85,0,0
+1788431157584,86,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-85,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,94,94,http://localhost:3000/api/login,86,0,0
+1788431157585,86,POST Login,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,612,247,94,94,http://localhost:3000/api/login,86,0,1
+1788431157587,85,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,505,317,94,94,http://localhost:3000/api/admin/users,85,0,0
+1788431157589,83,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-12,text,false,,273,182,94,94,http://localhost:3000/api/admin/users,83,0,0
+1788431157592,82,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-78,text,false,,273,182,94,94,http://localhost:3000/api/admin/users,82,0,0
+1788431157589,85,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-33,text,true,,505,317,94,94,http://localhost:3000/api/admin/users,85,0,0
+1788431157591,83,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-15,text,true,,505,317,94,94,http://localhost:3000/api/admin/users,83,0,0
+1788431157593,82,GET Categories,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,330,316,94,94,http://localhost:3000/api/categories,82,0,0
+1788431157594,82,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-10,text,false,,273,182,94,94,http://localhost:3000/api/admin/users,82,0,1
+1788431157593,83,GET Products,200,OK,Spike: 100 users x 3 loops 1-72,text,true,,1210,179,94,94,http://localhost:3000/api/products,83,0,0
+1788431157596,82,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,505,317,95,95,http://localhost:3000/api/admin/users,82,0,0
+1788431157597,82,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,505,317,95,95,http://localhost:3000/api/admin/users,82,0,1
+1788431157598,82,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-29,text,false,,273,182,95,95,http://localhost:3000/api/admin/users,82,0,1
+1788431157598,82,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-86,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,95,95,http://localhost:3000/api/login,82,0,1
+1788431157598,83,POST Login,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,612,382,95,95,http://localhost:3000/api/login,82,0,1
+1788431157600,81,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-42,text,false,,273,182,95,95,http://localhost:3000/api/admin/users,81,0,0
+1788431157601,82,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-19,text,true,,505,317,95,95,http://localhost:3000/api/admin/users,81,0,1
+1788431157602,81,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,505,317,95,95,http://localhost:3000/api/admin/users,81,0,1
+1788431157604,81,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-79,text,false,,273,182,95,95,http://localhost:3000/api/admin/users,80,0,1
+1788431157602,82,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-87,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,95,95,http://localhost:3000/api/login,82,0,1
+1788431157603,82,GET Products,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,1210,314,96,96,http://localhost:3000/api/products,82,0,1
+1788431157605,81,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-39,text,false,,273,182,96,96,http://localhost:3000/api/admin/users,81,0,1
+1788431157605,81,GET Products,200,OK,Spike: 100 users x 3 loops 1-73,text,true,,1210,179,96,96,http://localhost:3000/api/products,81,0,1
+1788431157608,80,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-38,text,false,,273,182,96,96,http://localhost:3000/api/admin/users,80,0,1
+1788431157607,81,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,505,317,96,96,http://localhost:3000/api/admin/users,81,0,1
+1788431157609,80,GET Categories,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,330,316,96,96,http://localhost:3000/api/categories,80,0,1
+1788431157611,79,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,505,317,96,96,http://localhost:3000/api/admin/users,79,0,0
+1788431157612,79,GET Categories,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,330,181,96,96,http://localhost:3000/api/categories,79,0,0
+1788431157612,80,POST Login,200,OK,Spike: 100 users x 3 loops 1-60,text,true,,612,247,96,96,http://localhost:3000/api/login,80,0,0
+1788431157614,79,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,505,317,96,96,http://localhost:3000/api/admin/users,79,0,0
+1788431157614,80,GET Products,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,1210,314,96,96,http://localhost:3000/api/products,80,0,1
+1788431157616,79,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-80,text,false,,273,182,97,97,http://localhost:3000/api/admin/users,78,0,1
+1788431157616,79,POST Login,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,612,382,97,97,http://localhost:3000/api/login,79,0,0
+1788431157617,80,GET Categories,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,330,181,97,97,http://localhost:3000/api/categories,80,0,0
+1788431157620,77,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-41,text,false,,273,182,97,97,http://localhost:3000/api/admin/users,77,0,0
+1788431157621,77,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-22,text,false,,273,182,97,97,http://localhost:3000/api/admin/users,77,0,0
+1788431157619,79,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,505,317,97,97,http://localhost:3000/api/admin/users,79,0,0
+1788431157623,76,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-16,text,false,,273,182,97,97,http://localhost:3000/api/admin/users,76,0,1
+1788431157622,78,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,505,317,97,97,http://localhost:3000/api/admin/users,78,0,0
+1788431157622,79,GET Products,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,1210,179,97,97,http://localhost:3000/api/products,79,0,1
+1788431157617,85,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-88,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,97,97,http://localhost:3000/api/login,85,0,7
+1788431157624,80,GET Categories,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,330,316,98,98,http://localhost:3000/api/categories,80,0,1
+1788431157627,78,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-11,text,false,,273,182,98,98,http://localhost:3000/api/admin/users,77,0,0
+1788431157626,79,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-89,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,98,98,http://localhost:3000/api/login,79,0,0
+1788431157626,79,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,505,317,98,98,http://localhost:3000/api/admin/users,79,0,1
+1788431157628,77,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-13,text,false,,273,182,98,98,http://localhost:3000/api/admin/users,77,0,0
+1788431157629,78,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,505,317,98,98,http://localhost:3000/api/admin/users,78,0,1
+1788431157630,78,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-3,text,true,,505,317,98,98,http://localhost:3000/api/admin/users,78,0,1
+1788431157630,79,GET Products,200,OK,Spike: 100 users x 3 loops 1-51,text,true,,1210,314,98,98,http://localhost:3000/api/products,79,0,1
+1788431157631,79,GET Products,200,OK,Spike: 100 users x 3 loops 1-1,text,true,,1210,179,98,98,http://localhost:3000/api/products,79,0,0
+1788431157632,79,GET Categories,200,OK,Spike: 100 users x 3 loops 1-47,text,true,,330,181,98,98,http://localhost:3000/api/categories,79,0,1
+1788431157635,78,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-56,text,false,,273,182,99,99,http://localhost:3000/api/admin/users,78,0,0
+1788431157633,79,POST Login,200,OK,Spike: 100 users x 3 loops 1-62,text,true,,612,247,99,99,http://localhost:3000/api/login,79,0,1
+1788431157635,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-8,text,true,,1210,179,99,99,http://localhost:3000/api/products,78,0,0
+1788431157635,80,GET Categories,200,OK,Spike: 100 users x 3 loops 1-69,text,true,,330,316,99,99,http://localhost:3000/api/categories,80,0,1
+1788431157635,81,GET Products,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,1210,314,99,99,http://localhost:3000/api/products,81,0,1
+1788431157636,80,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-90,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,99,99,http://localhost:3000/api/login,80,0,1
+1788431157636,81,GET Products,200,OK,Spike: 100 users x 3 loops 1-52,text,true,,1210,179,99,99,http://localhost:3000/api/products,81,0,1
+1788431157638,80,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,505,317,99,99,http://localhost:3000/api/admin/users,80,0,0
+1788431157639,80,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,99,99,http://localhost:3000/api/login,80,0,1
+1788431157639,81,POST Login,200,OK,Spike: 100 users x 3 loops 1-91,text,true,,612,255,99,99,http://localhost:3000/api/login,81,0,1
+1788431157645,76,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-57,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,76,0,1
+1788431157644,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,1210,314,100,100,http://localhost:3000/api/products,77,0,0
+1788431157647,76,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-20,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,75,0,0
+1788431157646,77,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-9,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157649,75,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-82,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,75,0,0
+1788431157648,77,POST Login,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,612,255,100,100,http://localhost:3000/api/login,77,0,0
+1788431157650,77,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157651,76,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-6,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,76,0,1
+1788431157651,77,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,77,0,0
+1788431157652,78,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157654,76,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-27,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,76,0,1
+1788431157654,76,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-63,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,100,100,http://localhost:3000/api/login,76,0,1
+1788431157655,77,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157657,75,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-21,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,75,0,0
+1788431157656,77,GET Categories,200,OK,Spike: 100 users x 3 loops 1-70,text,true,,330,181,100,100,http://localhost:3000/api/categories,77,0,1
+1788431157658,76,GET Categories,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,330,316,100,100,http://localhost:3000/api/categories,76,0,0
+1788431157659,76,POST Login,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,612,255,100,100,http://localhost:3000/api/login,75,0,1
+1788431157660,76,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-64,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,100,100,http://localhost:3000/api/login,75,0,1
+1788431157660,76,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,76,0,1
+1788431157661,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,1210,314,100,100,http://localhost:3000/api/products,76,0,1
+1788431157663,75,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-25,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,74,0,1
+1788431157662,76,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-58,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,76,0,0
+1788431157664,75,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,75,0,0
+1788431157665,75,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-84,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,74,0,1
+1788431157666,74,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-5,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,74,0,1
+1788431157665,75,GET Products,200,OK,Spike: 100 users x 3 loops 1-77,text,true,,1210,179,100,100,http://localhost:3000/api/products,75,0,1
+1788431157667,75,GET Categories,200,OK,Spike: 100 users x 3 loops 1-71,text,true,,330,181,100,100,http://localhost:3000/api/categories,74,0,0
+1788431157668,75,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,75,0,0
+1788431157666,78,POST Login,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,612,255,100,100,http://localhost:3000/api/login,77,0,1
+1788431157668,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-54,text,true,,1210,314,100,100,http://localhost:3000/api/products,76,0,1
+1788431157669,76,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-65,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,100,100,http://localhost:3000/api/login,76,0,0
+1788431157670,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,1210,179,100,100,http://localhost:3000/api/products,76,0,0
+1788431157671,75,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-85,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,75,0,0
+1788431157670,77,GET Categories,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,330,316,100,100,http://localhost:3000/api/categories,77,0,1
+1788431157672,76,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,76,0,0
+1788431157673,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,1210,179,100,100,http://localhost:3000/api/products,76,0,1
+1788431157673,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,1210,314,100,100,http://localhost:3000/api/products,76,0,1
+1788431157674,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,1210,179,100,100,http://localhost:3000/api/products,76,0,1
+1788431157675,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-15,text,true,,1210,314,100,100,http://localhost:3000/api/products,76,0,0
+1788431157674,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-33,text,true,,1210,314,100,100,http://localhost:3000/api/products,78,0,1
+1788431157676,77,GET Categories,200,OK,Spike: 100 users x 3 loops 1-72,text,true,,330,181,100,100,http://localhost:3000/api/categories,77,0,1
+1788431157676,77,POST Login,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,612,382,100,100,http://localhost:3000/api/login,77,0,0
+1788431157676,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,1210,179,100,100,http://localhost:3000/api/products,78,0,1
+1788431157679,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,1210,314,100,100,http://localhost:3000/api/products,76,0,0
+1788431157679,76,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-95,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,100,100,http://localhost:3000/api/login,76,0,1
+1788431157680,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,1210,314,100,100,http://localhost:3000/api/products,76,0,0
+1788431157680,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-29,text,true,,1210,179,100,100,http://localhost:3000/api/products,77,0,1
+1788431157681,77,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-86,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157681,77,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157681,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,1210,179,100,100,http://localhost:3000/api/products,78,0,1
+1788431157685,75,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-87,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,75,0,0
+1788431157683,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-19,text,true,,1210,314,100,100,http://localhost:3000/api/products,77,0,0
+1788431157684,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,1210,314,100,100,http://localhost:3000/api/products,77,0,0
+1788431157685,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-79,text,true,,1210,179,100,100,http://localhost:3000/api/products,77,0,1
+1788431157685,78,POST Login,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,612,255,100,100,http://localhost:3000/api/login,78,0,1
+1788431157686,78,GET Categories,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,330,316,100,100,http://localhost:3000/api/categories,78,0,0
+1788431157687,77,GET Categories,200,OK,Spike: 100 users x 3 loops 1-73,text,true,,330,181,100,100,http://localhost:3000/api/categories,77,0,0
+1788431157687,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-39,text,true,,1210,179,100,100,http://localhost:3000/api/products,78,0,0
+1788431157688,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,1210,179,100,100,http://localhost:3000/api/products,78,0,0
+1788431157689,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,1210,314,100,100,http://localhost:3000/api/products,77,0,0
+1788431157690,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,1210,314,100,100,http://localhost:3000/api/products,77,0,1
+1788431157691,77,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,100,100,http://localhost:3000/api/login,77,0,0
+1788431157691,78,POST Login,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,612,247,100,100,http://localhost:3000/api/login,78,0,1
+1788431157693,77,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-60,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157693,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,1210,314,100,100,http://localhost:3000/api/products,78,0,1
+1788431157695,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-80,text,true,,1210,179,100,100,http://localhost:3000/api/products,76,0,1
+1788431157695,77,GET Categories,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,330,316,100,100,http://localhost:3000/api/categories,77,0,1
+1788431157696,77,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,505,317,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157696,78,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-97,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,100,100,http://localhost:3000/api/login,78,0,1
+1788431157697,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-41,text,true,,1210,179,100,100,http://localhost:3000/api/products,78,0,1
+1788431157697,79,POST Login,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,612,247,100,100,http://localhost:3000/api/login,79,0,1
+1788431157698,79,GET Products,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,1210,179,100,100,http://localhost:3000/api/products,78,0,0
+1788431157698,79,GET Products,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,1210,314,100,100,http://localhost:3000/api/products,79,0,1
+1788431157699,79,GET Products,200,OK,Spike: 100 users x 3 loops 1-16,text,true,,1210,179,100,100,http://localhost:3000/api/products,79,0,1
+1788431157700,79,GET Products,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,1210,314,100,100,http://localhost:3000/api/products,78,0,0
+1788431157702,77,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-88,text,false,,273,182,100,100,http://localhost:3000/api/admin/users,77,0,1
+1788431157701,78,GET Categories,200,OK,Spike: 100 users x 3 loops 1-24,text,true,,330,181,100,100,http://localhost:3000/api/categories,78,0,1
+1788431157704,77,POST Login,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,612,382,99,99,http://localhost:3000/api/login,77,0,0
+1788431157705,76,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-89,text,false,,273,182,99,99,http://localhost:3000/api/admin/users,76,0,0
+1788431157705,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-11,text,true,,1210,179,99,99,http://localhost:3000/api/products,76,0,0
+1788431157705,78,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-98,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,99,99,http://localhost:3000/api/login,78,0,1
+1788431157705,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-13,text,true,,1210,179,99,99,http://localhost:3000/api/products,78,0,1
+1788431157706,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,1210,314,99,99,http://localhost:3000/api/products,78,0,0
+1788431157708,77,GET Products,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,1210,314,99,99,http://localhost:3000/api/products,77,0,0
+1788431157708,78,GET Products,200,OK,Spike: 100 users x 3 loops 1-3,text,true,,1210,314,99,99,http://localhost:3000/api/products,78,0,0
+1788431157709,77,GET Categories,200,OK,Spike: 100 users x 3 loops 1-51,text,true,,330,316,99,99,http://localhost:3000/api/categories,77,0,0
+1788431157710,77,GET Categories,200,OK,Spike: 100 users x 3 loops 1-1,text,true,,330,181,99,99,http://localhost:3000/api/categories,77,0,0
+1788431157711,77,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,98,98,http://localhost:3000/api/login,77,0,1
+1788431157713,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-56,text,true,,1210,179,98,98,http://localhost:3000/api/products,76,0,0
+1788431157713,84,POST Login,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,612,255,98,98,http://localhost:3000/api/login,84,0,0
+1788431157713,85,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-62,text,true,,505,317,98,98,http://localhost:3000/api/admin/users,85,0,1
+1788431157713,87,GET Categories,200,OK,Spike: 100 users x 3 loops 1-8,text,true,,330,181,98,98,http://localhost:3000/api/categories,86,0,1
+1788431157715,85,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-69,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,98,98,http://localhost:3000/api/login,85,0,1
+1788431157717,84,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-90,text,false,,273,182,98,98,http://localhost:3000/api/admin/users,84,0,0
+1788431157716,86,GET Categories,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,330,316,97,97,http://localhost:3000/api/categories,86,0,1
+1788431157717,86,GET Categories,200,OK,Spike: 100 users x 3 loops 1-52,text,true,,330,181,97,97,http://localhost:3000/api/categories,86,0,1
+1788431157720,84,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-44,text,false,,273,182,97,97,http://localhost:3000/api/admin/users,84,0,0
+1788431157719,86,GET Products,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,1210,314,97,97,http://localhost:3000/api/products,85,0,0
+1788431157721,86,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-91,text,true,,505,317,97,97,http://localhost:3000/api/admin/users,85,0,0
+1788431157721,87,GET Products,200,OK,Spike: 100 users x 3 loops 1-57,text,true,,1210,179,97,97,http://localhost:3000/api/products,87,0,0
+1788431157721,88,POST Login,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,612,255,97,97,http://localhost:3000/api/login,88,0,1
+1788431157722,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,330,316,97,97,http://localhost:3000/api/categories,89,0,0
+1788431157723,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-20,text,true,,1210,179,97,97,http://localhost:3000/api/products,88,0,0
+1788431157723,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-9,text,true,,1210,314,97,97,http://localhost:3000/api/products,89,0,0
+1788431157724,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-82,text,true,,1210,179,97,97,http://localhost:3000/api/products,89,0,1
+1788431157725,89,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,505,317,97,97,http://localhost:3000/api/admin/users,89,0,1
+1788431157727,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,1210,314,97,97,http://localhost:3000/api/products,88,0,0
+1788431157727,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-6,text,true,,1210,179,97,97,http://localhost:3000/api/products,89,0,1
+1788431157729,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,1210,314,97,97,http://localhost:3000/api/products,88,0,0
+1788431157730,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,1210,314,97,97,http://localhost:3000/api/products,88,0,0
+1788431157731,88,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-63,text,false,,273,182,97,97,http://localhost:3000/api/admin/users,87,0,0
+1788431157730,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-27,text,true,,1210,179,97,97,http://localhost:3000/api/products,89,0,0
+1788431157732,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,1210,314,97,97,http://localhost:3000/api/products,88,0,0
+1788431157732,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-21,text,true,,1210,179,97,97,http://localhost:3000/api/products,89,0,1
+1788431157733,89,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-70,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,97,97,http://localhost:3000/api/login,89,0,1
+1788431157734,89,POST Login,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,612,382,97,97,http://localhost:3000/api/login,89,0,1
+1788431157736,88,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-64,text,false,,273,182,97,97,http://localhost:3000/api/admin/users,88,0,0
+1788431157735,89,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,505,317,97,97,http://localhost:3000/api/admin/users,89,0,0
+1788431157736,90,GET Products,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,1210,314,97,97,http://localhost:3000/api/products,89,0,1
+1788431157737,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,330,316,97,97,http://localhost:3000/api/categories,89,0,1
+1788431157738,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-25,text,true,,1210,179,97,97,http://localhost:3000/api/products,89,0,0
+1788431157738,90,GET Products,200,OK,Spike: 100 users x 3 loops 1-58,text,true,,1210,314,97,97,http://localhost:3000/api/products,89,0,0
+1788431157739,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,1210,314,97,97,http://localhost:3000/api/products,89,0,1
+1788431157740,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,1210,179,97,97,http://localhost:3000/api/products,89,0,0
+1788431157740,90,GET Products,200,OK,Spike: 100 users x 3 loops 1-5,text,true,,1210,179,97,97,http://localhost:3000/api/products,90,0,1
+1788431157740,90,GET Categories,200,OK,Spike: 100 users x 3 loops 1-77,text,true,,330,181,97,97,http://localhost:3000/api/categories,90,0,1
+1788431157742,89,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-71,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,97,97,http://localhost:3000/api/login,89,0,0
+1788431157743,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,1210,314,97,97,http://localhost:3000/api/products,89,0,1
+1788431157744,89,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,505,317,97,97,http://localhost:3000/api/admin/users,89,0,0
+1788431157746,87,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-65,text,false,,273,182,97,97,http://localhost:3000/api/admin/users,87,0,0
+1788431157745,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-54,text,true,,330,316,97,97,http://localhost:3000/api/categories,88,0,0
+1788431157746,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-28,text,true,,330,181,97,97,http://localhost:3000/api/categories,89,0,1
+1788431157747,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-85,text,true,,1210,179,96,96,http://localhost:3000/api/products,89,0,1
+1788431157747,89,POST Login,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,612,382,96,96,http://localhost:3000/api/login,89,0,0
+1788431157748,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,1210,314,96,96,http://localhost:3000/api/products,89,0,1
+1788431157749,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-12,text,true,,330,181,96,96,http://localhost:3000/api/categories,89,0,0
+1788431157750,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-26,text,true,,330,316,96,96,http://localhost:3000/api/categories,88,0,0
+1788431157750,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,330,181,94,94,http://localhost:3000/api/categories,89,0,1
+1788431157752,87,GET Categories,200,OK,Spike: 100 users x 3 loops 1-33,text,true,,330,316,94,94,http://localhost:3000/api/categories,87,0,0
+1788431157752,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-15,text,true,,330,316,93,93,http://localhost:3000/api/categories,89,0,0
+1788431157753,88,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,505,317,93,93,http://localhost:3000/api/admin/users,88,0,1
+1788431157754,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-10,text,true,,330,181,92,92,http://localhost:3000/api/categories,88,0,0
+1788431157754,88,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-72,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,92,92,http://localhost:3000/api/login,88,0,0
+1788431157756,87,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-95,text,false,,273,182,91,91,http://localhost:3000/api/admin/users,87,0,0
+1788431157755,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-35,text,true,,330,316,91,91,http://localhost:3000/api/categories,88,0,1
+1788431157756,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-34,text,true,,330,316,90,90,http://localhost:3000/api/categories,88,0,1
+1788431157758,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-29,text,true,,330,181,89,89,http://localhost:3000/api/categories,88,0,0
+1788431157758,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-86,text,true,,1210,179,89,89,http://localhost:3000/api/products,88,0,1
+1788431157758,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,1210,314,88,88,http://localhost:3000/api/products,89,0,1
+1788431157759,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-42,text,true,,330,181,88,88,http://localhost:3000/api/categories,88,0,1
+1788431157760,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-87,text,true,,1210,179,87,87,http://localhost:3000/api/products,88,0,0
+1788431157761,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-19,text,true,,330,316,87,87,http://localhost:3000/api/categories,88,0,0
+1788431157761,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-36,text,true,,330,316,87,87,http://localhost:3000/api/categories,88,0,0
+1788431157762,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-79,text,true,,330,181,85,85,http://localhost:3000/api/categories,88,0,1
+1788431157764,87,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,505,317,85,85,http://localhost:3000/api/admin/users,87,0,0
+1788431157764,89,POST Login,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,612,382,85,85,http://localhost:3000/api/login,89,0,0
+1788431157765,89,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-73,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,85,85,http://localhost:3000/api/login,89,0,0
+1788431157765,90,GET Categories,200,OK,Spike: 100 users x 3 loops 1-39,text,true,,330,181,85,85,http://localhost:3000/api/categories,89,0,1
+1788431157766,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-38,text,true,,330,181,85,85,http://localhost:3000/api/categories,89,0,1
+1788431157767,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,330,316,84,84,http://localhost:3000/api/categories,88,0,0
+1788431157768,88,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-46,text,false,,273,182,83,83,http://localhost:3000/api/admin/users,87,0,1
+1788431157767,89,GET Categories,200,OK,Spike: 100 users x 3 loops 1-18,text,true,,330,316,83,83,http://localhost:3000/api/categories,89,0,1
+1788431157770,88,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,505,317,82,82,http://localhost:3000/api/admin/users,88,0,1
+1788431157770,89,GET Products,200,OK,Spike: 100 users x 3 loops 1-60,text,true,,1210,314,82,82,http://localhost:3000/api/products,88,0,1
+1788431157771,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-2,text,true,,330,316,82,82,http://localhost:3000/api/categories,88,0,0
+1788431157772,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-80,text,true,,330,181,81,81,http://localhost:3000/api/categories,88,0,0
+1788431157774,87,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-97,text,false,,273,182,81,81,http://localhost:3000/api/admin/users,87,0,1
+1788431157773,88,POST Login,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,612,382,81,81,http://localhost:3000/api/login,88,0,0
+1788431157774,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,1210,314,81,81,http://localhost:3000/api/products,88,0,0
+1788431157775,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-41,text,true,,330,181,81,81,http://localhost:3000/api/categories,88,0,0
+1788431157776,88,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,505,317,80,80,http://localhost:3000/api/admin/users,88,0,0
+1788431157777,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-22,text,true,,330,181,80,80,http://localhost:3000/api/categories,88,0,0
+1788431157777,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-40,text,true,,330,316,79,79,http://localhost:3000/api/categories,88,0,1
+1788431157778,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-16,text,true,,330,181,79,79,http://localhost:3000/api/categories,87,0,0
+1788431157779,87,GET Categories,200,OK,Spike: 100 users x 3 loops 1-31,text,true,,330,316,77,77,http://localhost:3000/api/categories,87,0,0
+1788431157779,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-88,text,true,,1210,179,76,76,http://localhost:3000/api/products,88,0,0
+1788431157781,87,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,505,317,76,76,http://localhost:3000/api/admin/users,87,0,1
+1788431157781,88,GET Products,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,1210,179,76,76,http://localhost:3000/api/products,88,0,1
+1788431157783,86,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-98,text,false,,273,182,76,76,http://localhost:3000/api/admin/users,86,0,0
+1788431157782,88,GET Categories,200,OK,Spike: 100 users x 3 loops 1-11,text,true,,330,181,76,76,http://localhost:3000/api/categories,87,0,0
+1788431157784,87,GET Categories,200,OK,Spike: 100 users x 3 loops 1-13,text,true,,330,181,75,75,http://localhost:3000/api/categories,87,0,0
+1788431157784,87,GET Categories,200,OK,Spike: 100 users x 3 loops 1-32,text,true,,330,316,74,74,http://localhost:3000/api/categories,87,0,1
+1788431157785,86,GET Categories,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,330,316,74,74,http://localhost:3000/api/categories,86,0,0
+1788431157786,86,GET Categories,200,OK,Spike: 100 users x 3 loops 1-3,text,true,,330,316,73,73,http://localhost:3000/api/categories,86,0,0
+1788431157789,84,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-47,text,false,,273,182,72,72,http://localhost:3000/api/admin/users,84,0,1
+1788431157787,86,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,72,72,http://localhost:3000/api/login,86,0,0
+1788431157789,85,GET Categories,200,OK,Spike: 100 users x 3 loops 1-56,text,true,,330,181,72,72,http://localhost:3000/api/categories,85,0,1
+1788431157799,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-62,text,true,,1210,314,72,72,http://localhost:3000/api/products,76,0,0
+1788431157801,74,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-69,text,false,,273,182,72,72,http://localhost:3000/api/admin/users,74,0,0
+1788431157798,78,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,505,317,72,72,http://localhost:3000/api/admin/users,78,0,1
+1788431157801,76,GET Products,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,1210,179,72,72,http://localhost:3000/api/products,76,0,1
+1788431157802,77,POST Login,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,612,382,72,72,http://localhost:3000/api/login,76,0,2
+1788431157804,75,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,72,72,http://localhost:3000/api/login,75,0,1
+1788431157805,74,GET Products,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,1210,179,72,72,http://localhost:3000/api/products,74,0,0
+1788431157805,75,GET Categories,200,OK,Spike: 100 users x 3 loops 1-14,text,true,,330,316,72,72,http://localhost:3000/api/categories,75,0,1
+1788431157807,74,GET Products,200,OK,Spike: 100 users x 3 loops 1-91,text,true,,1210,314,71,71,http://localhost:3000/api/products,74,0,1
+1788431157808,74,GET Categories,200,OK,Spike: 100 users x 3 loops 1-57,text,true,,330,181,71,71,http://localhost:3000/api/categories,74,0,1
+1788431157810,73,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,505,317,71,71,http://localhost:3000/api/admin/users,73,0,1
+1788431157811,73,POST Login,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,612,382,71,71,http://localhost:3000/api/login,73,0,1
+1788431157812,73,GET Categories,200,OK,Spike: 100 users x 3 loops 1-20,text,true,,330,181,71,71,http://localhost:3000/api/categories,73,0,0
+1788431157813,72,GET Categories,200,OK,Spike: 100 users x 3 loops 1-9,text,true,,330,316,71,71,http://localhost:3000/api/categories,72,0,0
+1788431157814,72,GET Categories,200,OK,Spike: 100 users x 3 loops 1-82,text,true,,330,181,69,69,http://localhost:3000/api/categories,72,0,0
+1788431157814,72,GET Products,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,1210,314,69,69,http://localhost:3000/api/products,72,0,1
+1788431157815,72,GET Categories,200,OK,Spike: 100 users x 3 loops 1-7,text,true,,330,316,69,69,http://localhost:3000/api/categories,72,0,0
+1788431157816,72,GET Categories,200,OK,Spike: 100 users x 3 loops 1-6,text,true,,330,181,68,68,http://localhost:3000/api/categories,72,0,0
+1788431157817,71,GET Categories,200,OK,Spike: 100 users x 3 loops 1-4,text,true,,330,316,67,67,http://localhost:3000/api/categories,71,0,1
+1788431157818,71,GET Categories,200,OK,Spike: 100 users x 3 loops 1-17,text,true,,330,316,66,66,http://localhost:3000/api/categories,71,0,0
+1788431157819,71,GET Products,200,OK,Spike: 100 users x 3 loops 1-63,text,true,,1210,179,65,65,http://localhost:3000/api/products,71,0,0
+1788431157820,71,GET Categories,200,OK,Spike: 100 users x 3 loops 1-30,text,true,,330,316,65,65,http://localhost:3000/api/categories,71,0,0
+1788431157819,72,GET Categories,200,OK,Spike: 100 users x 3 loops 1-27,text,true,,330,181,65,65,http://localhost:3000/api/categories,72,0,0
+1788431157822,69,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-70,text,false,,273,182,64,64,http://localhost:3000/api/admin/users,69,0,1
+1788431157821,71,GET Categories,200,OK,Spike: 100 users x 3 loops 1-21,text,true,,330,181,63,63,http://localhost:3000/api/categories,71,0,0
+1788431157824,69,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,505,317,62,62,http://localhost:3000/api/admin/users,69,0,0
+1788431157824,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,1210,314,62,62,http://localhost:3000/api/products,69,0,1
+1788431157824,70,GET Products,200,OK,Spike: 100 users x 3 loops 1-64,text,true,,1210,179,62,62,http://localhost:3000/api/products,70,0,1
+1788431157826,69,GET Categories,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,330,316,62,62,http://localhost:3000/api/categories,69,0,0
+1788431157827,69,GET Categories,200,OK,Spike: 100 users x 3 loops 1-25,text,true,,330,181,62,62,http://localhost:3000/api/categories,69,0,0
+1788431157827,69,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,62,62,http://localhost:3000/api/login,69,0,0
+1788431157828,69,GET Categories,200,OK,Spike: 100 users x 3 loops 1-58,text,true,,330,316,62,62,http://localhost:3000/api/categories,69,0,0
+1788431157828,70,GET Categories,200,OK,Spike: 100 users x 3 loops 1-37,text,true,,330,316,61,61,http://localhost:3000/api/categories,70,0,1
+1788431157829,69,GET Categories,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,330,181,61,61,http://localhost:3000/api/categories,69,0,0
+1788431157830,69,GET Categories,200,OK,Spike: 100 users x 3 loops 1-5,text,true,,330,181,60,60,http://localhost:3000/api/categories,69,0,1
+1788431157832,69,GET Categories,200,OK,Spike: 100 users x 3 loops 1-23,text,true,,330,316,59,59,http://localhost:3000/api/categories,69,0,0
+1788431157832,68,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-71,text,false,,273,182,59,59,http://localhost:3000/api/admin/users,68,0,0
+1788431157831,69,POST Login,200,OK,Spike: 100 users x 3 loops 1-77,text,true,,612,247,59,59,http://localhost:3000/api/login,69,0,0
+1788431157833,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-65,text,true,,1210,179,58,58,http://localhost:3000/api/products,69,0,0
+1788431157833,69,GET Products,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,1210,314,58,58,http://localhost:3000/api/products,69,0,0
+1788431157834,70,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,58,58,http://localhost:3000/api/login,69,0,0
+1788431157837,68,GET Categories,200,OK,Spike: 100 users x 3 loops 1-85,text,true,,330,181,58,58,http://localhost:3000/api/categories,67,0,0
+1788431157837,67,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,505,317,58,58,http://localhost:3000/api/admin/users,67,0,0
+1788431157837,68,GET Categories,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,330,316,58,58,http://localhost:3000/api/categories,68,0,1
+1788431157839,67,POST Login,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,612,247,58,58,http://localhost:3000/api/login,67,0,1
+1788431157843,64,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-72,text,false,,273,182,58,58,http://localhost:3000/api/admin/users,64,0,1
+1788431157842,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,1210,314,58,58,http://localhost:3000/api/products,65,0,0
+1788431157843,65,GET Products,200,OK,Spike: 100 users x 3 loops 1-95,text,true,,1210,179,58,58,http://localhost:3000/api/products,65,0,1
+1788431157846,63,GET Categories,200,OK,Spike: 100 users x 3 loops 1-86,text,true,,330,181,58,58,http://localhost:3000/api/categories,63,0,1
+1788431157847,62,GET Categories,200,OK,Spike: 100 users x 3 loops 1-43,text,true,,330,316,58,58,http://localhost:3000/api/categories,62,0,0
+1788431157848,62,GET Categories,200,OK,Spike: 100 users x 3 loops 1-87,text,true,,330,181,57,57,http://localhost:3000/api/categories,62,0,1
+1788431157851,59,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-79,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,57,57,http://localhost:3000/api/login,59,0,0
+1788431157851,60,GET Products,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,1210,314,57,57,http://localhost:3000/api/products,60,0,1
+1788431157854,57,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-73,text,false,,273,182,57,57,http://localhost:3000/api/admin/users,57,0,1
+1788431157854,58,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,505,317,57,57,http://localhost:3000/api/admin/users,58,0,0
+1788431157856,57,POST Login,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,612,382,57,57,http://localhost:3000/api/login,57,0,0
+1788431157856,58,GET Products,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,1210,179,57,57,http://localhost:3000/api/products,58,0,0
+1788431157858,57,GET Products,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,1210,314,57,57,http://localhost:3000/api/products,57,0,0
+1788431157859,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-60,text,true,,330,316,57,57,http://localhost:3000/api/categories,56,0,0
+1788431157860,56,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-80,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,57,57,http://localhost:3000/api/login,56,0,0
+1788431157861,55,GET Products,200,OK,Spike: 100 users x 3 loops 1-97,text,true,,1210,179,57,57,http://localhost:3000/api/products,55,0,1
+1788431157862,55,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,505,317,57,57,http://localhost:3000/api/admin/users,55,0,0
+1788431157862,56,GET Categories,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,330,316,57,57,http://localhost:3000/api/categories,56,0,1
+1788431157864,54,GET Products,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,1210,314,57,57,http://localhost:3000/api/products,54,0,1
+1788431157867,52,GET Categories,200,OK,Spike: 100 users x 3 loops 1-88,text,true,,330,181,57,57,http://localhost:3000/api/categories,52,0,1
+1788431157869,50,GET Categories,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,330,181,57,57,http://localhost:3000/api/categories,50,0,0
+1788431157869,51,GET Products,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,1210,314,57,57,http://localhost:3000/api/products,51,0,0
+1788431157870,51,GET Products,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,1210,179,57,57,http://localhost:3000/api/products,51,0,0
+1788431157872,50,POST Login,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,612,382,57,57,http://localhost:3000/api/login,50,0,0
+1788431157874,48,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-51,text,false,,273,182,57,57,http://localhost:3000/api/admin/users,48,0,0
+1788431157874,49,GET Products,200,OK,Spike: 100 users x 3 loops 1-47,text,true,,1210,179,57,57,http://localhost:3000/api/products,49,0,0
+1788431157875,49,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,57,57,http://localhost:3000/api/login,49,0,1
+1788431157875,49,GET Categories,200,OK,Spike: 100 users x 3 loops 1-62,text,true,,330,316,57,57,http://localhost:3000/api/categories,49,0,1
+1788431157876,49,GET Products,200,OK,Spike: 100 users x 3 loops 1-69,text,true,,1210,179,57,57,http://localhost:3000/api/products,49,0,0
+1788431157876,49,GET Products,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,1210,314,57,57,http://localhost:3000/api/products,49,0,0
+1788431157877,50,GET Categories,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,330,181,57,57,http://localhost:3000/api/categories,50,0,1
+1788431157880,47,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-52,text,false,,273,182,57,57,http://localhost:3000/api/admin/users,47,0,0
+1788431157879,48,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,505,317,57,57,http://localhost:3000/api/admin/users,48,0,0
+1788431157880,48,GET Categories,200,OK,Spike: 100 users x 3 loops 1-44,text,true,,330,181,57,57,http://localhost:3000/api/categories,48,0,0
+1788431157881,48,GET Categories,200,OK,Spike: 100 users x 3 loops 1-91,text,true,,330,316,56,56,http://localhost:3000/api/categories,48,0,0
+1788431157882,48,POST Login,200,OK,Spike: 100 users x 3 loops 1-57,text,true,,612,247,56,56,http://localhost:3000/api/login,47,0,1
+1788431157883,48,GET Products,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,1210,314,56,56,http://localhost:3000/api/products,48,0,0
+1788431157884,47,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,505,317,56,56,http://localhost:3000/api/admin/users,47,0,1
+1788431157886,46,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-82,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,56,56,http://localhost:3000/api/login,46,0,1
+1788431157887,45,GET Categories,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,330,316,56,56,http://localhost:3000/api/categories,45,0,0
+1788431157890,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-63,text,true,,330,181,56,56,http://localhost:3000/api/categories,43,0,0
+1788431157892,42,GET Products,200,OK,Spike: 100 users x 3 loops 1-70,text,true,,1210,179,56,56,http://localhost:3000/api/products,42,0,0
+1788431157893,41,GET Products,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,1210,314,56,56,http://localhost:3000/api/products,41,0,1
+1788431157894,41,GET Categories,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,330,316,56,56,http://localhost:3000/api/categories,41,0,0
+1788431157894,41,GET Categories,200,OK,Spike: 100 users x 3 loops 1-64,text,true,,330,181,56,56,http://localhost:3000/api/categories,41,0,0
+1788431157897,39,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-53,text,false,,273,182,56,56,http://localhost:3000/api/admin/users,39,0,0
+1788431157895,41,POST Login,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,612,382,56,56,http://localhost:3000/api/login,41,0,1
+1788431157897,41,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,56,56,http://localhost:3000/api/login,41,0,1
+1788431157898,41,POST Login,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,612,247,56,56,http://localhost:3000/api/login,41,0,1
+1788431157901,39,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-77,text,true,,505,317,56,56,http://localhost:3000/api/admin/users,39,0,0
+1788431157902,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-65,text,true,,330,181,56,56,http://localhost:3000/api/categories,38,0,0
+1788431157901,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-71,text,true,,1210,179,56,56,http://localhost:3000/api/products,39,0,1
+1788431157904,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-54,text,false,,273,182,56,56,http://localhost:3000/api/admin/users,37,0,0
+1788431157903,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,330,316,56,56,http://localhost:3000/api/categories,38,0,0
+1788431157905,38,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-85,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,56,56,http://localhost:3000/api/login,37,0,0
+1788431157906,38,POST Login,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,612,382,56,56,http://localhost:3000/api/login,38,0,0
+1788431157905,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,1210,314,56,56,http://localhost:3000/api/products,39,0,1
+1788431157907,38,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,505,317,56,56,http://localhost:3000/api/admin/users,38,0,0
+1788431157907,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-45,text,true,,330,316,56,56,http://localhost:3000/api/categories,42,0,1
+1788431157908,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-95,text,true,,330,181,56,56,http://localhost:3000/api/categories,42,0,0
+1788431157908,42,GET Products,200,OK,Spike: 100 users x 3 loops 1-72,text,true,,1210,179,55,55,http://localhost:3000/api/products,42,0,1
+1788431157911,41,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-79,text,false,,273,182,55,55,http://localhost:3000/api/admin/users,40,0,0
+1788431157909,42,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-86,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,55,55,http://localhost:3000/api/login,42,0,0
+1788431157910,42,POST Login,200,OK,Spike: 100 users x 3 loops 1-87,text,true,,612,247,55,55,http://localhost:3000/api/login,42,0,0
+1788431157911,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,330,316,55,55,http://localhost:3000/api/categories,43,0,1
+1788431157912,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-73,text,true,,1210,179,55,55,http://localhost:3000/api/products,43,0,0
+1788431157912,44,GET Products,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,1210,314,55,55,http://localhost:3000/api/products,43,0,1
+1788431157914,42,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,505,317,55,55,http://localhost:3000/api/admin/users,42,0,0
+1788431157914,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-46,text,true,,330,181,55,55,http://localhost:3000/api/categories,43,0,1
+1788431157915,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,330,316,54,54,http://localhost:3000/api/categories,43,0,0
+1788431157916,42,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-80,text,false,,273,182,54,54,http://localhost:3000/api/admin/users,42,0,0
+1788431157915,43,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,54,54,http://localhost:3000/api/login,43,0,1
+1788431157917,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-97,text,true,,330,181,54,54,http://localhost:3000/api/categories,43,0,0
+1788431157917,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,1210,314,54,54,http://localhost:3000/api/products,43,0,0
+1788431157918,43,POST Login,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,612,382,54,54,http://localhost:3000/api/login,43,0,0
+1788431157919,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,330,316,54,54,http://localhost:3000/api/categories,43,0,0
+1788431157919,43,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-88,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,54,54,http://localhost:3000/api/login,43,0,1
+1788431157920,43,POST Login,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,612,247,54,54,http://localhost:3000/api/login,43,0,0
+1788431157920,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,330,316,54,54,http://localhost:3000/api/categories,44,0,1
+1788431157921,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,330,181,54,54,http://localhost:3000/api/categories,44,0,0
+1788431157922,44,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,505,317,54,54,http://localhost:3000/api/admin/users,44,0,1
+1788431157923,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-51,text,true,,1210,179,54,54,http://localhost:3000/api/products,43,0,0
+1788431157924,43,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-56,text,false,,273,182,54,54,http://localhost:3000/api/admin/users,43,0,0
+1788431157923,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-47,text,true,,330,181,54,54,http://localhost:3000/api/categories,44,0,0
+1788431157925,43,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-62,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,53,53,http://localhost:3000/api/login,43,0,0
+1788431157925,44,GET Categories,200,OK,Spike: 100 users x 3 loops 1-69,text,true,,330,181,53,53,http://localhost:3000/api/categories,44,0,0
+1788431157926,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,330,316,53,53,http://localhost:3000/api/categories,43,0,0
+1788431157927,43,POST Login,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,612,247,53,53,http://localhost:3000/api/login,43,0,0
+1788431157927,44,GET Products,200,OK,Spike: 100 users x 3 loops 1-52,text,true,,1210,179,53,53,http://localhost:3000/api/products,44,0,0
+1788431157927,45,GET Products,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,1210,314,53,53,http://localhost:3000/api/products,45,0,0
+1788431157930,42,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-91,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,53,53,http://localhost:3000/api/login,42,0,0
+1788431157930,43,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-57,text,true,,505,317,53,53,http://localhost:3000/api/admin/users,43,0,0
+1788431157931,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,1210,314,53,53,http://localhost:3000/api/products,43,0,1
+1788431157932,42,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-82,text,false,,273,182,53,53,http://localhost:3000/api/admin/users,42,0,0
+1788431157931,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,330,316,53,53,http://localhost:3000/api/categories,43,0,1
+1788431157933,42,POST Login,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,612,382,53,53,http://localhost:3000/api/login,42,0,0
+1788431157934,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-70,text,true,,330,181,53,53,http://localhost:3000/api/categories,42,0,0
+1788431157934,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-48,text,true,,330,316,53,53,http://localhost:3000/api/categories,43,0,1
+1788431157935,43,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-63,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,52,52,http://localhost:3000/api/login,43,0,0
+1788431157936,43,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-64,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,52,52,http://localhost:3000/api/login,43,0,0
+1788431157936,44,GET Products,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,1210,179,52,52,http://localhost:3000/api/products,44,0,0
+1788431157935,45,POST Login,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,612,382,52,52,http://localhost:3000/api/login,45,0,1
+1788431157938,43,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-58,text,false,,273,182,52,52,http://localhost:3000/api/admin/users,42,0,0
+1788431157937,44,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,505,317,52,52,http://localhost:3000/api/admin/users,44,0,0
+1788431157939,43,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,505,317,52,52,http://localhost:3000/api/admin/users,43,0,1
+1788431157940,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-77,text,true,,1210,314,52,52,http://localhost:3000/api/products,43,0,0
+1788431157941,42,GET Categories,200,OK,Spike: 100 users x 3 loops 1-71,text,true,,330,181,52,52,http://localhost:3000/api/categories,42,0,0
+1788431157941,44,GET Products,200,OK,Spike: 100 users x 3 loops 1-54,text,true,,1210,179,52,52,http://localhost:3000/api/products,44,0,0
+1788431157943,42,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-85,text,false,,273,182,52,52,http://localhost:3000/api/admin/users,42,0,0
+1788431157940,45,POST Login,200,OK,Spike: 100 users x 3 loops 1-65,text,true,,612,247,52,52,http://localhost:3000/api/login,45,0,1
+1788431157942,44,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-94,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,52,52,http://localhost:3000/api/login,44,0,0
+1788431157944,43,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,505,317,52,52,http://localhost:3000/api/admin/users,43,0,0
+1788431157944,43,GET Categories,200,OK,Spike: 100 users x 3 loops 1-49,text,true,,330,316,52,52,http://localhost:3000/api/categories,43,0,1
+1788431157945,43,GET Products,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,1210,314,51,51,http://localhost:3000/api/products,43,0,1
+1788431157951,39,GET Categories,200,OK,Spike: 100 users x 3 loops 1-72,text,true,,330,181,51,51,http://localhost:3000/api/categories,38,0,0
+1788431157950,39,POST Login,200,OK,Spike: 100 users x 3 loops 1-95,text,true,,612,247,51,51,http://localhost:3000/api/login,39,0,1
+1788431157952,38,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-86,text,false,,273,182,51,51,http://localhost:3000/api/admin/users,38,0,1
+1788431157952,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-79,text,true,,1210,179,51,51,http://localhost:3000/api/products,38,0,0
+1788431157953,39,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-87,text,true,,505,317,51,51,http://localhost:3000/api/admin/users,39,0,0
+1788431157955,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-73,text,true,,330,181,51,51,http://localhost:3000/api/categories,38,0,1
+1788431157955,38,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-96,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,51,51,http://localhost:3000/api/login,38,0,0
+1788431157957,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,1210,314,51,51,http://localhost:3000/api/products,37,0,0
+1788431157956,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-50,text,true,,330,316,51,51,http://localhost:3000/api/categories,38,0,0
+1788431157959,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-60,text,false,,273,182,50,50,http://localhost:3000/api/admin/users,37,0,1
+1788431157958,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-80,text,true,,1210,179,50,50,http://localhost:3000/api/products,38,0,1
+1788431157958,38,POST Login,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,612,382,50,50,http://localhost:3000/api/login,37,0,1
+1788431157960,37,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-97,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,50,50,http://localhost:3000/api/login,37,0,0
+1788431157961,37,GET Categories,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,330,316,50,50,http://localhost:3000/api/categories,37,0,0
+1788431157962,37,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,505,317,50,50,http://localhost:3000/api/admin/users,37,0,0
+1788431157963,36,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-88,text,false,,273,182,50,50,http://localhost:3000/api/admin/users,36,0,0
+1788431157962,38,POST Login,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,612,382,50,50,http://localhost:3000/api/login,38,0,1
+1788431157964,38,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,505,317,50,50,http://localhost:3000/api/admin/users,38,0,0
+1788431157965,38,POST Login,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,612,247,50,50,http://localhost:3000/api/login,38,0,1
+1788431157965,39,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-68,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,50,50,http://localhost:3000/api/login,38,0,1
+1788431157966,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,1210,314,50,50,http://localhost:3000/api/products,38,0,0
+1788431157969,36,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-62,text,false,,273,182,50,50,http://localhost:3000/api/admin/users,36,0,1
+1788431157967,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-56,text,true,,1210,179,50,50,http://localhost:3000/api/products,38,0,0
+1788431157967,39,GET Categories,200,OK,Spike: 100 users x 3 loops 1-51,text,true,,330,181,50,50,http://localhost:3000/api/categories,39,0,0
+1788431157970,37,POST Login,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,612,382,49,49,http://localhost:3000/api/login,37,0,0
+1788431157970,38,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-69,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,49,49,http://localhost:3000/api/login,38,0,0
+1788431157971,38,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,505,317,49,49,http://localhost:3000/api/admin/users,38,0,0
+1788431157971,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-52,text,true,,330,181,49,49,http://localhost:3000/api/categories,38,0,1
+1788431157973,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-91,text,false,,273,182,48,48,http://localhost:3000/api/admin/users,37,0,0
+1788431157972,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,330,316,48,48,http://localhost:3000/api/categories,38,0,0
+1788431157973,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-57,text,true,,1210,314,48,48,http://localhost:3000/api/products,38,0,1
+1788431157974,37,GET Categories,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,330,316,48,48,http://localhost:3000/api/categories,37,0,0
+1788431157974,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-82,text,true,,1210,179,48,48,http://localhost:3000/api/products,38,0,1
+1788431157975,39,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-100,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,48,48,http://localhost:3000/api/login,39,0,0
+1788431157976,38,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,505,317,48,48,http://localhost:3000/api/admin/users,38,0,0
+1788431157978,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-63,text,false,,273,182,48,48,http://localhost:3000/api/admin/users,36,0,1
+1788431157979,36,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-64,text,false,,273,182,48,48,http://localhost:3000/api/admin/users,36,0,0
+1788431157977,39,POST Login,200,OK,Spike: 100 users x 3 loops 1-70,text,true,,612,247,48,48,http://localhost:3000/api/login,39,0,0
+1788431157980,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-53,text,true,,330,181,48,48,http://localhost:3000/api/categories,37,0,1
+1788431157981,37,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,505,317,47,47,http://localhost:3000/api/admin/users,37,0,0
+1788431157981,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-58,text,true,,1210,179,47,47,http://localhost:3000/api/products,38,0,0
+1788431157981,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,1210,314,47,47,http://localhost:3000/api/products,38,0,1
+1788431157982,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,1210,314,47,47,http://localhost:3000/api/products,38,0,0
+1788431157983,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-77,text,true,,330,316,47,47,http://localhost:3000/api/categories,38,0,0
+1788431157984,37,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-71,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,47,47,http://localhost:3000/api/login,37,0,1
+1788431157985,38,GET Products,200,OK,Spike: 100 users x 3 loops 1-85,text,true,,1210,179,47,47,http://localhost:3000/api/products,38,0,1
+1788431157986,38,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-65,text,true,,505,317,47,47,http://localhost:3000/api/admin/users,37,0,0
+1788431157986,38,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-94,text,false,,273,182,47,47,http://localhost:3000/api/admin/users,38,0,1
+1788431157985,39,GET Categories,200,OK,Spike: 100 users x 3 loops 1-54,text,true,,330,181,47,47,http://localhost:3000/api/categories,39,0,1
+1788431157987,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,1210,314,46,46,http://localhost:3000/api/products,39,0,0
+1788431157988,39,GET Categories,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,330,316,46,46,http://localhost:3000/api/categories,39,0,1
+1788431157990,37,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-95,text,true,,505,317,46,46,http://localhost:3000/api/admin/users,37,0,0
+1788431157990,39,POST Login,200,OK,Spike: 100 users x 3 loops 1-72,text,true,,612,247,46,46,http://localhost:3000/api/login,39,0,0
+1788431157990,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-86,text,true,,1210,179,46,46,http://localhost:3000/api/products,39,0,1
+1788431157990,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-79,text,true,,330,181,46,46,http://localhost:3000/api/categories,40,0,1
+1788431157993,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-96,text,false,,273,182,46,46,http://localhost:3000/api/admin/users,37,0,1
+1788431157992,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-87,text,true,,1210,314,46,46,http://localhost:3000/api/products,39,0,0
+1788431157994,39,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-73,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,46,46,http://localhost:3000/api/login,38,0,1
+1788431157995,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-55,text,true,,330,316,46,46,http://localhost:3000/api/categories,38,0,0
+1788431157996,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-80,text,true,,330,181,45,45,http://localhost:3000/api/categories,37,0,1
+1788431157996,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-60,text,true,,1210,179,45,45,http://localhost:3000/api/products,39,0,1
+1788431157998,37,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-97,text,false,,273,182,45,45,http://localhost:3000/api/admin/users,37,0,0
+1788431157997,38,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,38,0,0
+1788431157999,38,POST Login,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,612,382,45,45,http://localhost:3000/api/login,38,0,0
+1788431157999,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,1210,314,45,45,http://localhost:3000/api/products,39,0,0
+1788431157999,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-88,text,true,,1210,179,45,45,http://localhost:3000/api/products,39,0,1
+1788431158001,38,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,38,0,0
+1788431158002,37,GET Products,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,1210,314,45,45,http://localhost:3000/api/products,37,0,0
+1788431158004,36,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-68,text,false,,273,182,45,45,http://localhost:3000/api/admin/users,36,0,0
+1788431158004,36,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,505,317,45,45,http://localhost:3000/api/admin/users,36,0,0
+1788431158005,36,GET Products,200,OK,Spike: 100 users x 3 loops 1-62,text,true,,1210,179,45,45,http://localhost:3000/api/products,36,0,0
+1788431158005,37,GET Categories,200,OK,Spike: 100 users x 3 loops 1-56,text,true,,330,181,45,45,http://localhost:3000/api/categories,37,0,1
+1788431158005,37,GET Categories,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,330,316,45,45,http://localhost:3000/api/categories,37,0,1
+1788431158008,35,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-69,text,false,,273,182,44,44,http://localhost:3000/api/admin/users,35,0,0
+1788431158008,35,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,505,317,44,44,http://localhost:3000/api/admin/users,35,0,0
+1788431158009,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,1210,314,44,44,http://localhost:3000/api/products,35,0,0
+1788431158010,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-91,text,true,,1210,179,44,44,http://localhost:3000/api/products,35,0,0
+1788431158011,35,GET Categories,200,OK,Spike: 100 users x 3 loops 1-57,text,true,,330,316,44,44,http://localhost:3000/api/categories,35,0,0
+1788431158011,35,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-75,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,44,44,http://localhost:3000/api/login,35,0,0
+1788431158012,35,POST Login,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,612,382,43,43,http://localhost:3000/api/login,35,0,0
+1788431158014,33,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-100,text,false,,273,182,43,43,http://localhost:3000/api/admin/users,33,0,0
+1788431158012,36,GET Categories,200,OK,Spike: 100 users x 3 loops 1-82,text,true,,330,181,43,43,http://localhost:3000/api/categories,36,0,1
+1788431158014,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,1210,314,43,43,http://localhost:3000/api/products,35,0,1
+1788431158015,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-63,text,true,,1210,179,43,43,http://localhost:3000/api/products,35,0,0
+1788431158015,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-64,text,true,,1210,179,43,43,http://localhost:3000/api/products,35,0,0
+1788431158016,35,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-70,text,true,,505,317,43,43,http://localhost:3000/api/admin/users,35,0,0
+1788431158018,34,GET Products,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,1210,314,43,43,http://localhost:3000/api/products,34,0,1
+1788431158019,33,GET Categories,200,OK,Spike: 100 users x 3 loops 1-58,text,true,,330,181,43,43,http://localhost:3000/api/categories,33,0,0
+1788431158020,33,GET Categories,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,330,316,42,42,http://localhost:3000/api/categories,33,0,0
+1788431158020,33,GET Categories,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,330,316,42,42,http://localhost:3000/api/categories,33,0,0
+1788431158022,32,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-71,text,false,,273,182,42,42,http://localhost:3000/api/admin/users,32,0,0
+1788431158021,33,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-77,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,42,42,http://localhost:3000/api/login,33,0,1
+1788431158023,32,GET Categories,200,OK,Spike: 100 users x 3 loops 1-85,text,true,,330,181,42,42,http://localhost:3000/api/categories,32,0,1
+1788431158024,32,GET Products,200,OK,Spike: 100 users x 3 loops 1-65,text,true,,1210,314,42,42,http://localhost:3000/api/products,31,0,0
+1788431158024,32,GET Products,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,1210,179,42,42,http://localhost:3000/api/products,32,0,0
+1788431158027,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-59,text,true,,330,316,42,42,http://localhost:3000/api/categories,29,0,0
+1788431158027,30,GET Products,200,OK,Spike: 100 users x 3 loops 1-95,text,true,,1210,314,41,41,http://localhost:3000/api/products,30,0,1
+1788431158027,31,POST Login,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,612,382,41,41,http://localhost:3000/api/login,31,0,1
+1788431158029,30,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-72,text,true,,505,317,41,41,http://localhost:3000/api/admin/users,30,0,0
+1788431158030,30,GET Categories,200,OK,Spike: 100 users x 3 loops 1-86,text,true,,330,181,41,41,http://localhost:3000/api/categories,30,0,0
+1788431158030,31,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-79,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,41,41,http://localhost:3000/api/login,30,0,0
+1788431158033,28,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-73,text,false,,273,182,41,41,http://localhost:3000/api/admin/users,28,0,0
+1788431158031,30,GET Products,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,1210,179,41,41,http://localhost:3000/api/products,30,0,0
+1788431158031,31,GET Categories,200,OK,Spike: 100 users x 3 loops 1-87,text,true,,330,316,41,41,http://localhost:3000/api/categories,31,0,0
+1788431158034,29,POST Login,200,OK,Spike: 100 users x 3 loops 1-80,text,true,,612,247,41,41,http://localhost:3000/api/login,29,0,0
+1788431158035,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-60,text,true,,330,181,41,41,http://localhost:3000/api/categories,29,0,0
+1788431158035,29,GET Products,200,OK,Spike: 100 users x 3 loops 1-97,text,true,,1210,179,41,41,http://localhost:3000/api/products,29,0,0
+1788431158035,30,GET Products,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,1210,314,40,40,http://localhost:3000/api/products,30,0,0
+1788431158037,29,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,505,317,40,40,http://localhost:3000/api/admin/users,29,0,0
+1788431158039,34,GET Categories,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,330,316,40,40,http://localhost:3000/api/categories,34,0,1
+1788431158038,35,GET Categories,200,OK,Spike: 100 users x 3 loops 1-88,text,true,,330,181,40,40,http://localhost:3000/api/categories,35,0,1
+1788431158044,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,330,316,40,40,http://localhost:3000/api/categories,29,0,1
+1788431158039,34,GET Products,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,1210,314,40,40,http://localhost:3000/api/products,34,0,0
+1788431158041,32,GET Categories,200,OK,Spike: 100 users x 3 loops 1-62,text,true,,330,181,40,40,http://localhost:3000/api/categories,32,0,1
+1788431158043,30,GET Products,200,OK,Spike: 100 users x 3 loops 1-69,text,true,,1210,179,40,40,http://localhost:3000/api/products,30,0,0
+1788431158040,33,GET Products,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,1210,179,40,40,http://localhost:3000/api/products,33,0,0
+1788431158041,32,GET Products,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,1210,314,40,40,http://localhost:3000/api/products,32,0,0
+1788431158044,29,GET Products,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,1210,314,40,40,http://localhost:3000/api/products,29,0,0
+1788431158043,30,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-81,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,40,40,http://localhost:3000/api/login,30,0,0
+1788431158045,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-91,text,true,,330,181,40,40,http://localhost:3000/api/categories,29,0,1
+1788431158046,28,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-75,text,false,,273,182,40,40,http://localhost:3000/api/admin/users,28,0,1
+1788431158038,36,GET Categories,200,OK,Spike: 100 users x 3 loops 1-61,text,true,,330,316,40,40,http://localhost:3000/api/categories,35,0,1
+1788431158047,29,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,505,317,38,38,http://localhost:3000/api/admin/users,29,0,1
+1788431158047,29,GET Products,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,1210,179,38,38,http://localhost:3000/api/products,29,0,1
+1788431158048,30,POST Login,200,OK,Spike: 100 users x 3 loops 1-82,text,true,,612,247,38,38,http://localhost:3000/api/login,29,0,0
+1788431158049,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,330,316,38,38,http://localhost:3000/api/categories,29,0,0
+1788431158050,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-63,text,true,,330,181,38,38,http://localhost:3000/api/categories,29,0,0
+1788431158051,28,GET Categories,200,OK,Spike: 100 users x 3 loops 1-64,text,true,,330,181,38,38,http://localhost:3000/api/categories,28,0,0
+1788431158051,29,GET Products,200,OK,Spike: 100 users x 3 loops 1-70,text,true,,1210,314,36,36,http://localhost:3000/api/products,29,0,1
+1788431158052,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,330,316,36,36,http://localhost:3000/api/categories,29,0,0
+1788431158053,29,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-83,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,36,36,http://localhost:3000/api/login,29,0,0
+1788431158054,28,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-77,text,false,,273,182,36,36,http://localhost:3000/api/admin/users,28,0,1
+1788431158054,29,POST Login,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,612,382,36,36,http://localhost:3000/api/login,29,0,0
+1788431158054,29,GET Products,200,OK,Spike: 100 users x 3 loops 1-71,text,true,,1210,179,36,36,http://localhost:3000/api/products,29,0,0
+1788431158055,29,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-85,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,36,36,http://localhost:3000/api/login,29,0,1
+1788431158056,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-65,text,true,,330,316,36,36,http://localhost:3000/api/categories,29,0,0
+1788431158056,29,GET Categories,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,330,181,36,36,http://localhost:3000/api/categories,29,0,0
+1788431158058,28,GET Categories,200,OK,Spike: 100 users x 3 loops 1-95,text,true,,330,316,35,35,http://localhost:3000/api/categories,28,0,0
+1788431158059,31,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,505,317,35,35,http://localhost:3000/api/admin/users,31,0,0
+1788431158060,33,GET Products,200,OK,Spike: 100 users x 3 loops 1-72,text,true,,1210,314,35,35,http://localhost:3000/api/products,32,0,0
+1788431158061,32,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-79,text,false,,273,182,35,35,http://localhost:3000/api/admin/users,32,0,0
+1788431158060,34,POST Login,200,OK,Spike: 100 users x 3 loops 1-86,text,true,,612,247,35,35,http://localhost:3000/api/login,34,0,0
+1788431158061,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-73,text,true,,1210,179,35,35,http://localhost:3000/api/products,35,0,1
+1788431158062,36,GET Categories,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,330,181,35,35,http://localhost:3000/api/categories,36,0,0
+1788431158062,36,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-87,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,35,35,http://localhost:3000/api/login,36,0,1
+1788431158063,36,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-80,text,true,,505,317,35,35,http://localhost:3000/api/admin/users,36,0,1
+1788431158065,35,GET Categories,200,OK,Spike: 100 users x 3 loops 1-97,text,true,,330,181,35,35,http://localhost:3000/api/categories,35,0,0
+1788431158066,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-66,text,true,,330,316,35,35,http://localhost:3000/api/categories,38,0,0
+1788431158066,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,1210,314,34,34,http://localhost:3000/api/products,39,0,8
+1788431158074,33,POST Login,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,612,382,34,34,http://localhost:3000/api/login,33,0,0
+1788431158074,34,GET Categories,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,330,316,34,34,http://localhost:3000/api/categories,34,0,0
+1788431158074,35,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-88,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,34,34,http://localhost:3000/api/login,35,0,0
+1788431158074,36,GET Categories,200,OK,Spike: 100 users x 3 loops 1-67,text,true,,330,316,34,34,http://localhost:3000/api/categories,35,0,0
+1788431158074,37,GET Categories,200,OK,Spike: 100 users x 3 loops 1-68,text,true,,330,181,33,33,http://localhost:3000/api/categories,36,0,0
+1788431158074,37,GET Categories,200,OK,Spike: 100 users x 3 loops 1-69,text,true,,330,181,33,33,http://localhost:3000/api/categories,37,0,0
+1788431158074,38,GET Categories,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,330,316,31,31,http://localhost:3000/api/categories,38,0,0
+1788431158074,38,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-81,text,false,,273,182,31,31,http://localhost:3000/api/admin/users,38,0,1
+1788431158074,39,POST Login,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,612,382,31,31,http://localhost:3000/api/login,39,0,1
+1788431158074,41,GET Products,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,1210,179,31,31,http://localhost:3000/api/products,41,0,1
+1788431158075,41,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-91,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,31,31,http://localhost:3000/api/login,41,0,1
+1788431158076,40,GET Products,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,1210,314,31,31,http://localhost:3000/api/products,40,0,0
+1788431158077,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,330,181,31,31,http://localhost:3000/api/categories,40,0,0
+1788431158078,40,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-82,text,true,,505,317,31,31,http://localhost:3000/api/admin/users,40,0,0
+1788431158078,41,POST Login,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,612,382,31,31,http://localhost:3000/api/login,41,0,1
+1788431158080,40,GET Categories,200,OK,Spike: 100 users x 3 loops 1-70,text,true,,330,316,31,31,http://localhost:3000/api/categories,40,0,1
+1788431158082,38,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-83,text,false,,273,182,30,30,http://localhost:3000/api/admin/users,38,0,0
+1788431158082,39,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-93,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,30,30,http://localhost:3000/api/login,39,0,0
+1788431158083,39,GET Products,200,OK,Spike: 100 users x 3 loops 1-77,text,true,,1210,179,30,30,http://localhost:3000/api/products,39,0,0
+1788431158083,39,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,505,317,30,30,http://localhost:3000/api/admin/users,39,0,0
+1788431158085,38,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-85,text,false,,273,182,30,30,http://localhost:3000/api/admin/users,38,0,0
+1788431158083,41,GET Categories,200,OK,Spike: 100 users x 3 loops 1-71,text,true,,330,181,30,30,http://localhost:3000/api/categories,41,0,1
+1788431158085,40,POST Login,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,612,247,29,29,http://localhost:3000/api/login,40,0,1
+1788431158086,40,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-95,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,29,29,http://localhost:3000/api/login,40,0,1
+1788431158091,35,GET Products,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,1210,314,29,29,http://localhost:3000/api/products,35,0,0
+1788431158093,34,GET Products,200,OK,Spike: 100 users x 3 loops 1-79,text,true,,1210,179,29,29,http://localhost:3000/api/products,34,0,1
+1788431158093,35,GET Categories,200,OK,Spike: 100 users x 3 loops 1-72,text,true,,330,316,29,29,http://localhost:3000/api/categories,35,0,1
+1788431158095,33,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-86,text,true,,505,317,29,29,http://localhost:3000/api/admin/users,33,0,0
+1788431158096,33,GET Categories,200,OK,Spike: 100 users x 3 loops 1-73,text,true,,330,181,28,28,http://localhost:3000/api/categories,33,0,0
+1788431158099,31,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-87,text,false,,273,182,27,27,http://localhost:3000/api/admin/users,31,0,0
+1788431158098,32,POST Login,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,612,247,27,27,http://localhost:3000/api/login,32,0,1
+1788431158099,32,GET Products,200,OK,Spike: 100 users x 3 loops 1-80,text,true,,1210,314,27,27,http://localhost:3000/api/products,32,0,0
+1788431158101,31,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-97,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,27,27,http://localhost:3000/api/login,31,0,1
+1788431158106,27,GET Categories,200,OK,Spike: 100 users x 3 loops 1-74,text,true,,330,316,27,27,http://localhost:3000/api/categories,27,0,0
+1788431158107,27,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,505,317,26,26,http://localhost:3000/api/admin/users,27,0,1
+1788431158109,25,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-88,text,false,,273,182,26,26,http://localhost:3000/api/admin/users,25,0,0
+1788431158108,27,POST Login,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,612,382,26,26,http://localhost:3000/api/login,27,0,1
+1788431158112,24,GET Products,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,1210,179,26,26,http://localhost:3000/api/products,24,0,1
+1788431158113,24,POST Login,401,Unauthorized,Spike: 100 users x 3 loops 1-99,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,26,26,http://localhost:3000/api/login,23,0,0
+1788431158113,24,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,505,317,26,26,http://localhost:3000/api/admin/users,24,0,1
+1788431158116,21,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-91,text,false,,273,182,26,26,http://localhost:3000/api/admin/users,21,0,0
+1788431158115,23,GET Categories,200,OK,Spike: 100 users x 3 loops 1-75,text,true,,330,181,26,26,http://localhost:3000/api/categories,23,0,0
+1788431158117,22,GET Categories,200,OK,Spike: 100 users x 3 loops 1-76,text,true,,330,316,25,25,http://localhost:3000/api/categories,22,0,0
+1788431158117,23,POST Login,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,612,247,24,24,http://localhost:3000/api/login,23,0,1
+1788431158118,23,GET Products,200,OK,Spike: 100 users x 3 loops 1-82,text,true,,1210,314,24,24,http://localhost:3000/api/products,22,0,0
+1788431158119,22,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,505,317,24,24,http://localhost:3000/api/admin/users,22,0,1
+1788431158121,21,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-93,text,false,,273,182,24,24,http://localhost:3000/api/admin/users,21,0,1
+1788431158120,22,GET Products,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,1210,179,24,24,http://localhost:3000/api/products,22,0,1
+1788431158122,21,GET Categories,200,OK,Spike: 100 users x 3 loops 1-77,text,true,,330,181,24,24,http://localhost:3000/api/categories,21,0,1
+1788431158122,22,GET Products,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,1210,314,23,23,http://localhost:3000/api/products,22,0,1
+1788431158126,19,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-95,text,false,,273,182,23,23,http://localhost:3000/api/admin/users,18,0,0
+1788431158123,22,GET Products,200,OK,Spike: 100 users x 3 loops 1-85,text,true,,1210,179,23,23,http://localhost:3000/api/products,22,0,1
+1788431158125,20,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,505,317,23,23,http://localhost:3000/api/admin/users,20,0,1
+1788431158127,19,GET Categories,200,OK,Spike: 100 users x 3 loops 1-78,text,true,,330,316,23,23,http://localhost:3000/api/categories,19,0,0
+1788431158127,20,GET Categories,200,OK,Spike: 100 users x 3 loops 1-79,text,true,,330,181,22,22,http://localhost:3000/api/categories,19,0,0
+1788431158129,18,GET Products,200,OK,Spike: 100 users x 3 loops 1-86,text,true,,1210,314,21,21,http://localhost:3000/api/products,18,0,0
+1788431158130,18,GET Products,200,OK,Spike: 100 users x 3 loops 1-87,text,true,,1210,179,21,21,http://localhost:3000/api/products,18,0,0
+1788431158131,18,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,505,317,21,21,http://localhost:3000/api/admin/users,18,0,0
+1788431158132,17,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-97,text,false,,273,182,21,21,http://localhost:3000/api/admin/users,17,0,1
+1788431158131,18,GET Categories,200,OK,Spike: 100 users x 3 loops 1-80,text,true,,330,316,21,21,http://localhost:3000/api/categories,18,0,1
+1788431158134,17,GET Products,200,OK,Spike: 100 users x 3 loops 1-88,text,true,,1210,179,20,20,http://localhost:3000/api/products,17,0,0
+1788431158134,18,GET Products,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,1210,314,20,20,http://localhost:3000/api/products,18,0,0
+1788431158137,15,GET Admin users,401,Unauthorized,Spike: 100 users x 3 loops 1-99,text,false,,273,182,20,20,http://localhost:3000/api/admin/users,15,0,0
+1788431158135,17,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,505,317,20,20,http://localhost:3000/api/admin/users,17,0,0
+1788431158136,16,GET Categories,200,OK,Spike: 100 users x 3 loops 1-81,text,true,,330,181,20,20,http://localhost:3000/api/categories,16,0,0
+1788431158138,16,GET Products,200,OK,Spike: 100 users x 3 loops 1-91,text,true,,1210,179,19,19,http://localhost:3000/api/products,15,0,0
+1788431158137,18,GET Products,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,1210,314,19,19,http://localhost:3000/api/products,18,0,1
+1788431158141,14,GET Categories,200,OK,Spike: 100 users x 3 loops 1-82,text,true,,330,316,19,19,http://localhost:3000/api/categories,14,0,0
+1788431158141,14,GET Admin users,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,505,317,19,19,http://localhost:3000/api/admin/users,14,0,0
+1788431158141,15,GET Products,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,1210,314,18,18,http://localhost:3000/api/products,15,0,1
+1788431158142,15,GET Products,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,1210,179,18,18,http://localhost:3000/api/products,15,0,0
+1788431158143,14,GET Categories,200,OK,Spike: 100 users x 3 loops 1-83,text,true,,330,181,18,18,http://localhost:3000/api/categories,14,0,1
+1788431158144,14,GET Categories,200,OK,Spike: 100 users x 3 loops 1-84,text,true,,330,316,17,17,http://localhost:3000/api/categories,14,0,1
+1788431158145,14,GET Products,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,1210,314,16,16,http://localhost:3000/api/products,14,0,1
+1788431158145,14,GET Categories,200,OK,Spike: 100 users x 3 loops 1-85,text,true,,330,181,16,16,http://localhost:3000/api/categories,14,0,1
+1788431158145,15,GET Products,200,OK,Spike: 100 users x 3 loops 1-95,text,true,,1210,179,15,15,http://localhost:3000/api/products,15,0,1
+1788431158147,13,GET Categories,200,OK,Spike: 100 users x 3 loops 1-86,text,true,,330,316,15,15,http://localhost:3000/api/categories,13,0,1
+1788431158148,13,GET Categories,200,OK,Spike: 100 users x 3 loops 1-87,text,true,,330,181,14,14,http://localhost:3000/api/categories,13,0,1
+1788431158149,12,GET Products,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,1210,314,14,14,http://localhost:3000/api/products,12,0,0
+1788431158149,13,GET Products,200,OK,Spike: 100 users x 3 loops 1-97,text,true,,1210,179,13,13,http://localhost:3000/api/products,13,0,0
+1788431158151,12,GET Categories,200,OK,Spike: 100 users x 3 loops 1-88,text,true,,330,181,13,13,http://localhost:3000/api/categories,12,0,0
+1788431158152,12,GET Products,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,1210,179,12,12,http://localhost:3000/api/products,11,0,0
+1788431158152,12,GET Categories,200,OK,Spike: 100 users x 3 loops 1-89,text,true,,330,316,12,12,http://localhost:3000/api/categories,12,0,0
+1788431158152,12,GET Products,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,1210,314,12,12,http://localhost:3000/api/products,12,0,1
+1788431158154,11,GET Categories,200,OK,Spike: 100 users x 3 loops 1-91,text,true,,330,181,11,11,http://localhost:3000/api/categories,11,0,0
+1788431158155,10,GET Categories,200,OK,Spike: 100 users x 3 loops 1-90,text,true,,330,316,11,11,http://localhost:3000/api/categories,10,0,0
+1788431158156,10,GET Products,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,1210,314,9,9,http://localhost:3000/api/products,10,0,0
+1788431158156,11,GET Categories,200,OK,Spike: 100 users x 3 loops 1-92,text,true,,330,316,9,9,http://localhost:3000/api/categories,11,0,0
+1788431158157,10,GET Categories,200,OK,Spike: 100 users x 3 loops 1-93,text,true,,330,181,9,9,http://localhost:3000/api/categories,10,0,1
+1788431158159,9,GET Categories,200,OK,Spike: 100 users x 3 loops 1-94,text,true,,330,316,7,7,http://localhost:3000/api/categories,9,0,0
+1788431158160,8,GET Categories,200,OK,Spike: 100 users x 3 loops 1-95,text,true,,330,181,7,7,http://localhost:3000/api/categories,8,0,1
+1788431158162,7,GET Categories,200,OK,Spike: 100 users x 3 loops 1-96,text,true,,330,316,5,5,http://localhost:3000/api/categories,7,0,0
+1788431158162,8,GET Categories,200,OK,Spike: 100 users x 3 loops 1-97,text,true,,330,181,4,4,http://localhost:3000/api/categories,8,0,0
+1788431158164,6,GET Categories,200,OK,Spike: 100 users x 3 loops 1-99,text,true,,330,181,4,4,http://localhost:3000/api/categories,6,0,0
+1788431158164,6,GET Categories,200,OK,Spike: 100 users x 3 loops 1-98,text,true,,330,316,3,3,http://localhost:3000/api/categories,6,0,1
+1788431158166,5,GET Categories,200,OK,Spike: 100 users x 3 loops 1-100,text,true,,330,316,1,1,http://localhost:3000/api/categories,5,0,1

@@ -93,7 +93,10 @@ def resource_log_findings(
     if run_start_ms is not None and run_end_ms is not None:
         resource_start_ms = min(timestamp.timestamp() for timestamp in timestamps) * 1000
         resource_end_ms = max(timestamp.timestamp() for timestamp in timestamps) * 1000
-        if resource_start_ms > run_start_ms or resource_end_ms < run_end_ms:
+        # The monitor samples every 5 seconds; allow one sampling interval at
+        # either edge instead of requiring an artificial sample at test start/end.
+        sampling_tolerance_ms = 5000
+        if resource_start_ms > run_start_ms + sampling_tolerance_ms or resource_end_ms < run_end_ms - sampling_tolerance_ms:
             findings.append("resource log does not cover the JTL run window")
     if any(value <= 0 for value in rss):
         findings.append("resource log contains non-positive RSS")

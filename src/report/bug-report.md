@@ -12,7 +12,8 @@
 ### 1.1. Tóm tắt
 - **Mức độ**: High (Security Fault)
 - **Phạm vi**: `POST /api/products`, `PUT /api/products/:id`, `DELETE /api/products/:id`
-- **GitHub Issue**: Sẽ gắn link Issue và screenshot `github_issue_bug.png` sau khi tạo trên GitHub.
+- **GitHub Issue**: [#22 - [BUG-SEC-23127075] Product CRUD endpoints lack authentication](https://github.com/HCMUS-software-testing/HW05/issues/22)
+- **Screenshot**: `evidence/issues/github_issue_bug.png`
 
 Ba endpoint thay đổi dữ liệu sản phẩm không gắn middleware `authenticateToken`, trong khi các endpoint quản trị tương tự như category CRUD và import products đều yêu cầu JWT Token. Người dùng vãng lai chưa xác thực vẫn có thể tạo, sửa hoặc xóa sản phẩm.
 
@@ -43,6 +44,7 @@ Các endpoint ghi dữ liệu sản phẩm phải dùng `authenticateToken` và 
 ### 2.1. Tóm tắt
 - **Mức độ**: High (Security Fault)
 - **Phạm vi**: `GET /api/products?search=...`
+- **GitHub Issue**: [#23 - [BUG-SEC-23127075] SQL Injection Vulnerability in Product Search API](https://github.com/HCMUS-software-testing/HW05/issues/23)
 
 Mã nguồn backend tại `eshop-sut/backend/server.js` (dòng 144) sử dụng nối chuỗi SQL trực tiếp thay vì parameterized query:
 `const query = "SELECT * FROM products WHERE name LIKE '%" + searchQuery + "%'";`
@@ -74,6 +76,7 @@ Sử dụng Parameterized Query chuẩn của SQLite:
 ### 3.1. Tóm tắt
 - **Mức độ**: Medium (Performance Bottleneck)
 - **Phạm vi**: Kịch bản Spike Testing (100 threads / 1s ramp-up)
+- **GitHub Issue**: [#24 - [BUG-PERF-23127075] Severe Tail-Latency Under Spike Load](https://github.com/HCMUS-software-testing/HW05/issues/24)
 - **Bằng chứng dữ liệu**: Log thô `src/results/spike/raw.jtl` và `src/validation-report.json`
 
 Khi hệ thống chịu đợt Spike 100 Virtual Users trong 1 giây đồng thời thực hiện lệnh Create/Delete sản phẩm, mặc dù tỷ lệ lỗi HTTP bằng 0%, thời gian phản hồi ở đuôi (tail latency) suy giảm nghiêm trọng.

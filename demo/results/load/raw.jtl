@@ -1,0 +1,601 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1788431024823,40,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,3,3,http://localhost:3000/api/login,40,0,28
+1788431025825,10,POST Login,200,OK,Load: 10 users x 5 loops 1-2,text,true,,612,255,4,4,http://localhost:3000/api/login,9,0,2
+1788431026416,9,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,4,4,http://localhost:3000/api/login,8,0,2
+1788431026705,4,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,5,5,http://localhost:3000/api/admin/users,4,0,2
+1788431027066,6,POST Login,200,OK,Load: 10 users x 5 loops 1-4,text,true,,612,255,5,5,http://localhost:3000/api/login,5,0,1
+1788431027549,6,GET Admin users,200,OK,Load: 10 users x 5 loops 1-2,text,true,,505,317,6,6,http://localhost:3000/api/admin/users,6,0,2
+1788431028098,5,GET Products,200,OK,Load: 10 users x 5 loops 1-1,text,true,,1210,179,6,6,http://localhost:3000/api/products,4,0,1
+1788431028536,4,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,7,7,http://localhost:3000/api/admin/users,3,0,1
+1788431028535,5,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,7,7,http://localhost:3000/api/login,5,0,1
+1788431028793,5,GET Admin users,200,OK,Load: 10 users x 5 loops 1-4,text,true,,505,317,7,7,http://localhost:3000/api/admin/users,5,0,2
+1788431029102,6,POST Login,200,OK,Load: 10 users x 5 loops 1-6,text,true,,612,255,7,7,http://localhost:3000/api/login,6,0,1
+1788431029734,4,GET Products,200,OK,Load: 10 users x 5 loops 1-2,text,true,,1210,314,8,8,http://localhost:3000/api/products,4,0,1
+1788431030175,6,GET Products,200,OK,Load: 10 users x 5 loops 1-3,text,true,,1210,179,8,8,http://localhost:3000/api/products,6,0,2
+1788431030405,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-1,text,true,,330,181,8,8,http://localhost:3000/api/categories,5,0,1
+1788431030539,4,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,9,9,http://localhost:3000/api/admin/users,4,0,1
+1788431030906,8,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,9,9,http://localhost:3000/api/login,8,0,3
+1788431031065,4,GET Products,200,OK,Load: 10 users x 5 loops 1-4,text,true,,1210,314,9,9,http://localhost:3000/api/products,4,0,1
+1788431031163,7,POST Login,200,OK,Load: 10 users x 5 loops 1-8,text,true,,612,255,9,9,http://localhost:3000/api/login,6,0,2
+1788431031347,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-2,text,true,,330,316,9,9,http://localhost:3000/api/categories,4,0,1
+1788431031577,6,GET Admin users,200,OK,Load: 10 users x 5 loops 1-6,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788431032050,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-3,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,1
+1788431032503,4,GET Products,200,OK,Load: 10 users x 5 loops 1-5,text,true,,1210,179,10,10,http://localhost:3000/api/products,4,0,1
+1788431032636,22,POST Create product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,275,322,10,10,http://localhost:3000/api/products,21,0,6
+1788431032735,6,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,244,10,10,http://localhost:3000/api/login,6,0,2
+1788431032881,11,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,10,0,2
+1788431032990,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-4,text,true,,330,316,10,10,http://localhost:3000/api/categories,5,0,2
+1788431033215,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-8,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788431033404,15,POST Create product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,275,457,10,10,http://localhost:3000/api/products,15,0,1
+1788431033640,6,GET Products,200,OK,Load: 10 users x 5 loops 1-6,text,true,,1469,314,10,10,http://localhost:3000/api/products,6,0,2
+1788431033968,9,POST Login,200,OK,Load: 10 users x 5 loops 1-10,text,true,,612,255,10,10,http://localhost:3000/api/login,8,0,2
+1788431034123,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,275,322,10,10,http://localhost:3000/api/products,17,0,3
+1788431034132,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,268,203,10,10,http://localhost:3000/api/products/6,14,0,3
+1788431034729,4,GET Categories,200,OK,Load: 10 users x 5 loops 1-5,text,true,,330,181,10,10,http://localhost:3000/api/categories,3,0,1
+1788431034929,14,POST Create product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,275,457,10,10,http://localhost:3000/api/products,14,0,2
+1788431035068,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,268,338,10,10,http://localhost:3000/api/products/7,14,0,1
+1788431035153,7,GET Products,200,OK,Load: 10 users x 5 loops 1-7,text,true,,1469,179,10,10,http://localhost:3000/api/products,6,0,2
+1788431035235,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,4,0,2
+1788431035261,6,GET Products,200,OK,Load: 10 users x 5 loops 1-8,text,true,,1469,314,10,10,http://localhost:3000/api/products,5,0,2
+1788431035516,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-6,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,1
+1788431035563,7,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,7,0,2
+1788431035993,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,268,203,10,10,http://localhost:3000/api/products/8,16,0,2
+1788431036509,8,GET Admin users,200,OK,Load: 10 users x 5 loops 1-10,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,3
+1788431036819,8,GET Products,200,OK,Load: 10 users x 5 loops 1-9,text,true,,1340,179,10,10,http://localhost:3000/api/products,7,0,2
+1788431036847,66,POST Create product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,276,322,10,10,http://localhost:3000/api/products,66,0,1
+1788431037215,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,268,338,10,10,http://localhost:3000/api/products/9,14,0,1
+1788431037324,6,POST Login,200,OK,Load: 10 users x 5 loops 1-2,text,true,,612,382,10,10,http://localhost:3000/api/login,5,0,1
+1788431037385,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,276,457,10,10,http://localhost:3000/api/products,15,0,2
+1788431037511,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-8,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,1
+1788431037915,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-7,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,1
+1788431038124,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,5,0,2
+1788431038311,7,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,6,0,2
+1788431038588,7,GET Products,200,OK,Load: 10 users x 5 loops 1-10,text,true,,1471,314,10,10,http://localhost:3000/api/products,6,0,2
+1788431038686,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-9,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,2
+1788431039247,18,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,268,339,10,10,http://localhost:3000/api/products/11,17,0,2
+1788431039427,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,276,457,10,10,http://localhost:3000/api/products,17,0,2
+1788431039546,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,268,204,10,10,http://localhost:3000/api/products/10,15,0,2
+1788431039585,5,POST Login,200,OK,Load: 10 users x 5 loops 1-4,text,true,,612,382,10,10,http://localhost:3000/api/login,5,0,2
+1788431039634,5,GET Admin users,200,OK,Load: 10 users x 5 loops 1-2,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,5,0,1
+1788431039817,8,GET Products,200,OK,Load: 10 users x 5 loops 1-1,text,true,,1341,179,10,10,http://localhost:3000/api/products,7,0,2
+1788431039827,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,4,0,1
+1788431039960,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,276,322,10,10,http://localhost:3000/api/products,16,0,2
+1788431040397,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-10,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,2
+1788431040602,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,276,322,10,10,http://localhost:3000/api/products,16,0,2
+1788431041220,4,GET Products,200,OK,Load: 10 users x 5 loops 1-2,text,true,,1601,314,10,10,http://localhost:3000/api/products,4,0,1
+1788431041271,8,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,10,10,http://localhost:3000/api/login,7,0,2
+1788431041321,5,GET Admin users,200,OK,Load: 10 users x 5 loops 1-4,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,5,0,2
+1788431041345,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,268,339,10,10,http://localhost:3000/api/products/12,15,0,2
+1788431041354,8,POST Login,200,OK,Load: 10 users x 5 loops 1-5,text,true,,612,247,10,10,http://localhost:3000/api/login,8,0,1
+1788431041742,6,GET Products,200,OK,Load: 10 users x 5 loops 1-3,text,true,,1471,179,10,10,http://localhost:3000/api/products,6,0,2
+1788431041923,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-1,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,2
+1788431042093,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,268,204,10,10,http://localhost:3000/api/products/13,15,0,2
+1788431042303,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,276,457,10,10,http://localhost:3000/api/products,15,0,2
+1788431042622,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-2,text,true,,330,316,10,10,http://localhost:3000/api/categories,5,0,1
+1788431042712,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,268,204,10,10,http://localhost:3000/api/products/14,15,0,2
+1788431043211,5,GET Products,200,OK,Load: 10 users x 5 loops 1-4,text,true,,1341,314,10,10,http://localhost:3000/api/products,4,0,1
+1788431043417,6,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,5,0,2
+1788431043500,8,GET Admin users,200,OK,Load: 10 users x 5 loops 1-5,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,8,0,2
+1788431043671,10,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,10,10,http://localhost:3000/api/login,10,0,2
+1788431043788,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-3,text,true,,330,181,10,10,http://localhost:3000/api/categories,5,0,2
+1788431043827,17,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,268,339,10,10,http://localhost:3000/api/products/15,16,0,2
+1788431044286,8,POST Login,200,OK,Load: 10 users x 5 loops 1-7,text,true,,612,247,10,10,http://localhost:3000/api/login,8,0,2
+1788431044378,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,276,322,10,10,http://localhost:3000/api/products,15,0,2
+1788431044418,14,POST Create product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,276,457,10,10,http://localhost:3000/api/products,13,0,2
+1788431044750,7,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,7,0,2
+1788431045267,7,GET Products,200,OK,Load: 10 users x 5 loops 1-5,text,true,,1471,314,10,10,http://localhost:3000/api/products,7,0,2
+1788431045303,4,GET Categories,200,OK,Load: 10 users x 5 loops 1-4,text,true,,330,316,10,10,http://localhost:3000/api/categories,4,0,1
+1788431045680,6,GET Products,200,OK,Load: 10 users x 5 loops 1-6,text,true,,1471,179,10,10,http://localhost:3000/api/products,6,0,2
+1788431045810,7,POST Login,200,OK,Load: 10 users x 5 loops 1-10,text,true,,612,382,10,10,http://localhost:3000/api/login,7,0,1
+1788431045861,18,POST Create product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,276,322,10,10,http://localhost:3000/api/products,17,0,2
+1788431045880,4,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,3,0,2
+1788431046112,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,268,204,10,10,http://localhost:3000/api/products/16,14,0,2
+1788431046171,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,268,339,10,10,http://localhost:3000/api/products/17,14,0,2
+1788431046308,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-7,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788431046326,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,5,0,2
+1788431047365,5,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,5,0,1
+1788431047446,11,POST Create product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,276,457,10,10,http://localhost:3000/api/products,11,0,2
+1788431047448,10,GET Products,200,OK,Load: 10 users x 5 loops 1-8,text,true,,1471,179,10,10,http://localhost:3000/api/products,10,0,1
+1788431047570,8,GET Categories,200,OK,Load: 10 users x 5 loops 1-6,text,true,,330,181,10,10,http://localhost:3000/api/categories,7,0,2
+1788431047571,9,GET Categories,200,OK,Load: 10 users x 5 loops 1-5,text,true,,330,316,10,10,http://localhost:3000/api/categories,9,0,1
+1788431047675,8,GET Admin users,200,OK,Load: 10 users x 5 loops 1-10,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788431047879,6,GET Products,200,OK,Load: 10 users x 5 loops 1-7,text,true,,1471,314,10,10,http://localhost:3000/api/products,6,0,2
+1788431047929,7,POST Login,200,OK,Load: 10 users x 5 loops 1-2,text,true,,612,382,10,10,http://localhost:3000/api/login,7,0,2
+1788431047990,17,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,268,204,10,10,http://localhost:3000/api/products/18,16,0,2
+1788431048796,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,276,457,10,10,http://localhost:3000/api/products,16,0,2
+1788431048890,4,GET Products,200,OK,Load: 10 users x 5 loops 1-9,text,true,,1471,179,10,10,http://localhost:3000/api/products,4,0,1
+1788431049146,3,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,3,0,1
+1788431049474,13,POST Create product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,276,322,10,10,http://localhost:3000/api/products,13,0,1
+1788431049515,5,GET Products,200,OK,Load: 10 users x 5 loops 1-10,text,true,,1601,314,10,10,http://localhost:3000/api/products,5,0,1
+1788431049654,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-7,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,1
+1788431049686,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,268,339,10,10,http://localhost:3000/api/products/19,14,0,1
+1788431050026,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-8,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,2
+1788431050086,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-2,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788431050217,17,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,268,339,10,10,http://localhost:3000/api/products/20,17,0,2
+1788431050221,15,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,15,0,2
+1788431050809,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-9,text,true,,330,181,10,10,http://localhost:3000/api/categories,5,0,1
+1788431051005,4,GET Products,200,OK,Load: 10 users x 5 loops 1-1,text,true,,1341,179,10,10,http://localhost:3000/api/products,4,0,1
+1788431051315,18,POST Create product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,276,457,10,10,http://localhost:3000/api/products,17,0,3
+1788431051491,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,268,204,10,10,http://localhost:3000/api/products/21,14,0,1
+1788431051491,16,POST Login,200,OK,Load: 10 users x 5 loops 1-4,text,true,,612,382,10,10,http://localhost:3000/api/login,15,0,1
+1788431051533,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-10,text,true,,330,316,10,10,http://localhost:3000/api/categories,5,0,2
+1788431051661,6,GET Products,200,OK,Load: 10 users x 5 loops 1-2,text,true,,1341,314,10,10,http://localhost:3000/api/products,5,0,1
+1788431051770,15,POST Create product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,276,322,10,10,http://localhost:3000/api/products,15,0,2
+1788431052188,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,5,0,2
+1788431052344,6,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,10,10,http://localhost:3000/api/login,6,0,2
+1788431053050,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,276,322,10,10,http://localhost:3000/api/products,16,0,2
+1788431053340,12,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,268,204,10,10,http://localhost:3000/api/products/23,11,0,1
+1788431053354,12,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,268,339,10,10,http://localhost:3000/api/products/22,11,0,1
+1788431053449,7,GET Categories,200,OK,Load: 10 users x 5 loops 1-1,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,2
+1788431053558,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-2,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,2
+1788431053819,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,276,457,10,10,http://localhost:3000/api/products,17,0,2
+1788431053898,4,GET Admin users,200,OK,Load: 10 users x 5 loops 1-4,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,4,0,1
+1788431054213,6,POST Login,200,OK,Load: 10 users x 5 loops 1-6,text,true,,612,247,10,10,http://localhost:3000/api/login,6,0,1
+1788431054216,6,GET Products,200,OK,Load: 10 users x 5 loops 1-3,text,true,,1471,179,10,10,http://localhost:3000/api/products,5,0,1
+1788431054537,6,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,5,0,2
+1788431054544,18,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,268,204,10,10,http://localhost:3000/api/products/24,17,0,2
+1788431055089,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,276,457,10,10,http://localhost:3000/api/products,16,0,3
+1788431055140,10,POST Create product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,276,322,10,10,http://localhost:3000/api/products,10,0,1
+1788431055617,7,POST Login,200,OK,Load: 10 users x 5 loops 1-7,text,true,,612,382,10,10,http://localhost:3000/api/login,7,0,1
+1788431055857,6,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,6,0,1
+1788431055907,5,GET Products,200,OK,Load: 10 users x 5 loops 1-4,text,true,,1601,314,10,10,http://localhost:3000/api/products,4,0,1
+1788431056040,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-3,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,2
+1788431056095,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-6,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,2
+1788431056267,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,268,339,10,10,http://localhost:3000/api/products/25,15,0,2
+1788431056568,8,GET Products,200,OK,Load: 10 users x 5 loops 1-5,text,true,,1471,179,10,10,http://localhost:3000/api/products,7,0,2
+1788431056569,8,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,7,0,2
+1788431056870,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,268,204,10,10,http://localhost:3000/api/products/27,14,0,1
+1788431056987,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,268,339,10,10,http://localhost:3000/api/products/26,16,0,2
+1788431057024,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-7,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,2
+1788431057174,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-4,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,2
+1788431058036,6,GET Products,200,OK,Load: 10 users x 5 loops 1-6,text,true,,1210,314,10,10,http://localhost:3000/api/products,6,0,2
+1788431058264,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,4,0,2
+1788431058267,6,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788431058359,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,276,322,10,10,http://localhost:3000/api/products,16,0,2
+1788431058365,12,POST Login,200,OK,Load: 10 users x 5 loops 1-10,text,true,,612,382,10,10,http://localhost:3000/api/login,12,0,2
+1788431058511,6,GET Products,200,OK,Load: 10 users x 5 loops 1-7,text,true,,1341,314,10,10,http://localhost:3000/api/products,6,0,2
+1788431058840,7,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,6,0,2
+1788431058986,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,276,457,10,10,http://localhost:3000/api/products,16,0,2
+1788431059068,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-5,text,true,,330,181,10,10,http://localhost:3000/api/categories,5,0,1
+1788431059305,8,POST Login,200,OK,Load: 10 users x 5 loops 1-2,text,true,,612,382,10,10,http://localhost:3000/api/login,7,0,2
+1788431060332,6,GET Products,200,OK,Load: 10 users x 5 loops 1-8,text,true,,1471,179,10,10,http://localhost:3000/api/products,6,0,2
+1788431060358,4,GET Categories,200,OK,Load: 10 users x 5 loops 1-6,text,true,,330,316,10,10,http://localhost:3000/api/categories,4,0,1
+1788431060444,7,GET Products,200,OK,Load: 10 users x 5 loops 1-9,text,true,,1471,179,10,10,http://localhost:3000/api/products,6,0,2
+1788431060723,5,GET Admin users,200,OK,Load: 10 users x 5 loops 1-10,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,5,0,1
+1788431060736,12,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,268,204,10,10,http://localhost:3000/api/products/28,12,0,1
+1788431060816,4,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,3,0,1
+1788431060831,12,POST Create product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,276,322,10,10,http://localhost:3000/api/products,12,0,2
+1788431060869,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-7,text,true,,330,316,10,10,http://localhost:3000/api/categories,5,0,2
+1788431061222,17,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,268,339,10,10,http://localhost:3000/api/products/29,16,0,2
+1788431061676,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-2,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788431061853,6,GET Products,200,OK,Load: 10 users x 5 loops 1-1,text,true,,1341,179,10,10,http://localhost:3000/api/products,6,0,2
+1788431062198,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,268,204,10,10,http://localhost:3000/api/products/30,15,0,2
+1788431062340,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-8,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,2
+1788431062377,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,276,457,10,10,http://localhost:3000/api/products,17,0,2
+1788431062435,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,276,457,10,10,http://localhost:3000/api/products,16,0,1
+1788431062588,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-9,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,2
+1788431062641,3,GET Products,200,OK,Load: 10 users x 5 loops 1-10,text,true,,1471,314,10,10,http://localhost:3000/api/products,3,0,1
+1788431063301,7,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,6,0,2
+1788431063310,6,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,6,0,1
+1788431063407,7,POST Login,200,OK,Load: 10 users x 5 loops 1-4,text,true,,612,382,10,10,http://localhost:3000/api/login,7,0,2
+1788431063459,6,GET Products,200,OK,Load: 10 users x 5 loops 1-2,text,true,,1471,314,10,10,http://localhost:3000/api/products,5,0,1
+1788431064050,7,GET Categories,200,OK,Load: 10 users x 5 loops 1-1,text,true,,330,181,10,10,http://localhost:3000/api/categories,7,0,1
+1788431064225,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,276,322,10,10,http://localhost:3000/api/products,17,0,2
+1788431064436,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,268,339,10,10,http://localhost:3000/api/products/31,16,0,2
+1788431064483,12,POST Create product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,276,322,10,10,http://localhost:3000/api/products,12,0,2
+1788431065011,4,GET Categories,200,OK,Load: 10 users x 5 loops 1-10,text,true,,330,316,10,10,http://localhost:3000/api/categories,4,0,1
+1788431065154,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,5,0,2
+1788431065272,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-4,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788431065337,4,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,4,0,1
+1788431065503,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,268,339,10,10,http://localhost:3000/api/products/32,16,0,2
+1788431065857,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-2,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,2
+1788431065877,15,POST Create product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,276,322,10,10,http://localhost:3000/api/products,15,0,1
+1788431066486,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,268,204,10,10,http://localhost:3000/api/products/33,13,0,2
+1788431066616,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,268,204,10,10,http://localhost:3000/api/products/34,16,0,2
+1788431066879,6,GET Products,200,OK,Load: 10 users x 5 loops 1-3,text,true,,1341,179,10,10,http://localhost:3000/api/products,6,0,2
+1788431066921,7,GET Products,200,OK,Load: 10 users x 5 loops 1-4,text,true,,1341,314,10,10,http://localhost:3000/api/products,6,0,2
+1788431066983,6,GET Products,200,OK,Load: 10 users x 5 loops 1-5,text,true,,1341,179,10,10,http://localhost:3000/api/products,5,0,1
+1788431067261,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,268,204,10,10,http://localhost:3000/api/products/35,14,0,2
+1788431067278,6,POST Login,200,OK,Load: 10 users x 5 loops 1-7,text,true,,612,382,10,10,http://localhost:3000/api/login,5,0,1
+1788431067364,7,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,10,10,http://localhost:3000/api/login,7,0,1
+1788431067606,15,POST Create product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,276,457,10,10,http://localhost:3000/api/products,15,0,2
+1788431067912,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,276,457,10,10,http://localhost:3000/api/products,16,0,2
+1788431068576,6,GET Admin users,200,OK,Load: 10 users x 5 loops 1-7,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788431068609,3,POST Login,200,OK,Load: 10 users x 5 loops 1-8,text,true,,612,247,10,10,http://localhost:3000/api/login,3,0,1
+1788431068624,5,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,5,0,1
+1788431068661,7,GET Categories,200,OK,Load: 10 users x 5 loops 1-5,text,true,,330,181,10,10,http://localhost:3000/api/categories,6,0,2
+1788431068731,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-4,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,2
+1788431068790,7,POST Login,200,OK,Load: 10 users x 5 loops 1-1,text,true,,612,247,10,10,http://localhost:3000/api/login,7,0,2
+1788431068853,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-3,text,true,,330,181,10,10,http://localhost:3000/api/categories,5,0,1
+1788431068973,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,268,339,10,10,http://localhost:3000/api/products/36,16,0,1
+1788431069607,4,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,4,0,1
+1788431070100,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,268,339,10,10,http://localhost:3000/api/products/37,16,0,2
+1788431070233,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,276,322,10,10,http://localhost:3000/api/products,15,0,2
+1788431070345,4,GET Admin users,200,OK,Load: 10 users x 5 loops 1-8,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,4,0,0
+1788431070579,6,GET Products,200,OK,Load: 10 users x 5 loops 1-7,text,true,,1341,314,10,10,http://localhost:3000/api/products,5,0,1
+1788431070792,6,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788431070792,20,POST Create product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,276,457,10,10,http://localhost:3000/api/products,19,0,2
+1788431070797,22,POST Create product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,276,322,10,10,http://localhost:3000/api/products,22,0,1
+1788431070799,21,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,10,10,http://localhost:3000/api/login,21,0,1
+1788431071356,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-1,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,2
+1788431071524,6,GET Products,200,OK,Load: 10 users x 5 loops 1-6,text,true,,1601,179,10,10,http://localhost:3000/api/products,5,0,1
+1788431071770,8,POST Login,200,OK,Load: 10 users x 5 loops 1-2,text,true,,612,382,10,10,http://localhost:3000/api/login,8,0,2
+1788431072412,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-7,text,true,,330,316,10,10,http://localhost:3000/api/categories,6,0,2
+1788431072530,4,GET Products,200,OK,Load: 10 users x 5 loops 1-8,text,true,,1601,314,10,10,http://localhost:3000/api/products,4,0,1
+1788431072582,4,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,4,0,2
+1788431072593,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,268,339,10,10,http://localhost:3000/api/products/39,15,0,2
+1788431072689,11,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,268,204,10,10,http://localhost:3000/api/products/40,11,0,1
+1788431072695,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,268,204,10,10,http://localhost:3000/api/products/38,14,0,1
+1788431072915,6,GET Products,200,OK,Load: 10 users x 5 loops 1-9,text,true,,1210,179,10,10,http://localhost:3000/api/products,5,0,1
+1788431073077,6,GET Products,200,OK,Load: 10 users x 5 loops 1-1,text,true,,1210,314,10,10,http://localhost:3000/api/products,6,0,2
+1788431073197,7,GET Categories,200,OK,Load: 10 users x 5 loops 1-6,text,true,,330,181,10,10,http://localhost:3000/api/categories,7,0,1
+1788431073872,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-2,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,7,0,2
+1788431074103,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-8,text,true,,330,316,10,10,http://localhost:3000/api/categories,5,0,1
+1788431074319,14,POST Create product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,276,457,10,10,http://localhost:3000/api/products,14,0,2
+1788431074466,7,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,371,10,10,http://localhost:3000/api/login,6,0,2
+1788431074856,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-9,text,true,,330,181,10,10,http://localhost:3000/api/categories,5,0,2
+1788431074985,7,POST Login,200,OK,Load: 10 users x 5 loops 1-3,text,true,,612,247,10,10,http://localhost:3000/api/login,6,0,1
+1788431075064,5,GET Products,200,OK,Load: 10 users x 5 loops 1-10,text,true,,1341,179,10,10,http://localhost:3000/api/products,5,0,1
+1788431075076,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-1,text,true,,330,316,10,10,http://localhost:3000/api/categories,5,0,2
+1788431075247,7,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,10,10,http://localhost:3000/api/login,6,0,1
+1788431075332,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,276,322,10,10,http://localhost:3000/api/products,16,0,2
+1788431075460,5,GET Products,200,OK,Load: 10 users x 5 loops 1-2,text,true,,1471,314,10,10,http://localhost:3000/api/products,5,0,1
+1788431075897,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,276,457,10,10,http://localhost:3000/api/products,16,0,2
+1788431076273,17,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,268,339,10,10,http://localhost:3000/api/products/41,16,0,2
+1788431076721,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,276,322,10,10,http://localhost:3000/api/products,16,0,2
+1788431076889,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,4,0,1
+1788431076895,6,GET Admin users,200,OK,Load: 10 users x 5 loops 1-3,text,true,,505,317,10,10,http://localhost:3000/api/admin/users,6,0,1
+1788431076978,15,POST Create product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,276,457,10,10,http://localhost:3000/api/products,14,0,2
+1788431076997,4,GET Categories,200,OK,Load: 10 users x 5 loops 1-10,text,true,,330,181,10,10,http://localhost:3000/api/categories,4,0,1
+1788431077008,11,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,268,204,10,10,http://localhost:3000/api/products/42,11,0,1
+1788431077387,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,10,10,http://localhost:3000/api/admin/users,5,0,2
+1788431077636,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,268,339,10,10,http://localhost:3000/api/products/43,15,0,2
+1788431077896,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-2,text,true,,330,316,10,10,http://localhost:3000/api/categories,5,0,1
+1788431078262,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,268,204,10,10,http://localhost:3000/api/products/44,15,0,1
+1788431078288,6,POST Login,200,OK,Load: 10 users x 5 loops 1-7,text,true,,612,382,10,10,http://localhost:3000/api/login,6,0,2
+1788431078598,6,GET Products,200,OK,Load: 10 users x 5 loops 1-5,text,true,,1341,179,10,10,http://localhost:3000/api/products,6,0,2
+1788431078609,4,GET Products,200,OK,Load: 10 users x 5 loops 1-4,text,true,,1341,179,10,10,http://localhost:3000/api/products,4,0,1
+1788431078912,18,POST Create product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,276,322,10,10,http://localhost:3000/api/products,18,0,2
+1788431079147,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-1,text,true,,268,339,10,10,http://localhost:3000/api/products/45,16,0,2
+1788431079243,8,POST Login,200,OK,Load: 10 users x 5 loops 1-8,text,true,,612,382,9,9,http://localhost:3000/api/login,8,0,1
+1788431079268,5,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,9,9,http://localhost:3000/api/login,4,0,1
+1788431079580,6,GET Products,200,OK,Load: 10 users x 5 loops 1-3,text,true,,1341,314,9,9,http://localhost:3000/api/products,6,0,2
+1788431080064,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-7,text,true,,505,317,9,9,http://localhost:3000/api/admin/users,6,0,2
+1788431080087,15,POST Create product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,276,457,9,9,http://localhost:3000/api/products,14,0,1
+1788431080095,8,POST Login,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",286,236,9,9,http://localhost:3000/api/login,8,0,1
+1788431080534,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-5,text,true,,330,181,9,9,http://localhost:3000/api/categories,6,0,2
+1788431080923,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-8,text,true,,505,317,9,9,http://localhost:3000/api/admin/users,7,0,2
+1788431080931,3,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,9,9,http://localhost:3000/api/admin/users,3,0,1
+1788431081164,17,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,268,204,9,9,http://localhost:3000/api/products/46,16,0,2
+1788431081309,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-4,text,true,,330,181,9,9,http://localhost:3000/api/categories,6,0,2
+1788431081732,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-3,text,true,,330,316,9,9,http://localhost:3000/api/categories,5,0,2
+1788431082307,18,POST Create product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,276,322,9,9,http://localhost:3000/api/products,17,0,2
+1788431082314,12,GET Products,200,OK,Load: 10 users x 5 loops 1-6,text,true,,1471,179,9,9,http://localhost:3000/api/products,12,0,1
+1788431082335,11,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-2,text,true,,268,339,9,9,http://localhost:3000/api/products/47,10,0,1
+1788431082400,5,GET Admin users,401,Unauthorized,Load: 10 users x 5 loops 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",273,182,8,8,http://localhost:3000/api/admin/users,4,0,2
+1788431082438,6,GET Products,200,OK,Load: 10 users x 5 loops 1-7,text,true,,1341,314,8,8,http://localhost:3000/api/products,6,0,1
+1788431083036,7,POST Login,200,OK,Load: 10 users x 5 loops 1-10,text,true,,612,247,8,8,http://localhost:3000/api/login,7,0,2
+1788431083218,5,GET Products,200,OK,Load: 10 users x 5 loops 1-8,text,true,,1341,314,8,8,http://localhost:3000/api/products,5,0,1
+1788431083497,14,POST Create product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,276,457,8,8,http://localhost:3000/api/products,14,0,2
+1788431083506,13,POST Create product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,276,322,8,8,http://localhost:3000/api/products,12,0,1
+1788431084174,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-5,text,true,,268,204,8,8,http://localhost:3000/api/products/48,13,0,1
+1788431084220,5,GET Products,200,OK,Load: 10 users x 5 loops 1-9,text,true,,1471,179,7,7,http://localhost:3000/api/products,5,0,1
+1788431084384,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-8,text,true,,330,316,7,7,http://localhost:3000/api/categories,5,0,1
+1788431084428,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-6,text,true,,330,181,7,7,http://localhost:3000/api/categories,5,0,1
+1788431084791,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-7,text,true,,330,316,7,7,http://localhost:3000/api/categories,5,0,2
+1788431085246,7,GET Admin users,200,OK,Load: 10 users x 5 loops 1-10,text,true,,505,317,7,7,http://localhost:3000/api/admin/users,7,0,2
+1788431085507,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-4,text,true,,268,204,7,7,http://localhost:3000/api/products/50,15,0,1
+1788431085601,14,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-3,text,true,,268,339,6,6,http://localhost:3000/api/products/49,13,0,2
+1788431086169,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,276,457,5,5,http://localhost:3000/api/products,16,0,2
+1788431086319,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,276,322,5,5,http://localhost:3000/api/products,17,0,2
+1788431086345,5,GET Categories,200,OK,Load: 10 users x 5 loops 1-9,text,true,,330,181,5,5,http://localhost:3000/api/categories,4,0,1
+1788431086840,16,POST Create product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,276,457,5,5,http://localhost:3000/api/products,15,0,1
+1788431087452,6,GET Products,200,OK,Load: 10 users x 5 loops 1-10,text,true,,1601,314,5,5,http://localhost:3000/api/products,5,0,1
+1788431087686,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-6,text,true,,268,204,5,5,http://localhost:3000/api/products/52,15,0,1
+1788431088246,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-7,text,true,,268,339,4,4,http://localhost:3000/api/products/51,16,0,2
+1788431088574,15,POST Create product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,276,322,3,3,http://localhost:3000/api/products,14,0,1
+1788431088814,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-8,text,true,,268,339,3,3,http://localhost:3000/api/products/53,16,0,2
+1788431089189,6,GET Categories,200,OK,Load: 10 users x 5 loops 1-10,text,true,,330,316,2,2,http://localhost:3000/api/categories,5,0,1
+1788431090706,15,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-9,text,true,,268,204,2,2,http://localhost:3000/api/products/54,14,0,1
+1788431091261,17,POST Create product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,276,457,1,1,http://localhost:3000/api/products,16,0,2
+1788431092993,16,DELETE Cleanup product,200,OK,Load: 10 users x 5 loops 1-10,text,true,,268,339,1,1,http://localhost:3000/api/products/55,15,0,2

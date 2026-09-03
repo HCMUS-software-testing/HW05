@@ -1,0 +1,46 @@
+
+(process:42): dconf-CRITICAL **: 17:26:11.153: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.154: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.154: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.154: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.154: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.154: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.155: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.155: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.155: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+
+(process:42): dconf-CRITICAL **: 17:26:11.155: unable to create file '/run/user/1000/dconf/user': Read-only file system.  dconf will not work properly.
+[m[1m[34m             .',;::::;,'.[m                 [m[1m[39mtkin[m@[1m[39mfedora[m
+[1m[34m         .';:cccccccccccc:;,.[m             -----------
+[1m[34m      .;cccccccccccccccccccccc;.[m          [m[1m[34mOS[m: [mFedora Linux 44 (Workstation Edition) x86_64
+[1m[34m    .:cccccccccccccccccccccccccc:.[m        [m[1m[34mHost[m: [mASUS EXPERTBOOK B5404CMA_B5404CMA (1.0)
+[1m[34m  .;ccccccccccccc;[37m.:dddl:.[34m;ccccccc;.[m      [m[1m[34mKernel[m: [mLinux 7.1.8-200.fc44.x86_64
+[1m[34m .:ccccccccccccc;[37mOWMKOOXMWd[34m;ccccccc:.[m     [m[1m[34mUptime[m: [m8 hours, 59 mins
+[1m[34m.:ccccccccccccc;[37mKMMc[34m;cc;[37mxMMc[34m;ccccccc:.[m    [m[1m[34mPackages[m: [m15 (flatpak), 2115 (rpm)
+[1m[34m,cccccccccccccc;[37mMMM.[34m;cc;[37m;WW:[34m;cccccccc,[m    [m[1m[34mShell[m: [mbash 5.3.9
+[1m[34m:cccccccccccccc;[37mMMM.[34m;cccccccccccccccc:[m    [m[1m[34mDisplay (eDP-1)[m: [m1920x1200 [Built-in]
+[1m[34m:ccccccc;[37moxOOOo[34m;[37mMMM000k.[34m;cccccccccccc:[m    [m[1m[34mDE[m: [mGNOME 50.4
+[1m[34mcccccc;[37m0MMKxdd:[34m;[37mMMMkddc.[34m;cccccccccccc;[m    [m[1m[34mTheme[m: [mAdwaita [GTK2/3/4]
+[1m[34mccccc;[37mXMO'[34m;cccc;[37mMMM.[34m;cccccccccccccccc'[m    [m[1m[34mIcons[m: [mAdwaita [GTK2/3/4]
+[1m[34mccccc;[37mMMo[34m;ccccc;[37mMMW.[34m;ccccccccccccccc;[m     [m[1m[34mFont[m: [mAdwaita Sans (11pt) [GTK2/3/4]
+[1m[34mccccc;[37m0MNc.[34mccc[37m.xMMd[34m;ccccccccccccccc;[m      [m[1m[34mCursor[m: [mAdwaita (24px)
+[1m[34mcccccc;[37mdNMWXXXWM0:[34m;cccccccccccccc:,[m       [m[1m[34mTerminal[m: [mdumb
+[1m[34mcccccccc;[37m.:odl:.[34m;cccccccccccccc:,.[m        [m[1m[34mCPU[m: [mIntel(R) Core(TM) Ultra 7 155H (6+8+2) @ 3.80 GHz
+[1m[34mccccccccccccccccccccccccccccc:'.[m          [m[1m[34mGPU[m: [mIntel Arc Graphics @ 2.25 GHz [Integrated]
+[1m[34m:ccccccccccccccccccccccc:;,..[m             [m[1m[34mMemory[m: [m10.42 GiB / 14.92 GiB ([93m70%[m)
+[1m[34m ':cccccccccccccccc::;,.[m                  [m[1m[34mSwap[m: [m2.93 GiB / 8.00 GiB ([32m37%[m)
+                                          [m[1m[34mDisk (/)[m: [m57.08 GiB / 474.35 GiB ([32m12%[m) - btrfs [Read-only]
+                                          [m[1m[34mBattery (C340152)[m: [m[32m99%[m [AC Connected, Charging]
+                                          [m[1m[34mLocale[m: [men_US.UTF-8
+                                          
+                                          [m[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m
+                                          [5m[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m
+[m

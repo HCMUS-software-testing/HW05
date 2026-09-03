@@ -17,7 +17,7 @@
 | 6 | Agent Skills | 10 | 10 | Skill, analyzer, endurance runner và regression tests |
 | **Tổng nội dung kỹ thuật** | | **100** | **94 / 100** | Chưa phải trạng thái sẵn sàng nộp |
 
-Các mục bắt buộc còn cần thao tác thủ công: video YouTube unlisted tối thiểu 6 phút, PDF của báo cáo chính và AI Audit, GitHub Issue cùng screenshot. Không tạo ZIP cuối khi các mục này chưa đủ vì đề cảnh báo thiếu tài liệu bắt buộc có thể bị 0 điểm.
+Các mục còn cần hoàn tất thủ công: export PDF của báo cáo chính và AI Audit, cập nhật git commit log sau các thay đổi cuối, và kiểm tra video ở chế độ unlisted, thời lượng tối thiểu 6 phút cùng nội dung hiển thị theo đề.
 
 ## 2. Phạm vi và kết quả
 
@@ -36,7 +36,7 @@ Workflow sáu request bao phủ:
 
 Điểm tải endurance đã chứng minh: **30 VU đạt trung bình 28,80 RPS trong 10 phút**, backend RSS **103,676-111,680 MiB**, không có xu hướng tăng bộ nhớ trong 121 mẫu giám sát. Đây không phải tải tối đa vì chưa chạy nhiều bậc tải. Xem [`report/main-report.md`](report/main-report.md) để biết p99, outlier, cleanup và phương pháp tính.
 
-Một bug bảo mật đã được tái hiện: Product create/update/delete thiếu authentication. Báo cáo cục bộ nằm tại [`report/bug-report.md`](report/bug-report.md); GitHub Issue chưa tạo được do phiên `gh` không hợp lệ.
+Các bug và vấn đề đã được ghi nhận tại GitHub Issues: #22 và #23 là lỗi bảo mật, #24 là vấn đề hiệu năng. Báo cáo chi tiết nằm tại [`report/bug-report.md`](report/bug-report.md).
 
 ## 3. Chạy lại
 
@@ -93,6 +93,19 @@ src/
 
 Skill nguồn nằm ngoài `src/` tại `.agents/skills/performance-testing-skills/`. Validator chỉ copy skill vào `agent-skill/` của bản staging; không tạo wrapper và không sửa tên thư mục `src/` đang làm việc.
 
-## 5. Video
+## 5. Trạng thái trước khi nộp
 
-Link YouTube unlisted chưa được bổ sung. Video cuối phải dài tối thiểu 6 phút, có thuyết minh tiếng Việt và hiển thị JMeter cùng resource monitor trong một khung hình.
+Lần kiểm tra gần nhất bằng `tools/validate_submission.sh` còn các lỗi sau:
+
+- `Endurance resource log integrity`: resource log chưa bao phủ toàn bộ cửa sổ JTL.
+- `Endurance transactional cleanup`: còn chênh lệch 4 sản phẩm create/delete trong bằng chứng cleanup.
+- Thiếu PDF của `report/main-report.md` và `ai-audit/ai_audit_report.md`.
+- GitHub Issues đã tạo: [#22 BUG-SEC-23127075](https://github.com/HCMUS-software-testing/HW05/issues/22), [#23 BUG-SEC-23127075](https://github.com/HCMUS-software-testing/HW05/issues/23), [#24 BUG-PERF-23127075](https://github.com/HCMUS-software-testing/HW05/issues/24).
+- Screenshot Issue: `evidence/screenshots/github_issue_bug.png`.
+
+## 6. Video
+
+- **Flow demo**: <https://youtu.be/iJPhKGJS6jM>
+- **Agent demo**: <https://youtu.be/JUV8j6AjZdQ>
+
+Hai video cần được đặt ở chế độ YouTube unlisted, dài tối thiểu 6 phút cho video bài nộp, có thuyết minh tiếng Việt và hiển thị JMeter cùng resource monitor trong một khung hình.
